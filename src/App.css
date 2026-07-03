@@ -971,6 +971,121 @@
   white-space: nowrap;
 }
 
+.builder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.builder-actions button {
+  flex: 1 1 120px;
+}
+
+.builder-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+  transform: none;
+}
+
+.builder-preview {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  background: rgba(255, 250, 240, 0.55);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.builder-preview-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: start;
+}
+
+.builder-preview-head strong,
+.builder-preview-head small {
+  display: block;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.builder-preview-head small,
+.preview-question-list small {
+  color: var(--ink-muted);
+}
+
+.preview-metrics,
+.preview-warnings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.preview-metrics span,
+.preview-warnings span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 9px;
+  color: var(--ink-soft);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.preview-metrics span.warn,
+.preview-warnings span {
+  color: var(--red);
+  background: rgba(217, 79, 53, 0.08);
+  border-color: rgba(217, 79, 53, 0.24);
+}
+
+.preview-question-list {
+  display: grid;
+  gap: 8px;
+}
+
+.preview-question-list > div:not(.preview-more) {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 10px;
+  background: rgba(236, 228, 214, 0.5);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.preview-question-list span {
+  display: grid;
+  place-items: center;
+  min-height: 30px;
+  color: #fffaf0;
+  background: var(--night-2);
+  border-radius: 7px;
+  font-family: var(--mono);
+  font-weight: 900;
+}
+
+.preview-question-list strong,
+.preview-question-list small {
+  display: block;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.preview-more {
+  padding: 10px;
+  color: var(--ink-muted);
+  background: rgba(236, 228, 214, 0.35);
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius);
+}
+
 .paste-builder {
   grid-row: span 2;
 }
@@ -1257,6 +1372,15 @@
 
   .pending-paper button {
     justify-self: start;
+  }
+
+  .builder-preview-head {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-metrics,
+  .preview-warnings {
+    justify-content: flex-start;
   }
 
   .mobile-nav {

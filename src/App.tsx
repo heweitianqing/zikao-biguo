@@ -1068,6 +1068,23 @@ function ReportView({
   )
 }
 
+type BuilderPreview = {
+  bank: ImportedBank
+  warnings: string[]
+}
+
+function getPreviewStats(bank: ImportedBank) {
+  const questions = bank.questions
+  return {
+    total: questions.length,
+    objective: questions.filter((question) => question.type === 'single' || question.type === 'multiple').length,
+    text: questions.filter((question) => question.type === 'short' || question.type === 'essay').length,
+    missingAnswer: questions.filter((question) => question.answer.includes('待补充答案')).length,
+    missingAnalysis: questions.filter((question) => question.analysis.includes('暂未提供解析')).length,
+    score: questions.reduce((sum, question) => sum + question.points, 0),
+  }
+}
+
 function ResourcesView({
   selectedCourse,
   allPapers,
@@ -1099,6 +1116,7 @@ function ResourcesView({
   const [builderTitle, setBuilderTitle] = useState(`${selectedCourse.code} ${new Date().getFullYear()} 年4月真题导入卷`)
   const [pastedText, setPastedText] = useState('')
   const [builderMessage, setBuilderMessage] = useState('支持每题带答案，也支持卷尾统一“参考答案”。')
+  const [builderPreview, setBuilderPreview] = useState<BuilderPreview | null>(null)
   const importedQuestionCount = (paperId: string) =>
     importedBank.questions.filter((question) => question.paperId === paperId).length
   const targetCourses = courses.filter((course) => ['xi', 'history', 'marx', 'multimedia'].includes(course.id))
@@ -1121,6 +1139,7 @@ function ResourcesView({
     setBuilderSession(paper.session)
     setBuilderTitle(`${paper.title}导入卷`)
     setPastedText('')
+    setBuilderPreview(null)
     setBuilderMessage(`已预填 ${paper.title}。找到题文后粘贴进来，点“生成可刷试卷”。`)
   }
 
@@ -1143,15 +1162,41 @@ function ResourcesView({
     })
 
     if (!result.bank.questions.length) {
+      setBuilderPreview(null)
       setBuilderMessage(result.warnings.join('；') || '没有识别到题目。')
       return
     }
 
-    onImportBank(result.bank, '已从粘贴文本生成')
+    setBuilderPreview(result)
     setBuilderMessage(
-      `识别到 ${result.bank.questions.length} 道题。${result.warnings.length ? `提醒：${result.warnings.join('；')}` : '已生成可刷试卷。'}`,
+      `已生成预览：${result.bank.questions.length} 道题。确认无误后再导入，或修改文本后重新解析。`,
     )
   }
+
+  function importBuilderPreview() {
+    if (!builderPreview?.bank.questions.length) {
+      setBuilderMessage('还没有可导入的预览。')
+      return
+    }
+
+    onImportBank(builderPreview.bank, '已从预览确认导入')
+    setBuilderMessage(`已导入 ${builderPreview.bank.questions.length} 道题。`)
+    setBuilderPreview(null)
+  }
+
+  function downloadBuilderPreview() {
+    if (!builderPreview?.bank.questions.length) {
+      setBuilderMessage('还没有可下载的预览。')
+      return
+    }
+
+    const paper = builderPreview.bank.papers[0]
+    downloadJson(`${paper?.id ?? 'zikao-paper-preview'}.json`, builderPreview.bank)
+    setBuilderMessage('已下载当前预览 JSON。')
+  }
+
+  const previewPaper = builderPreview?.bank.papers[0]
+  const previewStats = builderPreview ? getPreviewStats(builderPreview.bank) : null
 
   return (
     <section className="resources-view">
@@ -1303,6 +1348,7 @@ function ResourcesView({
                   const nextCourse = courses.find((course) => course.id === event.target.value) ?? selectedCourse
                   setBuilderCourseId(nextCourse.id)
                   setBuilderTitle(`${nextCourse.code} ${builderYear} 年${builderSession}真题导入卷`)
+                  setBuilderPreview(null)
                 }}
               >
                 {courses.map((course) => (
@@ -1314,11 +1360,24 @@ function ResourcesView({
             </label>
             <label>
               <span>年份</span>
-              <input type="number" value={builderYear} onChange={(event) => setBuilderYear(Number(event.target.value))} />
+              <input
+                type="number"
+                value={builderYear}
+                onChange={(event) => {
+                  setBuilderYear(Number(event.target.value))
+                  setBuilderPreview(null)
+                }}
+              />
             </label>
             <label>
               <span>考期</span>
-              <select value={builderSession} onChange={(event) => setBuilderSession(event.target.value as Paper['session'])}>
+              <select
+                value={builderSession}
+                onChange={(event) => {
+                  setBuilderSession(event.target.value as Paper['session'])
+                  setBuilderPreview(null)
+                }}
+              >
                 <option value="4月">4月</option>
                 <option value="10月">10月</option>
                 <option value="专项">专项</option>
@@ -1328,18 +1387,81 @@ function ResourcesView({
           </div>
           <label className="wide-field">
             <span>试卷名</span>
-            <input value={builderTitle} onChange={(event) => setBuilderTitle(event.target.value)} />
+            <input
+              value={builderTitle}
+              onChange={(event) => {
+                setBuilderTitle(event.target.value)
+                setBuilderPreview(null)
+              }}
+            />
           </label>
           <textarea
             value={pastedText}
             placeholder={'示例：\n一、单项选择题\n1. 鸦片战争前，中国封建文化的核心是（ ） A. 儒家思想 B. 法家思想 C. 道家思想 D. 墨家思想\n2. 马克思主义首要的观点是（ ） A. 政治观点 B. 认识观点 C. 实践观点 D. 发展观点\n参考答案：\n1.A 2.C\n答案及解析：\n1.A 解析：儒家思想长期处于封建正统地位。'}
-            onChange={(event) => setPastedText(event.target.value)}
+            onChange={(event) => {
+              setPastedText(event.target.value)
+              setBuilderPreview(null)
+            }}
           />
-          <button className="primary" type="button" onClick={buildPaperFromText}>
-            <Sparkles size={18} />
-            生成可刷试卷
-          </button>
+          <div className="builder-actions">
+            <button className="primary" type="button" onClick={buildPaperFromText}>
+              <Sparkles size={18} />
+              解析预览
+            </button>
+            <button type="button" onClick={importBuilderPreview} disabled={!builderPreview?.bank.questions.length}>
+              <Upload size={18} />
+              确认导入
+            </button>
+            <button type="button" onClick={downloadBuilderPreview} disabled={!builderPreview?.bank.questions.length}>
+              <Download size={18} />
+              下载预览
+            </button>
+          </div>
           <small>{builderMessage}</small>
+          {builderPreview && previewStats && previewPaper && (
+            <section className="builder-preview">
+              <div className="builder-preview-head">
+                <div>
+                  <p className="eyebrow">导入前预览</p>
+                  <strong>{previewPaper.title}</strong>
+                  <small>{previewPaper.year} · {previewPaper.session} · {previewStats.score} 分</small>
+                </div>
+                <div className="preview-metrics">
+                  <span>{previewStats.total} 题</span>
+                  <span>{previewStats.objective} 客观题</span>
+                  <span>{previewStats.text} 主观题</span>
+                  <span className={previewStats.missingAnswer ? 'warn' : ''}>{previewStats.missingAnswer} 缺答案</span>
+                  <span className={previewStats.missingAnalysis ? 'warn' : ''}>{previewStats.missingAnalysis} 缺解析</span>
+                </div>
+              </div>
+
+              {builderPreview.warnings.length > 0 && (
+                <div className="preview-warnings">
+                  {builderPreview.warnings.slice(0, 5).map((warning) => (
+                    <span key={warning}>{warning}</span>
+                  ))}
+                  {builderPreview.warnings.length > 5 && <span>还有 {builderPreview.warnings.length - 5} 条提醒</span>}
+                </div>
+              )}
+
+              <div className="preview-question-list">
+                {builderPreview.bank.questions.slice(0, 8).map((question, index) => (
+                  <div key={question.id}>
+                    <span>{index + 1}</span>
+                    <div>
+                      <strong>{question.stem}</strong>
+                      <small>
+                        {questionLabel(question.type)} · {question.points} 分 · 答案 {question.answer.join(' / ')}
+                      </small>
+                    </div>
+                  </div>
+                ))}
+                {builderPreview.bank.questions.length > 8 && (
+                  <div className="preview-more">还有 {builderPreview.bank.questions.length - 8} 道题，导入后可完整查看。</div>
+                )}
+              </div>
+            </section>
+          )}
         </div>
 
         <div className="resource-box imported-manager">
