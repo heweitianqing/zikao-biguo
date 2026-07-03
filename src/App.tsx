@@ -85,6 +85,20 @@ function getSearchUrl(query: string) {
   return `https://www.baidu.com/s?wd=${encodeURIComponent(query)}`
 }
 
+function getPaperSlotKey(paper: Pick<Paper, 'courseId' | 'year' | 'session'>) {
+  return `${paper.courseId}-${paper.year}-${paper.session}`
+}
+
+function filterCoveredIndexPapers(papers: Paper[]) {
+  const coveredSlots = new Set(
+    papers
+      .filter((paper) => paper.sourceKind === 'imported' && paper.status === 'ready')
+      .map((paper) => getPaperSlotKey(paper)),
+  )
+
+  return papers.filter((paper) => !(paper.status === 'needs-import' && coveredSlots.has(getPaperSlotKey(paper))))
+}
+
 function App() {
   const [state, setState] = useState<AppState>(() => loadState(defaultState))
   const [imports, setImports] = useState<ImportedBank>(() => loadImports())
@@ -92,15 +106,17 @@ function App() {
   const [notice, setNotice] = useState('已按上海电机学院 2025 计划初始化题库。')
 
   const allPapers = useMemo(() => [...seedPapers, ...imports.papers], [imports.papers])
+  const visiblePapers = useMemo(() => filterCoveredIndexPapers(allPapers), [allPapers])
   const allQuestions = useMemo(() => [...seedQuestions, ...imports.questions], [imports.questions])
 
   const selectedCourse = courses.find((course) => course.id === state.selectedCourseId) ?? courses[0]
-  const coursePapers = allPapers
+  const coursePapers = visiblePapers
     .filter((paper) => paper.courseId === selectedCourse.id)
     .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
   const selectedPaper =
-    allPapers.find((paper) => paper.id === state.selectedPaperId && paper.courseId === selectedCourse.id) ??
+    visiblePapers.find((paper) => paper.id === state.selectedPaperId && paper.courseId === selectedCourse.id) ??
     coursePapers[0] ??
+    visiblePapers[0] ??
     allPapers[0]
   const paperQuestions = selectedPaper.questionIds
     .map((id) => allQuestions.find((question) => question.id === id))
@@ -141,7 +157,7 @@ function App() {
   }
 
   function selectCourse(courseId: string) {
-    const firstPaper = allPapers.find((paper) => paper.courseId === courseId)
+    const firstPaper = visiblePapers.find((paper) => paper.courseId === courseId)
     patchState({
       selectedCourseId: courseId,
       selectedPaperId: firstPaper?.id ?? state.selectedPaperId,
@@ -520,7 +536,7 @@ function App() {
 
         <div className="course-list">
           {courses.map((course) => {
-            const paperCount = allPapers.filter((paper) => paper.courseId === course.id).length
+            const paperCount = visiblePapers.filter((paper) => paper.courseId === course.id).length
             return (
               <button
                 key={course.id}
@@ -806,7 +822,7 @@ function App() {
         {state.view === 'resources' && (
           <ResourcesView
             selectedCourse={selectedCourse}
-            allPapers={allPapers}
+            allPapers={visiblePapers}
             importedBank={imports}
             importedCount={imports.questions.length}
             onImport={handleImport}
