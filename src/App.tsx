@@ -83,6 +83,15 @@ type CourseProgressSummary = {
   }
 }
 
+type CourseStudyTask = {
+  id: string
+  kind: 'continue' | 'review' | 'start' | 'import' | 'complete'
+  title: string
+  detail: string
+  actionLabel: string
+  paper?: Paper
+}
+
 function createAttempt(paper: Paper) {
   return {
     paperId: paper.id,
@@ -238,8 +247,115 @@ function getCourseProgressSummary(
             totalScore: lastSubmitted.paper.totalScore,
             pass: lastScaledScore >= passScore,
           }
-        : undefined,
+      : undefined,
   }
+}
+
+function getCourseStudyTasks(
+  papers: Paper[],
+  questionById: Map<string, Question>,
+  attempts: Record<string, PaperAttempt>,
+  mistakeCount: number,
+): CourseStudyTask[] {
+  const readyPapers = papers.filter((paper) => paper.status === 'ready')
+  const pendingPapers = papers
+    .filter((paper) => paper.status !== 'ready')
+    .slice()
+    .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
+
+  const inProgressPapers = readyPapers
+    .map((paper) => {
+      const attempt = attempts[paper.id]
+      if (!attempt || attempt.submittedAt || !Object.keys(attempt.answers).length) {
+        return undefined
+      }
+
+      const questions = paper.questionIds.map((id) => questionById.get(id)).filter((question): question is Question => Boolean(question))
+      const answeredCount = questions.filter((question) => {
+        const record = attempt.answers[question.id]
+        return Boolean(record?.answer.length || record?.textAnswer.trim())
+      }).length
+      const checkedCount = questions.filter((question) => attempt.answers[question.id]?.checked).length
+      const lastUpdated = Object.values(attempt.answers)
+        .map((record) => record.updatedAt)
+        .sort()
+        .at(-1)
+
+      return {
+        paper,
+        total: questions.length,
+        answeredCount,
+        checkedCount,
+        lastUpdated: lastUpdated ?? attempt.startedAt,
+      }
+    })
+    .filter((item): item is { paper: Paper; total: number; answeredCount: number; checkedCount: number; lastUpdated: string } =>
+      Boolean(item),
+    )
+    .sort((a, b) => b.lastUpdated.localeCompare(a.lastUpdated))
+
+  const unstartedPaper = readyPapers.find((paper) => {
+    const attempt = attempts[paper.id]
+    return !attempt || (!attempt.submittedAt && !Object.keys(attempt.answers).length)
+  })
+
+  const tasks: CourseStudyTask[] = []
+  const activePaper = inProgressPapers[0]
+  if (activePaper) {
+    tasks.push({
+      id: `continue-${activePaper.paper.id}`,
+      kind: 'continue',
+      title: `继续 ${activePaper.paper.title}`,
+      detail: `已答 ${activePaper.answeredCount}/${activePaper.total}，已判 ${activePaper.checkedCount}/${activePaper.total}`,
+      actionLabel: '继续刷',
+      paper: activePaper.paper,
+    })
+  }
+
+  if (mistakeCount) {
+    tasks.push({
+      id: 'review-mistakes',
+      kind: 'review',
+      title: `复盘 ${mistakeCount} 道错题`,
+      detail: '先把最近失分题清掉，再开新卷更稳。',
+      actionLabel: '打开错题',
+    })
+  }
+
+  if (unstartedPaper) {
+    tasks.push({
+      id: `start-${unstartedPaper.id}`,
+      kind: 'start',
+      title: `开刷 ${unstartedPaper.title}`,
+      detail: `${unstartedPaper.questionIds.length} 题 · ${unstartedPaper.minutes} 分钟 · ${sourceLabel(unstartedPaper.sourceKind)}`,
+      actionLabel: '开始',
+      paper: unstartedPaper,
+    })
+  }
+
+  const nextPendingPaper = pendingPapers[0]
+  if (nextPendingPaper) {
+    tasks.push({
+      id: `import-${nextPendingPaper.id}`,
+      kind: 'import',
+      title: `补齐 ${nextPendingPaper.title}`,
+      detail: '点开后会进入资源页并预填制卷信息。',
+      actionLabel: '预填制卷',
+      paper: nextPendingPaper,
+    })
+  }
+
+  if (!tasks.length) {
+    tasks.push({
+      id: 'complete',
+      kind: 'complete',
+      title: '本课暂时收干净了',
+      detail: '可以重刷已完成卷，或去资源页继续补历年真题。',
+      actionLabel: '查看真题',
+    })
+  }
+
+  return tasks.slice(0, 4)
 }
 
 function App() {
@@ -303,6 +419,8 @@ function App() {
     })
     .filter((item): item is MistakeReviewItem => Boolean(item))
     .sort((a, b) => b.record.updatedAt.localeCompare(a.record.updatedAt))
+  const selectedCourseMistakes = mistakeItems.filter((item) => item.course.id === selectedCourse.id)
+  const courseStudyTasks = getCourseStudyTasks(coursePapers, questionById, state.attempts, selectedCourseMistakes.length)
 
   useEffect(() => {
     saveState(state)
@@ -819,6 +937,13 @@ function App() {
           onOpenMistakes={() => patchState({ view: 'mistakes' })}
         />
 
+        <CourseStudyQueue
+          tasks={courseStudyTasks}
+          onOpenPaper={selectPaper}
+          onOpenMistakes={() => patchState({ view: 'mistakes' })}
+          onOpenPapers={() => patchState({ view: 'papers' })}
+        />
+
         {state.view === 'practice' && (
           <section className="practice-grid">
             <div className="paper-panel">
@@ -1169,6 +1294,63 @@ function CourseProgressBoard({
           {summary.inProgressPapers ? ` · ${summary.inProgressPapers} 套进行中` : ''}
         </span>
         <span>{summary.lastScore ? `最近 ${summary.lastScore.score}/${summary.lastScore.totalScore} · ${summary.lastScore.paperTitle}` : '还没有交卷记录'}</span>
+      </div>
+    </section>
+  )
+}
+
+function CourseStudyQueue({
+  tasks,
+  onOpenPaper,
+  onOpenMistakes,
+  onOpenPapers,
+}: {
+  tasks: CourseStudyTask[]
+  onOpenPaper: (paper: Paper) => void
+  onOpenMistakes: () => void
+  onOpenPapers: () => void
+}) {
+  function openTask(task: CourseStudyTask) {
+    if (task.kind === 'review') {
+      onOpenMistakes()
+      return
+    }
+    if (task.paper) {
+      onOpenPaper(task.paper)
+      return
+    }
+    onOpenPapers()
+  }
+
+  return (
+    <section className="study-queue" aria-label="本课下一步">
+      <div className="study-queue-head">
+        <div>
+          <p className="eyebrow">本课下一步</p>
+          <strong>按这个顺序推进</strong>
+        </div>
+        <span>继续 / 复盘 / 开新卷 / 补真题</span>
+      </div>
+      <div className="study-task-grid">
+        {tasks.map((task) => (
+          <article key={task.id} className={`study-task task-${task.kind}`}>
+            <div className="study-task-icon">
+              {task.kind === 'continue' && <PlayCircle size={18} />}
+              {task.kind === 'review' && <ClipboardCheck size={18} />}
+              {task.kind === 'start' && <FileQuestion size={18} />}
+              {task.kind === 'import' && <Upload size={18} />}
+              {task.kind === 'complete' && <CheckCircle2 size={18} />}
+            </div>
+            <div>
+              <strong>{task.title}</strong>
+              <small>{task.detail}</small>
+            </div>
+            <button type="button" onClick={() => openTask(task)}>
+              {task.kind === 'import' ? <ClipboardList size={16} /> : <PlayCircle size={16} />}
+              {task.actionLabel}
+            </button>
+          </article>
+        ))}
       </div>
     </section>
   )

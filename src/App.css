@@ -69,6 +69,7 @@
 .course-button,
 .rail-nav button,
 .progress-actions button,
+.study-task button,
 .paper-actions button,
 .question-actions button,
 .report-actions button,
@@ -108,6 +109,7 @@
 .course-button:hover,
 .rail-nav button:hover,
 .progress-actions button:hover,
+.study-task button:hover,
 .paper-actions button:hover,
 .question-actions button:hover,
 .resource-box button:hover,
@@ -316,6 +318,110 @@
 
 .progress-foot span:last-child {
   text-align: right;
+}
+
+.study-queue {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.study-queue-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 2px;
+}
+
+.study-queue-head strong {
+  display: block;
+  margin-top: 3px;
+  color: var(--night);
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.study-queue-head span {
+  color: var(--ink-muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-align: right;
+}
+
+.study-task-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.study-task {
+  --task-color: var(--blue);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  min-width: 0;
+  min-height: 158px;
+  padding: 13px;
+  background: var(--paper-strong);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--task-color);
+  border-radius: var(--radius);
+}
+
+.study-task.task-review {
+  --task-color: var(--red);
+}
+
+.study-task.task-start {
+  --task-color: var(--green);
+}
+
+.study-task.task-import {
+  --task-color: var(--violet);
+}
+
+.study-task.task-complete {
+  --task-color: var(--green);
+}
+
+.study-task-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  color: var(--task-color);
+  background: color-mix(in srgb, var(--task-color) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--task-color) 24%, transparent);
+  border-radius: 7px;
+}
+
+.study-task strong,
+.study-task small {
+  display: block;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.study-task strong {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.study-task small {
+  margin-top: 5px;
+  color: var(--ink-muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.study-task button {
+  justify-self: start;
+  min-height: 34px;
+  padding: 6px 10px;
+  font-size: 13px;
 }
 
 .practice-grid {
@@ -1628,6 +1734,10 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .study-task-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .paper-panel,
   .insight-panel {
     position: static;
@@ -1690,6 +1800,15 @@
   }
 
   .progress-foot span:last-child {
+    text-align: left;
+  }
+
+  .study-queue-head {
+    display: grid;
+    align-items: start;
+  }
+
+  .study-queue-head span {
     text-align: left;
   }
 
@@ -1845,6 +1964,10 @@
   }
 
   .progress-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .study-task-grid {
     grid-template-columns: 1fr;
   }
 
