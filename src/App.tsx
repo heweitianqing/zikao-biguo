@@ -1086,7 +1086,7 @@ function ResourcesView({
   const [builderSession, setBuilderSession] = useState<Paper['session']>('4月')
   const [builderTitle, setBuilderTitle] = useState(`${selectedCourse.code} ${new Date().getFullYear()} 年4月真题导入卷`)
   const [pastedText, setPastedText] = useState('')
-  const [builderMessage, setBuilderMessage] = useState('支持常见格式：题号开头、A/B/C/D 选项、答案、解析。')
+  const [builderMessage, setBuilderMessage] = useState('支持每题带答案，也支持卷尾统一“参考答案”。')
   const importedQuestionCount = (paperId: string) =>
     importedBank.questions.filter((question) => question.paperId === paperId).length
   const courseCoverage = courses
@@ -1183,7 +1183,7 @@ function ResourcesView({
             <ClipboardList size={22} />
             <strong>粘贴文本制卷</strong>
           </div>
-          <p>从网页、PDF OCR 或 Word 里复制题目，按“题号 + 选项 + 答案 + 解析”粘贴，系统会拆成可刷试卷。</p>
+          <p>从网页、PDF OCR 或 Word 里复制题目，支持逐题答案，也支持最后统一答案表，系统会拆成可刷试卷。</p>
           <div className="builder-fields">
             <label>
               <span>科目</span>
@@ -1222,7 +1222,7 @@ function ResourcesView({
           </label>
           <textarea
             value={pastedText}
-            placeholder={'示例：\n1. 鸦片战争前，中国封建文化的核心是（ ）\nA. 儒家思想\nB. 法家思想\nC. 道家思想\nD. 墨家思想\n答案：A\n解析：儒家思想长期处于封建正统地位。'}
+            placeholder={'示例：\n一、单项选择题\n1. 鸦片战争前，中国封建文化的核心是（ ） A. 儒家思想 B. 法家思想 C. 道家思想 D. 墨家思想\n2. 马克思主义首要的观点是（ ） A. 政治观点 B. 认识观点 C. 实践观点 D. 发展观点\n参考答案：\n1.A 2.C\n答案及解析：\n1.A 解析：儒家思想长期处于封建正统地位。'}
             onChange={(event) => setPastedText(event.target.value)}
           />
           <button className="primary" type="button" onClick={buildPaperFromText}>

@@ -28,18 +28,20 @@ function splitQuestionBlocks(rawText: string) {
     .filter(Boolean)
 
   const blocks: string[][] = []
-  let current: string[] = []
+  let current: string[] | null = null
 
   for (const line of lines) {
-    if (/^\d{1,3}[.．、]\s*/.test(line) && current.length) {
-      blocks.push(current)
+    if (/^\d{1,3}[.．、]\s*/.test(line)) {
+      if (current?.length) {
+        blocks.push(current)
+      }
       current = [line]
-    } else {
+    } else if (current) {
       current.push(line)
     }
   }
 
-  if (current.length) {
+  if (current?.length) {
     blocks.push(current)
   }
 
@@ -50,6 +52,97 @@ function cleanQuestionNumber(line: string) {
   return line.replace(/^\d{1,3}[.．、]\s*/, '').trim()
 }
 
+function splitGlobalAnswerSection(rawText: string) {
+  const lines = rawText.replace(/\r/g, '').split('\n')
+  let cursor = 0
+
+  for (const [index, line] of lines.entries()) {
+    const trimmed = line.trim()
+    const looksLikeGlobalHeader =
+      /^(?:参考答案及解析|答案及解析|试题答案及解析|参考答案|试题答案|标准答案|答案解析|参考解析)\s*[:：]?/.test(trimmed) ||
+      (/^答案\s*[:：]?\s*$/.test(trimmed) && index > lines.length * 0.6)
+
+    if (looksLikeGlobalHeader) {
+      return {
+        questionText: rawText.slice(0, cursor),
+        answerText: rawText.slice(cursor),
+      }
+    }
+
+    cursor += line.length + 1
+  }
+
+  return { questionText: rawText, answerText: '' }
+}
+
+function parseGlobalAnswerMap(answerText: string) {
+  const answerMap = new Map<number, string>()
+
+  for (const match of answerText.matchAll(/(\d{1,3})\s*[-—~至]\s*(\d{1,3})\s*[:：]?\s*([A-H]{2,})/gi)) {
+    const start = Number(match[1])
+    const end = Number(match[2])
+    const letters = match[3].toUpperCase().split('')
+    for (let questionNo = start; questionNo <= end; questionNo += 1) {
+      const answer = letters[questionNo - start]
+      if (answer) {
+        answerMap.set(questionNo, answer)
+      }
+    }
+  }
+
+  for (const match of answerText.matchAll(/(?:^|[\s，,；;。])(\d{1,3})\s*[.．、:：]\s*([A-H]{1,6})(?=$|[\s，,；;。])/gi)) {
+    answerMap.set(Number(match[1]), match[2].toUpperCase())
+  }
+
+  for (const match of answerText.matchAll(/(?:^|[\s，,；;。])(\d{1,3})\s*题\s*[:：]\s*([A-H]{1,6})(?=$|[\s，,；;。])/gi)) {
+    answerMap.set(Number(match[1]), match[2].toUpperCase())
+  }
+
+  return answerMap
+}
+
+function parseGlobalAnalysisMap(answerText: string) {
+  const analysisMap = new Map<number, string>()
+  const normalized = answerText.replace(/\r/g, '')
+
+  for (const match of normalized.matchAll(/(?:^|\n)\s*(\d{1,3})[.．、]\s*([\s\S]*?)(?=\n\s*\d{1,3}[.．、]\s*|$)/g)) {
+    const questionNo = Number(match[1])
+    const entry = match[2].trim()
+    const analysis =
+      entry.match(/(?:解析|参考解析|【解析】|〖解析〗)\s*[:：]?\s*([\s\S]*)/)?.[1]?.trim() ??
+      entry.match(/[A-H]{1,6}\s*[。；;，,]\s*([\s\S]{12,})/)?.[1]?.trim() ??
+      ''
+
+    if (analysis) {
+      analysisMap.set(questionNo, analysis)
+    }
+  }
+
+  return analysisMap
+}
+
+function getQuestionNumber(line: string, fallback: number) {
+  return Number(line.match(/^(\d{1,3})[.．、]/)?.[1] ?? fallback)
+}
+
+function getOptionMarkers(text: string) {
+  return Array.from(text.matchAll(/(^|[\n\s])([A-H])[\s.．、:：]/g)).map((match) => ({
+    index: match.index + match[1].length,
+    markerLength: match[0].length - match[1].length,
+  }))
+}
+
+function getFirstOptionIndex(text: string) {
+  return getOptionMarkers(text)[0]?.index ?? -1
+}
+
+function getAnswerOrAnalysisIndex(text: string) {
+  const answerIndex = text.search(/(?:^|\n|\s)(?:答案|参考答案|【答案】|〖答案〗)\s*[:：]?/)
+  const analysisIndex = text.search(/(?:^|\n|\s)(?:解析|参考解析|【解析】|〖解析〗)\s*[:：]?/)
+  const indexes = [answerIndex, analysisIndex].filter((index) => index >= 0)
+  return indexes.length ? Math.min(...indexes) : text.length
+}
+
 function extractSection(text: string, labels: string[], stopLabels: string[]) {
   const labelPattern = labels.map((label) => label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')
   const stopPattern = stopLabels.map((label) => label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')
@@ -58,20 +151,23 @@ function extractSection(text: string, labels: string[], stopLabels: string[]) {
 }
 
 function parseOptions(text: string) {
-  const options: string[] = []
-  const optionRegex = /^([A-H])[\s.．、:：]\s*(.+)$/gm
-  let match: RegExpExecArray | null
+  const markers = getOptionMarkers(text)
+  const cutAt = getAnswerOrAnalysisIndex(text)
+  const options = markers.map((marker, index) => {
+    const nextMarker = markers[index + 1]
+    const end = Math.min(nextMarker?.index ?? cutAt, cutAt)
+    return text
+      .slice(marker.index + marker.markerLength, end)
+      .replace(/\s+/g, ' ')
+      .trim()
+  })
 
-  while ((match = optionRegex.exec(text))) {
-    options.push(match[2].trim())
-  }
-
-  return options
+  return options.filter(Boolean)
 }
 
 function extractStem(text: string, hasOptions: boolean) {
   const withoutNumber = text.replace(/^\d{1,3}[.．、]\s*/, '').trim()
-  const optionIndex = hasOptions ? withoutNumber.search(/\n[A-H][\s.．、:：]\s*/) : -1
+  const optionIndex = hasOptions ? getFirstOptionIndex(withoutNumber) : -1
   const answerIndex = withoutNumber.search(/\n\s*(?:答案|参考答案|【答案】|〖答案〗)\s*[:：]?/)
   const analysisIndex = withoutNumber.search(/\n\s*(?:解析|参考解析|【解析】|〖解析〗)\s*[:：]?/)
   const cutPoints = [optionIndex, answerIndex, analysisIndex].filter((index) => index >= 0)
@@ -124,12 +220,16 @@ function difficultyFor(type: Question['type']): Question['difficulty'] {
 
 export function parsePastedPaperText(rawText: string, course: Course, meta: ParserMeta): ParseResult {
   const warnings: string[] = []
-  const blocks = splitQuestionBlocks(rawText)
+  const globalSections = splitGlobalAnswerSection(rawText)
+  const globalAnswerMap = parseGlobalAnswerMap(globalSections.answerText)
+  const globalAnalysisMap = parseGlobalAnalysisMap(globalSections.answerText)
+  const blocks = splitQuestionBlocks(globalSections.questionText)
   const paperSlug = normalizeId(`${meta.courseId}-${meta.year}-${meta.session}-${meta.title}`) || `paper-${Date.now()}`
   const paperId = `import-${paperSlug}`
 
   const questions: Question[] = blocks.flatMap((block, index) => {
     const fullText = block.join('\n')
+    const questionNo = getQuestionNumber(block[0] ?? '', index + 1)
     const firstLine = cleanQuestionNumber(block[0] ?? '')
     if (!firstLine) {
       return []
@@ -144,9 +244,10 @@ export function parsePastedPaperText(rawText: string, course: Course, meta: Pars
       '评分点',
       '评分标准',
       '要点',
-    ])
+    ]) || globalAnswerMap.get(questionNo) || ''
     const analysis =
       extractSection(fullText, ['解析', '参考解析', '【解析】', '〖解析〗'], ['评分点', '评分标准', '要点']) ||
+      globalAnalysisMap.get(questionNo) ||
       '本题来自粘贴导入，暂未提供解析。建议补充教材页码、考点和易错点。'
     const answerLetters = options.length ? Array.from(new Set(answerRaw.toUpperCase().match(/[A-H]/g) ?? [])) : []
     const stem = extractStem(fullText, options.length > 0)
