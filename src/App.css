@@ -70,6 +70,7 @@
 .rail-nav button,
 .progress-actions button,
 .study-task button,
+.preview-score-controls button,
 .paper-actions button,
 .question-actions button,
 .report-actions button,
@@ -110,6 +111,7 @@
 .rail-nav button:hover,
 .progress-actions button:hover,
 .study-task button:hover,
+.preview-score-controls button:hover,
 .paper-actions button:hover,
 .question-actions button:hover,
 .resource-box button:hover,
@@ -1407,7 +1409,7 @@
 
 .builder-preview-head {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, auto);
   gap: 12px;
   align-items: start;
 }
@@ -1422,6 +1424,59 @@
 .builder-preview-head small,
 .preview-question-list small {
   color: var(--ink-muted);
+}
+
+.preview-side {
+  display: grid;
+  gap: 8px;
+  justify-items: end;
+  min-width: 0;
+}
+
+.preview-score-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.preview-score-controls label {
+  display: grid;
+  gap: 4px;
+  min-width: 96px;
+}
+
+.preview-score-controls span,
+.point-field span {
+  color: var(--ink-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.preview-score-controls input,
+.preview-edit-grid input {
+  width: 100%;
+  min-width: 0;
+  min-height: 38px;
+  padding: 8px 9px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  outline: none;
+}
+
+.preview-score-controls button {
+  align-self: end;
+  min-height: 38px;
+  padding: 7px 10px;
+  font-size: 13px;
+}
+
+.preview-score-controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
 }
 
 .preview-metrics,
@@ -1511,7 +1566,7 @@
 
 .preview-edit-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(96px, 0.38fr) minmax(0, 0.84fr) minmax(0, 1.2fr);
   gap: 10px;
   padding: 0 10px 10px 54px;
 }
@@ -1540,7 +1595,9 @@
   outline: none;
 }
 
-.preview-edit-grid textarea:focus {
+.preview-edit-grid input:focus,
+.preview-edit-grid textarea:focus,
+.preview-score-controls input:focus {
   border-color: var(--blue);
   box-shadow: 0 0 0 3px rgba(39, 98, 122, 0.14);
 }
@@ -1891,6 +1948,14 @@
 
   .builder-preview-head {
     grid-template-columns: 1fr;
+  }
+
+  .preview-side {
+    justify-items: start;
+  }
+
+  .preview-score-controls {
+    justify-content: flex-start;
   }
 
   .preview-metrics,

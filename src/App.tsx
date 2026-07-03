@@ -1805,6 +1805,11 @@ function parseAnswerFromEditor(question: Question, value: string) {
     .filter(Boolean)
 }
 
+function readPositiveInteger(value: string, fallback: number) {
+  const parsed = Number(value)
+  return Number.isFinite(parsed) && parsed > 0 ? Math.round(parsed) : fallback
+}
+
 function ResourcesView({
   selectedCourse,
   selectedPaper,
@@ -1951,6 +1956,24 @@ function ResourcesView({
     setBuilderMessage(`已载入 ${paper.title}。修正答案或解析后，点“确认导入”覆盖保存。`)
   }
 
+  function updatePreviewPaper(patch: Partial<Paper>) {
+    setBuilderPreview((current) => {
+      if (!current) {
+        return current
+      }
+
+      const nextPaper = current.bank.papers[0]
+
+      return {
+        ...current,
+        bank: {
+          ...current.bank,
+          papers: nextPaper ? [{ ...nextPaper, ...patch }] : [],
+        },
+      }
+    })
+  }
+
   function updatePreviewQuestion(questionId: string, patch: Partial<Question>) {
     setBuilderPreview((current) => {
       if (!current) {
@@ -1970,18 +1993,29 @@ function ResourcesView({
       return {
         ...current,
         bank: {
-          papers: nextPaper
-            ? [
-                {
-                  ...nextPaper,
-                  totalScore: nextQuestions.reduce((sum, question) => sum + question.points, 0),
-                },
-              ]
-            : [],
+          papers: nextPaper ? [nextPaper] : [],
           questions: nextQuestions,
         },
       }
     })
+  }
+
+  function updatePreviewPaperScore(value: string) {
+    updatePreviewPaper({ totalScore: readPositiveInteger(value, previewPaper?.totalScore ?? 100) })
+  }
+
+  function syncPreviewPaperScore() {
+    if (!previewStats) {
+      setBuilderMessage('还没有可同步的题目合计。')
+      return
+    }
+
+    updatePreviewPaper({ totalScore: Math.max(previewStats.score, 1) })
+    setBuilderMessage(`已把整卷满分同步为题目合计 ${previewStats.score} 分。`)
+  }
+
+  function updatePreviewQuestionPoints(question: Question, value: string) {
+    updatePreviewQuestion(question.id, { points: readPositiveInteger(value, question.points) })
   }
 
   function updatePreviewAnswer(question: Question, value: string) {
@@ -2232,14 +2266,31 @@ function ResourcesView({
                 <div>
                   <p className="eyebrow">导入前预览</p>
                   <strong>{previewPaper.title}</strong>
-                  <small>{previewPaper.year} · {previewPaper.session} · {previewStats.score} 分</small>
+                  <small>{previewPaper.year} · {previewPaper.session} · 题目合计 {previewStats.score} 分</small>
                 </div>
-                <div className="preview-metrics">
-                  <span>{previewStats.total} 题</span>
-                  <span>{previewStats.objective} 客观题</span>
-                  <span>{previewStats.text} 主观题</span>
-                  <span className={previewStats.missingAnswer ? 'warn' : ''}>{previewStats.missingAnswer} 缺答案</span>
-                  <span className={previewStats.missingAnalysis ? 'warn' : ''}>{previewStats.missingAnalysis} 缺解析</span>
+                <div className="preview-side">
+                  <div className="preview-score-controls">
+                    <label>
+                      <span>整卷满分</span>
+                      <input
+                        type="number"
+                        min={1}
+                        step={1}
+                        value={previewPaper.totalScore}
+                        onChange={(event) => updatePreviewPaperScore(event.target.value)}
+                      />
+                    </label>
+                    <button type="button" onClick={syncPreviewPaperScore} disabled={previewPaper.totalScore === previewStats.score}>
+                      按题目合计
+                    </button>
+                  </div>
+                  <div className="preview-metrics">
+                    <span>{previewStats.total} 题</span>
+                    <span>{previewStats.objective} 客观题</span>
+                    <span>{previewStats.text} 主观题</span>
+                    <span className={previewStats.missingAnswer ? 'warn' : ''}>{previewStats.missingAnswer} 缺答案</span>
+                    <span className={previewStats.missingAnalysis ? 'warn' : ''}>{previewStats.missingAnalysis} 缺解析</span>
+                  </div>
                 </div>
               </div>
 
@@ -2268,6 +2319,16 @@ function ResourcesView({
                         {needsFix && <em>待校正</em>}
                       </summary>
                       <div className="preview-edit-grid">
+                        <label className="point-field">
+                          <span>本题分值</span>
+                          <input
+                            type="number"
+                            min={1}
+                            step={1}
+                            value={question.points}
+                            onChange={(event) => updatePreviewQuestionPoints(question, event.target.value)}
+                          />
+                        </label>
                         <label>
                           <span>{question.type === 'single' || question.type === 'multiple' ? '答案' : '参考要点'}</span>
                           <textarea
