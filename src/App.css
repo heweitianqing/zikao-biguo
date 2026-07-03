@@ -1049,18 +1049,27 @@
   gap: 8px;
 }
 
-.preview-question-list > div:not(.preview-more) {
-  display: grid;
-  grid-template-columns: 34px minmax(0, 1fr);
-  gap: 10px;
-  align-items: start;
-  padding: 10px;
+.preview-question-editor {
+  overflow: hidden;
   background: rgba(236, 228, 214, 0.5);
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
 
-.preview-question-list span {
+.preview-question-editor summary {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.preview-question-editor summary::-webkit-details-marker {
+  display: none;
+}
+
+.preview-question-editor summary > span {
   display: grid;
   place-items: center;
   min-height: 30px;
@@ -1071,19 +1080,60 @@
   font-weight: 900;
 }
 
-.preview-question-list strong,
-.preview-question-list small {
+.preview-question-editor strong,
+.preview-question-editor small {
   display: block;
   min-width: 0;
   overflow-wrap: anywhere;
 }
 
-.preview-more {
-  padding: 10px;
+.preview-question-editor summary em {
+  grid-column: 2;
+  justify-self: start;
+  padding: 3px 8px;
+  color: var(--red);
+  background: rgba(217, 79, 53, 0.08);
+  border: 1px solid rgba(217, 79, 53, 0.22);
+  border-radius: 999px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.preview-edit-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 10px;
+  padding: 0 10px 10px 54px;
+}
+
+.preview-edit-grid label {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.preview-edit-grid label > span {
   color: var(--ink-muted);
-  background: rgba(236, 228, 214, 0.35);
-  border: 1px dashed var(--line-strong);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.preview-edit-grid textarea {
+  width: 100%;
+  min-height: 82px;
+  resize: vertical;
+  padding: 9px 10px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
+  outline: none;
+}
+
+.preview-edit-grid textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(39, 98, 122, 0.14);
 }
 
 .paste-builder {
@@ -1381,6 +1431,11 @@
   .preview-metrics,
   .preview-warnings {
     justify-content: flex-start;
+  }
+
+  .preview-edit-grid {
+    grid-template-columns: 1fr;
+    padding-left: 10px;
   }
 
   .mobile-nav {

@@ -1085,6 +1085,31 @@ function getPreviewStats(bank: ImportedBank) {
   }
 }
 
+function formatAnswerForEditor(question: Question) {
+  if (question.answer.includes('待补充答案')) {
+    return ''
+  }
+  if (question.type === 'single' || question.type === 'multiple') {
+    return question.answer.join(',')
+  }
+  return question.answer.join('\n')
+}
+
+function parseAnswerFromEditor(question: Question, value: string) {
+  const trimmed = value.trim()
+  if (!trimmed) {
+    return ['待补充答案']
+  }
+  if (question.type === 'single' || question.type === 'multiple') {
+    const letters = Array.from(new Set(trimmed.toUpperCase().match(/[A-H]/g) ?? []))
+    return letters.length ? letters : ['待补充答案']
+  }
+  return trimmed
+    .split(/\n|；|;/)
+    .map((item) => item.trim())
+    .filter(Boolean)
+}
+
 function ResourcesView({
   selectedCourse,
   allPapers,
@@ -1140,7 +1165,7 @@ function ResourcesView({
     setBuilderTitle(`${paper.title}导入卷`)
     setPastedText('')
     setBuilderPreview(null)
-    setBuilderMessage(`已预填 ${paper.title}。找到题文后粘贴进来，点“生成可刷试卷”。`)
+    setBuilderMessage(`已预填 ${paper.title}。找到题文后粘贴进来，点“解析预览”。`)
   }
 
   async function copySearchQuery(query: string) {
@@ -1182,6 +1207,47 @@ function ResourcesView({
     onImportBank(builderPreview.bank, '已从预览确认导入')
     setBuilderMessage(`已导入 ${builderPreview.bank.questions.length} 道题。`)
     setBuilderPreview(null)
+  }
+
+  function updatePreviewQuestion(questionId: string, patch: Partial<Question>) {
+    setBuilderPreview((current) => {
+      if (!current) {
+        return current
+      }
+
+      const nextQuestions = current.bank.questions.map((question) =>
+        question.id === questionId
+          ? {
+              ...question,
+              ...patch,
+            }
+          : question,
+      )
+      const nextPaper = current.bank.papers[0]
+
+      return {
+        ...current,
+        bank: {
+          papers: nextPaper
+            ? [
+                {
+                  ...nextPaper,
+                  totalScore: nextQuestions.reduce((sum, question) => sum + question.points, 0),
+                },
+              ]
+            : [],
+          questions: nextQuestions,
+        },
+      }
+    })
+  }
+
+  function updatePreviewAnswer(question: Question, value: string) {
+    const answer = parseAnswerFromEditor(question, value)
+    updatePreviewQuestion(question.id, {
+      answer,
+      rubric: question.type === 'short' || question.type === 'essay' ? answer.filter((item) => item !== '待补充答案').slice(0, 6) : undefined,
+    })
   }
 
   function downloadBuilderPreview() {
@@ -1445,20 +1511,45 @@ function ResourcesView({
               )}
 
               <div className="preview-question-list">
-                {builderPreview.bank.questions.slice(0, 8).map((question, index) => (
-                  <div key={question.id}>
-                    <span>{index + 1}</span>
-                    <div>
-                      <strong>{question.stem}</strong>
-                      <small>
-                        {questionLabel(question.type)} · {question.points} 分 · 答案 {question.answer.join(' / ')}
-                      </small>
-                    </div>
-                  </div>
-                ))}
-                {builderPreview.bank.questions.length > 8 && (
-                  <div className="preview-more">还有 {builderPreview.bank.questions.length - 8} 道题，导入后可完整查看。</div>
-                )}
+                {builderPreview.bank.questions.map((question, index) => {
+                  const needsFix = question.answer.includes('待补充答案') || question.analysis.includes('暂未提供解析')
+                  return (
+                    <details key={question.id} className="preview-question-editor" open={index < 3 || needsFix}>
+                      <summary>
+                        <span>{index + 1}</span>
+                        <div>
+                          <strong>{question.stem}</strong>
+                          <small>
+                            {questionLabel(question.type)} · {question.points} 分 · 答案 {question.answer.join(' / ')}
+                          </small>
+                        </div>
+                        {needsFix && <em>待校正</em>}
+                      </summary>
+                      <div className="preview-edit-grid">
+                        <label>
+                          <span>{question.type === 'single' || question.type === 'multiple' ? '答案' : '参考要点'}</span>
+                          <textarea
+                            value={formatAnswerForEditor(question)}
+                            placeholder={question.type === 'single' || question.type === 'multiple' ? '如 A 或 A,B' : '每行一个答题要点'}
+                            onChange={(event) => updatePreviewAnswer(question, event.target.value)}
+                          />
+                        </label>
+                        <label>
+                          <span>解析</span>
+                          <textarea
+                            value={question.analysis}
+                            placeholder="补充教材考点、易错点或答案解释"
+                            onChange={(event) =>
+                              updatePreviewQuestion(question.id, {
+                                analysis: event.target.value.trim() || '本题来自粘贴导入，暂未提供解析。建议补充教材页码、考点和易错点。',
+                              })
+                            }
+                          />
+                        </label>
+                      </div>
+                    </details>
+                  )
+                })}
               </div>
             </section>
           )}
