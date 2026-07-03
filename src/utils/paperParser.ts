@@ -75,6 +75,23 @@ function splitGlobalAnswerSection(rawText: string) {
   return { questionText: rawText, answerText: '' }
 }
 
+function parseNumberedAnswerEntries(answerText: string) {
+  const entryMap = new Map<number, string>()
+  const normalized = answerText.replace(/\r/g, '')
+
+  for (const match of normalized.matchAll(
+    /(?:^|\n)\s*(?:第\s*)?(\d{1,3})\s*(?:[.．、]|题\s*[:：、.]?)\s*([\s\S]*?)(?=\n\s*(?:第\s*)?\d{1,3}\s*(?:[.．、]|题\s*[:：、.]?)\s*|$)/g,
+  )) {
+    const questionNo = Number(match[1])
+    const entry = match[2].trim()
+    if (entry) {
+      entryMap.set(questionNo, entry)
+    }
+  }
+
+  return entryMap
+}
+
 function parseGlobalAnswerMap(answerText: string) {
   const answerMap = new Map<number, string>()
 
@@ -101,13 +118,36 @@ function parseGlobalAnswerMap(answerText: string) {
   return answerMap
 }
 
+function cleanGlobalTextAnswer(entry: string) {
+  const explicitAnswer =
+    entry.match(/(?:答案|参考答案|【答案】|〖答案〗)\s*[:：]?\s*([\s\S]*?)(?=(?:解析|参考解析|【解析】|〖解析〗)\s*[:：]?|$)/)?.[1] ??
+    entry
+  return explicitAnswer
+    .replace(/(?:解析|参考解析|【解析】|〖解析〗)\s*[:：]?[\s\S]*$/i, '')
+    .replace(/^(?:答案|参考答案|要点|参考要点|评分点|评分标准)\s*[:：]?/i, '')
+    .replace(/^[A-H]{1,6}\s*[。；;，,、:]?\s*/i, '')
+    .trim()
+}
+
+function parseGlobalTextAnswerMap(answerText: string) {
+  const entries = parseNumberedAnswerEntries(answerText)
+  const answerMap = new Map<number, string>()
+
+  entries.forEach((entry, questionNo) => {
+    const answer = cleanGlobalTextAnswer(entry)
+    if (answer) {
+      answerMap.set(questionNo, answer)
+    }
+  })
+
+  return answerMap
+}
+
 function parseGlobalAnalysisMap(answerText: string) {
   const analysisMap = new Map<number, string>()
-  const normalized = answerText.replace(/\r/g, '')
+  const entries = parseNumberedAnswerEntries(answerText)
 
-  for (const match of normalized.matchAll(/(?:^|\n)\s*(\d{1,3})[.．、]\s*([\s\S]*?)(?=\n\s*\d{1,3}[.．、]\s*|$)/g)) {
-    const questionNo = Number(match[1])
-    const entry = match[2].trim()
+  entries.forEach((entry, questionNo) => {
     const analysis =
       entry.match(/(?:解析|参考解析|【解析】|〖解析〗)\s*[:：]?\s*([\s\S]*)/)?.[1]?.trim() ??
       entry.match(/[A-H]{1,6}\s*[。；;，,]\s*([\s\S]{12,})/)?.[1]?.trim() ??
@@ -116,7 +156,7 @@ function parseGlobalAnalysisMap(answerText: string) {
     if (analysis) {
       analysisMap.set(questionNo, analysis)
     }
-  }
+  })
 
   return analysisMap
 }
@@ -222,6 +262,7 @@ export function parsePastedPaperText(rawText: string, course: Course, meta: Pars
   const warnings: string[] = []
   const globalSections = splitGlobalAnswerSection(rawText)
   const globalAnswerMap = parseGlobalAnswerMap(globalSections.answerText)
+  const globalTextAnswerMap = parseGlobalTextAnswerMap(globalSections.answerText)
   const globalAnalysisMap = parseGlobalAnalysisMap(globalSections.answerText)
   const blocks = splitQuestionBlocks(globalSections.questionText)
   const paperSlug = normalizeId(`${meta.courseId}-${meta.year}-${meta.session}-${meta.title}`) || `paper-${Date.now()}`
@@ -244,7 +285,7 @@ export function parsePastedPaperText(rawText: string, course: Course, meta: Pars
       '评分点',
       '评分标准',
       '要点',
-    ]) || globalAnswerMap.get(questionNo) || ''
+    ]) || (options.length ? globalAnswerMap.get(questionNo) : globalTextAnswerMap.get(questionNo)) || ''
     const analysis =
       extractSection(fullText, ['解析', '参考解析', '【解析】', '〖解析〗'], ['评分点', '评分标准', '要点']) ||
       globalAnalysisMap.get(questionNo) ||
