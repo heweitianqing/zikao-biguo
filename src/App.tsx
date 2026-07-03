@@ -176,7 +176,7 @@ function App() {
     if (paper.status === 'ready') {
       ensureAttempt(paper)
     } else {
-      setNotice(`${paper.title} 还没有导入题目。可以在资源页用 JSON 真题包导入。`)
+      setNotice(`${paper.title} 还没有导入题目，已切到资源页并预填制卷信息。`)
     }
   }
 
@@ -822,6 +822,7 @@ function App() {
         {state.view === 'resources' && (
           <ResourcesView
             selectedCourse={selectedCourse}
+            selectedPaper={selectedPaper}
             allPapers={visiblePapers}
             importedBank={imports}
             importedCount={imports.questions.length}
@@ -1128,6 +1129,7 @@ function parseAnswerFromEditor(question: Question, value: string) {
 
 function ResourcesView({
   selectedCourse,
+  selectedPaper,
   allPapers,
   importedBank,
   importedCount,
@@ -1140,6 +1142,7 @@ function ResourcesView({
   onOpenPaper,
 }: {
   selectedCourse: (typeof courses)[number]
+  selectedPaper: Paper
   allPapers: Paper[]
   importedBank: ImportedBank
   importedCount: number
@@ -1158,6 +1161,7 @@ function ResourcesView({
   const [pastedText, setPastedText] = useState('')
   const [builderMessage, setBuilderMessage] = useState('支持每题带答案，也支持卷尾统一“参考答案”。')
   const [builderPreview, setBuilderPreview] = useState<BuilderPreview | null>(null)
+  const [prefilledPaperId, setPrefilledPaperId] = useState<string | null>(null)
   const importedQuestionCount = (paperId: string) =>
     importedBank.questions.filter((question) => question.paperId === paperId).length
   const importedQuestionsForPaper = (paper: Paper) => {
@@ -1186,8 +1190,25 @@ function ResourcesView({
     setBuilderTitle(`${paper.title}导入卷`)
     setPastedText('')
     setBuilderPreview(null)
+    setPrefilledPaperId(paper.id)
     setBuilderMessage(`已预填 ${paper.title}。找到题文后粘贴进来，点“解析预览”。`)
   }
+
+  useEffect(() => {
+    if (selectedPaper.status !== 'needs-import' || selectedPaper.id === prefilledPaperId) {
+      return
+    }
+
+    const course = courses.find((item) => item.id === selectedPaper.courseId) ?? selectedCourse
+    setBuilderCourseId(course.id)
+    setBuilderYear(selectedPaper.year)
+    setBuilderSession(selectedPaper.session)
+    setBuilderTitle(`${selectedPaper.title}导入卷`)
+    setPastedText('')
+    setBuilderPreview(null)
+    setPrefilledPaperId(selectedPaper.id)
+    setBuilderMessage(`已预填 ${selectedPaper.title}。找到题文后粘贴进来，点“解析预览”。`)
+  }, [prefilledPaperId, selectedCourse, selectedPaper])
 
   async function copySearchQuery(query: string) {
     try {
