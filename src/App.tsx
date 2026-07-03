@@ -62,6 +62,16 @@ function getOptionLetter(index: number) {
   return String.fromCharCode(65 + index)
 }
 
+function downloadJson(filename: string, data: unknown) {
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
+  const url = URL.createObjectURL(blob)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = filename
+  link.click()
+  URL.revokeObjectURL(url)
+}
+
 function App() {
   const [state, setState] = useState<AppState>(() => loadState(defaultState))
   const [imports, setImports] = useState<ImportedBank>(() => loadImports())
@@ -354,6 +364,59 @@ function App() {
     setNotice(`${messagePrefix} ${bank.papers.length} 套试卷、${bank.questions.length} 道题，已切到新试卷。`)
   }
 
+  function deleteImportedPaper(paperId: string) {
+    const paper = imports.papers.find((item) => item.id === paperId)
+    if (!paper) {
+      setNotice('没有找到这套导入卷。')
+      return
+    }
+
+    const nextPapers = imports.papers.filter((item) => item.id !== paperId)
+    const nextQuestions = imports.questions.filter((question) => question.paperId !== paperId)
+    setImports({ papers: nextPapers, questions: nextQuestions })
+    saveImports(nextPapers, nextQuestions)
+    setState((current) => {
+      const nextAttempts = { ...current.attempts }
+      delete nextAttempts[paperId]
+      if (current.selectedPaperId !== paperId) {
+        return { ...current, attempts: nextAttempts }
+      }
+      const fallbackPaper = seedPapers.find((item) => item.courseId === paper.courseId) ?? seedPapers[0]
+      return {
+        ...current,
+        attempts: nextAttempts,
+        selectedCourseId: fallbackPaper.courseId,
+        selectedPaperId: fallbackPaper.id,
+        selectedQuestionIndex: 0,
+        view: current.view === 'resources' ? 'resources' : 'papers',
+      }
+    })
+    setNotice(`已删除本地导入卷：${paper.title}。`)
+  }
+
+  function exportImportedPaper(paperId: string) {
+    const paper = imports.papers.find((item) => item.id === paperId)
+    if (!paper) {
+      setNotice('没有找到这套导入卷。')
+      return
+    }
+    const bank = {
+      papers: [paper],
+      questions: imports.questions.filter((question) => question.paperId === paperId),
+    }
+    downloadJson(`${paper.id}.json`, bank)
+    setNotice(`已导出 ${paper.title}。`)
+  }
+
+  function exportAllImports() {
+    if (!imports.papers.length) {
+      setNotice('还没有导入卷可以备份。')
+      return
+    }
+    downloadJson(`zikao-biguo-imports-${new Date().toISOString().slice(0, 10)}.json`, imports)
+    setNotice(`已导出 ${imports.papers.length} 套导入卷备份。`)
+  }
+
   function handleImport(file: File) {
     const reader = new FileReader()
     reader.onload = () => {
@@ -368,13 +431,7 @@ function App() {
   }
 
   function downloadImportTemplate() {
-    const blob = new Blob([JSON.stringify(importTemplate, null, 2)], { type: 'application/json' })
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement('a')
-    link.href = url
-    link.download = 'zikao-import-template.json'
-    link.click()
-    URL.revokeObjectURL(url)
+    downloadJson('zikao-import-template.json', importTemplate)
   }
 
   function clearData() {
@@ -664,10 +721,16 @@ function App() {
         {state.view === 'resources' && (
           <ResourcesView
             selectedCourse={selectedCourse}
+            allPapers={allPapers}
+            importedBank={imports}
             importedCount={imports.questions.length}
             onImport={handleImport}
             onImportBank={(bank, messagePrefix) => importBank(bank, messagePrefix)}
             onDownloadTemplate={downloadImportTemplate}
+            onExportAllImports={exportAllImports}
+            onExportImportedPaper={exportImportedPaper}
+            onDeleteImportedPaper={deleteImportedPaper}
+            onOpenPaper={selectPaper}
           />
         )}
 
@@ -784,16 +847,28 @@ function MistakesView({ questions, onOpen }: { questions: Question[]; onOpen: (q
 
 function ResourcesView({
   selectedCourse,
+  allPapers,
+  importedBank,
   importedCount,
   onImport,
   onImportBank,
   onDownloadTemplate,
+  onExportAllImports,
+  onExportImportedPaper,
+  onDeleteImportedPaper,
+  onOpenPaper,
 }: {
   selectedCourse: (typeof courses)[number]
+  allPapers: Paper[]
+  importedBank: ImportedBank
   importedCount: number
   onImport: (file: File) => void
   onImportBank: (bank: ImportedBank, messagePrefix?: string) => void
   onDownloadTemplate: () => void
+  onExportAllImports: () => void
+  onExportImportedPaper: (paperId: string) => void
+  onDeleteImportedPaper: (paperId: string) => void
+  onOpenPaper: (paper: Paper) => void
 }) {
   const [builderCourseId, setBuilderCourseId] = useState(selectedCourse.id)
   const [builderYear, setBuilderYear] = useState(new Date().getFullYear())
@@ -801,6 +876,19 @@ function ResourcesView({
   const [builderTitle, setBuilderTitle] = useState(`${selectedCourse.code} ${new Date().getFullYear()} 年4月真题导入卷`)
   const [pastedText, setPastedText] = useState('')
   const [builderMessage, setBuilderMessage] = useState('支持常见格式：题号开头、A/B/C/D 选项、答案、解析。')
+  const importedQuestionCount = (paperId: string) =>
+    importedBank.questions.filter((question) => question.paperId === paperId).length
+  const courseCoverage = courses
+    .filter((course) => ['xi', 'history', 'marx', 'multimedia'].includes(course.id))
+    .map((course) => {
+      const coursePapers = allPapers.filter((paper) => paper.courseId === course.id)
+      return {
+        course,
+        readyCount: coursePapers.filter((paper) => paper.status === 'ready').length,
+        importedCount: importedBank.papers.filter((paper) => paper.courseId === course.id).length,
+        waitingCount: coursePapers.filter((paper) => paper.status === 'needs-import').length,
+      }
+    })
 
   function buildPaperFromText() {
     const course = courses.find((item) => item.id === builderCourseId) ?? selectedCourse
@@ -853,7 +941,30 @@ function ResourcesView({
             <Download size={18} />
             下载导入模板
           </button>
+          <button type="button" onClick={onExportAllImports}>
+            <Download size={18} />
+            备份全部导入卷
+          </button>
           <small>已导入 {importedCount} 道本地题。</small>
+        </div>
+
+        <div className="resource-box coverage-box">
+          <div>
+            <FileQuestion size={22} />
+            <strong>真题补齐进度</strong>
+          </div>
+          <p>先把公共课和计算机的 4 月/10 月卷补进来。旧代码 `03708/03709` 会按新代码一起显示。</p>
+          <div className="coverage-list">
+            {courseCoverage.map(({ course, readyCount, importedCount: localCount, waitingCount }) => (
+              <div key={course.id}>
+                <span className="course-code" style={{ '--course-color': course.color } as CSSProperties}>
+                  {course.code}
+                </span>
+                <strong>{course.shortName}</strong>
+                <small>{readyCount} 套可刷 · {localCount} 套本地导入 · {waitingCount} 套待补</small>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="resource-box paste-builder">
@@ -910,6 +1021,49 @@ function ResourcesView({
           <small>{builderMessage}</small>
         </div>
 
+        <div className="resource-box imported-manager">
+          <div>
+            <ArchiveIcon />
+            <strong>本地导入卷</strong>
+          </div>
+          <p>这里管理你自己整理进来的历年真题。导出可以当备份，删除只影响浏览器本地数据。</p>
+          {importedBank.papers.length ? (
+            <div className="imported-paper-list">
+              {importedBank.papers
+                .slice()
+                .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
+                .map((paper) => {
+                  const course = courses.find((item) => item.id === paper.courseId)
+                  return (
+                    <div key={paper.id} className="imported-paper-item">
+                      <div>
+                        <span>{course?.shortName ?? paper.courseId}</span>
+                        <strong>{paper.title}</strong>
+                        <small>{paper.year} · {paper.session} · {importedQuestionCount(paper.id)} 题 · {paper.totalScore} 分</small>
+                      </div>
+                      <div>
+                        <button type="button" onClick={() => onOpenPaper(paper)}>
+                          <FileQuestion size={16} />
+                          开刷
+                        </button>
+                        <button type="button" onClick={() => onExportImportedPaper(paper.id)}>
+                          <Download size={16} />
+                          导出
+                        </button>
+                        <button type="button" onClick={() => onDeleteImportedPaper(paper.id)}>
+                          <XCircle size={16} />
+                          删除
+                        </button>
+                      </div>
+                    </div>
+                  )
+                })}
+            </div>
+          ) : (
+            <div className="compact-empty">还没有本地导入卷。先用粘贴制卷或 JSON 导入补一套。</div>
+          )}
+        </div>
+
         <div className="resource-box source-list">
           <div>
             <LibraryBig size={22} />
@@ -946,6 +1100,10 @@ function ResourcesView({
       </div>
     </section>
   )
+}
+
+function ArchiveIcon() {
+  return <LibraryBig size={22} />
 }
 
 function SettingsView({
