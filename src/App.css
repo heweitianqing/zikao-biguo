@@ -70,6 +70,7 @@
 .rail-nav button,
 .paper-actions button,
 .question-actions button,
+.report-actions button,
 .resource-box button,
 .file-button,
 .setting-card button,
@@ -235,7 +236,8 @@
 .insight-panel,
 .library-view,
 .resources-view,
-.settings-view {
+.settings-view,
+.report-view {
   background: rgba(253, 248, 238, 0.88);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -442,6 +444,194 @@
 
 .question-actions button {
   flex: 1 1 120px;
+}
+
+.report-view {
+  padding: 22px;
+}
+
+.report-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: 16px;
+  align-items: stretch;
+  padding: 18px;
+  background: var(--paper-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.report-hero h3 {
+  margin-top: 6px;
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.1;
+}
+
+.report-hero p:not(.eyebrow) {
+  margin-top: 8px;
+  color: var(--ink-soft);
+}
+
+.report-score {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 4px;
+  color: #fffaf0;
+  background: var(--red);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.report-score.pass {
+  background: var(--green);
+}
+
+.report-score strong {
+  font-family: var(--mono);
+  font-size: 48px;
+  line-height: 1;
+}
+
+.report-score span,
+.report-score em {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.report-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.report-card {
+  min-width: 0;
+  padding: 16px;
+  background: var(--paper-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.metric-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.metric-list div {
+  padding: 12px;
+  background: rgba(236, 228, 214, 0.55);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.metric-list strong,
+.metric-list span {
+  display: block;
+}
+
+.metric-list strong {
+  font-family: var(--mono);
+  font-size: 22px;
+}
+
+.metric-list span,
+.chapter-rank span,
+.wrong-list small {
+  color: var(--ink-muted);
+  font-size: 12px;
+}
+
+.stat-bars,
+.chapter-rank,
+.wrong-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.stat-bars > div {
+  display: grid;
+  grid-template-columns: 72px 70px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.stat-bars span,
+.stat-bars strong {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.stat-bars em {
+  height: 9px;
+  overflow: hidden;
+  background: var(--surface-deep);
+  border-radius: 999px;
+}
+
+.stat-bars i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--green));
+}
+
+.chapter-rank > div {
+  padding: 12px;
+  background: rgba(236, 228, 214, 0.55);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.chapter-rank strong,
+.chapter-rank span {
+  display: block;
+}
+
+.wrong-review {
+  grid-column: 1 / -1;
+}
+
+.wrong-list button {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr) 70px;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  color: var(--ink);
+  background: rgba(236, 228, 214, 0.55);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-align: left;
+}
+
+.wrong-list button span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  color: #fffaf0;
+  background: var(--red);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.wrong-list button strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .primary,
@@ -901,7 +1091,12 @@
   }
 
   .resource-grid,
-  .settings-grid {
+  .settings-grid,
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-hero {
     grid-template-columns: 1fr;
   }
 
@@ -978,6 +1173,12 @@
   }
 
   .builder-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-list,
+  .stat-bars > div,
+  .wrong-list button {
     grid-template-columns: 1fr;
   }
 

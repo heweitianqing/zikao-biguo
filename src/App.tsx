@@ -14,6 +14,7 @@ import {
   RotateCcw,
   Settings,
   Sparkles,
+  Trophy,
   Upload,
   XCircle,
 } from 'lucide-react'
@@ -247,6 +248,57 @@ function App() {
         },
       }
     })
+  }
+
+  function submitPaper() {
+    if (!paperQuestions.length) {
+      setNotice('这套卷还没有题目，先导入真题。')
+      return
+    }
+
+    let finalScore = 0
+    const now = new Date().toISOString()
+    const nextAnswers = paperQuestions.reduce<Record<string, AnswerRecord>>((answers, question) => {
+      const existing = currentAttempt.answers[question.id] ?? {
+        questionId: question.id,
+        answer: [],
+        textAnswer: '',
+        checked: false,
+        earned: 0,
+        updatedAt: now,
+      }
+      const earned =
+        question.type === 'single' || question.type === 'multiple'
+          ? scoreObjective(question, existing.answer)
+          : scoreTextAnswer(question, existing.textAnswer)
+      finalScore += earned
+      return {
+        ...answers,
+        [question.id]: {
+          ...existing,
+          checked: true,
+          earned,
+          updatedAt: now,
+        },
+      }
+    }, {})
+
+    const possibleScore = paperQuestions.reduce((sum, question) => sum + question.points, 0)
+    const scaledScore = possibleScore ? Math.round((finalScore / possibleScore) * selectedPaper.totalScore) : finalScore
+
+    setState((current) => ({
+      ...current,
+      view: 'report',
+      attempts: {
+        ...current.attempts,
+        [selectedPaper.id]: {
+          ...(current.attempts[selectedPaper.id] ?? createAttempt(selectedPaper)),
+          answers: nextAnswers,
+          submittedAt: now,
+        },
+      },
+    }))
+    setNotice(`已交卷：卷面 ${finalScore}/${possibleScore}，折算 ${scaledScore}/${selectedPaper.totalScore}。`)
   }
 
   async function reviewWithAi(question: Question) {
@@ -558,6 +610,10 @@ function App() {
                 })}
               </div>
               <div className="paper-actions">
+                <button className="primary" type="button" onClick={submitPaper}>
+                  <Trophy size={16} />
+                  交卷
+                </button>
                 <button type="button" onClick={() => resetPaper(selectedPaper)}>
                   <RotateCcw size={16} />
                   重刷本卷
@@ -698,6 +754,23 @@ function App() {
               </div>
             </aside>
           </section>
+        )}
+
+        {state.view === 'report' && (
+          <ReportView
+            course={selectedCourse}
+            paper={selectedPaper}
+            questions={paperQuestions}
+            answers={currentAttempt.answers}
+            onBack={() => patchState({ view: 'practice' })}
+            onRetry={() => resetPaper(selectedPaper)}
+            onOpenQuestion={(question) => {
+              patchState({
+                view: 'practice',
+                selectedQuestionIndex: Math.max(selectedPaper.questionIds.indexOf(question.id), 0),
+              })
+            }}
+          />
         )}
 
         {state.view === 'papers' && <PapersView papers={coursePapers} selectedPaperId={selectedPaper.id} onSelect={selectPaper} />}
@@ -841,6 +914,144 @@ function MistakesView({ questions, onOpen }: { questions: Question[]; onOpen: (q
           <p>先刷一套卷，判题后这里会自动收集需要复盘的题。</p>
         </div>
       )}
+    </section>
+  )
+}
+
+function ReportView({
+  course,
+  paper,
+  questions,
+  answers,
+  onBack,
+  onRetry,
+  onOpenQuestion,
+}: {
+  course: (typeof courses)[number]
+  paper: Paper
+  questions: Question[]
+  answers: Record<string, AnswerRecord>
+  onBack: () => void
+  onRetry: () => void
+  onOpenQuestion: (question: Question) => void
+}) {
+  const possibleScore = questions.reduce((sum, question) => sum + question.points, 0)
+  const earnedScore = questions.reduce((sum, question) => sum + getQuestionScore(question, answers[question.id]), 0)
+  const scaledScore = possibleScore ? Math.round((earnedScore / possibleScore) * paper.totalScore) : 0
+  const pass = scaledScore >= course.passScore
+  const answeredCount = questions.filter((question) => {
+    const record = answers[question.id]
+    return Boolean(record?.answer.length || record?.textAnswer.trim())
+  }).length
+  const wrongQuestions = questions.filter((question) => getQuestionScore(question, answers[question.id]) < question.points)
+  const typeStats = (['single', 'multiple', 'short', 'essay'] as const)
+    .map((type) => {
+      const scoped = questions.filter((question) => question.type === type)
+      const total = scoped.reduce((sum, question) => sum + question.points, 0)
+      const earned = scoped.reduce((sum, question) => sum + getQuestionScore(question, answers[question.id]), 0)
+      return { type, count: scoped.length, earned, total }
+    })
+    .filter((item) => item.count)
+  const chapterStats = course.outline
+    .map((chapter) => {
+      const scoped = questions.filter((question) => question.chapterId === chapter.id)
+      const total = scoped.reduce((sum, question) => sum + question.points, 0)
+      const earned = scoped.reduce((sum, question) => sum + getQuestionScore(question, answers[question.id]), 0)
+      const rate = total ? earned / total : 1
+      return { chapter, count: scoped.length, earned, total, rate }
+    })
+    .filter((item) => item.count)
+    .sort((a, b) => a.rate - b.rate)
+
+  return (
+    <section className="report-view">
+      <div className="report-hero">
+        <div>
+          <p className="eyebrow">整卷报告</p>
+          <h3>{paper.title}</h3>
+          <p>{pass ? '已达到当前课程及格线。' : '还没到 60 分线，先从薄弱章节和错题重刷。'}</p>
+        </div>
+        <div className={`report-score ${pass ? 'pass' : ''}`}>
+          <strong>{scaledScore}</strong>
+          <span>折算 / {paper.totalScore}</span>
+          <em>{pass ? '通过线以上' : '需要复盘'}</em>
+        </div>
+      </div>
+
+      <div className="report-actions">
+        <button className="primary" type="button" onClick={onBack}>
+          <FileQuestion size={18} />
+          回到试卷
+        </button>
+        <button type="button" onClick={onRetry}>
+          <RotateCcw size={18} />
+          重刷本卷
+        </button>
+      </div>
+
+      <div className="report-grid">
+        <div className="report-card">
+          <p className="eyebrow">概览</p>
+          <div className="metric-list">
+            <div>
+              <strong>{earnedScore}/{possibleScore}</strong>
+              <span>卷面得分</span>
+            </div>
+            <div>
+              <strong>{answeredCount}/{questions.length}</strong>
+              <span>已作答</span>
+            </div>
+            <div>
+              <strong>{wrongQuestions.length}</strong>
+              <span>待复盘</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="report-card">
+          <p className="eyebrow">题型得分</p>
+          <div className="stat-bars">
+            {typeStats.map((item) => (
+              <div key={item.type}>
+                <span>{questionLabel(item.type)}</span>
+                <strong>{item.earned}/{item.total}</strong>
+                <em>
+                  <i style={{ width: `${item.total ? Math.round((item.earned / item.total) * 100) : 0}%` }} />
+                </em>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="report-card">
+          <p className="eyebrow">薄弱章节</p>
+          <div className="chapter-rank">
+            {chapterStats.slice(0, 4).map((item) => (
+              <div key={item.chapter.id}>
+                <strong>{item.chapter.title}</strong>
+                <span>{item.earned}/{item.total} 分 · {item.count} 题</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="report-card wrong-review">
+          <p className="eyebrow">错题回跳</p>
+          {wrongQuestions.length ? (
+            <div className="wrong-list">
+              {wrongQuestions.map((question) => (
+                <button key={question.id} type="button" onClick={() => onOpenQuestion(question)}>
+                  <span>{questionLabel(question.type)}</span>
+                  <strong>{question.stem}</strong>
+                  <small>{getQuestionScore(question, answers[question.id])}/{question.points} 分</small>
+                </button>
+              ))}
+            </div>
+          ) : (
+            <div className="compact-empty">这套卷暂时没有错题，下一步可以重刷真题保持手感。</div>
+          )}
+        </div>
+      </div>
     </section>
   )
 }

@@ -83,7 +83,7 @@ export type AppState = {
   selectedCourseId: string
   selectedPaperId: string
   selectedQuestionIndex: number
-  view: 'practice' | 'papers' | 'mistakes' | 'resources' | 'settings'
+  view: 'practice' | 'papers' | 'mistakes' | 'resources' | 'settings' | 'report'
   attempts: Record<string, PaperAttempt>
   deepseekApiKey: string
 }
