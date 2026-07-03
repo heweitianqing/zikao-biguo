@@ -75,6 +75,7 @@
 .file-button,
 .setting-card button,
 .mistake-filters button,
+.mistake-actions button,
 .empty-state button {
   min-height: 40px;
   border: 1px solid var(--line);
@@ -111,6 +112,7 @@
 .file-button:hover,
 .setting-card button:hover,
 .mistake-filters button:hover,
+.mistake-actions button:hover,
 .empty-state button:hover {
   transform: translateY(-1px);
 }
@@ -903,6 +905,34 @@
   border-color: var(--blue);
 }
 
+.mistake-actions {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(32, 36, 42, 0.04);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.mistake-actions button {
+  min-width: 164px;
+}
+
+.mistake-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.54;
+  transform: none;
+}
+
+.mistake-actions span {
+  min-width: 0;
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
 .mistake-focus {
   display: grid;
   gap: 10px;
@@ -1582,6 +1612,14 @@
 
   .mistake-list button {
     grid-template-columns: 68px minmax(0, 1fr);
+  }
+
+  .mistake-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .mistake-actions button {
+    width: 100%;
   }
 
   .mistake-score {

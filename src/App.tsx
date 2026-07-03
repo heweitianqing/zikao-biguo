@@ -14,6 +14,7 @@ import {
   KeyRound,
   LibraryBig,
   ListFilter,
+  PlayCircle,
   RotateCcw,
   Search,
   Settings,
@@ -109,6 +110,13 @@ function filterCoveredIndexPapers(papers: Paper[]) {
   return papers.filter((paper) => !(paper.status === 'needs-import' && coveredSlots.has(getPaperSlotKey(paper))))
 }
 
+function getLatestCheckedAnswer(questionId: string, attempts: Record<string, PaperAttempt>) {
+  return Object.values(attempts)
+    .map((attempt) => ({ attempt, record: attempt.answers[questionId] }))
+    .filter((item): item is { attempt: PaperAttempt; record: AnswerRecord } => Boolean(item.record?.checked))
+    .sort((a, b) => b.record.updatedAt.localeCompare(a.record.updatedAt))[0]
+}
+
 function getPaperTimelineStatus(paper: Paper, questions: Question[], attempt: PaperAttempt | undefined, passScore: number) {
   if (paper.status !== 'ready') {
     return {
@@ -155,11 +163,13 @@ function getPaperTimelineStatus(paper: Paper, questions: Question[], attempt: Pa
 function App() {
   const [state, setState] = useState<AppState>(() => loadState(defaultState))
   const [imports, setImports] = useState<ImportedBank>(() => loadImports())
+  const [reviewPaper, setReviewPaper] = useState<Paper | null>(null)
   const [aiReview, setAiReview] = useState<AiReview | null>(null)
   const [notice, setNotice] = useState('已按上海电机学院 2025 计划初始化题库。')
 
-  const allPapers = useMemo(() => [...seedPapers, ...imports.papers], [imports.papers])
-  const visiblePapers = useMemo(() => filterCoveredIndexPapers(allPapers), [allPapers])
+  const basePapers = useMemo(() => [...seedPapers, ...imports.papers], [imports.papers])
+  const allPapers = useMemo(() => (reviewPaper ? [...basePapers, reviewPaper] : basePapers), [basePapers, reviewPaper])
+  const visiblePapers = useMemo(() => filterCoveredIndexPapers(basePapers), [basePapers])
   const allQuestions = useMemo(() => [...seedQuestions, ...imports.questions], [imports.questions])
   const questionById = useMemo(() => new Map(allQuestions.map((question) => [question.id, question])), [allQuestions])
   const paperById = useMemo(() => new Map(allPapers.map((paper) => [paper.id, paper])), [allPapers])
@@ -170,10 +180,11 @@ function App() {
     .filter((paper) => paper.courseId === selectedCourse.id)
     .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
   const selectedPaper =
+    (reviewPaper?.id === state.selectedPaperId ? reviewPaper : undefined) ??
     visiblePapers.find((paper) => paper.id === state.selectedPaperId && paper.courseId === selectedCourse.id) ??
     coursePapers[0] ??
     visiblePapers[0] ??
-    allPapers[0]
+    basePapers[0]
   const paperQuestions = selectedPaper.questionIds
     .map((id) => questionById.get(id))
     .filter((question): question is Question => Boolean(question))
@@ -185,9 +196,10 @@ function App() {
   const progress = paperQuestions.length ? Math.round((answeredCount / paperQuestions.length) * 100) : 0
   const mistakeItems = allQuestions
     .map((question) => {
-      const attempt = state.attempts[question.paperId] ?? Object.values(state.attempts).find((item) => item.answers[question.id])
-      const record = attempt?.answers[question.id]
-      if (!record?.checked) return undefined
+      const latest = getLatestCheckedAnswer(question.id, state.attempts)
+      if (!latest) return undefined
+
+      const { attempt, record } = latest
 
       const earned = getQuestionScore(question, record)
       if (earned >= question.points) return undefined
@@ -487,6 +499,49 @@ function App() {
     setNotice(`${paper.title} 的答题记录已清空。`)
   }
 
+  function startMistakeReview(items: MistakeReviewItem[]) {
+    const questionIds = Array.from(new Set(items.map((item) => item.question.id)))
+    if (!questionIds.length) {
+      setNotice('当前筛选下没有可重刷的错题。')
+      return
+    }
+
+    const reviewCourses = Array.from(new Set(items.map((item) => item.course.id)))
+    const primaryCourse = courseById.get(reviewCourses[0]) ?? selectedCourse
+    const totalPoints = items.reduce((sum, item) => sum + item.question.points, 0)
+    const nextReviewPaper: Paper = {
+      id: 'mistake-review',
+      courseId: primaryCourse.id,
+      title: reviewCourses.length === 1 ? `${primaryCourse.shortName} 错题重刷卷` : '跨科错题重刷卷',
+      year: new Date().getFullYear(),
+      session: '专项',
+      sourceKind: 'mock',
+      status: 'ready',
+      description: `按当前错题筛选生成，共 ${questionIds.length} 题 / 原始 ${totalPoints} 分，判题后会用最新结果更新错题本。`,
+      minutes: Math.min(150, Math.max(20, Math.ceil(questionIds.length * 3))),
+      totalScore: 100,
+      questionIds,
+    }
+
+    setReviewPaper(nextReviewPaper)
+    setState((current) => {
+      const nextAttempts = { ...current.attempts }
+      delete nextAttempts[nextReviewPaper.id]
+      return {
+        ...current,
+        selectedCourseId: nextReviewPaper.courseId,
+        selectedPaperId: nextReviewPaper.id,
+        selectedQuestionIndex: 0,
+        view: 'practice',
+        attempts: {
+          ...nextAttempts,
+          [nextReviewPaper.id]: createAttempt(nextReviewPaper),
+        },
+      }
+    })
+    setNotice(`已生成 ${questionIds.length} 题错题重刷卷，答对后会从错题本移出。`)
+  }
+
   function importBank(bank: ImportedBank, messagePrefix = '已导入') {
     if (!Array.isArray(bank.papers) || !Array.isArray(bank.questions)) {
       throw new Error('导入包必须包含 papers 和 questions 数组。')
@@ -594,6 +649,7 @@ function App() {
     clearAllStorage()
     setState(defaultState)
     setImports({ papers: [], questions: [] })
+    setReviewPaper(null)
     setNotice('本地数据已重置。')
   }
 
@@ -891,13 +947,14 @@ function App() {
         {state.view === 'mistakes' && (
           <MistakesView
             items={mistakeItems}
-            onOpen={(question) => {
-              const paper = allPapers.find((item) => item.id === question.paperId)
+            onReview={startMistakeReview}
+            onOpen={(item) => {
+              const paper = item.paper ?? allPapers.find((paperItem) => paperItem.id === item.question.paperId)
               if (!paper) return
               patchState({
-                selectedCourseId: question.courseId,
-                selectedPaperId: question.paperId,
-                selectedQuestionIndex: Math.max(paper.questionIds.indexOf(question.id), 0),
+                selectedCourseId: paper.courseId,
+                selectedPaperId: paper.id,
+                selectedQuestionIndex: Math.max(paper.questionIds.indexOf(item.question.id), 0),
                 view: 'practice',
               })
             }}
@@ -1019,7 +1076,15 @@ function PapersView({
   )
 }
 
-function MistakesView({ items, onOpen }: { items: MistakeReviewItem[]; onOpen: (question: Question) => void }) {
+function MistakesView({
+  items,
+  onOpen,
+  onReview,
+}: {
+  items: MistakeReviewItem[]
+  onOpen: (item: MistakeReviewItem) => void
+  onReview: (items: MistakeReviewItem[]) => void
+}) {
   const [courseFilter, setCourseFilter] = useState('all')
   const [typeFilter, setTypeFilter] = useState<QuestionType | 'all'>('all')
   const [chapterFilter, setChapterFilter] = useState('all')
@@ -1156,6 +1221,18 @@ function MistakesView({ items, onOpen }: { items: MistakeReviewItem[]; onOpen: (
             </button>
           </div>
 
+          <div className="mistake-actions">
+            <button className="primary" type="button" onClick={() => onReview(filteredItems)} disabled={!filteredItems.length}>
+              <PlayCircle size={16} />
+              按当前筛选重刷
+            </button>
+            <span>
+              {filteredItems.length
+                ? `将 ${filteredItems.length} 道错题组成一套专项卷，答对后按最新判题结果移出错题本。`
+                : '当前筛选没有可重刷题目。'}
+            </span>
+          </div>
+
           <div className="mistake-focus">
             <p className="eyebrow">优先复盘章节</p>
             <div>
@@ -1172,7 +1249,7 @@ function MistakesView({ items, onOpen }: { items: MistakeReviewItem[]; onOpen: (
 
       <div className="mistake-list">
         {filteredItems.map((item) => (
-          <button key={item.question.id} type="button" onClick={() => onOpen(item.question)}>
+          <button key={item.question.id} type="button" onClick={() => onOpen(item)}>
             <span className="mistake-type">{questionLabel(item.question.type)}</span>
             <span>
               <strong>{item.question.stem}</strong>
