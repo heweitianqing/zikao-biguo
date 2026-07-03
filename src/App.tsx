@@ -13,6 +13,7 @@ import {
   Import,
   KeyRound,
   LibraryBig,
+  ListFilter,
   RotateCcw,
   Search,
   Settings,
@@ -25,7 +26,7 @@ import { useEffect, useMemo, useState } from 'react'
 import type { CSSProperties } from 'react'
 import './App.css'
 import { courses, importTemplate, papers as seedPapers, pastPaperSources, questions as seedQuestions } from './data/questionBank'
-import type { AnswerRecord, AppState, Course, ImportedBank, Paper, PaperAttempt, Question } from './types'
+import type { AnswerRecord, AppState, Course, ImportedBank, Paper, PaperAttempt, Question, QuestionType } from './types'
 import { parsePastedPaperText } from './utils/paperParser'
 import {
   calculatePaperScore,
@@ -51,6 +52,15 @@ type AiReview = {
   questionId: string
   content: string
   loading: boolean
+}
+
+type MistakeReviewItem = {
+  question: Question
+  record: AnswerRecord
+  paper: Paper | undefined
+  course: Course
+  chapterTitle: string
+  earned: number
 }
 
 function createAttempt(paper: Paper) {
@@ -152,6 +162,8 @@ function App() {
   const visiblePapers = useMemo(() => filterCoveredIndexPapers(allPapers), [allPapers])
   const allQuestions = useMemo(() => [...seedQuestions, ...imports.questions], [imports.questions])
   const questionById = useMemo(() => new Map(allQuestions.map((question) => [question.id, question])), [allQuestions])
+  const paperById = useMemo(() => new Map(allPapers.map((paper) => [paper.id, paper])), [allPapers])
+  const courseById = useMemo(() => new Map(courses.map((course) => [course.id, course])), [])
 
   const selectedCourse = courses.find((course) => course.id === state.selectedCourseId) ?? courses[0]
   const coursePapers = visiblePapers
@@ -171,11 +183,31 @@ function App() {
   const answeredCount = selectedPaper.questionIds.filter((id) => currentAttempt.answers[id]?.checked).length
   const score = calculatePaperScore(selectedPaper, paperQuestions, currentAttempt.answers)
   const progress = paperQuestions.length ? Math.round((answeredCount / paperQuestions.length) * 100) : 0
-  const mistakeQuestions = allQuestions.filter((question) => {
-    const attempt = Object.values(state.attempts).find((item) => item.answers[question.id])
-    const record = attempt?.answers[question.id]
-    return record?.checked && getQuestionScore(question, record) < question.points
-  })
+  const mistakeItems = allQuestions
+    .map((question) => {
+      const attempt = state.attempts[question.paperId] ?? Object.values(state.attempts).find((item) => item.answers[question.id])
+      const record = attempt?.answers[question.id]
+      if (!record?.checked) return undefined
+
+      const earned = getQuestionScore(question, record)
+      if (earned >= question.points) return undefined
+
+      const course = courseById.get(question.courseId)
+      if (!course) return undefined
+
+      const chapterTitle = course.outline.find((chapter) => chapter.id === question.chapterId)?.title ?? '未归类章节'
+
+      return {
+        question,
+        record,
+        paper: paperById.get(attempt?.paperId ?? question.paperId) ?? paperById.get(question.paperId),
+        course,
+        chapterTitle,
+        earned,
+      }
+    })
+    .filter((item): item is MistakeReviewItem => Boolean(item))
+    .sort((a, b) => b.record.updatedAt.localeCompare(a.record.updatedAt))
 
   useEffect(() => {
     saveState(state)
@@ -858,7 +890,7 @@ function App() {
 
         {state.view === 'mistakes' && (
           <MistakesView
-            questions={mistakeQuestions}
+            items={mistakeItems}
             onOpen={(question) => {
               const paper = allPapers.find((item) => item.id === question.paperId)
               if (!paper) return
@@ -987,23 +1019,181 @@ function PapersView({
   )
 }
 
-function MistakesView({ questions, onOpen }: { questions: Question[]; onOpen: (question: Question) => void }) {
+function MistakesView({ items, onOpen }: { items: MistakeReviewItem[]; onOpen: (question: Question) => void }) {
+  const [courseFilter, setCourseFilter] = useState('all')
+  const [typeFilter, setTypeFilter] = useState<QuestionType | 'all'>('all')
+  const [chapterFilter, setChapterFilter] = useState('all')
+
+  const courseOptions = useMemo(() => {
+    const optionMap = new Map<string, Course>()
+    items.forEach((item) => optionMap.set(item.course.id, item.course))
+    return Array.from(optionMap.values())
+  }, [items])
+
+  const chapterOptions = useMemo(() => {
+    const optionMap = new Map<string, { id: string; title: string; courseName: string }>()
+    items
+      .filter((item) => courseFilter === 'all' || item.course.id === courseFilter)
+      .filter((item) => typeFilter === 'all' || item.question.type === typeFilter)
+      .forEach((item) => {
+        optionMap.set(item.question.chapterId, {
+          id: item.question.chapterId,
+          title: item.chapterTitle,
+          courseName: item.course.shortName,
+        })
+      })
+    return Array.from(optionMap.values())
+  }, [courseFilter, items, typeFilter])
+
+  useEffect(() => {
+    if (chapterFilter !== 'all' && !chapterOptions.some((chapter) => chapter.id === chapterFilter)) {
+      setChapterFilter('all')
+    }
+  }, [chapterFilter, chapterOptions])
+
+  const filteredItems = useMemo(
+    () =>
+      items.filter(
+        (item) =>
+          (courseFilter === 'all' || item.course.id === courseFilter) &&
+          (typeFilter === 'all' || item.question.type === typeFilter) &&
+          (chapterFilter === 'all' || item.question.chapterId === chapterFilter),
+      ),
+    [chapterFilter, courseFilter, items, typeFilter],
+  )
+
+  const objectiveCount = items.filter((item) => item.question.type === 'single' || item.question.type === 'multiple').length
+  const textCount = items.length - objectiveCount
+  const lostPoints = items.reduce((sum, item) => sum + (item.question.points - item.earned), 0)
+  const chapterStats = useMemo(() => {
+    const stats = new Map<string, { key: string; courseName: string; title: string; count: number; lost: number }>()
+    items.forEach((item) => {
+      const key = `${item.course.id}-${item.question.chapterId}`
+      const current = stats.get(key) ?? {
+        key,
+        courseName: item.course.shortName,
+        title: item.chapterTitle,
+        count: 0,
+        lost: 0,
+      }
+      current.count += 1
+      current.lost += item.question.points - item.earned
+      stats.set(key, current)
+    })
+    return Array.from(stats.values()).sort((a, b) => b.count - a.count || b.lost - a.lost)
+  }, [items])
+
+  const resetFilters = () => {
+    setCourseFilter('all')
+    setTypeFilter('all')
+    setChapterFilter('all')
+  }
+
   return (
     <section className="library-view">
       <div className="section-heading">
         <p className="eyebrow">错题本</p>
-        <h3>{questions.length ? `${questions.length} 道题需要复盘` : '目前没有错题'}</h3>
+        <h3>{items.length ? `${items.length} 道题需要复盘` : '目前没有错题'}</h3>
       </div>
+
+      <div className="mistake-overview">
+        <div>
+          <strong>{items.length}</strong>
+          <span>总错题</span>
+        </div>
+        <div>
+          <strong>{objectiveCount}</strong>
+          <span>客观题</span>
+        </div>
+        <div>
+          <strong>{textCount}</strong>
+          <span>大题</span>
+        </div>
+        <div>
+          <strong>{lostPoints}</strong>
+          <span>累计失分</span>
+        </div>
+      </div>
+
+      {items.length > 0 && (
+        <>
+          <div className="mistake-filters" aria-label="错题筛选">
+            <label>
+              <span>科目</span>
+              <select value={courseFilter} onChange={(event) => setCourseFilter(event.target.value)}>
+                <option value="all">全部科目</option>
+                {courseOptions.map((course) => (
+                  <option key={course.id} value={course.id}>
+                    {course.code} {course.shortName}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span>题型</span>
+              <select value={typeFilter} onChange={(event) => setTypeFilter(event.target.value as QuestionType | 'all')}>
+                <option value="all">全部题型</option>
+                <option value="single">单选</option>
+                <option value="multiple">多选</option>
+                <option value="short">简答</option>
+                <option value="essay">论述</option>
+              </select>
+            </label>
+            <label>
+              <span>章节</span>
+              <select value={chapterFilter} onChange={(event) => setChapterFilter(event.target.value)}>
+                <option value="all">全部章节</option>
+                {chapterOptions.map((chapter) => (
+                  <option key={chapter.id} value={chapter.id}>
+                    {chapter.courseName} · {chapter.title}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <button type="button" onClick={resetFilters}>
+              <ListFilter size={16} />
+              清空筛选
+            </button>
+          </div>
+
+          <div className="mistake-focus">
+            <p className="eyebrow">优先复盘章节</p>
+            <div>
+              {chapterStats.slice(0, 3).map((chapter) => (
+                <span key={chapter.key}>
+                  <strong>{chapter.courseName}</strong>
+                  {chapter.title} · {chapter.count} 题 · 失 {chapter.lost} 分
+                </span>
+              ))}
+            </div>
+          </div>
+        </>
+      )}
+
       <div className="mistake-list">
-        {questions.map((question) => (
-          <button key={question.id} type="button" onClick={() => onOpen(question)}>
-            <span>{questionLabel(question.type)}</span>
-            <strong>{question.stem}</strong>
-            <small>{question.tags.join(' / ')}</small>
+        {filteredItems.map((item) => (
+          <button key={item.question.id} type="button" onClick={() => onOpen(item.question)}>
+            <span className="mistake-type">{questionLabel(item.question.type)}</span>
+            <span>
+              <strong>{item.question.stem}</strong>
+              <small>
+                {item.course.shortName} · {item.chapterTitle} · {item.paper?.title ?? '本地题库'}
+              </small>
+              <small>{item.question.tags.join(' / ')}</small>
+            </span>
+            <span className="mistake-score">
+              <strong>{item.earned}/{item.question.points}</strong>
+              <small>上次得分</small>
+            </span>
           </button>
         ))}
       </div>
-      {!questions.length && (
+
+      {items.length > 0 && !filteredItems.length && (
+        <div className="compact-empty">当前筛选下没有错题，可以换一个科目、题型或章节。</div>
+      )}
+
+      {!items.length && (
         <div className="empty-state">
           <CheckCircle2 size={32} />
           <p>先刷一套卷，判题后这里会自动收集需要复盘的题。</p>
