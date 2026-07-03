@@ -5,13 +5,16 @@ import {
   ChevronLeft,
   ChevronRight,
   ClipboardList,
+  Copy,
   Download,
+  ExternalLink,
   FileQuestion,
   History,
   Import,
   KeyRound,
   LibraryBig,
   RotateCcw,
+  Search,
   Settings,
   Sparkles,
   Trophy,
@@ -22,7 +25,7 @@ import { useEffect, useMemo, useState } from 'react'
 import type { CSSProperties } from 'react'
 import './App.css'
 import { courses, importTemplate, papers as seedPapers, pastPaperSources, questions as seedQuestions } from './data/questionBank'
-import type { AnswerRecord, AppState, ImportedBank, Paper, Question } from './types'
+import type { AnswerRecord, AppState, Course, ImportedBank, Paper, Question } from './types'
 import { parsePastedPaperText } from './utils/paperParser'
 import {
   calculatePaperScore,
@@ -71,6 +74,15 @@ function downloadJson(filename: string, data: unknown) {
   link.download = filename
   link.click()
   URL.revokeObjectURL(url)
+}
+
+function getPastPaperSearchQuery(course: Course) {
+  const codes = [course.code, ...(course.legacyCodes ?? [])].join(' ')
+  return `${codes} ${course.name} 自考历年真题 答案 PDF`
+}
+
+function getSearchUrl(query: string) {
+  return `https://www.baidu.com/s?wd=${encodeURIComponent(query)}`
 }
 
 function App() {
@@ -1089,17 +1101,37 @@ function ResourcesView({
   const [builderMessage, setBuilderMessage] = useState('支持每题带答案，也支持卷尾统一“参考答案”。')
   const importedQuestionCount = (paperId: string) =>
     importedBank.questions.filter((question) => question.paperId === paperId).length
-  const courseCoverage = courses
-    .filter((course) => ['xi', 'history', 'marx', 'multimedia'].includes(course.id))
-    .map((course) => {
-      const coursePapers = allPapers.filter((paper) => paper.courseId === course.id)
-      return {
-        course,
-        readyCount: coursePapers.filter((paper) => paper.status === 'ready').length,
-        importedCount: importedBank.papers.filter((paper) => paper.courseId === course.id).length,
-        waitingCount: coursePapers.filter((paper) => paper.status === 'needs-import').length,
-      }
-    })
+  const targetCourses = courses.filter((course) => ['xi', 'history', 'marx', 'multimedia'].includes(course.id))
+  const courseCoverage = targetCourses.map((course) => {
+    const coursePapers = allPapers.filter((paper) => paper.courseId === course.id)
+    return {
+      course,
+      readyPapers: coursePapers.filter((paper) => paper.status === 'ready'),
+      pendingPapers: coursePapers.filter((paper) => paper.status === 'needs-import'),
+      readyCount: coursePapers.filter((paper) => paper.status === 'ready').length,
+      importedCount: importedBank.papers.filter((paper) => paper.courseId === course.id).length,
+      waitingCount: coursePapers.filter((paper) => paper.status === 'needs-import').length,
+    }
+  })
+
+  function prefillBuilderFromPaper(paper: Paper) {
+    const course = courses.find((item) => item.id === paper.courseId) ?? selectedCourse
+    setBuilderCourseId(course.id)
+    setBuilderYear(paper.year)
+    setBuilderSession(paper.session)
+    setBuilderTitle(`${paper.title}导入卷`)
+    setPastedText('')
+    setBuilderMessage(`已预填 ${paper.title}。找到题文后粘贴进来，点“生成可刷试卷”。`)
+  }
+
+  async function copySearchQuery(query: string) {
+    try {
+      await navigator.clipboard.writeText(query)
+      setBuilderMessage(`已复制检索词：${query}`)
+    } catch {
+      setBuilderMessage(`复制失败，可以手动搜索：${query}`)
+    }
+  }
 
   function buildPaperFromText() {
     const course = courses.find((item) => item.id === builderCourseId) ?? selectedCourse
@@ -1164,7 +1196,7 @@ function ResourcesView({
             <FileQuestion size={22} />
             <strong>真题补齐进度</strong>
           </div>
-          <p>先把公共课和计算机的 4 月/10 月卷补进来。旧代码 `03708/03709` 会按新代码一起显示。</p>
+          <p>先把公共课和计算机的 4 月/10 月卷补进来。旧代码 03708/03709 会按新代码一起显示。</p>
           <div className="coverage-list">
             {courseCoverage.map(({ course, readyCount, importedCount: localCount, waitingCount }) => (
               <div key={course.id}>
@@ -1175,6 +1207,84 @@ function ResourcesView({
                 <small>{readyCount} 套可刷 · {localCount} 套本地导入 · {waitingCount} 套待补</small>
               </div>
             ))}
+          </div>
+        </div>
+
+        <div className="resource-box paper-matrix">
+          <div>
+            <Search size={22} />
+            <strong>真题补齐矩阵</strong>
+          </div>
+          <p>按备考优先级盯住四门课。待导入项先作为索引存在，拿到题文后可以直接预填到制卷器。</p>
+          <div className="matrix-list">
+            {courseCoverage.map(({ course, readyPapers, pendingPapers, readyCount, importedCount: localCount, waitingCount }) => {
+              const query = getPastPaperSearchQuery(course)
+              const sourceLinks = pastPaperSources.filter((source) => source.courseIds.includes(course.id)).slice(0, 3)
+              return (
+                <section key={course.id} className="matrix-course" style={{ '--course-color': course.color } as CSSProperties}>
+                  <div className="matrix-course-head">
+                    <span className="course-code" style={{ '--course-color': course.color } as CSSProperties}>
+                      {course.code}
+                    </span>
+                    <div>
+                      <strong>{course.shortName}</strong>
+                      <small>{course.legacyCodes?.length ? `旧代码 ${course.legacyCodes.join(' / ')}` : course.category}</small>
+                    </div>
+                    <div className="matrix-counts">
+                      <span>{readyCount} 可刷</span>
+                      <span>{localCount} 本地</span>
+                      <span>{waitingCount} 待补</span>
+                    </div>
+                  </div>
+
+                  <div className="matrix-actions">
+                    <a href={getSearchUrl(query)} target="_blank" rel="noreferrer">
+                      <Search size={16} />
+                      搜索真题
+                    </a>
+                    <button type="button" onClick={() => copySearchQuery(query)}>
+                      <Copy size={16} />
+                      复制检索词
+                    </button>
+                  </div>
+
+                  <small className="search-query">{query}</small>
+
+                  <div className="matrix-links">
+                    {sourceLinks.map((source) => (
+                      <a key={source.url} href={source.url} target="_blank" rel="noreferrer">
+                        <ExternalLink size={14} />
+                        {source.publisher}
+                      </a>
+                    ))}
+                  </div>
+
+                  <div className="pending-paper-list">
+                    {pendingPapers.length ? (
+                      pendingPapers
+                        .slice()
+                        .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
+                        .map((paper) => (
+                          <div key={paper.id} className="pending-paper">
+                            <div>
+                              <strong>{paper.title}</strong>
+                              <small>{paper.description}</small>
+                            </div>
+                            <button type="button" onClick={() => prefillBuilderFromPaper(paper)}>
+                              <ClipboardList size={16} />
+                              预填制卷
+                            </button>
+                          </div>
+                        ))
+                    ) : (
+                      <div className="compact-empty">暂无待导入索引，先刷已内置卷。</div>
+                    )}
+                  </div>
+
+                  <small>{readyPapers.map((paper) => paper.title).slice(0, 2).join(' / ') || '暂无可刷内置卷'}</small>
+                </section>
+              )
+            })}
           </div>
         </div>
 
@@ -1305,7 +1415,7 @@ function ResourcesView({
       <div className="import-guide">
         <p className="eyebrow">真题补齐策略</p>
         <p>
-          现在应用已经把旧代码 `03708/03709` 映射到新代码 `15043/15044`。公开网络上的完整真题多来自第三方资料站，
+          现在应用已经把旧代码 03708/03709 映射到新代码 15043/15044。公开网络上的完整真题多来自第三方资料站，
           版权状态不统一，所以不把不明授权的整套卷硬编码进仓库；你下载或复制到本地后，可以用“粘贴文本制卷”生成本地题库。
         </p>
       </div>
