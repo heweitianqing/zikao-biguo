@@ -5,10 +5,12 @@ import {
   ChevronLeft,
   ChevronRight,
   ClipboardList,
+  ClipboardCheck,
   Copy,
   Download,
   ExternalLink,
   FileQuestion,
+  Gauge,
   History,
   Import,
   KeyRound,
@@ -19,6 +21,7 @@ import {
   Search,
   Settings,
   Sparkles,
+  Target,
   Trophy,
   Upload,
   XCircle,
@@ -62,6 +65,22 @@ type MistakeReviewItem = {
   course: Course
   chapterTitle: string
   earned: number
+}
+
+type CourseProgressSummary = {
+  readyPapers: number
+  pendingPapers: number
+  submittedPapers: number
+  inProgressPapers: number
+  checkedQuestions: number
+  totalQuestions: number
+  wrongQuestions: number
+  lastScore?: {
+    paperTitle: string
+    score: number
+    totalScore: number
+    pass: boolean
+  }
 }
 
 function createAttempt(paper: Paper) {
@@ -160,6 +179,69 @@ function getPaperTimelineStatus(paper: Paper, questions: Question[], attempt: Pa
   }
 }
 
+function getCourseProgressSummary(
+  papers: Paper[],
+  questionById: Map<string, Question>,
+  attempts: Record<string, PaperAttempt>,
+  passScore: number,
+): CourseProgressSummary {
+  const readyPapers = papers.filter((paper) => paper.status === 'ready')
+  const submittedAttempts = readyPapers
+    .map((paper) => ({ paper, attempt: attempts[paper.id] }))
+    .filter((item): item is { paper: Paper; attempt: PaperAttempt } => Boolean(item.attempt?.submittedAt))
+    .sort((a, b) => (b.attempt.submittedAt ?? '').localeCompare(a.attempt.submittedAt ?? ''))
+
+  const checkedQuestionIds = new Set<string>()
+  const wrongQuestionIds = new Set<string>()
+
+  readyPapers.forEach((paper) => {
+    const attempt = attempts[paper.id]
+    if (!attempt) return
+
+    paper.questionIds.forEach((id) => {
+      const question = questionById.get(id)
+      const record = attempt.answers[id]
+      if (!question || !record?.checked) return
+      checkedQuestionIds.add(id)
+      if (getQuestionScore(question, record) < question.points) {
+        wrongQuestionIds.add(id)
+      }
+    })
+  })
+
+  const lastSubmitted = submittedAttempts[0]
+  const lastQuestions = lastSubmitted?.paper.questionIds
+    .map((id) => questionById.get(id))
+    .filter((question): question is Question => Boolean(question))
+  const lastPossibleScore = lastQuestions?.reduce((sum, question) => sum + question.points, 0) ?? 0
+  const lastEarnedScore =
+    lastQuestions?.reduce((sum, question) => sum + getQuestionScore(question, lastSubmitted?.attempt.answers[question.id]), 0) ?? 0
+  const lastScaledScore =
+    lastSubmitted && lastPossibleScore ? Math.round((lastEarnedScore / lastPossibleScore) * lastSubmitted.paper.totalScore) : undefined
+
+  return {
+    readyPapers: readyPapers.length,
+    pendingPapers: papers.filter((paper) => paper.status !== 'ready').length,
+    submittedPapers: submittedAttempts.length,
+    inProgressPapers: readyPapers.filter((paper) => {
+      const attempt = attempts[paper.id]
+      return Boolean(attempt && !attempt.submittedAt && Object.keys(attempt.answers).length)
+    }).length,
+    checkedQuestions: checkedQuestionIds.size,
+    totalQuestions: readyPapers.reduce((sum, paper) => sum + paper.questionIds.length, 0),
+    wrongQuestions: wrongQuestionIds.size,
+    lastScore:
+      lastSubmitted && lastScaledScore !== undefined
+        ? {
+            paperTitle: lastSubmitted.paper.title,
+            score: lastScaledScore,
+            totalScore: lastSubmitted.paper.totalScore,
+            pass: lastScaledScore >= passScore,
+          }
+        : undefined,
+  }
+}
+
 function App() {
   const [state, setState] = useState<AppState>(() => loadState(defaultState))
   const [imports, setImports] = useState<ImportedBank>(() => loadImports())
@@ -179,6 +261,7 @@ function App() {
   const coursePapers = visiblePapers
     .filter((paper) => paper.courseId === selectedCourse.id)
     .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
+  const courseProgress = getCourseProgressSummary(coursePapers, questionById, state.attempts, selectedCourse.passScore)
   const selectedPaper =
     (reviewPaper?.id === state.selectedPaperId ? reviewPaper : undefined) ??
     visiblePapers.find((paper) => paper.id === state.selectedPaperId && paper.courseId === selectedCourse.id) ??
@@ -729,6 +812,13 @@ function App() {
           <span>{notice}</span>
         </div>
 
+        <CourseProgressBoard
+          course={selectedCourse}
+          summary={courseProgress}
+          onOpenPapers={() => patchState({ view: 'papers' })}
+          onOpenMistakes={() => patchState({ view: 'mistakes' })}
+        />
+
         {state.view === 'practice' && (
           <section className="practice-grid">
             <div className="paper-panel">
@@ -1008,6 +1098,79 @@ function App() {
         ))}
       </nav>
     </main>
+  )
+}
+
+function CourseProgressBoard({
+  course,
+  summary,
+  onOpenPapers,
+  onOpenMistakes,
+}: {
+  course: Course
+  summary: CourseProgressSummary
+  onOpenPapers: () => void
+  onOpenMistakes: () => void
+}) {
+  const checkedRate = summary.totalQuestions ? Math.round((summary.checkedQuestions / summary.totalQuestions) * 100) : 0
+  const nextAction = summary.wrongQuestions
+    ? `${summary.wrongQuestions} 题需要回看`
+    : summary.pendingPapers
+      ? `${summary.pendingPapers} 套真题待导入`
+      : summary.readyPapers
+        ? '继续保持刷题手感'
+        : '先补入一套真题'
+
+  return (
+    <section className="course-progress-board" aria-label={`${course.shortName} 学习进度`}>
+      <div className="progress-head">
+        <div>
+          <p className="eyebrow">本课进度</p>
+          <strong>{nextAction}</strong>
+        </div>
+        <div className="progress-actions">
+          <button type="button" onClick={onOpenPapers}>
+            <History size={16} />
+            选卷
+          </button>
+          <button type="button" onClick={onOpenMistakes} disabled={!summary.wrongQuestions}>
+            <ClipboardCheck size={16} />
+            复盘
+          </button>
+        </div>
+      </div>
+
+      <div className="progress-metrics">
+        <div>
+          <Gauge size={18} />
+          <strong>{checkedRate}%</strong>
+          <span>判题进度</span>
+        </div>
+        <div>
+          <FileQuestion size={18} />
+          <strong>{summary.submittedPapers}/{summary.readyPapers}</strong>
+          <span>已交卷</span>
+        </div>
+        <div>
+          <Target size={18} />
+          <strong>{summary.wrongQuestions}</strong>
+          <span>待复盘</span>
+        </div>
+        <div>
+          <History size={18} />
+          <strong>{summary.pendingPapers}</strong>
+          <span>待导入真题</span>
+        </div>
+      </div>
+
+      <div className="progress-foot">
+        <span>
+          已判 {summary.checkedQuestions}/{summary.totalQuestions} 题
+          {summary.inProgressPapers ? ` · ${summary.inProgressPapers} 套进行中` : ''}
+        </span>
+        <span>{summary.lastScore ? `最近 ${summary.lastScore.score}/${summary.lastScore.totalScore} · ${summary.lastScore.paperTitle}` : '还没有交卷记录'}</span>
+      </div>
+    </section>
   )
 }
 
