@@ -25,7 +25,7 @@ import { useEffect, useMemo, useState } from 'react'
 import type { CSSProperties } from 'react'
 import './App.css'
 import { courses, importTemplate, papers as seedPapers, pastPaperSources, questions as seedQuestions } from './data/questionBank'
-import type { AnswerRecord, AppState, Course, ImportedBank, Paper, Question } from './types'
+import type { AnswerRecord, AppState, Course, ImportedBank, Paper, PaperAttempt, Question } from './types'
 import { parsePastedPaperText } from './utils/paperParser'
 import {
   calculatePaperScore,
@@ -99,6 +99,49 @@ function filterCoveredIndexPapers(papers: Paper[]) {
   return papers.filter((paper) => !(paper.status === 'needs-import' && coveredSlots.has(getPaperSlotKey(paper))))
 }
 
+function getPaperTimelineStatus(paper: Paper, questions: Question[], attempt: PaperAttempt | undefined, passScore: number) {
+  if (paper.status !== 'ready') {
+    return {
+      tone: 'pending',
+      label: '待导入',
+      detail: '点开预填制卷',
+    }
+  }
+
+  const answers = attempt?.answers ?? {}
+  const answeredCount = questions.filter((question) => {
+    const record = answers[question.id]
+    return Boolean(record?.answer.length || record?.textAnswer.trim())
+  }).length
+  const checkedCount = questions.filter((question) => answers[question.id]?.checked).length
+
+  if (attempt?.submittedAt) {
+    const earnedScore = questions.reduce((sum, question) => sum + getQuestionScore(question, answers[question.id]), 0)
+    const possibleScore = questions.reduce((sum, question) => sum + question.points, 0)
+    const scaledScore = possibleScore ? Math.round((earnedScore / possibleScore) * paper.totalScore) : 0
+    const wrongCount = questions.filter((question) => getQuestionScore(question, answers[question.id]) < question.points).length
+    return {
+      tone: scaledScore >= passScore ? 'done' : 'review',
+      label: `上次 ${scaledScore}/${paper.totalScore}`,
+      detail: wrongCount ? `${wrongCount} 题待复盘` : '已达通过线',
+    }
+  }
+
+  if (answeredCount || checkedCount) {
+    return {
+      tone: 'progress',
+      label: `已答 ${answeredCount}/${questions.length}`,
+      detail: checkedCount ? `${checkedCount} 题已判` : '还未交卷',
+    }
+  }
+
+  return {
+    tone: 'ready',
+    label: `${paper.questionIds.length} 题可刷`,
+    detail: '尚未开始',
+  }
+}
+
 function App() {
   const [state, setState] = useState<AppState>(() => loadState(defaultState))
   const [imports, setImports] = useState<ImportedBank>(() => loadImports())
@@ -108,6 +151,7 @@ function App() {
   const allPapers = useMemo(() => [...seedPapers, ...imports.papers], [imports.papers])
   const visiblePapers = useMemo(() => filterCoveredIndexPapers(allPapers), [allPapers])
   const allQuestions = useMemo(() => [...seedQuestions, ...imports.questions], [imports.questions])
+  const questionById = useMemo(() => new Map(allQuestions.map((question) => [question.id, question])), [allQuestions])
 
   const selectedCourse = courses.find((course) => course.id === state.selectedCourseId) ?? courses[0]
   const coursePapers = visiblePapers
@@ -119,7 +163,7 @@ function App() {
     visiblePapers[0] ??
     allPapers[0]
   const paperQuestions = selectedPaper.questionIds
-    .map((id) => allQuestions.find((question) => question.id === id))
+    .map((id) => questionById.get(id))
     .filter((question): question is Question => Boolean(question))
   const currentQuestion = paperQuestions[state.selectedQuestionIndex] ?? paperQuestions[0]
   const currentAttempt = state.attempts[selectedPaper.id] ?? createAttempt(selectedPaper)
@@ -801,7 +845,16 @@ function App() {
           />
         )}
 
-        {state.view === 'papers' && <PapersView papers={coursePapers} selectedPaperId={selectedPaper.id} onSelect={selectPaper} />}
+        {state.view === 'papers' && (
+          <PapersView
+            papers={coursePapers}
+            questionById={questionById}
+            attempts={state.attempts}
+            passScore={selectedCourse.passScore}
+            selectedPaperId={selectedPaper.id}
+            onSelect={selectPaper}
+          />
+        )}
 
         {state.view === 'mistakes' && (
           <MistakesView
@@ -885,10 +938,16 @@ function EmptyPaper({ paper, onImport }: { paper: Paper; onImport: () => void })
 
 function PapersView({
   papers,
+  questionById,
+  attempts,
+  passScore,
   selectedPaperId,
   onSelect,
 }: {
   papers: Paper[]
+  questionById: Map<string, Question>
+  attempts: Record<string, PaperAttempt>
+  passScore: number
   selectedPaperId: string
   onSelect: (paper: Paper) => void
 }) {
@@ -899,23 +958,30 @@ function PapersView({
         <h3>选择一套卷开始刷</h3>
       </div>
       <div className="paper-timeline">
-        {papers.map((paper) => (
-          <button
-            key={paper.id}
-            className={`paper-item ${paper.id === selectedPaperId ? 'active' : ''}`}
-            type="button"
-            onClick={() => onSelect(paper)}
-          >
-            <span className="paper-year">{paper.year}</span>
-            <span>
-              <strong>{paper.title}</strong>
-              <small>{paper.description}</small>
-            </span>
-            <em className={paper.status === 'ready' ? 'ready' : ''}>
-              {paper.status === 'ready' ? `${paper.questionIds.length} 题可刷` : '待导入'}
-            </em>
-          </button>
-        ))}
+        {papers.map((paper) => {
+          const paperQuestions = paper.questionIds
+            .map((id) => questionById.get(id))
+            .filter((question): question is Question => Boolean(question))
+          const status = getPaperTimelineStatus(paper, paperQuestions, attempts[paper.id], passScore)
+          return (
+            <button
+              key={paper.id}
+              className={`paper-item ${paper.id === selectedPaperId ? 'active' : ''}`}
+              type="button"
+              onClick={() => onSelect(paper)}
+            >
+              <span className="paper-year">{paper.year}</span>
+              <span>
+                <strong>{paper.title}</strong>
+                <small>{paper.description}</small>
+              </span>
+              <span className={`paper-status ${status.tone}`}>
+                <strong>{status.label}</strong>
+                <small>{status.detail}</small>
+              </span>
+            </button>
+          )
+        })}
       </div>
     </section>
   )

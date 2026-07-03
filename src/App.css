@@ -198,8 +198,7 @@
 .question-meta span,
 .rubric-chips span,
 .outline-stack span,
-.analysis-score span,
-.paper-item em {
+.analysis-score span {
   display: inline-flex;
   align-items: center;
   min-height: 28px;
@@ -775,10 +774,60 @@
   color: var(--ink-muted);
 }
 
-.paper-item em.ready {
-  color: var(--green);
+.paper-status {
+  min-width: 128px;
+  padding: 9px 10px;
+  background: rgba(255, 250, 240, 0.6);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-align: right;
+}
+
+.paper-status strong,
+.paper-status small {
+  display: block;
+}
+
+.paper-status strong {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.paper-status small {
+  margin-top: 2px;
+  color: var(--ink-muted);
+  font-size: 12px;
+}
+
+.paper-status.ready,
+.paper-status.done {
   border-color: rgba(63, 115, 86, 0.24);
   background: rgba(63, 115, 86, 0.08);
+}
+
+.paper-status.ready strong,
+.paper-status.done strong {
+  color: var(--green);
+}
+
+.paper-status.progress {
+  border-color: rgba(39, 98, 122, 0.24);
+  background: rgba(39, 98, 122, 0.08);
+}
+
+.paper-status.progress strong {
+  color: var(--blue);
+}
+
+.paper-status.review,
+.paper-status.pending {
+  border-color: rgba(217, 79, 53, 0.24);
+  background: rgba(217, 79, 53, 0.08);
+}
+
+.paper-status.review strong,
+.paper-status.pending strong {
+  color: var(--red);
 }
 
 .mistake-list button {
@@ -1380,9 +1429,11 @@
     grid-template-columns: 68px minmax(0, 1fr);
   }
 
-  .paper-item em {
+  .paper-status {
     grid-column: 2;
     justify-self: start;
+    min-width: 0;
+    text-align: left;
   }
 
   .resource-grid,
