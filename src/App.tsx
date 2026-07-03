@@ -1160,6 +1160,11 @@ function ResourcesView({
   const [builderPreview, setBuilderPreview] = useState<BuilderPreview | null>(null)
   const importedQuestionCount = (paperId: string) =>
     importedBank.questions.filter((question) => question.paperId === paperId).length
+  const importedQuestionsForPaper = (paper: Paper) => {
+    const byId = new Map(importedBank.questions.map((question) => [question.id, question]))
+    const ordered = paper.questionIds.map((questionId) => byId.get(questionId)).filter((question): question is Question => Boolean(question))
+    return ordered.length ? ordered : importedBank.questions.filter((question) => question.paperId === paper.id)
+  }
   const targetCourses = courses.filter((course) => ['xi', 'history', 'marx', 'multimedia'].includes(course.id))
   const courseCoverage = targetCourses.map((course) => {
     const coursePapers = allPapers.filter((paper) => paper.courseId === course.id)
@@ -1223,6 +1228,28 @@ function ResourcesView({
     onImportBank(builderPreview.bank, '已从预览确认导入')
     setBuilderMessage(`已导入 ${builderPreview.bank.questions.length} 道题。`)
     setBuilderPreview(null)
+  }
+
+  function loadImportedPaperToPreview(paper: Paper) {
+    const questions = importedQuestionsForPaper(paper)
+    if (!questions.length) {
+      setBuilderMessage(`${paper.title} 没有找到题目，无法校正。`)
+      return
+    }
+
+    setBuilderCourseId(paper.courseId)
+    setBuilderYear(paper.year)
+    setBuilderSession(paper.session)
+    setBuilderTitle(paper.title)
+    setPastedText('')
+    setBuilderPreview({
+      bank: {
+        papers: [paper],
+        questions,
+      },
+      warnings: [],
+    })
+    setBuilderMessage(`已载入 ${paper.title}。修正答案或解析后，点“确认导入”覆盖保存。`)
   }
 
   function updatePreviewQuestion(questionId: string, patch: Partial<Question>) {
@@ -1584,17 +1611,26 @@ function ResourcesView({
                 .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
                 .map((paper) => {
                   const course = courses.find((item) => item.id === paper.courseId)
+                  const paperQuestions = importedQuestionsForPaper(paper)
+                  const quality = getPreviewStats({ papers: [paper], questions: paperQuestions })
                   return (
                     <div key={paper.id} className="imported-paper-item">
                       <div>
                         <span>{course?.shortName ?? paper.courseId}</span>
                         <strong>{paper.title}</strong>
-                        <small>{paper.year} · {paper.session} · {importedQuestionCount(paper.id)} 题 · {paper.totalScore} 分</small>
+                        <small>
+                          {paper.year} · {paper.session} · {importedQuestionCount(paper.id)} 题 · {paper.totalScore} 分 · {quality.missingAnswer} 缺答案 ·{' '}
+                          {quality.missingAnalysis} 缺解析
+                        </small>
                       </div>
                       <div>
                         <button type="button" onClick={() => onOpenPaper(paper)}>
                           <FileQuestion size={16} />
                           开刷
+                        </button>
+                        <button type="button" onClick={() => loadImportedPaperToPreview(paper)}>
+                          <ClipboardList size={16} />
+                          校正
                         </button>
                         <button type="button" onClick={() => onExportImportedPaper(paper.id)}>
                           <Download size={16} />
