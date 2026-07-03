@@ -20,8 +20,9 @@ import {
 import { useEffect, useMemo, useState } from 'react'
 import type { CSSProperties } from 'react'
 import './App.css'
-import { courses, importTemplate, papers as seedPapers, questions as seedQuestions } from './data/questionBank'
+import { courses, importTemplate, papers as seedPapers, pastPaperSources, questions as seedQuestions } from './data/questionBank'
 import type { AnswerRecord, AppState, ImportedBank, Paper, Question } from './types'
+import { parsePastedPaperText } from './utils/paperParser'
 import {
   calculatePaperScore,
   getQuestionScore,
@@ -320,25 +321,45 @@ function App() {
     setNotice(`${paper.title} 的答题记录已清空。`)
   }
 
+  function importBank(bank: ImportedBank, messagePrefix = '已导入') {
+    if (!Array.isArray(bank.papers) || !Array.isArray(bank.questions)) {
+      throw new Error('导入包必须包含 papers 和 questions 数组。')
+    }
+    if (!bank.papers.length || !bank.questions.length) {
+      throw new Error('导入包里没有可用试卷或题目。')
+    }
+
+    const mergedPapers = [
+      ...imports.papers.filter((paper) => !bank.papers.some((incoming) => incoming.id === paper.id)),
+      ...bank.papers,
+    ]
+    const mergedQuestions = [
+      ...imports.questions.filter((question) => !bank.questions.some((incoming) => incoming.id === question.id)),
+      ...bank.questions,
+    ]
+    const firstPaper = bank.papers[0]
+    setImports({ papers: mergedPapers, questions: mergedQuestions })
+    saveImports(mergedPapers, mergedQuestions)
+    setState((current) => ({
+      ...current,
+      selectedCourseId: firstPaper.courseId,
+      selectedPaperId: firstPaper.id,
+      selectedQuestionIndex: 0,
+      view: 'practice',
+      attempts: {
+        ...current.attempts,
+        [firstPaper.id]: current.attempts[firstPaper.id] ?? createAttempt(firstPaper),
+      },
+    }))
+    setNotice(`${messagePrefix} ${bank.papers.length} 套试卷、${bank.questions.length} 道题，已切到新试卷。`)
+  }
+
   function handleImport(file: File) {
     const reader = new FileReader()
     reader.onload = () => {
       try {
         const parsed = JSON.parse(String(reader.result)) as ImportedBank
-        if (!Array.isArray(parsed.papers) || !Array.isArray(parsed.questions)) {
-          throw new Error('JSON 顶层必须包含 papers 和 questions 数组。')
-        }
-        const mergedPapers = [
-          ...imports.papers.filter((paper) => !parsed.papers.some((incoming) => incoming.id === paper.id)),
-          ...parsed.papers,
-        ]
-        const mergedQuestions = [
-          ...imports.questions.filter((question) => !parsed.questions.some((incoming) => incoming.id === question.id)),
-          ...parsed.questions,
-        ]
-        setImports({ papers: mergedPapers, questions: mergedQuestions })
-        saveImports(mergedPapers, mergedQuestions)
-        setNotice(`已导入 ${parsed.papers.length} 套试卷、${parsed.questions.length} 道题。`)
+        importBank(parsed)
       } catch (error) {
         setNotice(`导入失败：${error instanceof Error ? error.message : '文件格式不正确'}`)
       }
@@ -645,6 +666,7 @@ function App() {
             selectedCourse={selectedCourse}
             importedCount={imports.questions.length}
             onImport={handleImport}
+            onImportBank={(bank, messagePrefix) => importBank(bank, messagePrefix)}
             onDownloadTemplate={downloadImportTemplate}
           />
         )}
@@ -764,18 +786,47 @@ function ResourcesView({
   selectedCourse,
   importedCount,
   onImport,
+  onImportBank,
   onDownloadTemplate,
 }: {
   selectedCourse: (typeof courses)[number]
   importedCount: number
   onImport: (file: File) => void
+  onImportBank: (bank: ImportedBank, messagePrefix?: string) => void
   onDownloadTemplate: () => void
 }) {
+  const [builderCourseId, setBuilderCourseId] = useState(selectedCourse.id)
+  const [builderYear, setBuilderYear] = useState(new Date().getFullYear())
+  const [builderSession, setBuilderSession] = useState<Paper['session']>('4月')
+  const [builderTitle, setBuilderTitle] = useState(`${selectedCourse.code} ${new Date().getFullYear()} 年4月真题导入卷`)
+  const [pastedText, setPastedText] = useState('')
+  const [builderMessage, setBuilderMessage] = useState('支持常见格式：题号开头、A/B/C/D 选项、答案、解析。')
+
+  function buildPaperFromText() {
+    const course = courses.find((item) => item.id === builderCourseId) ?? selectedCourse
+    const result = parsePastedPaperText(pastedText, course, {
+      courseId: course.id,
+      title: builderTitle,
+      year: builderYear,
+      session: builderSession,
+    })
+
+    if (!result.bank.questions.length) {
+      setBuilderMessage(result.warnings.join('；') || '没有识别到题目。')
+      return
+    }
+
+    onImportBank(result.bank, '已从粘贴文本生成')
+    setBuilderMessage(
+      `识别到 ${result.bank.questions.length} 道题。${result.warnings.length ? `提醒：${result.warnings.join('；')}` : '已生成可刷试卷。'}`,
+    )
+  }
+
   return (
     <section className="resources-view">
       <div className="section-heading">
         <p className="eyebrow">资料与题库</p>
-        <h3>先用官方大纲稳住范围，再逐步补齐真题</h3>
+        <h3>找真题、粘贴整理、马上开刷</h3>
       </div>
 
       <div className="resource-grid">
@@ -805,6 +856,60 @@ function ResourcesView({
           <small>已导入 {importedCount} 道本地题。</small>
         </div>
 
+        <div className="resource-box paste-builder">
+          <div>
+            <ClipboardList size={22} />
+            <strong>粘贴文本制卷</strong>
+          </div>
+          <p>从网页、PDF OCR 或 Word 里复制题目，按“题号 + 选项 + 答案 + 解析”粘贴，系统会拆成可刷试卷。</p>
+          <div className="builder-fields">
+            <label>
+              <span>科目</span>
+              <select
+                value={builderCourseId}
+                onChange={(event) => {
+                  const nextCourse = courses.find((course) => course.id === event.target.value) ?? selectedCourse
+                  setBuilderCourseId(nextCourse.id)
+                  setBuilderTitle(`${nextCourse.code} ${builderYear} 年${builderSession}真题导入卷`)
+                }}
+              >
+                {courses.map((course) => (
+                  <option key={course.id} value={course.id}>
+                    {course.code} {course.shortName}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span>年份</span>
+              <input type="number" value={builderYear} onChange={(event) => setBuilderYear(Number(event.target.value))} />
+            </label>
+            <label>
+              <span>考期</span>
+              <select value={builderSession} onChange={(event) => setBuilderSession(event.target.value as Paper['session'])}>
+                <option value="4月">4月</option>
+                <option value="10月">10月</option>
+                <option value="专项">专项</option>
+                <option value="样卷">样卷</option>
+              </select>
+            </label>
+          </div>
+          <label className="wide-field">
+            <span>试卷名</span>
+            <input value={builderTitle} onChange={(event) => setBuilderTitle(event.target.value)} />
+          </label>
+          <textarea
+            value={pastedText}
+            placeholder={'示例：\n1. 鸦片战争前，中国封建文化的核心是（ ）\nA. 儒家思想\nB. 法家思想\nC. 道家思想\nD. 墨家思想\n答案：A\n解析：儒家思想长期处于封建正统地位。'}
+            onChange={(event) => setPastedText(event.target.value)}
+          />
+          <button className="primary" type="button" onClick={buildPaperFromText}>
+            <Sparkles size={18} />
+            生成可刷试卷
+          </button>
+          <small>{builderMessage}</small>
+        </div>
+
         <div className="resource-box source-list">
           <div>
             <LibraryBig size={22} />
@@ -817,13 +922,26 @@ function ResourcesView({
             </a>
           ))}
         </div>
+
+        <div className="resource-box source-list">
+          <div>
+            <History size={22} />
+            <strong>历年真题入口</strong>
+          </div>
+          {pastPaperSources.map((source) => (
+            <a key={source.url} href={source.url} target="_blank" rel="noreferrer">
+              <span>{source.title}</span>
+              <small>{source.publisher} · {source.note}</small>
+            </a>
+          ))}
+        </div>
       </div>
 
       <div className="import-guide">
         <p className="eyebrow">真题补齐策略</p>
         <p>
           现在应用已经把旧代码 `03708/03709` 映射到新代码 `15043/15044`。公开网络上的完整真题多来自第三方资料站，
-          版权状态不统一，所以第一版不把不明授权的整套卷直接塞进仓库；你下载到本地后，我可以继续帮你批量整理成导入包。
+          版权状态不统一，所以不把不明授权的整套卷硬编码进仓库；你下载或复制到本地后，可以用“粘贴文本制卷”生成本地题库。
         </p>
       </div>
     </section>

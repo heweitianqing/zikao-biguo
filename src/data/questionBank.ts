@@ -258,6 +258,45 @@ export const courses: Course[] = [
   },
 ]
 
+export const pastPaperSources = [
+  {
+    title: '环球网校：马克思主义基本原理资料下载',
+    url: 'https://www.hqwx.com/gjzk-kaoshi/ziliaolm/5897/',
+    publisher: '环球网校',
+    note: '有 2024、2025、2026 及近 4 年真题资料入口，适合下载后导入。',
+  },
+  {
+    title: '环球网校：中国近现代史纲要资料下载',
+    url: 'https://www.hqwx.com/gjzk-kaoshi/ziliaolm/5901/',
+    publisher: '环球网校',
+    note: '有 2024、2025、2026 及近 4 年真题资料入口，适合下载后导入。',
+  },
+  {
+    title: '自考365：2024 年 10 月马原试题及答案',
+    url: 'https://www.zikao365.com/ggk/zh20250328142055.shtml',
+    publisher: '自考365',
+    note: '页面提供 03709 旧代码真题线索，可复制题文后用粘贴制卷。',
+  },
+  {
+    title: '自考365：2024 年 10 月近代史试题及答案',
+    url: 'https://www.zikao365.com/ggk/zh20241221135415.shtml',
+    publisher: '自考365',
+    note: '页面提供 03708 旧代码真题线索，可复制题文后用粘贴制卷。',
+  },
+  {
+    title: '自考生网：15044/03709 马原历年真题列表',
+    url: 'https://www.zikaosw.cn/lnzt/subject-702.html',
+    publisher: '自考生网',
+    note: '按课程聚合历年真题与答案页面，适合定位年份。',
+  },
+  {
+    title: '自考生网：15043/03708 近代史历年真题列表',
+    url: 'https://www.zikaosw.cn/lnzt/subject-9.html',
+    publisher: '自考生网',
+    note: '按课程聚合历年真题与答案页面，适合定位年份。',
+  },
+]
+
 export const papers: Paper[] = [
   {
     id: 'marx-outline-sample',
