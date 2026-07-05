@@ -16,6 +16,7 @@ import {
   KeyRound,
   LibraryBig,
   ListFilter,
+  MapPinned,
   PlayCircle,
   RotateCcw,
   Search,
@@ -29,7 +30,7 @@ import {
 import { useEffect, useMemo, useState } from 'react'
 import type { CSSProperties } from 'react'
 import './App.css'
-import { courses, importTemplate, papers as seedPapers, pastPaperSources, questions as seedQuestions } from './data/questionBank'
+import { courses, importTemplate, papers as seedPapers, pastPaperSources, questions as seedQuestions, sourceGapRecords } from './data/questionBank'
 import type { AnswerRecord, AppState, Course, ImportedBank, Paper, PaperAttempt, Question, QuestionType } from './types'
 import { parsePastedPaperText } from './utils/paperParser'
 import {
@@ -90,6 +91,22 @@ type CourseStudyTask = {
   detail: string
   actionLabel: string
   paper?: Paper
+}
+
+type ChapterStudyRow = {
+  id: string
+  title: string
+  focus: string[]
+  mustKnow: string[]
+  questionPatterns: string[]
+  studySteps: string[]
+  questions: Question[]
+  checkedQuestions: number
+  wrongQuestions: number
+  objectiveQuestions: number
+  textQuestions: number
+  readyPapers: number
+  pendingPapers: number
 }
 
 function createAttempt(paper: Paper) {
@@ -358,17 +375,77 @@ function getCourseStudyTasks(
   return tasks.slice(0, 4)
 }
 
+function getChapterStudyRows(
+  course: Course,
+  questions: Question[],
+  papers: Paper[],
+  attempts: Record<string, PaperAttempt>,
+): ChapterStudyRow[] {
+  return course.outline.map((chapter) => {
+    const scopedQuestions = questions.filter((question) => question.courseId === course.id && question.chapterId === chapter.id)
+    const questionIds = new Set(scopedQuestions.map((question) => question.id))
+    const checkedQuestions = scopedQuestions.filter((question) => getLatestCheckedAnswer(question.id, attempts)).length
+    const wrongQuestions = scopedQuestions.filter((question) => {
+      const latest = getLatestCheckedAnswer(question.id, attempts)
+      return latest ? getQuestionScore(question, latest.record) < question.points : false
+    }).length
+    const readyPapers = papers.filter((paper) => paper.status === 'ready' && paper.questionIds.some((id) => questionIds.has(id))).length
+    const pendingPapers = papers.filter((paper) => paper.status === 'needs-import' && paper.courseId === course.id).length
+
+    return {
+      id: chapter.id,
+      title: chapter.title,
+      focus: chapter.focus,
+      mustKnow: chapter.mustKnow ?? [],
+      questionPatterns: chapter.questionPatterns ?? [],
+      studySteps: chapter.studySteps ?? [],
+      questions: scopedQuestions,
+      checkedQuestions,
+      wrongQuestions,
+      objectiveQuestions: scopedQuestions.filter((question) => question.type === 'single' || question.type === 'multiple').length,
+      textQuestions: scopedQuestions.filter((question) => question.type === 'short' || question.type === 'essay').length,
+      readyPapers,
+      pendingPapers,
+    }
+  })
+}
+
 function App() {
   const [state, setState] = useState<AppState>(() => loadState(defaultState))
   const [imports, setImports] = useState<ImportedBank>(() => loadImports())
+  const [generatedBank, setGeneratedBank] = useState<ImportedBank>({ papers: [], questions: [] })
   const [reviewPaper, setReviewPaper] = useState<Paper | null>(null)
   const [aiReview, setAiReview] = useState<AiReview | null>(null)
   const [notice, setNotice] = useState('已按上海电机学院 2025 计划初始化题库。')
 
-  const basePapers = useMemo(() => [...seedPapers, ...imports.papers], [imports.papers])
+  useEffect(() => {
+    let cancelled = false
+
+    import('./data/generatedPastPapers')
+      .then(({ generatedPastPapers, generatedPastQuestions }) => {
+        if (cancelled) return
+
+        setGeneratedBank({ papers: generatedPastPapers, questions: generatedPastQuestions })
+        setNotice(`已加载 ${generatedPastPapers.length} 套内置真题扩展包，可继续刷历年题。`)
+      })
+      .catch(() => {
+        if (cancelled) return
+
+        setNotice('真题扩展包加载失败，当前只显示基础题库和本地导入题。')
+      })
+
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  const basePapers = useMemo(() => [...seedPapers, ...generatedBank.papers, ...imports.papers], [generatedBank.papers, imports.papers])
   const allPapers = useMemo(() => (reviewPaper ? [...basePapers, reviewPaper] : basePapers), [basePapers, reviewPaper])
   const visiblePapers = useMemo(() => filterCoveredIndexPapers(basePapers), [basePapers])
-  const allQuestions = useMemo(() => [...seedQuestions, ...imports.questions], [imports.questions])
+  const allQuestions = useMemo(
+    () => [...seedQuestions, ...generatedBank.questions, ...imports.questions],
+    [generatedBank.questions, imports.questions],
+  )
   const questionById = useMemo(() => new Map(allQuestions.map((question) => [question.id, question])), [allQuestions])
   const paperById = useMemo(() => new Map(allPapers.map((paper) => [paper.id, paper])), [allPapers])
   const courseById = useMemo(() => new Map(courses.map((course) => [course.id, course])), [])
@@ -421,6 +498,7 @@ function App() {
     .sort((a, b) => b.record.updatedAt.localeCompare(a.record.updatedAt))
   const selectedCourseMistakes = mistakeItems.filter((item) => item.course.id === selectedCourse.id)
   const courseStudyTasks = getCourseStudyTasks(coursePapers, questionById, state.attempts, selectedCourseMistakes.length)
+  const chapterStudyRows = getChapterStudyRows(selectedCourse, allQuestions, coursePapers, state.attempts)
 
   useEffect(() => {
     saveState(state)
@@ -479,12 +557,13 @@ function App() {
           ? existing.answer.filter((item) => item !== choice)
           : [...(existing?.answer ?? []), choice]
         : [choice]
+      const earned = scoreObjective(question, nextAnswer)
       const nextRecord: AnswerRecord = {
         questionId: question.id,
         answer: nextAnswer,
         textAnswer: existing?.textAnswer ?? '',
-        checked: false,
-        earned: 0,
+        checked: true,
+        earned,
         updatedAt: new Date().toISOString(),
       }
       return {
@@ -743,6 +822,48 @@ function App() {
     setNotice(`已生成 ${questionIds.length} 题错题重刷卷，答对后会从错题本移出。`)
   }
 
+  function startChapterPractice(row: ChapterStudyRow) {
+    const questionIds = row.questions.map((question) => question.id)
+    if (!questionIds.length) {
+      setNotice(`${row.title} 还没有题目覆盖，先补真题或刷整卷。`)
+      patchState({ view: 'papers' })
+      return
+    }
+
+    const totalPoints = row.questions.reduce((sum, question) => sum + question.points, 0)
+    const nextReviewPaper: Paper = {
+      id: `chapter-${selectedCourse.id}-${row.id}`,
+      courseId: selectedCourse.id,
+      title: `${selectedCourse.shortName} · ${row.title}专项`,
+      year: new Date().getFullYear(),
+      session: '专项',
+      sourceKind: 'mock',
+      status: 'ready',
+      description: `按大纲章节生成，共 ${questionIds.length} 题 / 原始 ${totalPoints} 分。`,
+      minutes: Math.min(selectedCourse.examMinutes, Math.max(20, Math.ceil(questionIds.length * 4))),
+      totalScore: 100,
+      questionIds,
+    }
+
+    setReviewPaper(nextReviewPaper)
+    setState((current) => {
+      const nextAttempts = { ...current.attempts }
+      delete nextAttempts[nextReviewPaper.id]
+      return {
+        ...current,
+        selectedCourseId: nextReviewPaper.courseId,
+        selectedPaperId: nextReviewPaper.id,
+        selectedQuestionIndex: 0,
+        view: 'practice',
+        attempts: {
+          ...nextAttempts,
+          [nextReviewPaper.id]: createAttempt(nextReviewPaper),
+        },
+      }
+    })
+    setNotice(`已生成 ${row.title} 专项卷。`)
+  }
+
   function importBank(bank: ImportedBank, messagePrefix = '已导入') {
     if (!Array.isArray(bank.papers) || !Array.isArray(bank.questions)) {
       throw new Error('导入包必须包含 papers 和 questions 数组。')
@@ -893,6 +1014,10 @@ function App() {
             <FileQuestion size={18} />
             刷题
           </button>
+          <button className={state.view === 'study' ? 'active' : ''} type="button" onClick={() => patchState({ view: 'study' })}>
+            <MapPinned size={18} />
+            学习
+          </button>
           <button className={state.view === 'papers' ? 'active' : ''} type="button" onClick={() => patchState({ view: 'papers' })}>
             <History size={18} />
             真题
@@ -1018,10 +1143,19 @@ function App() {
                       {currentQuestion.options?.map((option, index) => {
                         const letter = getOptionLetter(index)
                         const chosen = currentRecord?.answer.includes(letter)
+                        const checked = Boolean(currentRecord?.checked)
+                        const isCorrectAnswer = currentQuestion.answer.includes(letter)
+                        const optionClassName = [
+                          chosen ? 'chosen' : '',
+                          checked && isCorrectAnswer ? 'correct' : '',
+                          checked && chosen && !isCorrectAnswer ? 'wrong' : '',
+                        ]
+                          .filter(Boolean)
+                          .join(' ')
                         return (
                           <button
                             key={letter}
-                            className={chosen ? 'chosen' : ''}
+                            className={optionClassName}
                             type="button"
                             onClick={() => answerChoice(currentQuestion, letter)}
                           >
@@ -1051,15 +1185,17 @@ function App() {
                       <ChevronLeft size={18} />
                       上一题
                     </button>
-                    <button className="primary" type="button" onClick={() => checkQuestion(currentQuestion)}>
-                      <CheckCircle2 size={18} />
-                      判题
-                    </button>
                     {(currentQuestion.type === 'short' || currentQuestion.type === 'essay') && (
-                      <button type="button" onClick={() => reviewWithAi(currentQuestion)}>
-                        <BrainCircuit size={18} />
-                        AI 评价
-                      </button>
+                      <>
+                        <button className="primary" type="button" onClick={() => checkQuestion(currentQuestion)}>
+                          <CheckCircle2 size={18} />
+                          判题
+                        </button>
+                        <button type="button" onClick={() => reviewWithAi(currentQuestion)}>
+                          <BrainCircuit size={18} />
+                          AI 评价
+                        </button>
+                      </>
                     )}
                     <button
                       type="button"
@@ -1148,6 +1284,17 @@ function App() {
           />
         )}
 
+        {state.view === 'study' && (
+          <StudyView
+            course={selectedCourse}
+            rows={chapterStudyRows}
+            papers={coursePapers}
+            onPracticeChapter={startChapterPractice}
+            onOpenPapers={() => patchState({ view: 'papers' })}
+            onOpenResources={() => patchState({ view: 'resources' })}
+          />
+        )}
+
         {state.view === 'papers' && (
           <PapersView
             papers={coursePapers}
@@ -1206,6 +1353,7 @@ function App() {
         {(
           [
           ['practice', FileQuestion, '刷题'],
+          ['study', MapPinned, '学习'],
           ['papers', History, '真题'],
           ['mistakes', ClipboardList, '错题'],
           ['resources', LibraryBig, '资源'],
@@ -1223,6 +1371,183 @@ function App() {
         ))}
       </nav>
     </main>
+  )
+}
+
+function StudyView({
+  course,
+  rows,
+  papers,
+  onPracticeChapter,
+  onOpenPapers,
+  onOpenResources,
+}: {
+  course: Course
+  rows: ChapterStudyRow[]
+  papers: Paper[]
+  onPracticeChapter: (row: ChapterStudyRow) => void
+  onOpenPapers: () => void
+  onOpenResources: () => void
+}) {
+  const totalQuestions = rows.reduce((sum, row) => sum + row.questions.length, 0)
+  const checkedQuestions = rows.reduce((sum, row) => sum + row.checkedQuestions, 0)
+  const wrongQuestions = rows.reduce((sum, row) => sum + row.wrongQuestions, 0)
+  const pendingPapers = papers.filter((paper) => paper.status === 'needs-import').length
+  const readyPapers = papers.filter((paper) => paper.status === 'ready').length
+
+  function rowStatus(row: ChapterStudyRow) {
+    if (!row.questions.length) {
+      return { label: '待补题', detail: `${row.pendingPapers} 套真题索引待整理`, tone: 'pending' }
+    }
+    if (row.wrongQuestions) {
+      return { label: '先复盘', detail: `${row.wrongQuestions} 题最近失分`, tone: 'review' }
+    }
+    if (row.checkedQuestions < row.questions.length) {
+      return { label: '继续刷', detail: `已判 ${row.checkedQuestions}/${row.questions.length}`, tone: 'progress' }
+    }
+    return { label: '可巩固', detail: `${row.questions.length} 题已覆盖`, tone: 'ready' }
+  }
+
+  return (
+    <section className="study-view library-view">
+      <div className="section-heading">
+        <p className="eyebrow">大纲学习</p>
+        <h3>{course.shortName} 章节路线</h3>
+      </div>
+
+      <div className="study-overview">
+        <div>
+          <MapPinned size={18} />
+          <strong>{rows.length}</strong>
+          <span>大纲章节</span>
+        </div>
+        <div>
+          <FileQuestion size={18} />
+          <strong>{checkedQuestions}/{totalQuestions}</strong>
+          <span>题目覆盖</span>
+        </div>
+        <div>
+          <Target size={18} />
+          <strong>{wrongQuestions}</strong>
+          <span>失分点</span>
+        </div>
+        <div>
+          <History size={18} />
+          <strong>{readyPapers}/{readyPapers + pendingPapers}</strong>
+          <span>可刷/待补卷</span>
+        </div>
+      </div>
+
+      <div className="study-route">
+        <article>
+          <strong>1. 大纲过点</strong>
+          <span>先把本章关键词和问法看熟。</span>
+        </article>
+        <article>
+          <strong>2. 章节专项</strong>
+          <span>用本章题目检查理解，不靠眼熟。</span>
+        </article>
+        <article>
+          <strong>3. 真题套卷</strong>
+          <span>按整卷节奏补速度和主观题结构。</span>
+        </article>
+      </div>
+
+      <div className="chapter-study-grid">
+        {rows.map((row, index) => {
+          const status = rowStatus(row)
+          return (
+            <article key={row.id} className="chapter-study-card">
+              <div className="chapter-study-head">
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                  <strong>{row.title}</strong>
+                  <small>
+                    客观题 {row.objectiveQuestions} · 大题 {row.textQuestions} · 覆盖 {row.readyPapers} 套卷
+                  </small>
+                </div>
+                <em className={`chapter-status ${status.tone}`}>
+                  <strong>{status.label}</strong>
+                  <small>{status.detail}</small>
+                </em>
+              </div>
+
+              <div className="chapter-focus">
+                {row.focus.map((focus) => (
+                  <span key={focus}>{focus}</span>
+                ))}
+              </div>
+
+              <div className="chapter-plan">
+                <div>
+                  <strong>
+                    <BookOpenCheck size={15} />
+                    必背点
+                  </strong>
+                  <ul>
+                    {row.mustKnow.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <strong>
+                    <BrainCircuit size={15} />
+                    常见问法
+                  </strong>
+                  <ul>
+                    {row.questionPatterns.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <strong>
+                    <CheckCircle2 size={15} />
+                    复习动作
+                  </strong>
+                  <ul>
+                    {row.studySteps.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="chapter-study-actions">
+                <button className="primary" type="button" onClick={() => onPracticeChapter(row)} disabled={!row.questions.length}>
+                  <PlayCircle size={16} />
+                  章节专项
+                </button>
+                <button type="button" onClick={onOpenPapers}>
+                  <History size={16} />
+                  真题套卷
+                </button>
+              </div>
+            </article>
+          )
+        })}
+      </div>
+
+      <div className="study-source-panel">
+        <div>
+          <p className="eyebrow">课程口径</p>
+          <p>{course.note}</p>
+        </div>
+        <div className="study-source-actions">
+          {course.sources.map((source) => (
+            <a key={source.url} href={source.url} target="_blank" rel="noreferrer">
+              <ExternalLink size={15} />
+              {source.publisher}
+            </a>
+          ))}
+          <button type="button" onClick={onOpenResources}>
+            <LibraryBig size={15} />
+            资料矩阵
+          </button>
+        </div>
+      </div>
+    </section>
   )
 }
 
@@ -1396,6 +1721,9 @@ function PapersView({
           const paperQuestions = paper.questionIds
             .map((id) => questionById.get(id))
             .filter((question): question is Question => Boolean(question))
+          const typeStats = (['single', 'multiple', 'short', 'essay'] as const)
+            .map((type) => ({ type, count: paperQuestions.filter((question) => question.type === type).length }))
+            .filter((item) => item.count > 0)
           const status = getPaperTimelineStatus(paper, paperQuestions, attempts[paper.id], passScore)
           return (
             <button
@@ -1408,6 +1736,17 @@ function PapersView({
               <span>
                 <strong>{paper.title}</strong>
                 <small>{paper.description}</small>
+                <span className="paper-type-strip">
+                  {typeStats.length ? (
+                    typeStats.map((item) => (
+                      <em key={item.type}>
+                        {questionLabel(item.type)} {item.count}
+                      </em>
+                    ))
+                  ) : (
+                    <em>待导入题目</em>
+                  )}
+                </span>
               </span>
               <span className={`paper-status ${status.tone}`}>
                 <strong>{status.label}</strong>
@@ -1855,6 +2194,7 @@ function ResourcesView({
   const targetCourses = courses.filter((course) => ['xi', 'history', 'marx', 'multimedia'].includes(course.id))
   const courseCoverage = targetCourses.map((course) => {
     const coursePapers = allPapers.filter((paper) => paper.courseId === course.id)
+    const gapRecords = sourceGapRecords.filter((record) => record.courseId === course.id)
     return {
       course,
       readyPapers: coursePapers.filter((paper) => paper.status === 'ready'),
@@ -1862,8 +2202,13 @@ function ResourcesView({
       readyCount: coursePapers.filter((paper) => paper.status === 'ready').length,
       importedCount: importedBank.papers.filter((paper) => paper.courseId === course.id).length,
       waitingCount: coursePapers.filter((paper) => paper.status === 'needs-import').length,
+      loginGapCount: gapRecords.filter((record) => record.accessStatus === 'requires-login-or-purchase').length,
+      previewGapCount: gapRecords.filter((record) => record.accessStatus !== 'requires-login-or-purchase').length,
+      gapRecords,
     }
   })
+  const loginGapRecords = sourceGapRecords.filter((record) => record.accessStatus === 'requires-login-or-purchase')
+  const previewGapRecords = sourceGapRecords.filter((record) => record.accessStatus !== 'requires-login-or-purchase')
 
   function prefillBuilderFromPaper(paper: Paper) {
     const course = courses.find((item) => item.id === paper.courseId) ?? selectedCourse
@@ -2097,6 +2442,56 @@ function ResourcesView({
           </div>
         </div>
 
+        <div className="resource-box gap-tracker">
+          <div>
+            <KeyRound size={22} />
+            <strong>待登录资料队列</strong>
+          </div>
+          <p>这些来源我已经验证过，不是没找到，而是需要登录/购买或只公开预览。登录后优先处理这里。</p>
+          <div className="gap-summary">
+            <div>
+              <strong>{loginGapRecords.length}</strong>
+              <span>需要登录</span>
+            </div>
+            <div>
+              <strong>{previewGapRecords.length}</strong>
+              <span>仅预览/答案受限</span>
+            </div>
+            <div>
+              <strong>{sourceGapRecords.length}</strong>
+              <span>已验证线索</span>
+            </div>
+          </div>
+          <div className="gap-list">
+            {sourceGapRecords.map((record) => {
+              const course = courses.find((item) => item.id === record.courseId)
+              const statusLabel =
+                record.accessStatus === 'requires-login-or-purchase'
+                  ? '待登录'
+                  : record.accessStatus === 'public-preview-only'
+                    ? '只有预览'
+                    : '答案受限'
+              return (
+                <article key={`${record.courseId}-${record.sourceUrl}-${record.title}`} className={`gap-item gap-${record.accessStatus}`}>
+                  <div>
+                    <span>{course?.shortName ?? record.code}</span>
+                    <strong>{record.title}</strong>
+                    <small>{record.coverage}</small>
+                    <small>{record.currentUse}</small>
+                  </div>
+                  <div>
+                    <em>{statusLabel}</em>
+                    <a href={record.sourceUrl} target="_blank" rel="noreferrer">
+                      <ExternalLink size={15} />
+                      打开
+                    </a>
+                  </div>
+                </article>
+              )
+            })}
+          </div>
+        </div>
+
         <div className="resource-box paper-matrix">
           <div>
             <Search size={22} />
@@ -2104,7 +2499,7 @@ function ResourcesView({
           </div>
           <p>按备考优先级盯住四门课。待导入项先作为索引存在，拿到题文后可以直接预填到制卷器。</p>
           <div className="matrix-list">
-            {courseCoverage.map(({ course, readyPapers, pendingPapers, readyCount, importedCount: localCount, waitingCount }) => {
+            {courseCoverage.map(({ course, readyPapers, pendingPapers, readyCount, importedCount: localCount, waitingCount, loginGapCount, previewGapCount, gapRecords }) => {
               const query = getPastPaperSearchQuery(course)
               const sourceLinks = pastPaperSources.filter((source) => source.courseIds.includes(course.id)).slice(0, 3)
               return (
@@ -2121,6 +2516,8 @@ function ResourcesView({
                       <span>{readyCount} 可刷</span>
                       <span>{localCount} 本地</span>
                       <span>{waitingCount} 待补</span>
+                      {!!loginGapCount && <span>{loginGapCount} 待登录</span>}
+                      {!!previewGapCount && <span>{previewGapCount} 预览</span>}
                     </div>
                   </div>
 
@@ -2145,6 +2542,17 @@ function ResourcesView({
                       </a>
                     ))}
                   </div>
+
+                  {gapRecords.length > 0 && (
+                    <div className="matrix-gap-links">
+                      {gapRecords.slice(0, 2).map((record) => (
+                        <a key={`${record.sourceUrl}-${record.title}`} href={record.sourceUrl} target="_blank" rel="noreferrer">
+                          <KeyRound size={14} />
+                          {record.accessStatus === 'requires-login-or-purchase' ? '待登录' : '线索'} · {record.coverage}
+                        </a>
+                      ))}
+                    </div>
+                  )}
 
                   <div className="pending-paper-list">
                     {pendingPapers.length ? (

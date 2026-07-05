@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <title>错误-跳转提示</title>
+    <script src="https://cdn.zikaosw.cn/static/admin/js/jquery.min.js"></script>
+    <script src="https://cdn.zikaosw.cn/static/admin/js/layer/layer.js"></script>
+</head>
+<body>
+
+<script> layer.msg('请输入搜索内容',{icon:0,shade:0.1,time:3000});</script>
+
+<script type="text/javascript">
+    setTimeout(function () {
+        location.href = 'javascript:history.back(-1);';
+    },3000);
+</script>
+</body>
+</html>

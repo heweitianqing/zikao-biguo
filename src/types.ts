@@ -22,6 +22,9 @@ export type OutlineChapter = {
   id: string
   title: string
   focus: string[]
+  mustKnow?: string[]
+  questionPatterns?: string[]
+  studySteps?: string[]
 }
 
 export type ResourceLink = {
@@ -83,7 +86,7 @@ export type AppState = {
   selectedCourseId: string
   selectedPaperId: string
   selectedQuestionIndex: number
-  view: 'practice' | 'papers' | 'mistakes' | 'resources' | 'settings' | 'report'
+  view: 'practice' | 'study' | 'papers' | 'mistakes' | 'resources' | 'settings' | 'report'
   attempts: Record<string, PaperAttempt>
   deepseekApiKey: string
 }

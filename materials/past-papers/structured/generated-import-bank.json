@@ -1,0 +1,6526 @@
+{
+  "updatedAt": "2026-07-05",
+  "note": "由 materials/past-papers/tools/build-generated-bank.py 从本地 PDF 真题抽取。papers/questions 为已进入应用的可刷题，reviewPapers/reviewQuestions 为待补答案或待校对资料。",
+  "papers": [
+    {
+      "id": "generated-xi-2025-10",
+      "courseId": "xi",
+      "title": "15040 2025 年 10 月真题答案解析",
+      "year": 2025,
+      "session": "10月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/raw/xi-1270151-2025年10月《习概》真题答案解析-完整版.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 100,
+      "questionIds": [
+        "generated-xi-2025-10-q001",
+        "generated-xi-2025-10-q002",
+        "generated-xi-2025-10-q003",
+        "generated-xi-2025-10-q004",
+        "generated-xi-2025-10-q005",
+        "generated-xi-2025-10-q006",
+        "generated-xi-2025-10-q007",
+        "generated-xi-2025-10-q008",
+        "generated-xi-2025-10-q009",
+        "generated-xi-2025-10-q010",
+        "generated-xi-2025-10-q011",
+        "generated-xi-2025-10-q012",
+        "generated-xi-2025-10-q013",
+        "generated-xi-2025-10-q014",
+        "generated-xi-2025-10-q015",
+        "generated-xi-2025-10-q016",
+        "generated-xi-2025-10-q017",
+        "generated-xi-2025-10-q018",
+        "generated-xi-2025-10-q019",
+        "generated-xi-2025-10-q020",
+        "generated-xi-2025-10-q021",
+        "generated-xi-2025-10-q022",
+        "generated-xi-2025-10-q023",
+        "generated-xi-2025-10-q024",
+        "generated-xi-2025-10-q025",
+        "generated-xi-2025-10-q026",
+        "generated-xi-2025-10-q027",
+        "generated-xi-2025-10-q028",
+        "generated-xi-2025-10-q029",
+        "generated-xi-2025-10-q030",
+        "generated-xi-2025-10-q031"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice",
+      "courseId": "xi",
+      "title": "15040 2025 年 4 月选择题真题",
+      "year": 2025,
+      "session": "4月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/raw/xi-1146671-2025年4月自学考试《新中概》选择题真题及答案-回忆版.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 50,
+      "questionIds": [
+        "generated-xi-2025-04-choice-q001",
+        "generated-xi-2025-04-choice-q002",
+        "generated-xi-2025-04-choice-q003",
+        "generated-xi-2025-04-choice-q004",
+        "generated-xi-2025-04-choice-q005",
+        "generated-xi-2025-04-choice-q006",
+        "generated-xi-2025-04-choice-q007",
+        "generated-xi-2025-04-choice-q008",
+        "generated-xi-2025-04-choice-q009",
+        "generated-xi-2025-04-choice-q010",
+        "generated-xi-2025-04-choice-q011",
+        "generated-xi-2025-04-choice-q012",
+        "generated-xi-2025-04-choice-q013",
+        "generated-xi-2025-04-choice-q014",
+        "generated-xi-2025-04-choice-q015",
+        "generated-xi-2025-04-choice-q016",
+        "generated-xi-2025-04-choice-q017",
+        "generated-xi-2025-04-choice-q018",
+        "generated-xi-2025-04-choice-q019",
+        "generated-xi-2025-04-choice-q020",
+        "generated-xi-2025-04-choice-q021",
+        "generated-xi-2025-04-choice-q022",
+        "generated-xi-2025-04-choice-q023",
+        "generated-xi-2025-04-choice-q024",
+        "generated-xi-2025-04-choice-q025"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-subjective",
+      "courseId": "xi",
+      "title": "15040 2025 年 4 月简答论述真题",
+      "year": 2025,
+      "session": "4月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/raw/xi-1146130-2025年4月自学考试《新中概》真题及答案-回忆版.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 52,
+      "questionIds": [
+        "generated-xi-2025-04-subjective-q001",
+        "generated-xi-2025-04-subjective-q002",
+        "generated-xi-2025-04-subjective-q003",
+        "generated-xi-2025-04-subjective-q004",
+        "generated-xi-2025-04-subjective-q005",
+        "generated-xi-2025-04-subjective-q006"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-choice",
+      "courseId": "marx",
+      "title": "15044/03709 2025 年 4 月选择题真题",
+      "year": 2025,
+      "session": "4月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/raw/marx-1146123-2025年4月自考《马原》选择题真题及答案-回忆版.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 50,
+      "questionIds": [
+        "generated-marx-2025-04-choice-q001",
+        "generated-marx-2025-04-choice-q002",
+        "generated-marx-2025-04-choice-q003",
+        "generated-marx-2025-04-choice-q004",
+        "generated-marx-2025-04-choice-q005",
+        "generated-marx-2025-04-choice-q006",
+        "generated-marx-2025-04-choice-q007",
+        "generated-marx-2025-04-choice-q008",
+        "generated-marx-2025-04-choice-q009",
+        "generated-marx-2025-04-choice-q010",
+        "generated-marx-2025-04-choice-q011"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-subjective",
+      "courseId": "marx",
+      "title": "15044/03709 2025 年 4 月简答论述真题",
+      "year": 2025,
+      "session": "4月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/raw/marx-1146105-2025年4月自考《马克思主义基本原理》简答题真题及答案-回忆版.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 60,
+      "questionIds": [
+        "generated-marx-2025-04-subjective-q001",
+        "generated-marx-2025-04-subjective-q002",
+        "generated-marx-2025-04-subjective-q003",
+        "generated-marx-2025-04-subjective-q004",
+        "generated-marx-2025-04-subjective-q005",
+        "generated-marx-2025-04-subjective-q006",
+        "generated-marx-2025-04-subjective-q007",
+        "generated-marx-2025-04-subjective-q008"
+      ]
+    },
+    {
+      "id": "generated-marx-2022-04",
+      "courseId": "marx",
+      "title": "03709/15044 2022 年 4 月简答论述真题",
+      "year": 2022,
+      "session": "4月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/extracted/marx/marx-2022-04-zip.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 72,
+      "questionIds": [
+        "generated-marx-2022-04-q001",
+        "generated-marx-2022-04-q002",
+        "generated-marx-2022-04-q003",
+        "generated-marx-2022-04-q004",
+        "generated-marx-2022-04-q005",
+        "generated-marx-2022-04-q006",
+        "generated-marx-2022-04-q007",
+        "generated-marx-2022-04-q008"
+      ]
+    },
+    {
+      "id": "generated-marx-2023-04",
+      "courseId": "marx",
+      "title": "03709/15044 2023 年 4 月简答论述真题",
+      "year": 2023,
+      "session": "4月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/extracted/marx/marx-2023-04-zip.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 64,
+      "questionIds": [
+        "generated-marx-2023-04-q001",
+        "generated-marx-2023-04-q002",
+        "generated-marx-2023-04-q003",
+        "generated-marx-2023-04-q004",
+        "generated-marx-2023-04-q005",
+        "generated-marx-2023-04-q006",
+        "generated-marx-2023-04-q007",
+        "generated-marx-2023-04-q008"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-04-zip",
+      "courseId": "marx",
+      "title": "03709/15044 2024 年 4 月简答论述真题汇总包版",
+      "year": 2024,
+      "session": "4月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/extracted/marx/marx-2024-04-zip.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 64,
+      "questionIds": [
+        "generated-marx-2024-04-zip-q001",
+        "generated-marx-2024-04-zip-q002",
+        "generated-marx-2024-04-zip-q003",
+        "generated-marx-2024-04-zip-q004",
+        "generated-marx-2024-04-zip-q005",
+        "generated-marx-2024-04-zip-q006",
+        "generated-marx-2024-04-zip-q007",
+        "generated-marx-2024-04-zip-q008"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-10-subjective",
+      "courseId": "marx",
+      "title": "15044 2025 年 10 月简答论述真题",
+      "year": 2025,
+      "session": "10月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/raw/marx-1270153-2025年10月自考《马原》简答、论述真题、答案.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 64,
+      "questionIds": [
+        "generated-marx-2025-10-subjective-q001",
+        "generated-marx-2025-10-subjective-q002",
+        "generated-marx-2025-10-subjective-q003",
+        "generated-marx-2025-10-subjective-q004",
+        "generated-marx-2025-10-subjective-q005",
+        "generated-marx-2025-10-subjective-q006",
+        "generated-marx-2025-10-subjective-q007",
+        "generated-marx-2025-10-subjective-q008"
+      ]
+    },
+    {
+      "id": "generated-marx-2026-04-subjective",
+      "courseId": "marx",
+      "title": "15044 2026 年 4 月简答论述真题",
+      "year": 2026,
+      "session": "4月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/raw/marx-1350778-26年4月自考-【马原】真题及答案解析.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 64,
+      "questionIds": [
+        "generated-marx-2026-04-subjective-q001",
+        "generated-marx-2026-04-subjective-q002",
+        "generated-marx-2026-04-subjective-q003",
+        "generated-marx-2026-04-subjective-q004",
+        "generated-marx-2026-04-subjective-q005",
+        "generated-marx-2026-04-subjective-q006",
+        "generated-marx-2026-04-subjective-q007",
+        "generated-marx-2026-04-subjective-q008"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-10-subjective",
+      "courseId": "marx",
+      "title": "03709/15044 2024 年 10 月简答论述真题",
+      "year": 2024,
+      "session": "10月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/raw/marx-1054639-2024年10月自考《马克思主义基本原理概论》真题及答案.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 72,
+      "questionIds": [
+        "generated-marx-2024-10-subjective-q001",
+        "generated-marx-2024-10-subjective-q002",
+        "generated-marx-2024-10-subjective-q003",
+        "generated-marx-2024-10-subjective-q004",
+        "generated-marx-2024-10-subjective-q005",
+        "generated-marx-2024-10-subjective-q006",
+        "generated-marx-2024-10-subjective-q007",
+        "generated-marx-2024-10-subjective-q008",
+        "generated-marx-2024-10-subjective-q009",
+        "generated-marx-2024-10-subjective-q010"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04",
+      "courseId": "history",
+      "title": "03708/15043 2024 年 4 月真题答案解析",
+      "year": 2024,
+      "session": "4月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/raw/history-977235-2024年4月自学考试《中国近现代史纲要》真题及答案解析.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 100,
+      "questionIds": [
+        "generated-history-2024-04-q001",
+        "generated-history-2024-04-q002",
+        "generated-history-2024-04-q003",
+        "generated-history-2024-04-q004",
+        "generated-history-2024-04-q005",
+        "generated-history-2024-04-q006",
+        "generated-history-2024-04-q007",
+        "generated-history-2024-04-q008",
+        "generated-history-2024-04-q009",
+        "generated-history-2024-04-q010",
+        "generated-history-2024-04-q011",
+        "generated-history-2024-04-q012",
+        "generated-history-2024-04-q013",
+        "generated-history-2024-04-q014",
+        "generated-history-2024-04-q015"
+      ]
+    },
+    {
+      "id": "generated-history-2022-04",
+      "courseId": "history",
+      "title": "03708/15043 2022 年 4 月简答论述真题",
+      "year": 2022,
+      "session": "4月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/extracted/history/history-2022-04-zip.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 72,
+      "questionIds": [
+        "generated-history-2022-04-q001",
+        "generated-history-2022-04-q002",
+        "generated-history-2022-04-q003",
+        "generated-history-2022-04-q004",
+        "generated-history-2022-04-q005",
+        "generated-history-2022-04-q006",
+        "generated-history-2022-04-q007",
+        "generated-history-2022-04-q008"
+      ]
+    },
+    {
+      "id": "generated-history-2022-10",
+      "courseId": "history",
+      "title": "03708/15043 2022 年 10 月回忆版简答题",
+      "year": 2022,
+      "session": "10月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/extracted/history/history-2022-10-zip.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 28,
+      "questionIds": [
+        "generated-history-2022-10-q001",
+        "generated-history-2022-10-q002",
+        "generated-history-2022-10-q003",
+        "generated-history-2022-10-q004"
+      ]
+    },
+    {
+      "id": "generated-history-2023-04",
+      "courseId": "history",
+      "title": "03708/15043 2023 年 4 月简答论述真题",
+      "year": 2023,
+      "session": "4月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/extracted/history/history-2023-04-zip.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 72,
+      "questionIds": [
+        "generated-history-2023-04-q001",
+        "generated-history-2023-04-q002",
+        "generated-history-2023-04-q003",
+        "generated-history-2023-04-q004",
+        "generated-history-2023-04-q005",
+        "generated-history-2023-04-q006",
+        "generated-history-2023-04-q007",
+        "generated-history-2023-04-q008"
+      ]
+    },
+    {
+      "id": "generated-history-2024-10-subjective",
+      "courseId": "history",
+      "title": "03708/15043 2024 年 10 月简答论述真题",
+      "year": 2024,
+      "session": "10月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/raw/history-1054821-2024年10月自考《中国近现代史纲要》真题及答案解析(回忆版)-.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 58,
+      "questionIds": [
+        "generated-history-2024-10-subjective-q001",
+        "generated-history-2024-10-subjective-q002",
+        "generated-history-2024-10-subjective-q003",
+        "generated-history-2024-10-subjective-q004",
+        "generated-history-2024-10-subjective-q005",
+        "generated-history-2024-10-subjective-q006",
+        "generated-history-2024-10-subjective-q007"
+      ]
+    },
+    {
+      "id": "generated-history-2025-10-subjective",
+      "courseId": "history",
+      "title": "15043 2025 年 10 月简答论述真题",
+      "year": 2025,
+      "session": "10月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/raw/history-1270145-2025年10月自考《中国近现代史纲要》简答、论述真题、答案.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 56,
+      "questionIds": [
+        "generated-history-2025-10-subjective-q001",
+        "generated-history-2025-10-subjective-q002",
+        "generated-history-2025-10-subjective-q003",
+        "generated-history-2025-10-subjective-q004",
+        "generated-history-2025-10-subjective-q005",
+        "generated-history-2025-10-subjective-q006",
+        "generated-history-2025-10-subjective-q007",
+        "generated-history-2025-10-subjective-q008"
+      ]
+    },
+    {
+      "id": "generated-history-2023-10-subjective",
+      "courseId": "history",
+      "title": "03708/15043 2023 年 10 月简答论述真题",
+      "year": 2023,
+      "session": "10月",
+      "sourceKind": "imported",
+      "status": "ready",
+      "description": "由本地 PDF 自动整理生成，来源：materials/past-papers/raw/history-941572-2023年10月自学考试《中国近现代史纲要》真题及答案考生回忆版.pdf。部分回忆版题目后续仍需人工校对。",
+      "minutes": 150,
+      "totalScore": 64,
+      "questionIds": [
+        "generated-history-2023-10-subjective-q001",
+        "generated-history-2023-10-subjective-q002",
+        "generated-history-2023-10-subjective-q003",
+        "generated-history-2023-10-subjective-q004",
+        "generated-history-2023-10-subjective-q005",
+        "generated-history-2023-10-subjective-q006",
+        "generated-history-2023-10-subjective-q007",
+        "generated-history-2023-10-subjective-q008"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "generated-xi-2025-10-q001",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "新时代坚持和发展中国特色社会主义，必须坚定“四个自信”。在四个自信中更基础，更广 泛更深厚的自信是（ ）",
+      "options": [
+        "道路自信",
+        "理论自信",
+        "制度自信",
+        "文化自信"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "文化自信是更基础、更广泛、更深厚的自信，是一个国家、一个民族发展中最基本、最 深沉最持久的力量。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q002",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "新时代我国社会主要矛盾是（ ）",
+      "options": [
+        "重点突破和整体推进的矛盾",
+        "各区域各领域之间发展不平衡的矛盾",
+        "人民日益增长的物质文化需要同落后的社会生产之间的矛盾",
+        "人民日益增长的美好生活需求和不平衡不充分的发展之间的矛盾"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "党的十八大以来，经过科学分析，我们党及时作出我国社会主要矛盾已经转化为人民日益增长 的美好生活需要和不平衡不充分的发展之间的矛盾的重大战略判断。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q003",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "走和平发展道路是中国式现代化的一个特色其承继的中华优秀传统文化的理念是（ ）",
+      "options": [
+        "天人合一",
+        "协和万邦",
+        "革故鼎新",
+        "取长补短"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "中国式现代化是走和平发展道路的现代化。华民族经历了西方列强侵略、凌辱的悲惨历史深知 决不能走西方依靠战争、殖民、掠夺等方式实现现代化的老路。中华民族有崇尚和平的文化基 因，渴望和平、追求发展始终是中国人民的精神特征，历来强调“强不执弱”、“富不侮贫”， 主张“协和万邦”。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q004",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "党的领导的最高原则是（ ）",
+      "options": [
+        "巩固党执政的阶级基础",
+        "党中央集中统一领导",
+        "厚植党执政的群众基础",
+        "加强党执政的经济基础"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "党中央集中统一领导是党的领导的最高是党保持团结统一和强大战斗力、不断默得利的 关键所在。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q005",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "我们党最大的政治优势是0",
+      "options": [
+        "密切联系群众",
+        "批评与自我批评",
+        "理论联系实际",
+        "谦虚谨慎戒骄戒躁"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "我们党的最大政治优势是密切联系群众,党执政后的最大危险是脱离群众。习近平指出: “坚持立党为公、执政为民，始终保持党同人民群众的血肉联系，是马克思主义政党与生俱来 的政治品质和最高从政道德，是衡量党的先进性的根本标尺。”",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q006",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "改革发展稳定三者密不可分，其中改革是（ ）",
+      "options": [
+        "前提",
+        "基础",
+        "动力",
+        "目的"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "改革发展稳定是我国社会主义现代化建设的三个重要支点。改革是经济社会发展的强大 动力，发展是解决一切经济社会问题的关键，稳定是改革发展的前提。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q007",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-2",
+      "stem": "在新发展理念中，注重解决发展内外联动问题的是（ ）",
+      "options": [
+        "共享发展",
+        "绿色发展",
+        "开放发展",
+        "协调发展"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "开放是国家繁荣发展的必由之路，开放发展重要的是解决发展内外联动问题，必须推动 形成更大范围、更宽领域、更深层次对外开放格局，不断增强我国国际经济合作和竞争新优势。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q008",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-2",
+      "stem": "实施乡村振兴战略的总目标是(",
+      "options": [
+        "城乡融合发展",
+        "农业农村现代化",
+        "保障粮食供给",
+        "农业农村优先发展"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "实施乡村振兴战略，农业农村现代化是总目标，坚持农业农村优先发展是总方针，产业 兴旺、生态宜居、乡风文明、治理有效、生活富裕是总要求，建立健全城乡融合发展体制机制 和政策体系是制度保障。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q009",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "在国家发展中始终具有基础性、先导性、全局性地位的是（ ）",
+      "options": [
+        "教育",
+        "人才",
+        "科技",
+        "资源"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "教育是国家经济社会发展的支撑力量，在国家发展中始终具有基础性先导性全局性地位。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q010",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "全体人民共同持续参与、各个民族共同平等享有体现了全过程人民民主具有（ ）",
+      "options": [
+        "稳定性",
+        "广泛性",
+        "实用性",
+        "针对性"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "全过程人民民主是最广泛的民主。全过程大民民主是全体人民共同持续参与，各个民族 共同平等享有，不同地域、不同领域、不同层级、不同群体均实现全面覆盖的民主体系，是最 广泛的民主。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q011",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "习近平法治思想的主要内容集中体现为（ ）(本题;2分)",
+      "options": [
+        "三个务必",
+        "六个必须坚持",
+        "七个若力",
+        "十一个坚持"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "习近平法治思想的主要内容集中体现为“十一坚持”:坚持党对全面依法治国的领导;坚持 以人民为中心;坚持中国特色社会主义法治道路;坚持依宪治国、依宪执政;坚持在法治轨道上推 进国家治理体系和治理能力现代化;坚持建设中国特色社会主义法治体系;坚持依法治国、依法 执政、依法行政共同推进，法治国家法治政府、法治社会一体建设;坚持全面推进科学立法、 严格执法、公正司法、全民守法;坚持统筹推进国内法治和涉外法治;坚持建设德才兼备的高素 质法治工作队伍;坚持抓住领导干部这个“关键少数”。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q012",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "全面推进依法治国的总抓手是（ ）(本题;2分)",
+      "options": [
+        "建设中国特色社会主义法治体系",
+        "正确处理政治和法治关系",
+        "坚持依法治国和以德治国相结合",
+        "正确处理改革和法治关系"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "全面依法治国是一个庞大的系统工程，涉及改革发展稳定、内政外交国防、治党治国治 军等各个方面。习近平指出:“全面推进依法治国涉及很多方面，在实际工作中必须有一个总 揽全局、牵引各方的总抓手，这个总抓手就是建设中国特色社会主义法治体系。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q013",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "“六合同风”“四海一家”体现的中华文明的突出特性是（ ）",
+      "options": [
+        "创新性",
+        "和平性",
+        "连续性",
+        "统一性"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "“六合同风”“四海一家”的核心是强调天下各地风俗统一、民众如同一家人，体现了 中华文明统一性的突出特性。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q014",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "新时代新征程解决民生问题的“总钥匙”是(",
+      "options": [
+        "统筹",
+        "发展",
+        "管理",
+        "治理"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "发展具有基础性、根本性，是解决安全的总钥匙，发展就是最大的安全。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q015",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "2024 年 12 月 4 日,我国被联合国教科文组织列入非物质文化遗产代表作名录的是（ ）(本 题:2分)",
+      "options": [
+        "春节",
+        "端午节",
+        "中秋节",
+        "重阳节"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "2024年12月4 日,我国被联合国教科文组列入非物质文化遗产代表作名录的是“春节-- 中国人庆祝传统新年的社会实践\"",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q016",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "绿色发展的要义是（ ）(木题;2分)",
+      "options": [
+        "解决好人与人和谐相处问题A)",
+        "处理好中国与世界的关系",
+        "解决好人与自然和谐共生的问题",
+        "处理好国家与社会的关系"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "绿色是永续发展的必要条件和人民对美好生活追求的重要体现，绿色发展注重的是解决 人与自然和谐共生问题，必须实现经济社会发展和生态环境保护协同共进，加快发展方式绿色 转型，推动形成绿色低碳的生产方式和生活方式。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q017",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "全球携手共建清洁美丽世界,应对生态环境挑战,必须坚持的原则是（ ）",
+      "options": [
+        "单边主义",
+        "多边主义",
+        "利己主义",
+        "孤立主义"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "建设人与自然和谐共生的地球家园，要顺应世界各国人民对美好生态环境的需要，以绿 色转型为驱动，坚持多边主义，推动全球环境治理体系更加公平合理，携手共建清洁美丽世界。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q018",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "构建新安全格局,应对各领域安全风险和挑战的首要任务是维护（ ）",
+      "options": [
+        "政治安全",
+        "太空安全",
+        "金融安全",
+        "网络安全"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "构建统筹各领域安全的新安全格局，必须把维护政治安全作为应对各领域安全风险挑战 的首要任务。政治安全是国家安全的根本。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q019",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "人民军队的主责主业是备战打仗,必须树立唯一的根本的标准是（ ）(木题:2分)",
+      "options": [
+        "领导力",
+        "组织力",
+        "战斗力",
+        "执行力"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "人民军队永远是战斗队，人民军队的生部刀在于战斗力，主责主业是备战打仗。把战斗 力作为唯一的根本的标准，是有效履行人民军队根本职能的要求，也是提高军队建设质量和效 益的要求。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q020",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "“一国两制”方针最高原则是（ ）(本题;2分)",
+      "options": [
+        "维护国家主权、安全、发展利益",
+        "全面管治权和高度自治权相统一",
+        "“爱国者治港”“爱国者治澳",
+        "依法治港治澳"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "维护国家主权、安全、发展利益是“一国两制”方针的最高原则，在这个前提下，香港、 澳门保持原有的资本主义制度长期不变，享有高度自治权。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q021",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "新时代党解决台湾问题的总体方略中,统一的战略支撑是坚持（ ）",
+      "options": [
+        "推动两岸关系融合发展",
+        "粉碎“台独”分裂图谋",
+        "决不放弃使用武力",
+        "反对外部势力干涉"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "我们不承诺放弃使用武力，保留采取一切必要措施的选项，针对的是外部势力干涉和极 少数“台独”分裂分子及其分裂活动，绝非针对广大台湾同胞。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q022",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "推动构建新型国际关系的原则是（ ）",
+      "options": [
+        "外交为民，共同发展",
+        "相互尊重、公平正义、合作共赢",
+        "总体稳定、;均衡发展",
+        "反对冷战思维，反对双重标准"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "推动构建新型国际关系，就是要秉持相互尊重、公平正义、合作共赢原则，走出一条对 话而不对抗、结伴而不结盟的国与国交往新路。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q023",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "共建“一带一路”应该坚持的理念是0",
+      "options": [
+        "双贏、多贏、共贏",
+        "平等、平均、平衡",
+        "互商、互谅、互利",
+        "开放、绿色、廉洁"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "共建“一带一路”,秉持共商共建共享原则，坚持开放、绿色、康洁理念，以高标准、可 持续、惠民生为目标，全面推进政策沟通、设施联通、贸易畅通、资金融通、民心相通，努力 建设和平之路、繁荣之路、开放之路、绿色之路、创新之路、文明之路。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q024",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "摆在党的建设总体布局首位的是（ ）",
+      "options": [
+        "纪律建设",
+        "组织建设",
+        "思想建设",
+        "政治建设"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "党的政治建设是党的根本性建设。把政治建设纳入党的建设总体布局并摆在首位，是新 时代我们党对马克思主义党建理论的重大创新，体现了我们党对共产党执政规律的深刻认识， 有着充分的理论和实践依据。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q025",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "我们党给出的跳出历史周期率的第二个答案是（ ）",
+      "options": [
+        "社会革命",
+        "民主",
+        "自我革命",
+        "集中"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "跳出历史周期率问题，是关系党千秋伟业的一个重大问题。党的自我革命是跳出历史周 期率的第二个答案。 二、简答题：",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q026",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "essay",
+      "chapterId": "xi-1",
+      "stem": "两个结合",
+      "answer": [
+        "“两个结合”:马克思主义基本原理同中国具体实际相结合(第一个结合)、同中华优秀传统",
+        "文化相结合(第二个结合)。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ],
+      "rubric": [
+        "“两个结合”:马克思主义基本原理同中国具体实际相结合(第一个结合)、同中华优秀传统",
+        "文化相结合(第二个结合)。"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q027",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "short",
+      "chapterId": "xi-2",
+      "stem": "四个全面",
+      "answer": [
+        "全面深化改革、全面依法治国、全面建设社会主义现代化国家、全面从严治党。"
+      ],
+      "analysis": "“四个全面”战略布局是新时代治国理政的总方略，其最新表述为全面建设社会主义现代化国 家、全面深化改革、全面依法治国、全面从严治党。 这一战略布局中，“全面建设社会主义现代化国家”是战略目标，“全面深化改革”“全面依 法治国”“全面从严治党”是三大战略举措，四者相互联系、相互促进，共同构成有机整体。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ],
+      "rubric": [
+        "全面深化改革、全面依法治国、全面建设社会主义现代化国家、全面从严治党。"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q028",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "essay",
+      "chapterId": "xi-2",
+      "stem": "构建新发展格局",
+      "answer": [
+        "内涵:以国内大循环为主体、国内国际双循环相互促进",
+        "意义/加快构建新发展格局的必然性:是推动高质量发展的战略基点，是关系我国发展全局",
+        "的重大战略任务",
+        "是把握未来发展主动权的战略部署、先手棋，是事关全局的系统性、深层次",
+        "变革，是立足当前、着眼长远的战略谋划，是适应我国发展新阶段要求、塑造国际合作和竞争",
+        "新优势的必然选择",
+        "如何推动构建新发展格局:着力推动实施扩大内需战略同深化供给侧结构性改革有机结合",
+        "着力发展实体经济(坚持把发展经济的着力点放在实体经济上)",
+        "着力加快科技自立自强",
+        "着力推"
+      ],
+      "analysis": "构建新发展格局是习近平经济思想中具有鲜明时代特征的原创性、标识性概念。以下是关于它 的详细介绍： 提出时间 2020年4 月，在十九届中央财经委员会第七次会议上，习近平总书记首次提出构建新发展格 局的战略构想。 丰富内涵 •以国内大循环为主体：大国经济的特征都是内需为主导、内部可循环。我国作为全球第二大 经济体，拥有 14 亿多人口的庞大市场，必须依靠强大国内市场，增强经济发展韧性，把国家 发展进步的命运和主导权牢牢掌握在自己手中。 •是开放的国内国际双循环：以国内大循环为主体，绝不是关起门来封闭运行，而是通过发挥 内需潜力，使国内市场和国际市场更好联通，更好利用国内国际两个市场两种资源，提高在全 球配置资源能力，争取开放发展中的战略主动。 •关键在于经济循环的畅通无阻：要把扩大内需战略同深化供给侧结构性改革有机结合起来， 供需两端同时发力、协调配合，不断提高经济循环的质效，以全国统一大市场基础上的国内大 循环为主体，避免搞“小而全”循环。 •最本质的特征是实现高水平的自立自强：加快科技自立自强是确保国内大循环畅通、塑造我 国在国际大循环中新优势的关键。只有打好关键核心技术攻坚战，实现产业链供应链自主可控 和安全稳定，才能为构建新发展格局夯实科技基础。 重大意义 构建新发展格局是保持我国经济持续稳定发展的战略基础，是促进高质量发展的有利举措，也 是赢得战略主动的重大举措，有助于我们在激烈的国际竞争中赢得优势、赢得主动，在大国博 弈中掌握主动权。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ],
+      "rubric": [
+        "内涵:以国内大循环为主体、国内国际双循环相互促进",
+        "意义/加快构建新发展格局的必然性:是推动高质量发展的战略基点，是关系我国发展全局",
+        "的重大战略任务",
+        "是把握未来发展主动权的战略部署、先手棋，是事关全局的系统性、深层次",
+        "变革，是立足当前、着眼长远的战略谋划，是适应我国发展新阶段要求、塑造国际合作和竞争",
+        "新优势的必然选择"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q029",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "short",
+      "chapterId": "xi-1",
+      "stem": "新时代强军目标",
+      "answer": [
+        "党在新时代的强军目标是建设一支听党指挥、能打胜仗、作风优良的人民军队，把人民军",
+        "队建设成为世界一流军队。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ],
+      "rubric": [
+        "党在新时代的强军目标是建设一支听党指挥、能打胜仗、作风优良的人民军队，把人民军",
+        "队建设成为世界一流军队。"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q030",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "short",
+      "chapterId": "xi-1",
+      "stem": "怎样理解世界正经历百年未有之大变局",
+      "answer": [
+        "世界多极化、经济全球化、社会信息化、文化多样化深入发展，和平、发展、合作、共",
+        "赢的历史潮流不可阻挡",
+        "世界面临的不稳定性不确定性突出，全球性问题加剧，人类处在一个",
+        "危机交织叠加、风险日益增多的时代",
+        "国际力量对比深刻变化",
+        "新一轮科技革命和产业变革深入发展",
+        "国际体系和国际秩序深度调整",
+        "三、论述题"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ],
+      "rubric": [
+        "世界多极化、经济全球化、社会信息化、文化多样化深入发展，和平、发展、合作、共",
+        "赢的历史潮流不可阻挡",
+        "世界面临的不稳定性不确定性突出，全球性问题加剧，人类处在一个",
+        "危机交织叠加、风险日益增多的时代",
+        "国际力量对比深刻变化",
+        "新一轮科技革命和产业变革深入发展"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-10-q031",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-10",
+      "type": "essay",
+      "chapterId": "xi-1",
+      "stem": "全面深化改革路线图的主要内容,",
+      "answer": [
+        "紧紧围绕使市场在资源配置中起决定性作用和更好发挥政府作用，深化经济体制改革",
+        "紧紧",
+        "围绕坚持党的领导、人民当家作主、依法治国有机统一，深化政治体制改革:紧紧围绕建设社",
+        "会主义核心价值体系社会主义文化强国，深化文化体制改革",
+        "紧紧围绕更好保障和改善民生、",
+        "促进社会公平正义，深化社会体制改革",
+        "紧紧围绕建设美丽中国，深化生态文明体制改革:紧紧",
+        "围绕提高科学执政、民主执政、依法执政水平，深化党的建设制度改革。",
+        "年10 月自学考试"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15040"
+      ],
+      "rubric": [
+        "紧紧围绕使市场在资源配置中起决定性作用和更好发挥政府作用，深化经济体制改革",
+        "紧紧",
+        "围绕坚持党的领导、人民当家作主、依法治国有机统一，深化政治体制改革:紧紧围绕建设社",
+        "会主义核心价值体系社会主义文化强国，深化文化体制改革",
+        "紧紧围绕更好保障和改善民生、",
+        "促进社会公平正义，深化社会体制改革"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q001",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-2",
+      "stem": "在四个全面战略布局中居引领地位的是（ ）",
+      "options": [
+        "全面深化改革",
+        "全面从严治党",
+        "全面依法治国",
+        "全面建设社会主义现代化国家"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q002",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "中国式现代化的出发点和落脚点是（ ）",
+      "options": [
+        "农轻重协调发展",
+        "实现人民对美好生活的向往",
+        "科技跨越式发展",
+        "坚持独立自主、自力更生"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q003",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "中国特色社会主义最本质的特征是（ ）",
+      "options": [
+        "中国共产党领导",
+        "实现人的全面发展",
+        "以公有制为主体",
+        "以按劳分配为主体"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q004",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "党执政的最大底气、最深厚的根基是",
+      "options": [
+        "人民",
+        "中国传统文化",
+        "综合国力",
+        "安定团结"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q005",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-2",
+      "stem": "下列关于共同富裕的理解正确的是（ ）",
+      "options": [
+        "所有人同时富裕",
+        "沿海地区和内陆地区同步富裕",
+        "所有人同等富裕",
+        "物质生活和精神生活都富裕"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q006",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "改革开放的首要任务是",
+      "options": [
+        "解放思想",
+        "解放和发展社会生产力",
+        "实事求是",
+        "解放和增强社会活力"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q007",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-2",
+      "stem": "在新发展理念中，注重解决社会公平正义问题的是（ ）",
+      "options": [
+        "协调发展",
+        "绿色发展",
+        "共享发展",
+        "开放发展"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q008",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "中国特色社会主义的重要物质基础和政治基础、我们党执政兴国的重要支柱是",
+      "options": [
+        "个体经济",
+        "私营经济",
+        "集体企业",
+        "国有企业"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q009",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "教育是国之大计、党之大计，育人的根本在于（ ）",
+      "options": [
+        "立功",
+        "立德",
+        "立言",
+        "立志"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q010",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "中国社会主义民主政治中独特的、独有的、独到的民主形式是（ ）",
+      "options": [
+        "选举民主",
+        "协商民主",
+        "间接民主",
+        "直接民主"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q011",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "我国各种制度和法律法规的总依据是（ ）",
+      "options": [
+        "民法",
+        "宪法",
+        "风俗习惯",
+        "道德观念"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q012",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "做好新闻舆论工作的第一位要求是（ ）",
+      "options": [
+        "管好用好互联网",
+        "提高新闻舆论传播力",
+        "坚持正确的政治方向",
+        "做大做强主流舆论阵地"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q013",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "在社会主义核心价值观中，着重回答“建设什么样的社会”重大问题的是",
+      "options": [
+        "博学、明辨、慎思、笃行",
+        "爱国、敬业、诚信、友善",
+        "自由、平等、公正、法治",
+        "富强、民主、文明、和谐"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q014",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "完善社会治理必须始终遵循的重要理念是（ ）",
+      "options": [
+        "共建共治共享",
+        "尊重顺应保护",
+        "防控排查化解",
+        "条务疏导干预"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q015",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "“天地与我并生，而万物与我为一”体现的理念是（ ）",
+      "options": [
+        "绿水青山就是金山银山",
+        "人与自然是生命共同体",
+        "保护环境就是保护生产力",
+        "良好的生态环境是最普惠的民生福祉"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q016",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "我国解决生态环境问题的治本之策是（ ）",
+      "options": [
+        "自由放任发展",
+        "最快速度淘汰落后产能",
+        "绿色低碳发展",
+        "最大力度发展化石能源"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q017",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-2",
+      "stem": "总体国家安全观的宗旨是（ ）",
+      "options": [
+        "人民安全",
+        "科技安全",
+        "军事",
+        "数据安全"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q018",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "党的二十大将“统筹发展和安全”写入党章，其中，安全解决的是（ ）",
+      "options": [
+        "动力问题",
+        "策略问题",
+        "方向问题",
+        "保障问题"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q019",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "新时代人民军队的使命任务，概括起来就是（ ）",
+      "options": [
+        "“一不怕死，二不怕苦”",
+        "六个必须坚持",
+        "三个主体，三个补充",
+        "“四个战略支撑”"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q020",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "全面推进国防和军队现代化“新三步走”战略安排中，到本世纪中叶要实现的目标是（ ）",
+      "options": [
+        "实现建军一百年奋斗目标",
+        "本实现机械化、信息化.",
+        "把人民军队全面建成世界一流军队。",
+        "基本实现国防和军队现代化"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q021",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "“一国两制”伟大构想，首先运用于解决（ ）",
+      "options": [
+        "台湾问题",
+        "香港和澳门问题",
+        "地区发展问题",
+        "突发热点问题"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q022",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "我国对外工作的根本任务是（ ）",
+      "options": [
+        "维护国家利益",
+        "与邻为善，以邻为伴",
+        "推进大国协调合作",
+        "相互尊重、包容"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q023",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "在全人类共同价值中，体现人类共同追求的理念是（ ）",
+      "options": [
+        "团结合作",
+        "平衡与协调",
+        "民主自由",
+        "安全与稳定"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q024",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "新时代党的根本性建设是（ ）",
+      "options": [
+        "组织建设",
+        "思想建设",
+        "播建设",
+        "政治建设"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-choice-q025",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-choice",
+      "type": "single",
+      "chapterId": "xi-1",
+      "stem": "新时代推进反腐败斗争的鲜明特征是（ ）",
+      "options": [
+        "标本兼治",
+        "从重从严",
+        "循序渐进",
+        "和风细雨"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-subjective-q001",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-subjective",
+      "type": "essay",
+      "chapterId": "xi-1",
+      "stem": "2024年7月，党的二十届三中全会在北京胜利召开。全会强调，必须深刻领悟“两个 确立”的决定性意义，“两个确立”的完整表述是什么？",
+      "answer": [
+        "党的十九届六中全会指出，党确立习近平同志党中央的核心、全党的核心地位，确立习",
+        "近平新时代中国特色社会主义思想的指导地位,反映了全党全军全国各族人民共同心愿。“两",
+        "个确立”是新时代党和国家事业取得历史性成就、发生历史性变革的决定性因素，是党和人",
+        "民应对一切不确定性的最大确定性、最大底气、最大保证。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ],
+      "rubric": [
+        "党的十九届六中全会指出，党确立习近平同志党中央的核心、全党的核心地位，确立习",
+        "近平新时代中国特色社会主义思想的指导地位,反映了全党全军全国各族人民共同心愿。“两",
+        "个确立”是新时代党和国家事业取得历史性成就、发生历史性变革的决定性因素，是党和人",
+        "民应对一切不确定性的最大确定性、最大底气、最大保证。"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-subjective-q002",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-subjective",
+      "type": "essay",
+      "chapterId": "xi-1",
+      "stem": "简述习近平新时代中国特色社会主义思想的历史地位",
+      "answer": [
+        "习近平新时代中国特色社会主义思想是当代中国马克思主义、二十一世纪马克思主义，",
+        "是中华文化和中国精神的时代精华，实现了马克思主义中国化时代化新的飞跃。",
+        "继承和发展马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观，",
+        "是马克思主义在当代中国发展的最新理论成果，开辟了马克思主义中国化时代化新境界。",
+        "把马克思主义基本原理同中国具体实际相结合、同中华优秀传统文化相结合，使马克",
+        "思主义这个魂脉和中华优秀传统文化这个根脉内在贯通、相互成就，是中华民族的文化主体",
+        "性最有力的体现，是中华文化和中国精神的时代精华。",
+        "是全党全国各族人民为实现中华民族伟大复兴而奋斗的行动指南，是新时代党和国家",
+        "事业发展的根本遵循。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ],
+      "rubric": [
+        "习近平新时代中国特色社会主义思想是当代中国马克思主义、二十一世纪马克思主义，",
+        "是中华文化和中国精神的时代精华，实现了马克思主义中国化时代化新的飞跃。",
+        "继承和发展马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观，",
+        "是马克思主义在当代中国发展的最新理论成果，开辟了马克思主义中国化时代化新境界。",
+        "把马克思主义基本原理同中国具体实际相结合、同中华优秀传统文化相结合，使马克",
+        "思主义这个魂脉和中华优秀传统文化这个根脉内在贯通、相互成就，是中华民族的文化主体"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-subjective-q003",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-subjective",
+      "type": "short",
+      "chapterId": "xi-1",
+      "stem": "如何坚持人民立场？",
+      "answer": [
+        "坚持人民立场，就要：始终牢记党的初心和使命",
+        "始终保持党同人民群众的血肉联系",
+        "热爱人民、尊重人民、敬畏人民。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ],
+      "rubric": [
+        "坚持人民立场，就要：始终牢记党的初心和使命",
+        "始终保持党同人民群众的血肉联系",
+        "热爱人民、尊重人民、敬畏人民。"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-subjective-q004",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-subjective",
+      "type": "essay",
+      "chapterId": "xi-2",
+      "stem": "简述高质量发展的重大战略意义",
+      "answer": [
+        "为全面建设社会主义现代化国家提供更为坚实的物质基础",
+        "是不断满足人民对美好生活",
+        "需要的重要保证",
+        "是维护国家长治久安的必然要求。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ],
+      "rubric": [
+        "为全面建设社会主义现代化国家提供更为坚实的物质基础",
+        "是不断满足人民对美好生活",
+        "需要的重要保证",
+        "是维护国家长治久安的必然要求。"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-subjective-q005",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-subjective",
+      "type": "short",
+      "chapterId": "xi-1",
+      "stem": "中华文明的特性有哪些？",
+      "answer": [
+        "连续性、创新性、统一性、包容性、和平性。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ],
+      "rubric": [
+        "连续性、创新性、统一性、包容性、和平性。"
+      ]
+    },
+    {
+      "id": "generated-xi-2025-04-subjective-q006",
+      "courseId": "xi",
+      "paperId": "generated-xi-2025-04-subjective",
+      "type": "essay",
+      "chapterId": "xi-3",
+      "stem": "结合材料回答问题：站在新的历史起点，中国将坚持走和平发展之路。始终做世界和 平的建设者、坚持走改革开放之路，始终做全球发展的贡献者；坚持走多边主义之路，始 终做国际秩序的维护者；“青山一道月云雨，明月何曾是两乡”让我们携起手来，站在历史 正确的一边站在人类进步的一边，为实现世界永续和平发展，为推动构建人类命运共同体 而不懈奋斗！ 一一摘自《习近平著作选读》第二卷、人民出版社2023年版 试述构建人类命运共同体的内涵和意义",
+      "answer": [
+        "人类命运共同体，就是每个民族、每个国家的前途命运都紧紧联系在一起，把世界各国人民",
+        "对美好生活的向往变成现实。构建人类命运共同体，就是要携手世界各国人民共同建设持久和平、普遍安",
+        "全、共同繁荣、开放包容、清洁美丽的世界。",
+        "构建人类命运共同体理念顺应了历史潮流，回应了时代要求，凝聚了各国共识，为人",
+        "类社会实现共同发展、持续繁荣、长治久安绘制了蓝图，对中国的和平发展、世界的繁荣进",
+        "步都具有重大而深远的意义。",
+        "A. 稳定性",
+        "B. 普速性",
+        "C. 客观性",
+        "D. 多样性"
+      ],
+      "analysis": "联系的客观性是指事物之间的相互联系是事物本身固有的，是不以人的主观意志为转移的。 普遍性是指世界上的一切事物都处于普遍联系之中；多样性是指联系的形式是多种多样的；稳定性不是联 系的特征。 6. 在唯物辩证法体系中，作为其实质与核心的是（）。 A. 对立统一规律 B. 量变质变规律 C. 否定之否定规律 D. 因果规律 【答案】: A 解析: 对立统一规律是唯物筹证法的实质与核心。它揭示了事物发展的源泉和动力，贯穿于唯物辩 证法其他规律和范畴的中心线索，是理解其他规律和范時的关键。 7. “从物到感觉和思想”与“从惑党和思想到物”的对立，是（）。 A. 唯物辩证法和形而上学的对立 B. 直观反映论和能动反映论的对立 C. 唯物主义一元论和唯心主义一元论的对立 D. 唯物主义反映论和唯心主义先验论的对立 【答案】: D 解析: “从物到感觉和思想”是唯物主义反映论的认识路线，认为认识是对客观事物的反映，先有 物质后有意识。“从感觉和思想到物”是唯心主义先验论的认识路线，认为意识先于物质，认识是先干经 验和实践的。 8. 一个完整的认识过程包括两次飞跃，下列选项属于第二次长跃的是（）。 A. 收集感性材料 B. 分析实际情况 D. 理论付诺实践 C. 提出科学假说 【答案】: D 解析: 认识过程的第二次飞跃是从理性认识到实践的飞跃，理论付诸实践属干第二次飞跃。 收集感性材料、分析实际情况属于认识过程的第一次飞跃中的感性认识阶段，提出科学假说属于理性 认识阶段。 9. “哲学家们只是用不同的方式解释世界，向题在于改变世界”的提出者是（）。 A. 圣西门 B. 费希特 C. 马克恩 D. 恩格斯 【答案】: C 解析: “哲学家们只是用不同的方式解释世界，间愿在于改变世界”是马克思提出的。这句话强调 了马克思主义哲学的实践性，即不仅要认识世界，更要改造世界。 10. 社会存在是指（）。 A. 社会物质生活条件的总和 B. 地理环境和人口因素的总和 C. 生产力和生产关系的总和 D. 经济制度和政治体制的总和 【答案】: A 解析: 社会存在是指社会物质生活条件的总和，包括地理环境、人口因素和物质资料的生产方式。 地理环境和人口因素只是社会存在的一部分，生产力和生产关系的总和是生产方式，经济制度和政治体制 属于上层建筑。 11. 上层建筑对经济基础的反作用集中表现为（）。 A. 它被经济基础决定 B. 它反映经济基础的要求 C. 它为经济基础服务 D. 它适应经济基础的变化 【答案】: C",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15040"
+      ],
+      "rubric": [
+        "人类命运共同体，就是每个民族、每个国家的前途命运都紧紧联系在一起，把世界各国人民",
+        "对美好生活的向往变成现实。构建人类命运共同体，就是要携手世界各国人民共同建设持久和平、普遍安",
+        "全、共同繁荣、开放包容、清洁美丽的世界。",
+        "构建人类命运共同体理念顺应了历史潮流，回应了时代要求，凝聚了各国共识，为人",
+        "类社会实现共同发展、持续繁荣、长治久安绘制了蓝图，对中国的和平发展、世界的繁荣进",
+        "步都具有重大而深远的意义。"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-choice-q001",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-choice",
+      "type": "single",
+      "chapterId": "marx-0",
+      "stem": "马克思主义是时代的产物。资本主义的发展及其内在矛盾的尖锐化，为马克思主义的产生提供了（ ）",
+      "options": [
+        "阶级基础",
+        "客观条件",
+        "科学前提",
+        "思想渊源"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "资本主义的发展及其内在矛盾的尖锐化，为马克思主义的产生提供了客观条件。无产阶级作 为独立的政治力量登上历史舞台，为马克思主义的产生提供了阶级基础。细胞学说、能量守恒与转化定律、 生物进化论等自然科学的新成就，为马克思主义的产生提供了科学前提。 德国古典哲学、英国古典政治经济学和英法两国的空想社会主义，为马克思主义的产生提供了思想渊 源。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-choice-q002",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-choice",
+      "type": "single",
+      "chapterId": "marx-0",
+      "stem": "马克思主义的基本特征用一句话来概括就是（ ）",
+      "options": [
+        "科学性与革命性的统一",
+        "科学性与人民性的统一",
+        "科学性与实践性的统一",
+        "科学性与发展性的统一"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "马克思主义的基本特征可以用科学性与革命性的统一来概括。马克思主义具有科学性，它是 对客观世界特别是人类社会本质和规律的正确反映。同时具有革命性，它是无产阶级和广大人民群众推翻 旧世界、建设新世界的理论，具有鲜明的阶级立场和批判精神。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-choice-q003",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-choice",
+      "type": "single",
+      "chapterId": "marx-0",
+      "stem": "思维和存在的关系问题作为哲学的基本问题也称为（ ）",
+      "options": [
+        "主体和客体的关系问题",
+        "理论和实践的关系问题",
+        "意识和物质的关系问题",
+        "社会和自然的关系问题"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "思维和存在的关系问题作为哲学的基本问题，也称为意识和物质的关系问题。思维是意识层 面的，存在是物质层面的，二者的关系是哲学研究的核心问题。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-choice-q004",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-choice",
+      "type": "single",
+      "chapterId": "marx-1",
+      "stem": "运动是物属的根本属性、否认物质的运动和运动的绝对性，必然导致（ ）",
+      "options": [
+        "相对主义",
+        "不可知论",
+        "唯心主义",
+        "形而上学"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "形而上学是用孤立、静止、片面的观点看间题，否认物质的运动和运动的绝对性是形而上学 的观点。相对主义则是夸大事物的相对性，否认事物的确定性和客观性：不可知论是认为世界是不可认识 或不能彻底认识的：唯心主义是把意识当作世界的本原。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-choice-q005",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-choice",
+      "type": "single",
+      "chapterId": "marx-0",
+      "stem": "唯物筹证法认为，事物之间的相互联系是事物本身固有的，是不以人的主观意志转 移的。这说明联系具有（ ）",
+      "options": [
+        "稳定性",
+        "普速性",
+        "客观性",
+        "多样性"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "联系的客观性是指事物之间的相互联系是事物本身固有的，是不以人的主观意志为转移的。 普遍性是指世界上的一切事物都处于普遍联系之中；多样性是指联系的形式是多种多样的；稳定性不是联 系的特征。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-choice-q006",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-choice",
+      "type": "single",
+      "chapterId": "marx-1",
+      "stem": "在唯物辩证法体系中，作为其实质与核心的是（ ）",
+      "options": [
+        "对立统一规律",
+        "量变质变规律",
+        "否定之否定规律",
+        "因果规律"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "对立统一规律是唯物筹证法的实质与核心。它揭示了事物发展的源泉和动力，贯穿于唯物辩 证法其他规律和范畴的中心线索，是理解其他规律和范時的关键。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-choice-q007",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-choice",
+      "type": "single",
+      "chapterId": "marx-0",
+      "stem": "“从物到感觉和思想”与“从惑党和思想到物”的对立，是（ ）",
+      "options": [
+        "唯物辩证法和形而上学的对立",
+        "直观反映论和能动反映论的对立",
+        "唯物主义一元论和唯心主义一元论的对立",
+        "唯物主义反映论和唯心主义先验论的对立"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "“从物到感觉和思想”是唯物主义反映论的认识路线，认为认识是对客观事物的反映，先有 物质后有意识。“从感觉和思想到物”是唯心主义先验论的认识路线，认为意识先于物质，认识是先干经 验和实践的。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-choice-q008",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-choice",
+      "type": "single",
+      "chapterId": "marx-2",
+      "stem": "一个完整的认识过程包括两次飞跃，下列选项属于第二次长跃的是（ ）",
+      "options": [
+        "收集感性材料",
+        "分析实际情况",
+        "理论付诺实践",
+        "提出科学假说"
+      ],
+      "answer": [
+        "D"
+      ],
+      "analysis": "认识过程的第二次飞跃是从理性认识到实践的飞跃，理论付诸实践属干第二次飞跃。 收集感性材料、分析实际情况属于认识过程的第一次飞跃中的感性认识阶段，提出科学假说属于理性 认识阶段。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-choice-q009",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-choice",
+      "type": "single",
+      "chapterId": "marx-0",
+      "stem": "“哲学家们只是用不同的方式解释世界，向题在于改变世界”的提出者是（ ）",
+      "options": [
+        "圣西门",
+        "费希特",
+        "马克恩",
+        "恩格斯"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "“哲学家们只是用不同的方式解释世界，间愿在于改变世界”是马克思提出的。这句话强调 了马克思主义哲学的实践性，即不仅要认识世界，更要改造世界。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-choice-q010",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-choice",
+      "type": "single",
+      "chapterId": "marx-3",
+      "stem": "社会存在是指（ ）",
+      "options": [
+        "社会物质生活条件的总和",
+        "地理环境和人口因素的总和",
+        "生产力和生产关系的总和",
+        "经济制度和政治体制的总和"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "社会存在是指社会物质生活条件的总和，包括地理环境、人口因素和物质资料的生产方式。 地理环境和人口因素只是社会存在的一部分，生产力和生产关系的总和是生产方式，经济制度和政治体制 属于上层建筑。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-choice-q011",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-choice",
+      "type": "single",
+      "chapterId": "marx-0",
+      "stem": "上层建筑对经济基础的反作用集中表现为（ ）",
+      "options": [
+        "它被经济基础决定",
+        "它反映经济基础的要求",
+        "它为经济基础服务",
+        "它适应经济基础的变化"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-subjective-q001",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-subjective",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "什么是马克思主义？",
+      "answer": [
+        "马克思主义是由马克思、恩格斯创立并为后继者所不断发展的科学理论体系，是关于自然、社会和人类思",
+        "维发展一般规律的学说，是关于社会主义必然代替资本主义、最终实现共产主义的学说，是关于无产阶级",
+        "解放、全人类解放和每个人自由而全面发展的学说，是无产阶级政党和社会主义国家的指导思想，是指引",
+        "人民创造美好生活的行动指南。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ],
+      "rubric": [
+        "马克思主义是由马克思、恩格斯创立并为后继者所不断发展的科学理论体系，是关于自然、社会和人类思",
+        "维发展一般规律的学说，是关于社会主义必然代替资本主义、最终实现共产主义的学说，是关于无产阶级",
+        "解放、全人类解放和每个人自由而全面发展的学说，是无产阶级政党和社会主义国家的指导思想，是指引",
+        "人民创造美好生活的行动指南。"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-subjective-q002",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-subjective",
+      "type": "short",
+      "chapterId": "marx-1",
+      "stem": "实践是检验真理的唯一标准",
+      "answer": [
+        "这是由真理的本性和实践的特点决定的：真理是人们对客观事物及其发展规律的正确反映，其本",
+        "性在于主观和客观相符合。实践具有直接现实性，这是它的客观实在性的具体表现。",
+        "已被逻辑证明了的东西，还必须经过实践的检验，并最终服从实践检验的结果。逻辑证明不能取",
+        "代实践作为检验真理的标准，实践才是检验真理的唯一标准。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ],
+      "rubric": [
+        "这是由真理的本性和实践的特点决定的：真理是人们对客观事物及其发展规律的正确反映，其本",
+        "性在于主观和客观相符合。实践具有直接现实性，这是它的客观实在性的具体表现。",
+        "已被逻辑证明了的东西，还必须经过实践的检验，并最终服从实践检验的结果。逻辑证明不能取",
+        "代实践作为检验真理的标准，实践才是检验真理的唯一标准。"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-subjective-q003",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-subjective",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "货币的本质及职能",
+      "answer": [
+        "货币的本质：固定地充当一般等价物的商品。货币的产生和起源是商品交换长期发展的产物。",
+        "货币的职能：",
+        "① 价值尺度职能。",
+        "② 流通手段职能。",
+        "③ 贮藏手段职能。",
+        "④ 支付手段职能。",
+        "⑤ 世界货币职能。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ],
+      "rubric": [
+        "货币的本质：固定地充当一般等价物的商品。货币的产生和起源是商品交换长期发展的产物。",
+        "货币的职能：",
+        "① 价值尺度职能。",
+        "② 流通手段职能。",
+        "③ 贮藏手段职能。",
+        "④ 支付手段职能。"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-subjective-q004",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-subjective",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "资本主义国家如何利用利率调节经济？",
+      "answer": [
+        "利率调节主要是通过利率高低和差别利率来实现某些宏观经济目标。例如，对国家支持的产业或企业",
+        "给予优惠的信贷条件，鼓励其发展",
+        "相反，对国家要控制的经济活动则用较严格的信贷条件来制约。在经",
+        "济过热时，适当提高利率，给经济降温",
+        "相反，在需要刺激经济发展、走出萧条与不景气阴影的时候，则",
+        "适当降低利率来刺激投资与消费。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ],
+      "rubric": [
+        "利率调节主要是通过利率高低和差别利率来实现某些宏观经济目标。例如，对国家支持的产业或企业",
+        "给予优惠的信贷条件，鼓励其发展",
+        "相反，对国家要控制的经济活动则用较严格的信贷条件来制约。在经",
+        "济过热时，适当提高利率，给经济降温",
+        "相反，在需要刺激经济发展、走出萧条与不景气阴影的时候，则",
+        "适当降低利率来刺激投资与消费。"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-subjective-q005",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-subjective",
+      "type": "short",
+      "chapterId": "marx-0",
+      "stem": "马克思主义政党在社会主义建设和改革中的领导核心作用主要体现在哪些方面？",
+      "answer": [
+        "在思想方面，马克思主义政党要确保自己在意识形态领域的领导地位，确保马克思主义在社会主",
+        "义国家的指导地位。",
+        "在政治方面，马克思主义政党要在社会主义民主政治建设和政治体制改革中起到领导核心作用，",
+        "保证社会主义建设的正确方向。",
+        "在组织方面，马克思主义政党要领导全体人民有组织、有系统、有管理、有序地进行社会主义的",
+        "各项建设事业。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ],
+      "rubric": [
+        "在思想方面，马克思主义政党要确保自己在意识形态领域的领导地位，确保马克思主义在社会主",
+        "义国家的指导地位。",
+        "在政治方面，马克思主义政党要在社会主义民主政治建设和政治体制改革中起到领导核心作用，",
+        "保证社会主义建设的正确方向。",
+        "在组织方面，马克思主义政党要领导全体人民有组织、有系统、有管理、有序地进行社会主义的",
+        "各项建设事业。"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-subjective-q006",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-subjective",
+      "type": "essay",
+      "chapterId": "marx-1",
+      "stem": "意识的能动性主要表现在哪些方面？在社会主义现代化建设中如何正确发挥人的主观能动性？",
+      "answer": [
+        "意识的能动性主要表现在：",
+        "意识对物质具有反作用。这种反作用就是意识的能动作用，表现在：",
+        "- 意识具有目的性和计划性",
+        "- 意识具有创造性",
+        "- 意识具有指导实践改造客观世界的作用",
+        "- 意识具有调控人的行为和生理活动的作用",
+        "在社会主义现代化建设中正确发挥人的主观能动性：",
+        "- 正确发挥人的主观能动性的前提是从实际出发",
+        "- 正确发挥人的主观能动性的根本途径是实践",
+        "- 正确发挥人的主观能动性，还依赖于一定的物质条件和物质手段"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ],
+      "rubric": [
+        "意识的能动性主要表现在：",
+        "意识对物质具有反作用。这种反作用就是意识的能动作用，表现在：",
+        "- 意识具有目的性和计划性",
+        "- 意识具有创造性",
+        "- 意识具有指导实践改造客观世界的作用",
+        "- 意识具有调控人的行为和生理活动的作用"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-subjective-q007",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-subjective",
+      "type": "essay",
+      "chapterId": "marx-1",
+      "stem": "社会改革的实质是什么？社会改革在社会发展中的作用表现在哪些方面？",
+      "answer": [
+        "实质：是社会制度的自我调整和完善。",
+        "作用：①改革是社会制度的自我调整和完善，是推动社会发展的重要动力。②改革是",
+        "解决社会基本矛盾、促进生产力发展、推动社会进步的有效途径和手段。③中国的社会主义",
+        "改革是社会主义制度的自我完善和自我发展，改革是社会主义社会发展的强大动力。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ],
+      "rubric": [
+        "实质：是社会制度的自我调整和完善。",
+        "作用：①改革是社会制度的自我调整和完善，是推动社会发展的重要动力。②改革是",
+        "解决社会基本矛盾、促进生产力发展、推动社会进步的有效途径和手段。③中国的社会主义",
+        "改革是社会主义制度的自我完善和自我发展，改革是社会主义社会发展的强大动力。"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-04-subjective-q008",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-04-subjective",
+      "type": "essay",
+      "chapterId": "marx-4",
+      "stem": "试述劳动力商品的特点及价值决定",
+      "answer": [
+        "像任何商品一样，劳动力商品也具有价值和使用价值。但是，劳动力是特殊的商品，它的价值和使用",
+        "价值具有不同于普通商品的特点。“劳动力的价值，是由生产、发展、维持和延续劳动力所必需的生活必",
+        "需品的价值决定的。”它包括三个部分：①维持劳动者本人生存所必需的生活资料的价值",
+        "②维持劳动者",
+        "家属的生存所必需的生活资料的价值",
+        "③劳动者接受教育和训练所支出的费用。由于劳动力价值的构成包",
+        "含历史和道德的因素，在不同的国家或在同一国家的不同历史时期，劳动者所必需的生活资料的数量和构",
+        "成是有区别的，所以劳动力价值的最低界限是由生活上不可缺少的生活资料的价值决定的。一旦劳动力价",
+        "值降低到这个界限以下，劳动力就只能在萎缩的状态下维持。",
+        "劳动力商品在使用价值上有一个很突出的特点，就是它的使用价值是价值的源泉，在"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20254月",
+        "15044"
+      ],
+      "rubric": [
+        "像任何商品一样，劳动力商品也具有价值和使用价值。但是，劳动力是特殊的商品，它的价值和使用",
+        "价值具有不同于普通商品的特点。“劳动力的价值，是由生产、发展、维持和延续劳动力所必需的生活必",
+        "需品的价值决定的。”它包括三个部分：①维持劳动者本人生存所必需的生活资料的价值",
+        "②维持劳动者",
+        "家属的生存所必需的生活资料的价值",
+        "③劳动者接受教育和训练所支出的费用。由于劳动力价值的构成包"
+      ]
+    },
+    {
+      "id": "generated-marx-2022-04-q001",
+      "courseId": "marx",
+      "paperId": "generated-marx-2022-04",
+      "type": "essay",
+      "chapterId": "marx-0",
+      "stem": "什么是马克思主义?马克思主义的根本理论特征?",
+      "answer": [
+        "马克思主义是由马克思、恩格斯创立的，为他们的后继者所发展的，以反对资本主义、建设社会主义和共产主义为",
+        "目标的科学理论体系，或者简要地说，它是关于无产阶级和人类解放的科学。马克思主义的根本理论特征是以实践为基础的",
+        "科学性和革命性的统一：",
+        "科学性：表现在，首先它不带任何偏见，其次在于它具有深刻性，再次它还经受住了实践的检验并随着实践的发展而不断",
+        "发展",
+        "革命性：集中表现为它的彻底的批判精神，还表现在它具有鲜明的政治立场上",
+        "以实践为基础： 马克思主义的科学性和革命性都是以实践为基础的",
+        "实践的观点是马克思主义的基本观点，是马克思主义",
+        "的出发点和归宿。",
+        "【考点】绪论——马克思主义科学性与革命性的统一"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15044"
+      ],
+      "rubric": [
+        "马克思主义是由马克思、恩格斯创立的，为他们的后继者所发展的，以反对资本主义、建设社会主义和共产主义为",
+        "目标的科学理论体系，或者简要地说，它是关于无产阶级和人类解放的科学。马克思主义的根本理论特征是以实践为基础的",
+        "科学性和革命性的统一：",
+        "科学性：表现在，首先它不带任何偏见，其次在于它具有深刻性，再次它还经受住了实践的检验并随着实践的发展而不断",
+        "发展",
+        "革命性：集中表现为它的彻底的批判精神，还表现在它具有鲜明的政治立场上"
+      ]
+    },
+    {
+      "id": "generated-marx-2022-04-q002",
+      "courseId": "marx",
+      "paperId": "generated-marx-2022-04",
+      "type": "short",
+      "chapterId": "marx-1",
+      "stem": "简述认识客体的含义、构成和性质",
+      "answer": [
+        "含义：认识客体是指人的实践活动和认识活动所指向的对象。",
+        "构成：主要有自然客体、社会客体和精神客体。",
+        "性质：认识客体具有客观性和对象性。",
+        "【考点】认识的本质及其规律——认识的本质"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15044"
+      ],
+      "rubric": [
+        "含义：认识客体是指人的实践活动和认识活动所指向的对象。",
+        "构成：主要有自然客体、社会客体和精神客体。",
+        "性质：认识客体具有客观性和对象性。",
+        "【考点】认识的本质及其规律——认识的本质"
+      ]
+    },
+    {
+      "id": "generated-marx-2022-04-q003",
+      "courseId": "marx",
+      "paperId": "generated-marx-2022-04",
+      "type": "short",
+      "chapterId": "marx-1",
+      "stem": "什么是资本主义意识形态，它的本质是什么?",
+      "answer": [
+        "资本主义意识形态是资产阶级对世界和社会的系统看法和见解，它在资本主义社会中是占统治地位的思想体系，",
+        "具有鲜明的阶级性。其核心是利己主义。",
+        "资本主义意识形态毕竟是建立在资本主义经济基础之上，是为资本主义私有制和雇佣劳动制度服务的，因而其本质上是维",
+        "护资本主义剥削制度的思想体系。",
+        "【考点】资本主义制度的形成及其本质——资本主义的政治制度和意识形态"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15044"
+      ],
+      "rubric": [
+        "资本主义意识形态是资产阶级对世界和社会的系统看法和见解，它在资本主义社会中是占统治地位的思想体系，",
+        "具有鲜明的阶级性。其核心是利己主义。",
+        "资本主义意识形态毕竟是建立在资本主义经济基础之上，是为资本主义私有制和雇佣劳动制度服务的，因而其本质上是维",
+        "护资本主义剥削制度的思想体系。",
+        "【考点】资本主义制度的形成及其本质——资本主义的政治制度和意识形态"
+      ]
+    },
+    {
+      "id": "generated-marx-2022-04-q004",
+      "courseId": "marx",
+      "paperId": "generated-marx-2022-04",
+      "type": "essay",
+      "chapterId": "marx-4",
+      "stem": "简述第二次世界大战后资本国家垄断统治加强的原因和主要表现 咨询热线：400-678-3456 免费订阅考试提醒 免费约直播领资料",
+      "answer": [
+        "原因：",
+        "仅靠私人垄断资本的力量，无法满足大规模经济建设所需要的巨额资金。",
+        "在一些大规模公共设施的建设上，私人垄断资本无能为力或不愿进行投资建设。",
+        "—些大型、基础性、前导性的科学研究项目,也是私人垄断资本不愿涉足的领域。",
+        "日益严重的生产过剩问题仅靠私人垄断资本难以解决。",
+        "社会化大生产的发展要求国家出面进行某些宏观经济调控。",
+        "在经济利益关系的调整方面，国家的再分配功能也越来越重要。",
+        "主要表现：",
+        "国家直接掌握的垄断资本，即国有经济、国有企业",
+        "国家和私人资本在企业内部结合，即国有资本与私人资本结合在一个企业中的形式"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15044"
+      ],
+      "rubric": [
+        "原因：",
+        "仅靠私人垄断资本的力量，无法满足大规模经济建设所需要的巨额资金。",
+        "在一些大规模公共设施的建设上，私人垄断资本无能为力或不愿进行投资建设。",
+        "—些大型、基础性、前导性的科学研究项目,也是私人垄断资本不愿涉足的领域。",
+        "日益严重的生产过剩问题仅靠私人垄断资本难以解决。",
+        "社会化大生产的发展要求国家出面进行某些宏观经济调控。"
+      ]
+    },
+    {
+      "id": "generated-marx-2022-04-q005",
+      "courseId": "marx",
+      "paperId": "generated-marx-2022-04",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "社会主义从一个国家到多个国家的历史贡献?",
+      "answer": [
+        "社会主义作为一种现实存在的社会制度出现在世界上，推动了人类历史的发展和社会制度的演进",
+        "社会主义国家的存在改变了世界格局，在一定程度上遏制了资本主义和霸权主义在世界上的扩张",
+        "社会主义力量坚定地支持被压迫民族和被压迫人民，推动着和平与发展的世界时代潮流",
+        "社会主义引导着世界人民的前进方向。",
+        "【考点】社会主义的发展及其规律——社会主义五百年的历史进程",
+        "三、论述题(本大题共3小题，3选",
+        "每小题10分，共20分)",
+        "咨询热线：400-678-3456 微信扫码刷题 免费约直播领资料"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15044"
+      ],
+      "rubric": [
+        "社会主义作为一种现实存在的社会制度出现在世界上，推动了人类历史的发展和社会制度的演进",
+        "社会主义国家的存在改变了世界格局，在一定程度上遏制了资本主义和霸权主义在世界上的扩张",
+        "社会主义力量坚定地支持被压迫民族和被压迫人民，推动着和平与发展的世界时代潮流",
+        "社会主义引导着世界人民的前进方向。",
+        "【考点】社会主义的发展及其规律——社会主义五百年的历史进程",
+        "三、论述题(本大题共3小题，3选"
+      ]
+    },
+    {
+      "id": "generated-marx-2022-04-q006",
+      "courseId": "marx",
+      "paperId": "generated-marx-2022-04",
+      "type": "essay",
+      "chapterId": "marx-1",
+      "stem": "试述矛盾的普遍性和特殊性辩证关系原理，并说明这一原理对社会主义建设的重要意义",
+      "answer": [
+        "矛盾的普遍性和特殊性相互区别，相互联结。",
+        "矛盾的普遍性和特殊性是相互区别的，共性只是包括了同类个别事物的共同的、本质的东西，而没有包括个别事物的全部",
+        "内容和特点。",
+        "矛盾普遍性与特殊性是相互联结的，普遍性存在于特殊性之中，特殊性中包含着普遍性。矛盾的普遍性与特殊性在一定条",
+        "件下可以相互转化。",
+        "矛盾的普遍性和特殊性辩证关系原理，是我们坚持马克思主义普遍真理与中国具体实际相结合，建设中国特色社会主义的",
+        "理论基础。",
+        "【考点】物质世界及其发展规律——物质世界的普遍联系和永恒发展"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15044"
+      ],
+      "rubric": [
+        "矛盾的普遍性和特殊性相互区别，相互联结。",
+        "矛盾的普遍性和特殊性是相互区别的，共性只是包括了同类个别事物的共同的、本质的东西，而没有包括个别事物的全部",
+        "内容和特点。",
+        "矛盾普遍性与特殊性是相互联结的，普遍性存在于特殊性之中，特殊性中包含着普遍性。矛盾的普遍性与特殊性在一定条",
+        "件下可以相互转化。",
+        "矛盾的普遍性和特殊性辩证关系原理，是我们坚持马克思主义普遍真理与中国具体实际相结合，建设中国特色社会主义的"
+      ]
+    },
+    {
+      "id": "generated-marx-2022-04-q007",
+      "courseId": "marx",
+      "paperId": "generated-marx-2022-04",
+      "type": "essay",
+      "chapterId": "marx-1",
+      "stem": "如何理解“社会经济形态的发展是一种自然过程”",
+      "answer": [
+        "人类社会的发展或者说社会形态的演进也像自然界一样，是客观的、物质的、辩证的过程，具有不依人的意志为转移的客",
+        "观规律性。",
+        "同时又应看到，人类的活动是有意识的、有目的的。正是人类有意识、有目的的实践活动，构成了人类社会的历史，形成",
+        "了人类社会历史的发展规律。社会历史规律不是别的，就是人的活动的规律。",
+        "【考点】人类社会及其发展规律——社会基本矛盾及其运动规律"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15044"
+      ],
+      "rubric": [
+        "人类社会的发展或者说社会形态的演进也像自然界一样，是客观的、物质的、辩证的过程，具有不依人的意志为转移的客",
+        "观规律性。",
+        "同时又应看到，人类的活动是有意识的、有目的的。正是人类有意识、有目的的实践活动，构成了人类社会的历史，形成",
+        "了人类社会历史的发展规律。社会历史规律不是别的，就是人的活动的规律。",
+        "【考点】人类社会及其发展规律——社会基本矛盾及其运动规律"
+      ]
+    },
+    {
+      "id": "generated-marx-2022-04-q008",
+      "courseId": "marx",
+      "paperId": "generated-marx-2022-04",
+      "type": "essay",
+      "chapterId": "marx-4",
+      "stem": "试述借贷资本和利息的来源与本质",
+      "answer": [
+        "在资本主义再生产过程中，职能资本家手中闲置的货币资本，成为借贷资本的主要来源。借贷资本的本质是为了获取利息",
+        "而暂时贷给职能资本家使用的货币资本。",
+        "职能资本家不能无偿使用这部分货币资本，必须向借贷资本家支付利息。利息是来源于职能资本家使用借贷资本而让给借",
+        "贷资本家的一部分剩余价值，其本质是剩余价值的特殊转化形式。",
+        "【考点】资本主义制度的形成及其本质——资本的流通过程和剩余价值的分配"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15044"
+      ],
+      "rubric": [
+        "在资本主义再生产过程中，职能资本家手中闲置的货币资本，成为借贷资本的主要来源。借贷资本的本质是为了获取利息",
+        "而暂时贷给职能资本家使用的货币资本。",
+        "职能资本家不能无偿使用这部分货币资本，必须向借贷资本家支付利息。利息是来源于职能资本家使用借贷资本而让给借",
+        "贷资本家的一部分剩余价值，其本质是剩余价值的特殊转化形式。",
+        "【考点】资本主义制度的形成及其本质——资本的流通过程和剩余价值的分配"
+      ]
+    },
+    {
+      "id": "generated-marx-2023-04-q001",
+      "courseId": "marx",
+      "paperId": "generated-marx-2023-04",
+      "type": "short",
+      "chapterId": "marx-0",
+      "stem": "筑述马克思主义科学体系的主要组成部分和理论品质",
+      "answer": [
+        "马克思主义哲学。马克思主义政治经济学和科学社会庄义是马克思主义",
+        "科学体系的主要组成部分。",
+        "德国古典哲学,英国古典政治经济学和英法两国的空想社会主义学说分别是",
+        "马克思主义哲学、马克思主义政治经济学和科学社会=义的百接理论来源。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15044"
+      ],
+      "rubric": [
+        "马克思主义哲学。马克思主义政治经济学和科学社会庄义是马克思主义",
+        "科学体系的主要组成部分。",
+        "德国古典哲学,英国古典政治经济学和英法两国的空想社会主义学说分别是",
+        "马克思主义哲学、马克思主义政治经济学和科学社会=义的百接理论来源。"
+      ]
+    },
+    {
+      "id": "generated-marx-2023-04-q002",
+      "courseId": "marx",
+      "paperId": "generated-marx-2023-04",
+      "type": "short",
+      "chapterId": "marx-2",
+      "stem": "什么是思想路线?",
+      "answer": [
+        "简述党的思想路线的内容。",
+        "T1: 党的思想路线也叫认识路线，是中国共产党认识问题.分析问题.处理问题所",
+        "选很的最根本的指导原则和思想基础。",
+        "党的思想路线基本内容足: 一切从实际出发，理论联系实际，实事求是,在实践",
+        "中检验真理和发展真理。其精馗是:解故思想。实事求是。与时供进。其实质和",
+        "核心是:实事求是。党的思想路线经历了一个形成、发展和完善的过程。我党历",
+        "史上自觉地提出并第一次使用“思想路线”这一概念的是毛泽东。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15044"
+      ],
+      "rubric": [
+        "简述党的思想路线的内容。",
+        "T1: 党的思想路线也叫认识路线，是中国共产党认识问题.分析问题.处理问题所",
+        "选很的最根本的指导原则和思想基础。",
+        "党的思想路线基本内容足: 一切从实际出发，理论联系实际，实事求是,在实践",
+        "中检验真理和发展真理。其精馗是:解故思想。实事求是。与时供进。其实质和",
+        "核心是:实事求是。党的思想路线经历了一个形成、发展和完善的过程。我党历"
+      ]
+    },
+    {
+      "id": "generated-marx-2023-04-q003",
+      "courseId": "marx",
+      "paperId": "generated-marx-2023-04",
+      "type": "short",
+      "chapterId": "marx-1",
+      "stem": "简述历史唯心主义的两个缺点",
+      "answer": [
+        "把人们的思想动机看成历史发展的动力，看不到物质生产是人们思想动机的根源:",
+        "认为历史是由英雄人物特别是他们的总志创造的。否定人民群众是历史的创造者.",
+        "这是历史唯心主义的两个根本的缺陷。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15044"
+      ],
+      "rubric": [
+        "把人们的思想动机看成历史发展的动力，看不到物质生产是人们思想动机的根源:",
+        "认为历史是由英雄人物特别是他们的总志创造的。否定人民群众是历史的创造者.",
+        "这是历史唯心主义的两个根本的缺陷。"
+      ]
+    },
+    {
+      "id": "generated-marx-2023-04-q004",
+      "courseId": "marx",
+      "paperId": "generated-marx-2023-04",
+      "type": "short",
+      "chapterId": "marx-1",
+      "stem": "简还社会总产品的实现",
+      "answer": [
+        "社会总产品的实现也即社会总产品的补偿。它包括社会总产品的价值补偿和社会",
+        "总产品的物质补偿两个方面。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15044"
+      ],
+      "rubric": [
+        "社会总产品的实现也即社会总产品的补偿。它包括社会总产品的价值补偿和社会",
+        "总产品的物质补偿两个方面。"
+      ]
+    },
+    {
+      "id": "generated-marx-2023-04-q005",
+      "courseId": "marx",
+      "paperId": "generated-marx-2023-04",
+      "type": "essay",
+      "chapterId": "marx-1",
+      "stem": "能述当代资本主义生产力和生产关系新变化的原因.",
+      "answer": [
+        "世界上任何小物的发展变化都有其内在的和外在的原因。资本主义作为人类社会",
+        "发展历史过程中的一种社会形态，在当代之所以发生如此大的变化，是特定的社",
+        "会历史条件和诸多因素共同作用的结果。",
+        "第一。新科技革命是引发当代资本主义发展变化的百接动因。",
+        "第二，资本主义生产力内部，以及生产力与生产关系的矛盾运动足当代资本主义",
+        "发展变化的内在根据。",
+        "第三，先发优势与现存国际经济分工的影响是当代资本主义经济社会发展的国际",
+        "经济条件。",
+        "第四，社会主义国家的存在与发展，社会t义运动的影响与斗争是当代资本主义",
+        "变化发展的国际"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15044"
+      ],
+      "rubric": [
+        "世界上任何小物的发展变化都有其内在的和外在的原因。资本主义作为人类社会",
+        "发展历史过程中的一种社会形态，在当代之所以发生如此大的变化，是特定的社",
+        "会历史条件和诸多因素共同作用的结果。",
+        "第一。新科技革命是引发当代资本主义发展变化的百接动因。",
+        "第二，资本主义生产力内部，以及生产力与生产关系的矛盾运动足当代资本主义",
+        "发展变化的内在根据。"
+      ]
+    },
+    {
+      "id": "generated-marx-2023-04-q006",
+      "courseId": "marx",
+      "paperId": "generated-marx-2023-04",
+      "type": "essay",
+      "chapterId": "marx-1",
+      "stem": "唯物辩证法的否定观包含制些内容?",
+      "answer": [
+        "试用对待中国传统文化和外国文化的态",
+        "度说明辩证唯物的否定观。",
+        "第一,辩证的否定是小物的自我否定，是事物内部矛活运动的结果。",
+        "第二，否定是事物发展的环节。",
+        "第三，否定是新旧事物联系的环节。",
+        "第四，新事物孕育产生于伯手物，新旧事物是是通过否定环节联系起来的。",
+        "辩证否定的实质是“扬弃” ,即新事物对日事物既批判又要继承，既克服消极因",
+        "素又变保留其积极因素。辩证否定观要求我们在对待外来文化时要采取批判继承",
+        "的态度。",
+        "一方面要取其精华，吸收其中的合理成分，为我所用:另一方面，要弃其情怕，"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15044"
+      ],
+      "rubric": [
+        "试用对待中国传统文化和外国文化的态",
+        "度说明辩证唯物的否定观。",
+        "第一,辩证的否定是小物的自我否定，是事物内部矛活运动的结果。",
+        "第二，否定是事物发展的环节。",
+        "第三，否定是新旧事物联系的环节。",
+        "第四，新事物孕育产生于伯手物，新旧事物是是通过否定环节联系起来的。"
+      ]
+    },
+    {
+      "id": "generated-marx-2023-04-q007",
+      "courseId": "marx",
+      "paperId": "generated-marx-2023-04",
+      "type": "essay",
+      "chapterId": "marx-1",
+      "stem": "为什么说经济全球化是矛盾的过程，是一把双刃剑",
+      "answer": [
+        "第一.之所以说经济全球化是一把双刃剑。是因为它的积极作用和消极作用同时",
+        "存在，但总的来说是积极作用大于消极作用。从积极作用来说。经济全球化有效",
+        "地利用世界各地的资源，为各个国家提供了更多发展的机会，也极大地丰富和方",
+        "便了人们的日常生活。从消极作用来说，西方发达田家主导的经济全球化造成南",
+        "北矛店培贫富分化。环境退化等问题.引发全球性的经济金融生态危机，威胁人",
+        "类生在学发展市国家处于十分不利的地位。田家主权和经济安全面临挑战。",
+        "第二，经济全球化是生产力发展的要求，是社会经济发展的必然结果，是无法改",
+        "变的历史趋势.因此，反对全球化是不正确的。发展中国家要抓住全球化这一机",
+        "遇，积极参与全球化进程.发展中国家对全球化带来的风险和安全问题要有充分",
+        "的认识.要积极采取各种措施趋利通害。费努力争取建立公正合理的国际经济政"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15044"
+      ],
+      "rubric": [
+        "第一.之所以说经济全球化是一把双刃剑。是因为它的积极作用和消极作用同时",
+        "存在，但总的来说是积极作用大于消极作用。从积极作用来说。经济全球化有效",
+        "地利用世界各地的资源，为各个国家提供了更多发展的机会，也极大地丰富和方",
+        "便了人们的日常生活。从消极作用来说，西方发达田家主导的经济全球化造成南",
+        "北矛店培贫富分化。环境退化等问题.引发全球性的经济金融生态危机，威胁人",
+        "类生在学发展市国家处于十分不利的地位。田家主权和经济安全面临挑战。"
+      ]
+    },
+    {
+      "id": "generated-marx-2023-04-q008",
+      "courseId": "marx",
+      "paperId": "generated-marx-2023-04",
+      "type": "essay",
+      "chapterId": "marx-1",
+      "stem": "为什么说共产主义是崇高理想和科学理想的统一- ，为什么说共产主义既是-",
+      "answer": [
+        "种社会制度，又",
+        "足一种社会运动。",
+        "共产主义事业是最崇高理想与科学理想的统一，古往今来，人类对理想社会",
+        "的追求，经历了漫长的道路。-些志士仁人都提出过建立平等自由的大同壮会的",
+        "理想主张。但他们所追求的理想社会，不是建立在认识社会发展规律基础上的科",
+        "学理想，难免流手空幻。",
+        "共产主义之所以是人类最伟大的事业,就在于它是崇高理想与种学理想的统",
+        "一。体现了人类对理想社会目标的追求与符合规律的科学社会实践的有机结合。",
+        "共产主义既是-种理想的社会制度，又是一种社会运动。共产主义作为-种社",
+        "会运动，自从马克思和恩格斯在一百多年前创立了科学共产主义学说以来，就已"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15044"
+      ],
+      "rubric": [
+        "种社会制度，又",
+        "足一种社会运动。",
+        "共产主义事业是最崇高理想与科学理想的统一，古往今来，人类对理想社会",
+        "的追求，经历了漫长的道路。-些志士仁人都提出过建立平等自由的大同壮会的",
+        "理想主张。但他们所追求的理想社会，不是建立在认识社会发展规律基础上的科",
+        "学理想，难免流手空幻。"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-04-zip-q001",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-04-zip",
+      "type": "short",
+      "chapterId": "marx-1",
+      "stem": "为什么一个正确的认识需要多次反复才能完成?",
+      "answer": [
+        "认识的反复性",
+        "定义",
+        "认识的反复性是指认识是一个由实践到认识、再由认识到实践的认识过程,不是一次就能",
+        "完成的，而是要经过多次反复的。",
+        "原因",
+        "①从认识客体方面:",
+        "A. 客观事物本身的复杂性",
+        "B. 事物的矛盾有个展开和发展的过程。",
+        "C. 任何事物都处于特定的历史环境中，受到限制。",
+        "②从认识主体方面:人的认识受到主体的知识水平、认识能力等方面的限制"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15044"
+      ],
+      "rubric": [
+        "认识的反复性",
+        "定义",
+        "认识的反复性是指认识是一个由实践到认识、再由认识到实践的认识过程,不是一次就能",
+        "完成的，而是要经过多次反复的。",
+        "原因",
+        "①从认识客体方面:"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-04-zip-q002",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-04-zip",
+      "type": "short",
+      "chapterId": "marx-3",
+      "stem": "简述生产方式及其在社会发展中的作用",
+      "answer": [
+        "生产方式",
+        "①生产方式是人类借以向自然界谋取必需的生活资料的方式,包括生产力和生产关系两个",
+        "方面，是特定的生产力和生产关系的统一。",
+        "②生产方式在社会发展中起决定作用",
+        "是人区别于动物的根本标志",
+        "是人类社会存在发展的",
+        "基础",
+        "是形成社会关系的基础",
+        "决定社会制度的性质和更替。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15044"
+      ],
+      "rubric": [
+        "生产方式",
+        "①生产方式是人类借以向自然界谋取必需的生活资料的方式,包括生产力和生产关系两个",
+        "方面，是特定的生产力和生产关系的统一。",
+        "②生产方式在社会发展中起决定作用",
+        "是人区别于动物的根本标志",
+        "是人类社会存在发展的"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-04-zip-q003",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-04-zip",
+      "type": "essay",
+      "chapterId": "marx-4",
+      "stem": "劳动二重性理论是理解\"政治经济学的枢纽”，请说明劳动二重性的含义生产商品的",
+      "answer": [
+        "劳动的二重性:具体劳动和抽象劳动",
+        "含义:生产使用价值，有特定性质、目的和形式的劳动。",
+        "①具体劳动",
+        "创造商品的使用价值",
+        "是生产商品劳动的自然属性，反映人与自然的关系。",
+        "②抽象劳动",
+        "含义:",
+        "撇开一切具体形式的、无差别的一般人类劳动。",
+        "创造商品的价值，是价值的唯一源泉",
+        "是生产商品劳动的社会属性，反映商品生产者的社会关系。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15044"
+      ],
+      "rubric": [
+        "劳动的二重性:具体劳动和抽象劳动",
+        "含义:生产使用价值，有特定性质、目的和形式的劳动。",
+        "①具体劳动",
+        "创造商品的使用价值",
+        "是生产商品劳动的自然属性，反映人与自然的关系。",
+        "②抽象劳动"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-04-zip-q004",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-04-zip",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "简述资本主义国家宏观经济管理与调节的主要目标国家垄断资本主义条件下的宏观",
+      "answer": [
+        "经济调控",
+        "⑴必要性:能在一定程度上缓解社会矛盾。",
+        "目标:保持经济的稳定和一定程度的增长。保持币值和物价的稳定。实现充分就业保持",
+        "国际国内收支的大体平衡。",
+        "⑶总任务:促进市场总供给和总需求的平衡。",
+        "主要手段:经济手段。",
+        "主要政策:财政政策货币政策以及一定程度上的经济计划。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15044"
+      ],
+      "rubric": [
+        "经济调控",
+        "⑴必要性:能在一定程度上缓解社会矛盾。",
+        "目标:保持经济的稳定和一定程度的增长。保持币值和物价的稳定。实现充分就业保持",
+        "国际国内收支的大体平衡。",
+        "⑶总任务:促进市场总供给和总需求的平衡。",
+        "主要手段:经济手段。"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-04-zip-q005",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-04-zip",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "共产主义精神境界的极大提高表现在哪些方面给分题",
+      "answer": [
+        "人们梳理了高度的自觉劳动态度，遵守社会纪律，团结互助，诚实有爱，完全从社会",
+        "公共利益出发进行劳作和参与社会活动，人人都习惯于遵守社会公共生活的基本准则。",
+        "人们拜托了封建、保守的思想观点束缚，又摒弃了以利已主义为核心的资产阶级思想",
+        "意识，树立了集体主义为核心的共产主义人生观、价值观和道德观。",
+        "三、论述题"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15044"
+      ],
+      "rubric": [
+        "人们梳理了高度的自觉劳动态度，遵守社会纪律，团结互助，诚实有爱，完全从社会",
+        "公共利益出发进行劳作和参与社会活动，人人都习惯于遵守社会公共生活的基本准则。",
+        "人们拜托了封建、保守的思想观点束缚，又摒弃了以利已主义为核心的资产阶级思想",
+        "意识，树立了集体主义为核心的共产主义人生观、价值观和道德观。",
+        "三、论述题"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-04-zip-q006",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-04-zip",
+      "type": "essay",
+      "chapterId": "marx-4",
+      "stem": "简述量变与质变的关系原理及其对社会主义建设的意义量变和质变的辩证关系原理",
+      "answer": [
+        "及其现实意义",
+        "原理:辩证统一",
+        "A. 量变是质变的必要准备:质变以量变为前提和基础，质变由量变规定其性质和方向。",
+        "B. 质变是量变的必然结果。",
+        "C. 量变和质变相互渗透。",
+        "现实意义",
+        "要求我们在社会主义建设和改革过程中，把远大的理想和目标同有步骤、分阶段的踏实肯",
+        "干、稳步前进的精神结合起来，反对急于求成。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15044"
+      ],
+      "rubric": [
+        "及其现实意义",
+        "原理:辩证统一",
+        "A. 量变是质变的必要准备:质变以量变为前提和基础，质变由量变规定其性质和方向。",
+        "B. 质变是量变的必然结果。",
+        "C. 量变和质变相互渗透。",
+        "现实意义"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-04-zip-q007",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-04-zip",
+      "type": "essay",
+      "chapterId": "marx-4",
+      "stem": "相对剩余价值和超额剩余价值是怎样产生的?",
+      "answer": [
+        "相对剩余价值的形成过程(超额剩余价值与相对剩余价值产生过程等类似，超额剩余价值",
+        "资本家之间进行激烈竞争产生的)",
+        "①生产相对剩余价值，必须缩短必要劳动时间。而缩短必要劳动时间，就要降低劳动力价",
+        "值。",
+        "②而劳动力价值是由工人及其家庭的生活资料价值所构成，因而就要降低生活资料的价值。",
+        "③商品价值与劳动生产率成反比，所以，为降低生活资料的价值，就必须提高生活资料生",
+        "产部门的劳动生产率，也要提高与生活资料相关的生产资料部门的劳动率。",
+        "④最后，整个社会劳动生产率都提高了，所以，相对剩余价值生产是以社会劳动生产率提",
+        "高为条件的。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15044"
+      ],
+      "rubric": [
+        "相对剩余价值的形成过程(超额剩余价值与相对剩余价值产生过程等类似，超额剩余价值",
+        "资本家之间进行激烈竞争产生的)",
+        "①生产相对剩余价值，必须缩短必要劳动时间。而缩短必要劳动时间，就要降低劳动力价",
+        "值。",
+        "②而劳动力价值是由工人及其家庭的生活资料价值所构成，因而就要降低生活资料的价值。",
+        "③商品价值与劳动生产率成反比，所以，为降低生活资料的价值，就必须提高生活资料生"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-04-zip-q008",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-04-zip",
+      "type": "essay",
+      "chapterId": "marx-4",
+      "stem": "第二次世界大战后国家垄断资本主义大发展的原因是什么?",
+      "answer": [
+        "国家垄断资本主义在战后",
+        "大发展的原因",
+        "①私人垄断资本的力量无法满足大规模经济建设需要的巨额资金。②大规模公共设施建设，",
+        "私人垄断资本无力或不愿投资。",
+        "大型、前导性的科学研究项目，私人垄断资本不愿涉足。④日益严重的生产过剩问题仅",
+        "靠私人垄断资本难以解决",
+        "⑤社会化大生产的发展要求国家出面进行某些宏观经济调控。⑥经济利益关系的调整方面，",
+        "国家的再分配功能越来越重要。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15044"
+      ],
+      "rubric": [
+        "国家垄断资本主义在战后",
+        "大发展的原因",
+        "①私人垄断资本的力量无法满足大规模经济建设需要的巨额资金。②大规模公共设施建设，",
+        "私人垄断资本无力或不愿投资。",
+        "大型、前导性的科学研究项目，私人垄断资本不愿涉足。④日益严重的生产过剩问题仅",
+        "靠私人垄断资本难以解决"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-10-subjective-q001",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-10-subjective",
+      "type": "short",
+      "chapterId": "marx-0",
+      "stem": "简述马克思主义的基本特征",
+      "answer": [
+        "科学的理论(科学性)。马克思主义是对自然、社会和人类思维发展本",
+        "质和规律的正确反映。",
+        "人民的理论(人民性)。人民性是马克思主义的本质属性，人民至上是马克",
+        "思主义的政治立场。",
+        "实践的理论(实践性)。实践观点是马克思主义首要的和基本的观点。",
+        "发展的理论(发展性)。马克思主义具有与时俱进的理论品质。",
+        "马克思主义的基本特征，如果用一句话来概括就是科学性与革命性的统一。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15044"
+      ],
+      "rubric": [
+        "科学的理论(科学性)。马克思主义是对自然、社会和人类思维发展本",
+        "质和规律的正确反映。",
+        "人民的理论(人民性)。人民性是马克思主义的本质属性，人民至上是马克",
+        "思主义的政治立场。",
+        "实践的理论(实践性)。实践观点是马克思主义首要的和基本的观点。",
+        "发展的理论(发展性)。马克思主义具有与时俱进的理论品质。"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-10-subjective-q002",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-10-subjective",
+      "type": "essay",
+      "chapterId": "marx-2",
+      "stem": "如何理解真理和谬误的关系?",
+      "answer": [
+        "它们之间既对立又统一。",
+        "二者相互对立。在确定的对象和范围内，真理与谬误的对立是绝对的，",
+        "与对象相符合的认识就是真理，与对象不相符合的认识就是谬误。",
+        "二者的对立又是相对的，它们在一定条件下能够相互转化。①真理在一",
+        "定条件下会转化为谬误。任何真理都是在一定范围内、一定条件下才能够成立，",
+        "超出这个范围，失去特定条件，就会变成谬误。②谬误在一定条件下能够向真理",
+        "转化。任何人都有可能犯错误，但勇于正视、反省、修正错误，终能让错误转化",
+        "为正确，谬误转化为真理。③在批判谬误中发展真理，是谬误向真理转化的另一",
+        "种形式。谬误可以起到反面教员的作用，警示人们要更加正确地认识世界。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15044"
+      ],
+      "rubric": [
+        "它们之间既对立又统一。",
+        "二者相互对立。在确定的对象和范围内，真理与谬误的对立是绝对的，",
+        "与对象相符合的认识就是真理，与对象不相符合的认识就是谬误。",
+        "二者的对立又是相对的，它们在一定条件下能够相互转化。①真理在一",
+        "定条件下会转化为谬误。任何真理都是在一定范围内、一定条件下才能够成立，",
+        "超出这个范围，失去特定条件，就会变成谬误。②谬误在一定条件下能够向真理"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-10-subjective-q003",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-10-subjective",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "简述产樅纾业资本的运动中，实现资本顺利循环必须具备的两个基本前 提条件",
+      "answer": [
+        "产业资本的运动，必须具备两个基本前提条件:一是产业资本的三种职能",
+        "形式必须在空间上并存，也就是说，产业资本必须按照一定比例同时存在于货币",
+        "资本、生产资本和商品资本三种形轤子式中。二是产业资本的三种职能形式必须",
+        "在时间上继起，也就是说，产业资本循环中三种职能形式的转化必须保持时间上",
+        "的依次连续性。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15044"
+      ],
+      "rubric": [
+        "产业资本的运动，必须具备两个基本前提条件:一是产业资本的三种职能",
+        "形式必须在空间上并存，也就是说，产业资本必须按照一定比例同时存在于货币",
+        "资本、生产资本和商品资本三种形轤子式中。二是产业资本的三种职能形式必须",
+        "在时间上继起，也就是说，产业资本循环中三种职能形式的转化必须保持时间上",
+        "的依次连续性。"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-10-subjective-q004",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-10-subjective",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "经济全球化的含义、表现",
+      "answer": [
+        "是在生产不断发展、科技加速进步、社会分工和国际分工不断深化、生",
+        "产的社会化和国际孫舞賁波鲼攀程度不断提高的情况下,世界各国、各地区的经济",
+        "活动越来越超出某一国家和地区的范围而相互联系、相互依存的过程。",
+        "表现:生产全球化、贸易全球化、金融全球化。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15044"
+      ],
+      "rubric": [
+        "是在生产不断发展、科技加速进步、社会分工和国际分工不断深化、生",
+        "产的社会化和国际孫舞賁波鲼攀程度不断提高的情况下,世界各国、各地区的经济",
+        "活动越来越超出某一国家和地区的范围而相互联系、相互依存的过程。",
+        "表现:生产全球化、贸易全球化、金融全球化。"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-10-subjective-q005",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-10-subjective",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "简述马克思主义经典作家预见未来社会的方法论原则",
+      "answer": [
+        "在揭示人类社会发展一般规律的基础上指明社会发展的方向。",
+        "在刨析资本主义旧世界的过程中阐发未来新世界的特点。",
+        "在社会主义社会发展中不断深化对未来共产主义社会的认识。",
+        "立足于揭示未来社会的一般特征，而不对各种细节作具体描绘。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15044"
+      ],
+      "rubric": [
+        "在揭示人类社会发展一般规律的基础上指明社会发展的方向。",
+        "在刨析资本主义旧世界的过程中阐发未来新世界的特点。",
+        "在社会主义社会发展中不断深化对未来共产主义社会的认识。",
+        "立足于揭示未来社会的一般特征，而不对各种细节作具体描绘。"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-10-subjective-q006",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-10-subjective",
+      "type": "essay",
+      "chapterId": "marx-1",
+      "stem": "试述矛盾的普遍性、矛盾的特殊性的含义以及分析矛盾的特殊性的意义",
+      "answer": [
+        "二者是辩证统一关系。矛盾的普遍性即矛盾的共性，矛盾的特殊性即",
+        "矛盾的个性。矛盾的共性是无条件的、绝对的，矛盾的个性是有条件的、相对的。",
+        "任何现实存在的事物的矛盾都是共性和个性的有机统一，共性寓于个性之中，没",
+        "有离开个性的共性，也没有离开共性的个性。矛盾的共性和个性相统一的关系，",
+        "既是客观事物固有的辩证法，也是科学的认识方法。",
+        "二者的辩证关系原理是马克思主义基本原理同各国实际相结合的哲学基",
+        "础。中国共产党坚持把马克閨志思欐ㄣ鬚棉义基本原理同中国具体实际相结合、",
+        "同中华优秀传统文化相结合，不断推进马克思主义中国化时代化，取得一系列重",
+        "大理论成果，指引中国革命、建设、改革取得伟大胜利，同时又用中国经验和理",
+        "论创新丰富发展了马克思主义。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15044"
+      ],
+      "rubric": [
+        "二者是辩证统一关系。矛盾的普遍性即矛盾的共性，矛盾的特殊性即",
+        "矛盾的个性。矛盾的共性是无条件的、绝对的，矛盾的个性是有条件的、相对的。",
+        "任何现实存在的事物的矛盾都是共性和个性的有机统一，共性寓于个性之中，没",
+        "有离开个性的共性，也没有离开共性的个性。矛盾的共性和个性相统一的关系，",
+        "既是客观事物固有的辩证法，也是科学的认识方法。",
+        "二者的辩证关系原理是马克思主义基本原理同各国实际相结合的哲学基"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-10-subjective-q007",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-10-subjective",
+      "type": "essay",
+      "chapterId": "marx-1",
+      "stem": "什么是社会意识?如何理解社会意识相独立性的含义及表现",
+      "answer": [
+        "社会意识:是社会存在的反映，是社会生活的精神方面。",
+        "含义:指社会意识在从根本上受到社会存在决定的同时，还具有自身特有",
+        "的发展形式",
+        "和发展规律杞。",
+        "表现:①社会意识与社会存在发展具有不完全同步性和不平衡性。②社会意识",
+        "内部各种形式之间存在相互影响且各自具有历史继承性③社会意识对社会存在",
+        "具有能动的反作用。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15044"
+      ],
+      "rubric": [
+        "社会意识:是社会存在的反映，是社会生活的精神方面。",
+        "含义:指社会意识在从根本上受到社会存在决定的同时，还具有自身特有",
+        "的发展形式",
+        "和发展规律杞。",
+        "表现:①社会意识与社会存在发展具有不完全同步性和不平衡性。②社会意识",
+        "内部各种形式之间存在相互影响且各自具有历史继承性③社会意识对社会存在"
+      ]
+    },
+    {
+      "id": "generated-marx-2025-10-subjective-q008",
+      "courseId": "marx",
+      "paperId": "generated-marx-2025-10-subjective",
+      "type": "essay",
+      "chapterId": "marx-4",
+      "stem": "试述资本主义为社会主义所代替的历史必然性",
+      "answer": [
+        "资本主义基本矛盾包含着现代的一切冲突的萌芽",
+        "资本积累推动资",
+        "本主义基本矛盾不断激化并最终否定资本主义自身。",
+        "国家垄断资本主义是资",
+        "本社会化的更高形式，将成为社会主义的前奏",
+        "资本主义社会存在着资产阶级",
+        "和无产阶级两大阶级之间的矛盾和斗争。",
+        "年10 月自学考试"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15044"
+      ],
+      "rubric": [
+        "资本主义基本矛盾包含着现代的一切冲突的萌芽",
+        "资本积累推动资",
+        "本主义基本矛盾不断激化并最终否定资本主义自身。",
+        "国家垄断资本主义是资",
+        "本社会化的更高形式，将成为社会主义的前奏",
+        "资本主义社会存在着资产阶级"
+      ]
+    },
+    {
+      "id": "generated-marx-2026-04-subjective-q001",
+      "courseId": "marx",
+      "paperId": "generated-marx-2026-04-subjective",
+      "type": "short",
+      "chapterId": "marx-2",
+      "stem": "什么是价值观?我国社会主义价值观的基本内容是什么?",
+      "answer": [
+        "价值观是人们关于价值本质的认识以及对人和事物的评价标准、",
+        "评价原则和评价方法的观点的体系。",
+        "我国社会主义价值观的基本内容:",
+        "国家层面:富强、民主、文明、",
+        "和谐",
+        "社会层面:自由、平等、公正、法治",
+        "公民层面:爱国、",
+        "敬业、诚信、友善。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20264月",
+        "15044"
+      ],
+      "rubric": [
+        "价值观是人们关于价值本质的认识以及对人和事物的评价标准、",
+        "评价原则和评价方法的观点的体系。",
+        "我国社会主义价值观的基本内容:",
+        "国家层面:富强、民主、文明、",
+        "和谐",
+        "社会层面:自由、平等、公正、法治"
+      ]
+    },
+    {
+      "id": "generated-marx-2026-04-subjective-q002",
+      "courseId": "marx",
+      "paperId": "generated-marx-2026-04-subjective",
+      "type": "short",
+      "chapterId": "marx-1",
+      "stem": "简要说明社会存在与意识的含义及相互关系",
+      "answer": [
+        "社会存在指社会物质生活条件，是社会生活的物质方面。社",
+        "会意识是社会存在的反映，是社会生活的精神方面。",
+        "关系:二者是辩证统一的。社会存在决定社会意识，社会意识是",
+        "社会存在的反映，并反作用于社会存在。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20264月",
+        "15044"
+      ],
+      "rubric": [
+        "社会存在指社会物质生活条件，是社会生活的物质方面。社",
+        "会意识是社会存在的反映，是社会生活的精神方面。",
+        "关系:二者是辩证统一的。社会存在决定社会意识，社会意识是",
+        "社会存在的反映，并反作用于社会存在。"
+      ]
+    },
+    {
+      "id": "generated-marx-2026-04-subjective-q003",
+      "courseId": "marx",
+      "paperId": "generated-marx-2026-04-subjective",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "简述生产价格的形成过程",
+      "answer": [
+        "生产价格是商品价值的转化形式，是生产成本与平均利润之和。",
+        "生产成本是由生产中实际耗费的不变资本和可变资本所构成的。在",
+        "价值转化为生产价格的条件下，价值规律作用的形式发生了变化。",
+        "商品不再以价值而是以生产价格为基础进行交换，市场价格的变动",
+        "不再以价值为中心，而是以生产价格为中心。从价值到生产价格的",
+        "转化，是随着资本主义大工业的出现和发展而完成的，反映了从小",
+        "商品生产到资本主义商品生产的历史发展过程。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20264月",
+        "15044"
+      ],
+      "rubric": [
+        "生产价格是商品价值的转化形式，是生产成本与平均利润之和。",
+        "生产成本是由生产中实际耗费的不变资本和可变资本所构成的。在",
+        "价值转化为生产价格的条件下，价值规律作用的形式发生了变化。",
+        "商品不再以价值而是以生产价格为基础进行交换，市场价格的变动",
+        "不再以价值为中心，而是以生产价格为中心。从价值到生产价格的",
+        "转化，是随着资本主义大工业的出现和发展而完成的，反映了从小"
+      ]
+    },
+    {
+      "id": "generated-marx-2026-04-subjective-q004",
+      "courseId": "marx",
+      "paperId": "generated-marx-2026-04-subjective",
+      "type": "essay",
+      "chapterId": "marx-4",
+      "stem": "第二次世界大战后资本主发生了一系列新变化，其主要表现有 哪些?这是否意味着资本主义本质的改变?",
+      "answer": [
+        "新变化:1 生产资料所有制的变化。法人资本所有制崛起并成",
+        "为居主导地位的资本所有制形式。2 劳资关系和分配关系的变化。",
+        "资本家及其代理人采取一些缓和劳资关系的激励制度，主要有职工",
+        "参与决策、终身雇佣、职工持股。发达资本主义国家为了缓和矛",
+        "盾，避免社会剧烈冲突和动荡，建立并实施普及化、全民化的社会",
+        "福利制度。3 社会阶层和阶级结构的变化。资本家的地位和作用己",
+        "经发生很大变化",
+        "高级职业经理成为大公司经营活动的实际控制者",
+        "知识型和服务型劳动者的数量不断增加，劳动方式发生新变化。4",
+        "经济调节机制和经济危机形态的变化。资本主义国家为尽快恢复国"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20264月",
+        "15044"
+      ],
+      "rubric": [
+        "新变化:1 生产资料所有制的变化。法人资本所有制崛起并成",
+        "为居主导地位的资本所有制形式。2 劳资关系和分配关系的变化。",
+        "资本家及其代理人采取一些缓和劳资关系的激励制度，主要有职工",
+        "参与决策、终身雇佣、职工持股。发达资本主义国家为了缓和矛",
+        "盾，避免社会剧烈冲突和动荡，建立并实施普及化、全民化的社会",
+        "福利制度。3 社会阶层和阶级结构的变化。资本家的地位和作用己"
+      ]
+    },
+    {
+      "id": "generated-marx-2026-04-subjective-q005",
+      "courseId": "marx",
+      "paperId": "generated-marx-2026-04-subjective",
+      "type": "short",
+      "chapterId": "marx-1",
+      "stem": "社会主义发展道路多样性的原因 P315-316",
+      "answer": [
+        "各个国家的生产力发展状况和社会发展阶段决定了社会主义",
+        "发展道路具有不同的特点",
+        "历史文化传统的差异性是造成不同国家社会主义发展道路多样性",
+        "的重要条件",
+        "时代和实践的不断发展，是造成社会主义发展道路多样性的现实",
+        "原因",
+        "论述题:"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20264月",
+        "15044"
+      ],
+      "rubric": [
+        "各个国家的生产力发展状况和社会发展阶段决定了社会主义",
+        "发展道路具有不同的特点",
+        "历史文化传统的差异性是造成不同国家社会主义发展道路多样性",
+        "的重要条件",
+        "时代和实践的不断发展，是造成社会主义发展道路多样性的现实",
+        "原因"
+      ]
+    },
+    {
+      "id": "generated-marx-2026-04-subjective-q006",
+      "courseId": "marx",
+      "paperId": "generated-marx-2026-04-subjective",
+      "type": "essay",
+      "chapterId": "marx-1",
+      "stem": "“两点论”和“重点论”统一的原理及其现实意义",
+      "answer": [
+        "坚持两点论，就是在认识复杂事物的发展过程时，既要看到",
+        "主要矛盾，又不忽略次要矛盾",
+        "在认识某一矛盾时，既要看到矛盾的",
+        "主要方面，又不忽略矛盾的次要方面。",
+        "坚持重点论，就是在认识复杂事物的发展过程时，要着重抓住主",
+        "要矛盾",
+        "在研究某一矛盾时，要注重把握矛盾的主要方面。",
+        "坚持两点论和重点论的统一，就是看问题、办事情既要全面，又",
+        "要抓住重点。我国坚持以经济建设为中心和一系列“两手抓”的方",
+        "针，就是坚持两点论和重点论统一的具体表现。认识我国改革开放"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20264月",
+        "15044"
+      ],
+      "rubric": [
+        "坚持两点论，就是在认识复杂事物的发展过程时，既要看到",
+        "主要矛盾，又不忽略次要矛盾",
+        "在认识某一矛盾时，既要看到矛盾的",
+        "主要方面，又不忽略矛盾的次要方面。",
+        "坚持重点论，就是在认识复杂事物的发展过程时，要着重抓住主",
+        "要矛盾"
+      ]
+    },
+    {
+      "id": "generated-marx-2026-04-subjective-q007",
+      "courseId": "marx",
+      "paperId": "generated-marx-2026-04-subjective",
+      "type": "essay",
+      "chapterId": "marx-4",
+      "stem": "商品经济中商品价值量的决定及其与劳动生产率的关系",
+      "answer": [
+        "商品的价值量是由生产商品的社会必要劳动时间所决定的",
+        "劳动生产率水平越高，单位时间内生产的商品数量越多，生产每",
+        "件商品所需要的社会必要劳动时间就越少，单位商品的价值量就越",
+        "小，反之就越大。商品的价值量与生产商品所耗费的社会必要劳动",
+        "时间成正比，与劳动生产率成反比"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20264月",
+        "15044"
+      ],
+      "rubric": [
+        "商品的价值量是由生产商品的社会必要劳动时间所决定的",
+        "劳动生产率水平越高，单位时间内生产的商品数量越多，生产每",
+        "件商品所需要的社会必要劳动时间就越少，单位商品的价值量就越",
+        "小，反之就越大。商品的价值量与生产商品所耗费的社会必要劳动",
+        "时间成正比，与劳动生产率成反比"
+      ]
+    },
+    {
+      "id": "generated-marx-2026-04-subjective-q008",
+      "courseId": "marx",
+      "paperId": "generated-marx-2026-04-subjective",
+      "type": "essay",
+      "chapterId": "marx-4",
+      "stem": "如何理解资本主义的历史进步性，主要表现是什么?",
+      "answer": [
+        "资本主义将科学技术转变为强大的生产力。",
+        "题库",
+        "资本追求剩余价值的内在动力和竞争的外在压力推动了社会生产",
+        "力的迅速发展。",
+        "资本主义的意识形态和政治制度作为上层建筑在战胜封建社会自",
+        "给自足的小生产的生产方式，保护、促进和完善资本主义生产方式",
+        "方面起着重要作用，从而推动了社会生产力的迅速发展，促进了社",
+        "会进步。",
+        "年 4 月全专业考试科目真题，已更新至：",
+        "也可复制链接进入："
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20264月",
+        "15044"
+      ],
+      "rubric": [
+        "资本主义将科学技术转变为强大的生产力。",
+        "题库",
+        "资本追求剩余价值的内在动力和竞争的外在压力推动了社会生产",
+        "力的迅速发展。",
+        "资本主义的意识形态和政治制度作为上层建筑在战胜封建社会自",
+        "给自足的小生产的生产方式，保护、促进和完善资本主义生产方式"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-10-subjective-q001",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-10-subjective",
+      "type": "essay",
+      "chapterId": "marx-4",
+      "stem": "(简答)马克思主义是时代的产物",
+      "answer": [
+        "从 17 世纪 40 年代到 19 世纪上半叶，英国和法国等西欧主要国家相继",
+        "发生了资产阶级革命，推翻了封建专制制度，清除了资本主义发展的障碍，资",
+        "本主义得到迅速发展.资本主义机器大工业的发展，一方面大大发展了生产力，",
+        "提高了劳动生产率，带来了物质财富的空前增长另一方面又导致了资本主义固",
+        "有矛盾的尖锐化。",
+        "资本主义基本矛盾的激化，在阶级关系上表现为工人阶级和资产阶级之间的矛",
+        "盾的尖锐化.",
+        "到了 19 世纪 30-40 年代，西欧社会的主要矛盾从人民大众与封",
+        "建势力的矛盾转化为工人阶级与资产阶级之间的矛盾.1844 年，德国西里西亚的",
+        "工人发动了起义，这是一次直接反对资本家残酷刹削的斗争，斗争目标明确地"
+      ],
+      "analysis": "同答案",
+      "points": 6,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15044"
+      ],
+      "rubric": [
+        "从 17 世纪 40 年代到 19 世纪上半叶，英国和法国等西欧主要国家相继",
+        "发生了资产阶级革命，推翻了封建专制制度，清除了资本主义发展的障碍，资",
+        "本主义得到迅速发展.资本主义机器大工业的发展，一方面大大发展了生产力，",
+        "提高了劳动生产率，带来了物质财富的空前增长另一方面又导致了资本主义固",
+        "有矛盾的尖锐化。",
+        "资本主义基本矛盾的激化，在阶级关系上表现为工人阶级和资产阶级之间的矛"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-10-subjective-q002",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-10-subjective",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "(简答)按劳分配的原因及历史作用",
+      "answer": [
+        "在共产主义社会的第",
+        "一阶段或低级阶段，也即社会主义阶段，生产力水平还不高，并存在旧的社会",
+        "分工，存在体力劳动和脑力劳动等劳动差别，劳动还仅仅是谋生手段，个人消",
+        "费品的分配应当实行按劳分配原则，这种分配方式尽管存在历史局限性，但在",
+        "社会主义阶段是无法避免的."
+      ],
+      "analysis": "同答案",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15044"
+      ],
+      "rubric": [
+        "在共产主义社会的第",
+        "一阶段或低级阶段，也即社会主义阶段，生产力水平还不高，并存在旧的社会",
+        "分工，存在体力劳动和脑力劳动等劳动差别，劳动还仅仅是谋生手段，个人消",
+        "费品的分配应当实行按劳分配原则，这种分配方式尽管存在历史局限性，但在",
+        "社会主义阶段是无法避免的."
+      ]
+    },
+    {
+      "id": "generated-marx-2024-10-subjective-q003",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-10-subjective",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "(简答)商品二重性因素",
+      "answer": [
+        "商品具有使用价值和价值两个因素或两种属性,",
+        "使用价值是一种物品",
+        "能够满足人们某种需要的属性，即物品的有用性，商品的使用价值反映的是人",
+        "与自然的关系。",
+        "价值是生产商品时结在商品中的无差别的一般人类劳动，即",
+        "人们的脑力和体力的支出。价值反映商品生产者之间的关系，是商品的社会属",
+        "商品必然同时具有使用价值和价值两个因素。没有使用价值的物品不可能",
+        "有价值，使用价值是价值的物质承担着，面价值则寓于使用价值之中",
+        "有使用价",
+        "值但没有价值的物品，也不是商品，价值是商品的最本质因素。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15044"
+      ],
+      "rubric": [
+        "商品具有使用价值和价值两个因素或两种属性,",
+        "使用价值是一种物品",
+        "能够满足人们某种需要的属性，即物品的有用性，商品的使用价值反映的是人",
+        "与自然的关系。",
+        "价值是生产商品时结在商品中的无差别的一般人类劳动，即",
+        "人们的脑力和体力的支出。价值反映商品生产者之间的关系，是商品的社会属"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-10-subjective-q004",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-10-subjective",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "(简答)按劳分配的原因及历史作用",
+      "answer": [
+        "在共产主义社会的第一阶段或低级阶段，也即社会主义阶段，生产力水平",
+        "还不高，并存在旧的社会分工，存在体力劳动和脑力劳动等劳动差别，劳动还",
+        "仅仅是谋生手段，个人消费品的分配应当实行技劳分配原则，这种分配方式尽",
+        "管存在历史局限性，但在社会主义阶段是无法避免的。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15044"
+      ],
+      "rubric": [
+        "在共产主义社会的第一阶段或低级阶段，也即社会主义阶段，生产力水平",
+        "还不高，并存在旧的社会分工，存在体力劳动和脑力劳动等劳动差别，劳动还",
+        "仅仅是谋生手段，个人消费品的分配应当实行技劳分配原则，这种分配方式尽",
+        "管存在历史局限性，但在社会主义阶段是无法避免的。"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-10-subjective-q005",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-10-subjective",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "(简答)商品二重性因素",
+      "answer": [
+        "商品具有使用价值和价值两个因素或两种属性。",
+        "使用价值是一种物品",
+        "能够满足人们某种需要的属性，即物品的有用性，商品的使用价值反映的是人",
+        "与自然的关系。",
+        "价值是生产商品时凝结在商品中的无差别的一般人类劳动，",
+        "即人们的脑力和体力的支出。价值反映商品生产者之间的关系，是商品的社会",
+        "属性",
+        "商品必然同时具有使用价值和价值两个因素。没有使用价值的物品不可",
+        "能有价值，使用价值是价值的物质承担者，面价值则寓于使用价值之中",
+        "有使用"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15044"
+      ],
+      "rubric": [
+        "商品具有使用价值和价值两个因素或两种属性。",
+        "使用价值是一种物品",
+        "能够满足人们某种需要的属性，即物品的有用性，商品的使用价值反映的是人",
+        "与自然的关系。",
+        "价值是生产商品时凝结在商品中的无差别的一般人类劳动，",
+        "即人们的脑力和体力的支出。价值反映商品生产者之间的关系，是商品的社会"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-10-subjective-q006",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-10-subjective",
+      "type": "short",
+      "chapterId": "marx-4",
+      "stem": "(简答)二战后，资本输出的特点",
+      "answer": [
+        "资本流向的变化，不再只向经济落后国家输出，面是多方向输出，特别是",
+        "发达国家间相互投资大度增加",
+        "在私人资本输出增长的问时，国家资本的输出也",
+        "在增长，并日益成为占重要地位的资本输出形式。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15044"
+      ],
+      "rubric": [
+        "资本流向的变化，不再只向经济落后国家输出，面是多方向输出，特别是",
+        "发达国家间相互投资大度增加",
+        "在私人资本输出增长的问时，国家资本的输出也",
+        "在增长，并日益成为占重要地位的资本输出形式。"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-10-subjective-q007",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-10-subjective",
+      "type": "short",
+      "chapterId": "marx-1",
+      "stem": "(简答)认识主体的含义，性质特点",
+      "answer": [
+        "认识主体的含义:认识主体是指认识和实践活动的承担者，是处于一定",
+        "社会关系中从事实践活动和认识活动的现实的、具体的人。",
+        "性质和特点:人",
+        "作为认识主体具有自然的物质基础。认识主体不仅具有自然的物质基础，而且",
+        "具有社会性，认识主体具有历史性，认识主体的社会性和历史性是分不开的，",
+        "认识主体具有能动性，这是认识主体的突出特点。",
+        "论述题"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15044"
+      ],
+      "rubric": [
+        "认识主体的含义:认识主体是指认识和实践活动的承担者，是处于一定",
+        "社会关系中从事实践活动和认识活动的现实的、具体的人。",
+        "性质和特点:人",
+        "作为认识主体具有自然的物质基础。认识主体不仅具有自然的物质基础，而且",
+        "具有社会性，认识主体具有历史性，认识主体的社会性和历史性是分不开的，",
+        "认识主体具有能动性，这是认识主体的突出特点。"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-10-subjective-q008",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-10-subjective",
+      "type": "essay",
+      "chapterId": "marx-1",
+      "stem": "(简答)杏定之香定规律",
+      "answer": [
+        "辩证否定观的内容:①辩证的否定是事物的自我否定，即通过事物内部",
+        "矛盾面进行的对自身的否定。②)辩证的否定是联系和发展的环节，③辩证的否",
+        "定是扬弃，既克服又保留。",
+        "现实意义:否定之否定规律揭示了事物的发展是",
+        "前进性和曲折性的统一趋势和道路。把握否定之否定规律，坚持事物的发展是",
+        "前进性和曲折性统一的原理，对我们正确认识社会主义现代化建设事业具有重",
+        "要意义。",
+        "首先，要坚信社会主义的前途是光明的，对我国社会主义现代化建设事业充满",
+        "必胜的信心，高举中国特色社会主义的伟大旗帆，坚定不移地建建设中国特色",
+        "社会主义道路，不要被一时的表面现象所迷惑，不要因暂时的挫折而动摇。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15044"
+      ],
+      "rubric": [
+        "辩证否定观的内容:①辩证的否定是事物的自我否定，即通过事物内部",
+        "矛盾面进行的对自身的否定。②)辩证的否定是联系和发展的环节，③辩证的否",
+        "定是扬弃，既克服又保留。",
+        "现实意义:否定之否定规律揭示了事物的发展是",
+        "前进性和曲折性的统一趋势和道路。把握否定之否定规律，坚持事物的发展是",
+        "前进性和曲折性统一的原理，对我们正确认识社会主义现代化建设事业具有重"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-10-subjective-q009",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-10-subjective",
+      "type": "essay",
+      "chapterId": "marx-0",
+      "stem": "(简答)社会形态发展的统一性和多样性",
+      "answer": [
+        "社会形态发展的统一性是指处于同一社会形态的不同国家和民族的历",
+        "史发展具有的共同性、普遍性，即具有大致相同的生产力发展水平，大致相问",
+        "的生产关系体系，大致相同的上层建筑。",
+        "社会形态发展的多样性，是指不同",
+        "国家和民族的历史发展具有不同的特点，在经济、政治、文化发展上都有自己",
+        "民族的特色,各国的历史可以说是千差万别的,社会形态发展的多样性主要表现",
+        "在以下几个方面:第一，处于同一社会形态的不同国家和民族的历史具有各自的",
+        "特点",
+        "第二，各国在不同的社会形态中所具有的典型意义不同",
+        "第三,人类社会"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15044"
+      ],
+      "rubric": [
+        "社会形态发展的统一性是指处于同一社会形态的不同国家和民族的历",
+        "史发展具有的共同性、普遍性，即具有大致相同的生产力发展水平，大致相问",
+        "的生产关系体系，大致相同的上层建筑。",
+        "社会形态发展的多样性，是指不同",
+        "国家和民族的历史发展具有不同的特点，在经济、政治、文化发展上都有自己",
+        "民族的特色,各国的历史可以说是千差万别的,社会形态发展的多样性主要表现"
+      ]
+    },
+    {
+      "id": "generated-marx-2024-10-subjective-q010",
+      "courseId": "marx",
+      "paperId": "generated-marx-2024-10-subjective",
+      "type": "essay",
+      "chapterId": "marx-4",
+      "stem": "(论述)资本周转的速度对剩余价值的影响",
+      "answer": [
+        "产业资本家为了使一定数量的资本带来尽可能多的剩余价值，总是竭力缩",
+        "短生产时间和流通时间，以加速资本的周转，产业资本周转速度的快慢，影响",
+        "到一定数量的预付资本在一定时期内(一般以年为单位)所能带来的剩余价值量",
+        "的多少，在一年之内，资本周转的速度越快，带来的年剩余价值总量就越多，",
+        "年剩余价值率也越高",
+        "反之，带来的年剩余价值总量就越少，年剩余价值率也",
+        "越低，年剩余价值率为一年内生产的剩余价值总量与一年内预付的可变资本总",
+        "量的比率。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15044"
+      ],
+      "rubric": [
+        "产业资本家为了使一定数量的资本带来尽可能多的剩余价值，总是竭力缩",
+        "短生产时间和流通时间，以加速资本的周转，产业资本周转速度的快慢，影响",
+        "到一定数量的预付资本在一定时期内(一般以年为单位)所能带来的剩余价值量",
+        "的多少，在一年之内，资本周转的速度越快，带来的年剩余价值总量就越多，",
+        "年剩余价值率也越高",
+        "反之，带来的年剩余价值总量就越少，年剩余价值率也"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q001",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "single",
+      "chapterId": "history-3",
+      "stem": "1978 年 12月，中国共产党召开的具有历史转意义的重要会议是（ ）",
+      "options": [
+        "中共十一届三中全会",
+        "中共十一届六中全会",
+        "中共十二届三中全会",
+        "中共十二届六中全"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q002",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "single",
+      "chapterId": "history-4",
+      "stem": "新中国恢复联合国合法席位的时间是（ ）",
+      "options": [
+        "1949年",
+        "1956 年",
+        "1971年",
+        "1978年"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q003",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "single",
+      "chapterId": "history-1",
+      "stem": "1919年发表《我的马克思主义观》一文的是（ ）",
+      "options": [
+        "陈独秀",
+        "李大钊",
+        "蔡和森",
+        "杨匏安"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q004",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "single",
+      "chapterId": "history-2",
+      "stem": "在 1911年爆发的保路运动中，规模最大、斗争最激烈的省份是（ ）",
+      "options": [
+        "湖南",
+        "四川",
+        "广东"
+      ],
+      "answer": [
+        "B"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q005",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "single",
+      "chapterId": "history-1",
+      "stem": "1947年 10月 10号,《中国人民解放军宣言》正式提出的口号是（ ）",
+      "options": [
+        "反投降，反分裂，反倒退",
+        "和平民主团结",
+        "打倒蒋介石，解放全中国",
+        "打过长江去，解放全中国"
+      ],
+      "answer": [
+        "C"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q006",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "short",
+      "chapterId": "history-3",
+      "stem": "1949年6月30日，毛泽东系统阐明中国共产党建国主张的文章是（ ）。 《论人民民主专政》 《中国革命和中国共产党》 《新民主主义论》 《丢掉幻想，准备斗争》",
+      "answer": [
+        "A"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ],
+      "rubric": [
+        "A"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q007",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "single",
+      "chapterId": "history-4",
+      "stem": "新中国从 1953 年开始的发展国民经济新五年计划的中心环节是（ ）",
+      "options": [
+        "优先发展重工业",
+        "优先发展轻工业",
+        "优先发展制造业",
+        "优先建设水利工程"
+      ],
+      "answer": [
+        "A"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 2,
+      "difficulty": "易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q008",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "short",
+      "chapterId": "history-1",
+      "stem": "第一次国共合作正式形成的标志",
+      "answer": [
+        "国民党一大确立联俄、联共、扶助农工政策，大会的成功召开，标志着第一次国共",
+        "合作的革命统一战线正式形成。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ],
+      "rubric": [
+        "国民党一大确立联俄、联共、扶助农工政策，大会的成功召开，标志着第一次国共",
+        "合作的革命统一战线正式形成。"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q009",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "essay",
+      "chapterId": "history-3",
+      "stem": "毛泽东在《星星之火，可以燎原》中阐述的思想及其意义",
+      "answer": [
+        "年 1 月，毛泽东在《星星之火，可以燎原》一文中进一步指出，红军、游",
+        "击队和红色区域的建立和发展，是半殖 民地中国在无产阶级领导之下的农民斗争的最高",
+        "形式，是半殖民地农民斗争发 展的必然结果，并且无疑义的是促进全国革命高潮的最重",
+        "要因素。这就在实际 上批评了共产国际和中共党内某些人坚持的“城市中心论”，提出",
+        "了以乡村为中 心的思想，初步形成了农村包围城市、武装夺取政权的理论。",
+        "农村",
+        "包围城市、武装夺取政权的理论是对 1927 年后共产党领导的红军和 根据地斗争经验的",
+        "科学概括，它是在以毛泽东为主要代表的中国共产党人同当 时党内盛行的把马克思主义",
+        "教条化、把共产国际决议和劳联经验神圣化的错误倾向作坚决斗争的基础上逐步形成的。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ],
+      "rubric": [
+        "年 1 月，毛泽东在《星星之火，可以燎原》一文中进一步指出，红军、游",
+        "击队和红色区域的建立和发展，是半殖 民地中国在无产阶级领导之下的农民斗争的最高",
+        "形式，是半殖民地农民斗争发 展的必然结果，并且无疑义的是促进全国革命高潮的最重",
+        "要因素。这就在实际 上批评了共产国际和中共党内某些人坚持的“城市中心论”，提出",
+        "了以乡村为中 心的思想，初步形成了农村包围城市、武装夺取政权的理论。",
+        "农村"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q010",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "essay",
+      "chapterId": "history-3",
+      "stem": "解放战争时期国民党统治区政治、经济危机日益加深的主要原因",
+      "answer": [
+        "抗战胜利后，国民党把接收变成“劫收”，大发“胜利财”，从而使更多的民众",
+        "期望破灭。",
+        "国民党统治集团违背全国人民迫切要求休养生息、和平建国的意愿，实行",
+        "反人民的内战政策。",
+        "为了支持反人民的内战，国民党政府从多方面加剧对广大人民的",
+        "疯狂掠夺，将全国各阶层人民置于饥饿和死亡线上，迫使全国各阶层人民团结起来，同国",
+        "民党政府作你死我活的斗争除此以外，再无出路。",
+        "中国共产党制定和实行了推翻国民",
+        "党黑暗统治的正确政策和策略，不仅成功地领导了解放区军民在第1条战线的革命斗争，",
+        "而且成功地领导了国统区人民在第二条战线的命斗争。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ],
+      "rubric": [
+        "抗战胜利后，国民党把接收变成“劫收”，大发“胜利财”，从而使更多的民众",
+        "期望破灭。",
+        "国民党统治集团违背全国人民迫切要求休养生息、和平建国的意愿，实行",
+        "反人民的内战政策。",
+        "为了支持反人民的内战，国民党政府从多方面加剧对广大人民的",
+        "疯狂掠夺，将全国各阶层人民置于饥饿和死亡线上，迫使全国各阶层人民团结起来，同国"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q011",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "short",
+      "chapterId": "history-1",
+      "stem": "毛泽东在探索中国社会主义建设道路过程中提出的文化建设方针",
+      "answer": [
+        "在讨论报告的过程中，还提出了“双百”方针这一社会主义文化建设的新方针。4",
+        "月28日,在中共中央政治局扩大会议上,毛泽东提出:“艺术问题上的百花齐放，学术问题",
+        "上的百家争鸣，我看应该成为我们的方针。”在社会主义文化建设方面，毛泽东提出，要",
+        "坚持马克思主义的指导地位，实行“百花齐放、百家争鸣”的方针，对古今中外的优秀文",
+        "化实行“古为今用、洋为中用、百花齐放推陈出新”的方针。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ],
+      "rubric": [
+        "在讨论报告的过程中，还提出了“双百”方针这一社会主义文化建设的新方针。4",
+        "月28日,在中共中央政治局扩大会议上,毛泽东提出:“艺术问题上的百花齐放，学术问题",
+        "上的百家争鸣，我看应该成为我们的方针。”在社会主义文化建设方面，毛泽东提出，要",
+        "坚持马克思主义的指导地位，实行“百花齐放、百家争鸣”的方针，对古今中外的优秀文",
+        "化实行“古为今用、洋为中用、百花齐放推陈出新”的方针。"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q012",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "short",
+      "chapterId": "history-1",
+      "stem": "中共十三大制定的社会主义现代化建设 “三步走”的战略部署",
+      "answer": [
+        "第一步，实现国民生产总值比 1980年翻一番，解决人民的温饱问题，这个任务",
+        "已经基本实现",
+        "第二步，到20 世纪末，使国民生产总值再增长一倍，人民生活达到小康水平。",
+        "第三步，到 21 世纪中叶，人均国民生产总值达到中等发达国家水平，人民生活比较",
+        "富裕，基本实现现代化。“三步走”发展战略及相关政策的制定，进步解决了中国现代化",
+        "建设的目标、步骤等关系全局的重大问题，对中国未来几十年的发展具有深远的影响。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ],
+      "rubric": [
+        "第一步，实现国民生产总值比 1980年翻一番，解决人民的温饱问题，这个任务",
+        "已经基本实现",
+        "第二步，到20 世纪末，使国民生产总值再增长一倍，人民生活达到小康水平。",
+        "第三步，到 21 世纪中叶，人均国民生产总值达到中等发达国家水平，人民生活比较",
+        "富裕，基本实现现代化。“三步走”发展战略及相关政策的制定，进步解决了中国现代化",
+        "建设的目标、步骤等关系全局的重大问题，对中国未来几十年的发展具有深远的影响。"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q013",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "essay",
+      "chapterId": "history-2",
+      "stem": "如何评价太平天国定都天京后，先后颁布的两个社会改革方案?",
+      "answer": [
+        "太平天国定都天京后，在政治、军事经济、文化等方面采取了一系列的政策和措施，",
+        "其中最重要的是《天朝田亩制度》的颁布。《天朝田亩制度》颁布于 1853 年冬，是最能",
+        "体现太平天国社会理想和这次农民战争特点的纲领性文件。《天朝田亩制度》是一个以解",
+        "决土地问题为中心的比较完整的社会改革方案，代表了农民要求平均分配土地的强烈愿望，",
+        "反映了农民反对封建土地所有制的普遍要求。与以往农民起义提出的“均贫富，等贵贱”",
+        "和“迎闯王，不纳粮”等相比《天朝田亩制度》有更完备的内容和更触及封建社会矛盾核",
+        "心的深度，应该说这个纲领比历代农民起义所提出口号的思想内涵更为深刻。太平天国后",
+        "期，洪仁开提出了《资政新篇》，作为统筹全局的建议。《资政新篇是中国近代史上第一",
+        "个具有资本主义色彩的方案，缺点是没有提出涉及农民土地问题的具体方案。它的主要内",
+        "容有:在政治方面，主张“禁朋党之弊”，加强中央集权，制定法律、制度。在经济方面，"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ],
+      "rubric": [
+        "太平天国定都天京后，在政治、军事经济、文化等方面采取了一系列的政策和措施，",
+        "其中最重要的是《天朝田亩制度》的颁布。《天朝田亩制度》颁布于 1853 年冬，是最能",
+        "体现太平天国社会理想和这次农民战争特点的纲领性文件。《天朝田亩制度》是一个以解",
+        "决土地问题为中心的比较完整的社会改革方案，代表了农民要求平均分配土地的强烈愿望，",
+        "反映了农民反对封建土地所有制的普遍要求。与以往农民起义提出的“均贫富，等贵贱”",
+        "和“迎闯王，不纳粮”等相比《天朝田亩制度》有更完备的内容和更触及封建社会矛盾核"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q014",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "essay",
+      "chapterId": "history-3",
+      "stem": "中国人民抗日战争胜利的历史意义",
+      "answer": [
+        "中国人民抗日战争的胜利，彻底粉碎了日本军国主义殖民奴役中国的图谋，迫使",
+        "日本归还甲午战争以后从中国窃取的东北、台湾、澎湖列岛等神圣领土，捍卫了国家主权",
+        "和领土完整，彻底洗刷了近代以来抗击外来侵略屡战屡败的民族耻辱。",
+        "中国人民抗日",
+        "战争的伟大胜利，重新确立了中国在世界上的大国地位。中国人民为世界反法西斯战争作",
+        "出的重大贡献，使中国国际地位显薯提高。",
+        "中国人民抗日战争的胜利，促进了中华民",
+        "族的觉醒，开辟了中华民族伟大复兴的光明前景。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ],
+      "rubric": [
+        "中国人民抗日战争的胜利，彻底粉碎了日本军国主义殖民奴役中国的图谋，迫使",
+        "日本归还甲午战争以后从中国窃取的东北、台湾、澎湖列岛等神圣领土，捍卫了国家主权",
+        "和领土完整，彻底洗刷了近代以来抗击外来侵略屡战屡败的民族耻辱。",
+        "中国人民抗日",
+        "战争的伟大胜利，重新确立了中国在世界上的大国地位。中国人民为世界反法西斯战争作",
+        "出的重大贡献，使中国国际地位显薯提高。"
+      ]
+    },
+    {
+      "id": "generated-history-2024-04-q015",
+      "courseId": "history",
+      "paperId": "generated-history-2024-04",
+      "type": "essay",
+      "chapterId": "history-1",
+      "stem": "中共十九大如何论述进入中国特色社会主义新时代后我国社会主要矛盾的变化?",
+      "answer": [
+        "中共十九大关于我国社会的主要矛盾是人民日益增长的美好生活需要和不平衡不充",
+        "分的发展之间的矛盾。我国社会主要矛盾的变化是关系全局的历史性变化，对党和国家工",
+        "作提出了许多新要求。大会强调，我国社会主要矛盾的变化，没有改变我们对我国社会主",
+        "义所处历史阶段的判断，我国仍处于并将长期处于社会主义初级阶段的基本国情没有变，",
+        "我国是世界最大发展中国家的国际地位没有变。全党要牢牢把握社会主义初级阶段这个基",
+        "本国情，牢牢立足社会主义初级阶段这个最大实际，牢牢坚持党的基本路线这个党和国家",
+        "的生命线、人民的幸福线。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20244月",
+        "15043"
+      ],
+      "rubric": [
+        "中共十九大关于我国社会的主要矛盾是人民日益增长的美好生活需要和不平衡不充",
+        "分的发展之间的矛盾。我国社会主要矛盾的变化是关系全局的历史性变化，对党和国家工",
+        "作提出了许多新要求。大会强调，我国社会主要矛盾的变化，没有改变我们对我国社会主",
+        "义所处历史阶段的判断，我国仍处于并将长期处于社会主义初级阶段的基本国情没有变，",
+        "我国是世界最大发展中国家的国际地位没有变。全党要牢牢把握社会主义初级阶段这个基",
+        "本国情，牢牢立足社会主义初级阶段这个最大实际，牢牢坚持党的基本路线这个党和国家"
+      ]
+    },
+    {
+      "id": "generated-history-2022-04-q001",
+      "courseId": "history",
+      "paperId": "generated-history-2022-04",
+      "type": "short",
+      "chapterId": "history-1",
+      "stem": "简述洋务派创办的新式学堂",
+      "answer": [
+        "洋务派创办的新式学堂可分为4种类型：",
+        "兼习西学的外语学堂",
+        "军械技术学堂，如江南制造局附设的操炮学堂、工艺学堂及广东实学馆",
+        "专业技术学堂，包括电报、医学、铁路、矿务、工程等工种",
+        "水师、武备学堂，属于专门培养军事指挥人才和训练作战技术的近代军事学校，如李鸿章创办的天津水师学堂、天津武备",
+        "学堂，张之洞创办的广东水陆师学堂、湖北武备学堂及江南陆师学堂，曾国荃创办的江南水师学堂等。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15043"
+      ],
+      "rubric": [
+        "洋务派创办的新式学堂可分为4种类型：",
+        "兼习西学的外语学堂",
+        "军械技术学堂，如江南制造局附设的操炮学堂、工艺学堂及广东实学馆",
+        "专业技术学堂，包括电报、医学、铁路、矿务、工程等工种",
+        "水师、武备学堂，属于专门培养军事指挥人才和训练作战技术的近代军事学校，如李鸿章创办的天津水师学堂、天津武备",
+        "学堂，张之洞创办的广东水陆师学堂、湖北武备学堂及江南陆师学堂，曾国荃创办的江南水师学堂等。"
+      ]
+    },
+    {
+      "id": "generated-history-2022-04-q002",
+      "courseId": "history",
+      "paperId": "generated-history-2022-04",
+      "type": "short",
+      "chapterId": "history-2",
+      "stem": "辛亥革命以后孙中山为保卫捍卫革命成果进行的斗争",
+      "answer": [
+        "“二次革命”",
+        "发动护国运动：",
+        "发动第一次护法运动",
+        "第二次护法运动。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15043"
+      ],
+      "rubric": [
+        "“二次革命”",
+        "发动护国运动：",
+        "发动第一次护法运动",
+        "第二次护法运动。"
+      ]
+    },
+    {
+      "id": "generated-history-2022-04-q003",
+      "courseId": "history",
+      "paperId": "generated-history-2022-04",
+      "type": "essay",
+      "chapterId": "history-1",
+      "stem": "简述三湾改编的主要内容和意义",
+      "answer": [
+        "年9月29日毛泽东率领湘赣边界秋收起义部队到达江西永新县的三湾村，在此总结了起义以来部队行军作战",
+        "的经验教训，具体讨论了部队的改编问题。",
+        "主要内容有：将参加秋收起义遇挫的部队由一个师缩编为一个团，在部队中建立共产党的各级组织，将党支部建在连上，成",
+        "立各级士兵委员会，在部队中实行民主管理。",
+        "意义：三湾改编是建设共产党领导的新型人民军队的重要开端。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15043"
+      ],
+      "rubric": [
+        "年9月29日毛泽东率领湘赣边界秋收起义部队到达江西永新县的三湾村，在此总结了起义以来部队行军作战",
+        "的经验教训，具体讨论了部队的改编问题。",
+        "主要内容有：将参加秋收起义遇挫的部队由一个师缩编为一个团，在部队中建立共产党的各级组织，将党支部建在连上，成",
+        "立各级士兵委员会，在部队中实行民主管理。",
+        "意义：三湾改编是建设共产党领导的新型人民军队的重要开端。"
+      ]
+    },
+    {
+      "id": "generated-history-2022-04-q004",
+      "courseId": "history",
+      "paperId": "generated-history-2022-04",
+      "type": "essay",
+      "chapterId": "history-3",
+      "stem": "简述抗日游击战争的战略地位和作用",
+      "answer": [
+        "在战略防御阶段，从全局看，国民党正面战场的正规战是主要的，敌后的游击战是辅助的。但是，游击战在敌后",
+        "的广泛开展和敌后抗日根据地的开辟，迫使敌人不得不把用于进攻的兵力抽调回来保守其占领区，敌后游击战争对阻止日军",
+        "进攻、减轻正面战场压力、促使战争转入战略相持阶段起了重要作用。",
+        "咨询热线：400-678-3456 免费订阅考试提醒 免费约直播领资料",
+        "在战略相持阶段，敌后游击战争成为主要的抗日作战方式。日军逐步将主要兵力用于敌后战场，以保持和巩固其占领地。",
+        "敌后根据地的建立和武装力量的壮大还使得游击战为人民军队进行战略反攻准备了条件。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15043"
+      ],
+      "rubric": [
+        "在战略防御阶段，从全局看，国民党正面战场的正规战是主要的，敌后的游击战是辅助的。但是，游击战在敌后",
+        "的广泛开展和敌后抗日根据地的开辟，迫使敌人不得不把用于进攻的兵力抽调回来保守其占领区，敌后游击战争对阻止日军",
+        "进攻、减轻正面战场压力、促使战争转入战略相持阶段起了重要作用。",
+        "咨询热线：400-678-3456 免费订阅考试提醒 免费约直播领资料",
+        "在战略相持阶段，敌后游击战争成为主要的抗日作战方式。日军逐步将主要兵力用于敌后战场，以保持和巩固其占领地。",
+        "敌后根据地的建立和武装力量的壮大还使得游击战为人民军队进行战略反攻准备了条件。"
+      ]
+    },
+    {
+      "id": "generated-history-2022-04-q005",
+      "courseId": "history",
+      "paperId": "generated-history-2022-04",
+      "type": "essay",
+      "chapterId": "history-4",
+      "stem": "新中国成立初期土地改革基本完成的历史意义",
+      "answer": [
+        "土地改革的完成，彻底摧毁了我国存在两千多年的封建地主土地制度，地主阶级也被消灭",
+        "农民翻了身，得到了土地，成为土地的主人。",
+        "这使人民政权更加巩固，大大解放了农村生产力，农业生产获得迅速恢复和发展，为国家的工业化建设准备了重要条件。",
+        "三、论述题：本大题共3小题，考生任选其中2题作答，每小题10分，共20分。如果考生回答的题目超过2题，只按考生",
+        "回答题目的前2题计分。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15043"
+      ],
+      "rubric": [
+        "土地改革的完成，彻底摧毁了我国存在两千多年的封建地主土地制度，地主阶级也被消灭",
+        "农民翻了身，得到了土地，成为土地的主人。",
+        "这使人民政权更加巩固，大大解放了农村生产力，农业生产获得迅速恢复和发展，为国家的工业化建设准备了重要条件。",
+        "三、论述题：本大题共3小题，考生任选其中2题作答，每小题10分，共20分。如果考生回答的题目超过2题，只按考生",
+        "回答题目的前2题计分。"
+      ]
+    },
+    {
+      "id": "generated-history-2022-04-q006",
+      "courseId": "history",
+      "paperId": "generated-history-2022-04",
+      "type": "essay",
+      "chapterId": "history-1",
+      "stem": "论述中国近代半殖民地半封建社会的特点",
+      "answer": [
+        "帝国主义不但操纵了中国的财政和经济命脉，日益成为支配中国的决定性力量。",
+        "中国的封建势力同外国侵略势力相勾结，成为奴役中国人民的社会基础和统治支柱。",
+        "封建剥削制度的根基依然在广大地区内保持着，成为中国走向现代化和民主化的严重障碍。",
+        "中国资本主义有所发展，但始终没有成为中国社会经济的主体。",
+        "中国各地区经济、政治和文化发展极不平衡，长期处于不统一状态。",
+        "人民毫无政治权利，生活极端贫困化。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15043"
+      ],
+      "rubric": [
+        "帝国主义不但操纵了中国的财政和经济命脉，日益成为支配中国的决定性力量。",
+        "中国的封建势力同外国侵略势力相勾结，成为奴役中国人民的社会基础和统治支柱。",
+        "封建剥削制度的根基依然在广大地区内保持着，成为中国走向现代化和民主化的严重障碍。",
+        "中国资本主义有所发展，但始终没有成为中国社会经济的主体。",
+        "中国各地区经济、政治和文化发展极不平衡，长期处于不统一状态。",
+        "人民毫无政治权利，生活极端贫困化。"
+      ]
+    },
+    {
+      "id": "generated-history-2022-04-q007",
+      "courseId": "history",
+      "paperId": "generated-history-2022-04",
+      "type": "essay",
+      "chapterId": "history-3",
+      "stem": "论述毛泽东《论人民民主专政》一文关于建立人民民主专政的新中国的主张",
+      "answer": [
+        "年6月30日，毛泽东发表《论人民民主专政》一文系统地闹明了中国共产党关于建立人民民主专政的新中国",
+        "的主张：",
+        "人民民主专政的基础是工人阶級、农民阶级和城市小资产阶级的联盟。",
+        "在上述联蟹中，主要是工人阶级和农民阶级的联盟，因为这两个阶级占了中国人口的80%～90%，推籍帝国主义和国民党",
+        "反动派主要是这两个阶级的力量。由新民主主义到社会主义，主要依靠这两个阶级的联盟。",
+        "为建立新中国，必须利用一切于国计民生有利而不是有害的城乡资本主义因素，团结民族资产阶级。但是民族资产阶级不",
+        "能充当革命的领导者，也不应当在国家政权中占主要的地位。毛**指出：总结我们的经验，集中到一点，就是工人阶级(经过",
+        "共产党)领导的以工农联盟为基础的人民民主专政。这个专政必须和国际革命力量团结一致。",
+        "咨询热线：400-678-3456 微信扫码刷题 免费约直播领资料"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15043"
+      ],
+      "rubric": [
+        "年6月30日，毛泽东发表《论人民民主专政》一文系统地闹明了中国共产党关于建立人民民主专政的新中国",
+        "的主张：",
+        "人民民主专政的基础是工人阶級、农民阶级和城市小资产阶级的联盟。",
+        "在上述联蟹中，主要是工人阶级和农民阶级的联盟，因为这两个阶级占了中国人口的80%～90%，推籍帝国主义和国民党",
+        "反动派主要是这两个阶级的力量。由新民主主义到社会主义，主要依靠这两个阶级的联盟。",
+        "为建立新中国，必须利用一切于国计民生有利而不是有害的城乡资本主义因素，团结民族资产阶级。但是民族资产阶级不"
+      ]
+    },
+    {
+      "id": "generated-history-2022-04-q008",
+      "courseId": "history",
+      "paperId": "generated-history-2022-04",
+      "type": "essay",
+      "chapterId": "history-4",
+      "stem": "论述中共十九大提出习近平新时代中国特色社会主义思想的核心内容",
+      "answer": [
+        "大会强调，坚持和发展中国特色社会主义，是习近平新时代中国特色社会主义思想的核心要义。大会提出了“明确坚",
+        "持和发展中国特色社会主义，总任务是实现社会主义现代化和中华民族伟大复兴，在全面建成小康社会的基础上，分两步走。",
+        "在本世纪21世纪中叶建成富强、民主、文明、和谐和美丽的“社会主义现代化强国”等“八个明确”，这是支撑习近平新时代中",
+        "国特色社会主义思想的四梁八柱",
+        "大会提出了新时代坚持和发展中国特色社会主义的基本方略，即“坚持竞对一切工作的领导”",
+        "等“十四个坚持”，这是实现总任务的“路线图”和“方法论”，“八个明确”和“十四个坚持”有机融合、有机统一，是习近平新时代中",
+        "国特色社会主义思想的核心内容。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20224月",
+        "15043"
+      ],
+      "rubric": [
+        "大会强调，坚持和发展中国特色社会主义，是习近平新时代中国特色社会主义思想的核心要义。大会提出了“明确坚",
+        "持和发展中国特色社会主义，总任务是实现社会主义现代化和中华民族伟大复兴，在全面建成小康社会的基础上，分两步走。",
+        "在本世纪21世纪中叶建成富强、民主、文明、和谐和美丽的“社会主义现代化强国”等“八个明确”，这是支撑习近平新时代中",
+        "国特色社会主义思想的四梁八柱",
+        "大会提出了新时代坚持和发展中国特色社会主义的基本方略，即“坚持竞对一切工作的领导”",
+        "等“十四个坚持”，这是实现总任务的“路线图”和“方法论”，“八个明确”和“十四个坚持”有机融合、有机统一，是习近平新时代中"
+      ]
+    },
+    {
+      "id": "generated-history-2022-10-q001",
+      "courseId": "history",
+      "paperId": "generated-history-2022-10",
+      "type": "short",
+      "chapterId": "history-2",
+      "stem": "辛亥革命的局限性",
+      "answer": [
+        "与帝国主义和封建统治阶级有着密切的关系，在政治和经济.上要受到双重的压迫与剥削，所以具有",
+        "不可避免的软弱性和妥协性，无法进行坚决的反帝反封建斗争，是不彻底的胜利。",
+        "由于不敢触动封建的地主土地所有制，辛亥革命难以获得占中国绝大多数的农民的支持，使得革命丧",
+        "失了最根本最雄厚的革命力量。",
+        "没有反帝国主义，没有完成反帝反封建的任务。",
+        "没有改变中国社会的性质"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202210月",
+        "15043"
+      ],
+      "rubric": [
+        "与帝国主义和封建统治阶级有着密切的关系，在政治和经济.上要受到双重的压迫与剥削，所以具有",
+        "不可避免的软弱性和妥协性，无法进行坚决的反帝反封建斗争，是不彻底的胜利。",
+        "由于不敢触动封建的地主土地所有制，辛亥革命难以获得占中国绝大多数的农民的支持，使得革命丧",
+        "失了最根本最雄厚的革命力量。",
+        "没有反帝国主义，没有完成反帝反封建的任务。",
+        "没有改变中国社会的性质"
+      ]
+    },
+    {
+      "id": "generated-history-2022-10-q002",
+      "courseId": "history",
+      "paperId": "generated-history-2022-10",
+      "type": "short",
+      "chapterId": "history-2",
+      "stem": "洋务运动创办军用民用企业目的",
+      "answer": [
+        "洋务派以“自强”为旗号，创办了一批近代军事工业。洋务运动后期，洋务派为解决军事工业资金、燃料、",
+        "运输等方面的困难以“求富”为旗号，兴办了一批民用工业。",
+        "强兵:利用西方的先进技术，打击外来侵略势力",
+        "富国:通过洋务运动，鼓励国内资本主义发展，发展国家的经济",
+        "维护清朝统治:洋务运动的发起者是地主阶级洋务派，他们和顽固派的区别就是在于是否向西方学习，",
+        "但根本目的是相同的，都是为了维护清朝统治。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202210月",
+        "15043"
+      ],
+      "rubric": [
+        "洋务派以“自强”为旗号，创办了一批近代军事工业。洋务运动后期，洋务派为解决军事工业资金、燃料、",
+        "运输等方面的困难以“求富”为旗号，兴办了一批民用工业。",
+        "强兵:利用西方的先进技术，打击外来侵略势力",
+        "富国:通过洋务运动，鼓励国内资本主义发展，发展国家的经济",
+        "维护清朝统治:洋务运动的发起者是地主阶级洋务派，他们和顽固派的区别就是在于是否向西方学习，",
+        "但根本目的是相同的，都是为了维护清朝统治。"
+      ]
+    },
+    {
+      "id": "generated-history-2022-10-q003",
+      "courseId": "history",
+      "paperId": "generated-history-2022-10",
+      "type": "essay",
+      "chapterId": "history-1",
+      "stem": "延安整风运动的主要内容和意义是什么?",
+      "answer": [
+        "主要内容为反对主观主义以整顿学风、反对宗派主义以整顿党风、反对党八股以整顿文风。",
+        "其中，反对主观主义是整风运动的最主要的任务。",
+        "意义：意义是整风运动是一场伟大的思想解放运动,在全党范围确立起一切从实际出发、理论联系实际、实",
+        "事求是马克思主义思想路线。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202210月",
+        "15043"
+      ],
+      "rubric": [
+        "主要内容为反对主观主义以整顿学风、反对宗派主义以整顿党风、反对党八股以整顿文风。",
+        "其中，反对主观主义是整风运动的最主要的任务。",
+        "意义：意义是整风运动是一场伟大的思想解放运动,在全党范围确立起一切从实际出发、理论联系实际、实",
+        "事求是马克思主义思想路线。"
+      ]
+    },
+    {
+      "id": "generated-history-2022-10-q004",
+      "courseId": "history",
+      "paperId": "generated-history-2022-10",
+      "type": "short",
+      "chapterId": "history-3",
+      "stem": "工人阶级产生特点",
+      "answer": [
+        "第一、中国工人阶级身受三种压迫,压迫的严重性和残酷性，是世界各民族中少见的",
+        "因此,他们在革命斗争",
+        "中，比任何别的阶级来得坚决和彻底在半封建半殖民地的中国，没有欧洲那样的社会改良主义的经济基础，",
+        "所以除极少数的工贼之外，整个阶级都是最革命的。",
+        "第二、中国无产阶级开始走上革命的舞台，就在本阶级的革命政党——中国共产党领导之下，成为中国社",
+        "会里比较最有觉悟的阶级。",
+        "第三、由于从破产农民出身的成分占多数，中国无产阶级和广大的农民有一种天然的联系，便利于他们和",
+        "农民结成亲密的联盟。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202210月",
+        "15043"
+      ],
+      "rubric": [
+        "第一、中国工人阶级身受三种压迫,压迫的严重性和残酷性，是世界各民族中少见的",
+        "因此,他们在革命斗争",
+        "中，比任何别的阶级来得坚决和彻底在半封建半殖民地的中国，没有欧洲那样的社会改良主义的经济基础，",
+        "所以除极少数的工贼之外，整个阶级都是最革命的。",
+        "第二、中国无产阶级开始走上革命的舞台，就在本阶级的革命政党——中国共产党领导之下，成为中国社",
+        "会里比较最有觉悟的阶级。"
+      ]
+    },
+    {
+      "id": "generated-history-2023-04-q001",
+      "courseId": "history",
+      "paperId": "generated-history-2023-04",
+      "type": "short",
+      "chapterId": "history-1",
+      "stem": "太平天国农民战争爆发的原因？",
+      "answer": [
+        "根本原因是封建专制政权和地主阶级对农民的政治压迫和经济剥",
+        "削，迫使广大人民走上了反抗的道路。",
+        "鸦片战争使中国社会的阶级矛盾普遍激化，外国商品的输入和鸦片贩卖年年",
+        "激增，加速了中国社会经济的萎缩，人民生活更加贫困。",
+        "太平天国农民起义发生前十年，包括广西在内全国自然灾害频发，大量灾民",
+        "流离失所。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15043"
+      ],
+      "rubric": [
+        "根本原因是封建专制政权和地主阶级对农民的政治压迫和经济剥",
+        "削，迫使广大人民走上了反抗的道路。",
+        "鸦片战争使中国社会的阶级矛盾普遍激化，外国商品的输入和鸦片贩卖年年",
+        "激增，加速了中国社会经济的萎缩，人民生活更加贫困。",
+        "太平天国农民起义发生前十年，包括广西在内全国自然灾害频发，大量灾民",
+        "流离失所。"
+      ]
+    },
+    {
+      "id": "generated-history-2023-04-q002",
+      "courseId": "history",
+      "paperId": "generated-history-2023-04",
+      "type": "short",
+      "chapterId": "history-3",
+      "stem": "抗日战争进入相持阶段后，国民党内外政策的变化？",
+      "answer": [
+        "国民党在重申坚持持久抗战的同时，其对内对外政策发生重大变化。",
+        "年1月，国民党五届五中全会决定成立\"防共委员会\"，确定了\"防共、限共、",
+        "溶共、反共\"的方针。蒋介石还将抗战到底的含义解释为\"恢复到卢沟桥事变以前",
+        "的状态\"。这标志着国民党由片面抗战逐步转变为消极抗战。这个阶段国民党对",
+        "抗战在全局上逐渐趋向消极，基本上实行保守的收缩战略，以便保存实力",
+        "同时",
+        "又抽出相当多的兵力用来限制、打击共产党及其领导的八路军、新四军，制造了",
+        "多次的反共'摩擦\"事件。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15043"
+      ],
+      "rubric": [
+        "国民党在重申坚持持久抗战的同时，其对内对外政策发生重大变化。",
+        "年1月，国民党五届五中全会决定成立\"防共委员会\"，确定了\"防共、限共、",
+        "溶共、反共\"的方针。蒋介石还将抗战到底的含义解释为\"恢复到卢沟桥事变以前",
+        "的状态\"。这标志着国民党由片面抗战逐步转变为消极抗战。这个阶段国民党对",
+        "抗战在全局上逐渐趋向消极，基本上实行保守的收缩战略，以便保存实力",
+        "同时"
+      ]
+    },
+    {
+      "id": "generated-history-2023-04-q003",
+      "courseId": "history",
+      "paperId": "generated-history-2023-04",
+      "type": "essay",
+      "chapterId": "history-3",
+      "stem": "中国人民政治协商会议共同纲领的作用，核心，内容，意义？",
+      "answer": [
+        "作用: 《共同纲领》在当时是全国人民的大宪章,起着临时宪法的",
+        "作用",
+        "核心内容:关于新中国的国体和政体的规定，是《共同纲领》最基本、最核心",
+        "的内容",
+        "意义:《共同纲领》在当时是全国人民的大宪章，起着临时宪法的作用。10月",
+        "日，中国人民政治协商会议第一届全国委 员会在北京举行第一次会议，选举",
+        "毛泽东为政协第一届全国委员会主席。人民政协的召开，标志着中国的新型政党",
+        "制度一中国共产党领导的多党合作和政治协商制度的确立。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15043"
+      ],
+      "rubric": [
+        "作用: 《共同纲领》在当时是全国人民的大宪章,起着临时宪法的",
+        "作用",
+        "核心内容:关于新中国的国体和政体的规定，是《共同纲领》最基本、最核心",
+        "的内容",
+        "意义:《共同纲领》在当时是全国人民的大宪章，起着临时宪法的作用。10月",
+        "日，中国人民政治协商会议第一届全国委 员会在北京举行第一次会议，选举"
+      ]
+    },
+    {
+      "id": "generated-history-2023-04-q004",
+      "courseId": "history",
+      "paperId": "generated-history-2023-04",
+      "type": "essay",
+      "chapterId": "history-4",
+      "stem": "从一五计划时期到 1976 年，新中国经济建设的重大成就？",
+      "answer": [
+        "成就:工业方面，建设了一大批基础性的重点工程,为国家的工业化奠",
+        "定了初步的坚实基础，如鞍山、包头、武汉三大钢铁基地的建设取得重大进展。",
+        "中国在工业建设上接连实现了具有历史意义的许多项零的突破，如长春第一汽车",
+        "制造厂建成投产，沈阳机床厂建成投产等。农业方面，农业产品产量，也有大幅",
+        "度提高。交通方面, 1957 年，武汉长江大桥通车，从此铁路贯通中国南北。青",
+        "藏、康藏、新藏公路建成通车，沟通了西藏和内地的联系。",
+        "意义:是对国家重大建设项目、生产力分布和国民经济重要比例关系等作出规划，",
+        "为国民经济发展远景规定目标和方向。为社会主义现代化建设进行良好的探索。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15043"
+      ],
+      "rubric": [
+        "成就:工业方面，建设了一大批基础性的重点工程,为国家的工业化奠",
+        "定了初步的坚实基础，如鞍山、包头、武汉三大钢铁基地的建设取得重大进展。",
+        "中国在工业建设上接连实现了具有历史意义的许多项零的突破，如长春第一汽车",
+        "制造厂建成投产，沈阳机床厂建成投产等。农业方面，农业产品产量，也有大幅",
+        "度提高。交通方面, 1957 年，武汉长江大桥通车，从此铁路贯通中国南北。青",
+        "藏、康藏、新藏公路建成通车，沟通了西藏和内地的联系。"
+      ]
+    },
+    {
+      "id": "generated-history-2023-04-q005",
+      "courseId": "history",
+      "paperId": "generated-history-2023-04",
+      "type": "essay",
+      "chapterId": "history-3",
+      "stem": "中共 18大阐明的中国特色社会主义的总依据，总布局，总任务！",
+      "answer": [
+        "年 11 月 8 日至 14 日，中国共产党第十八次全国代表大会在北",
+        "京举行。这是在我国进入全面建成小康社会决定性阶段召开的一次大会。大会指",
+        "出科学发展观同马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要",
+        "思想一道，是党必须长期坚持的指导思想。",
+        "大会阐明中国特色社会主义的总依据是社会主义初级阶段，总布局是经济、政治、",
+        "文化、社会、生态文明建设五位一体，总任务是实现社会主义现代化和中华民族",
+        "伟大复兴。",
+        "大会强调确保到 2020年实现全面建成小康社会的目标，即经济持续健康发展，",
+        "人民民主不断扩大，文化软实力显著增强,人民生活水平全面提高资源节约型、",
+        "环境友好型社会建设取得重大进展。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15043"
+      ],
+      "rubric": [
+        "年 11 月 8 日至 14 日，中国共产党第十八次全国代表大会在北",
+        "京举行。这是在我国进入全面建成小康社会决定性阶段召开的一次大会。大会指",
+        "出科学发展观同马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要",
+        "思想一道，是党必须长期坚持的指导思想。",
+        "大会阐明中国特色社会主义的总依据是社会主义初级阶段，总布局是经济、政治、",
+        "文化、社会、生态文明建设五位一体，总任务是实现社会主义现代化和中华民族"
+      ]
+    },
+    {
+      "id": "generated-history-2023-04-q006",
+      "courseId": "history",
+      "paperId": "generated-history-2023-04",
+      "type": "essay",
+      "chapterId": "history-1",
+      "stem": "18 世纪西方殖民主义扩张对中国的威胁？",
+      "answer": [
+        "西方列强的殖民扩张以及对中国的威胁:商品生产的无限增长需要开",
+        "辟新的原料市场和产品市场,寻求新的殖民地。资本主义制度确立和工业革命之",
+        "后，殖民主义者加紧对一些国家和地区进行军事、政治、经济和文化等方面的侵",
+        "略，使其沦为列强所垄断的商品倾销市场、廉价劳动力与廉价原料的供应地和自",
+        "由投资市场。开辟新的市场和转移国内矛盾的需要，促使西方列强发动新的侵略",
+        "战争，他们把目标瞄向中国。1825 年英国经历第一次资本主义经济危机，一些",
+        "人主张利用战争摆脱危机。",
+        "年，英国政府代表、驻华商务监督义律扬言要用武力打开中国国门。与此",
+        "同时，法、美、俄等国也有侵略中国的欲望。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15043"
+      ],
+      "rubric": [
+        "西方列强的殖民扩张以及对中国的威胁:商品生产的无限增长需要开",
+        "辟新的原料市场和产品市场,寻求新的殖民地。资本主义制度确立和工业革命之",
+        "后，殖民主义者加紧对一些国家和地区进行军事、政治、经济和文化等方面的侵",
+        "略，使其沦为列强所垄断的商品倾销市场、廉价劳动力与廉价原料的供应地和自",
+        "由投资市场。开辟新的市场和转移国内矛盾的需要，促使西方列强发动新的侵略",
+        "战争，他们把目标瞄向中国。1825 年英国经历第一次资本主义经济危机，一些"
+      ]
+    },
+    {
+      "id": "generated-history-2023-04-q007",
+      "courseId": "history",
+      "paperId": "generated-history-2023-04",
+      "type": "essay",
+      "chapterId": "history-3",
+      "stem": "中国共产党第一次全国代表大会的内容？",
+      "answer": [
+        "确定党的名称为中国共产党、提出了党的纲领",
+        "决定要特别注意组织",
+        "工人，以共产主义精神教育他",
+        "选举产生了由陈独秀、张国焘、李达组成的党的领导机构",
+        "正式宣告了中国共",
+        "产党的成立。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15043"
+      ],
+      "rubric": [
+        "确定党的名称为中国共产党、提出了党的纲领",
+        "决定要特别注意组织",
+        "工人，以共产主义精神教育他",
+        "选举产生了由陈独秀、张国焘、李达组成的党的领导机构",
+        "正式宣告了中国共",
+        "产党的成立。"
+      ]
+    },
+    {
+      "id": "generated-history-2023-04-q008",
+      "courseId": "history",
+      "paperId": "generated-history-2023-04",
+      "type": "essay",
+      "chapterId": "history-3",
+      "stem": "新中国成立初期土地改革运动及意义？",
+      "answer": [
+        "年下半年和1948年初，土地改革运动在各解放区广泛发动。这",
+        "期间一度发生过侵犯部分中农利益、侵犯某些民族工商业",
+        "许多地方斗争地主、",
+        "富农的方法不适当等“左的错误。中共中央一经发现，便立即采取坚决的措施加",
+        "以纠正。期间，毛泽东在晋绥干部会议上的讲话，总结了土地改革的经验，系统",
+        "阐明了中国共产党的土地改革总路线，即依靠贫农，团结中农，有步骤地、有分",
+        "别地消灭封建剥削制度，发展农业生产。",
+        "经过土地改革运动，解放区广“大农民实现了梦寐以求的“耕者有其田”的愿望。",
+        "解放区出现了新面貌:广大农民对中国共产党更加信任和拥护，工农联盟以及解",
+        "放区的人民民主政权得到进一步巩固和加强"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "20234月",
+        "15043"
+      ],
+      "rubric": [
+        "年下半年和1948年初，土地改革运动在各解放区广泛发动。这",
+        "期间一度发生过侵犯部分中农利益、侵犯某些民族工商业",
+        "许多地方斗争地主、",
+        "富农的方法不适当等“左的错误。中共中央一经发现，便立即采取坚决的措施加",
+        "以纠正。期间，毛泽东在晋绥干部会议上的讲话，总结了土地改革的经验，系统",
+        "阐明了中国共产党的土地改革总路线，即依靠贫农，团结中农，有步骤地、有分"
+      ]
+    },
+    {
+      "id": "generated-history-2024-10-subjective-q001",
+      "courseId": "history",
+      "paperId": "generated-history-2024-10-subjective",
+      "type": "short",
+      "chapterId": "history-2",
+      "stem": "简述辛亥革命时期资产阶级革命派的骨干力量",
+      "answer": [
+        "中国资产阶级民主革命是由以孙中山为首的资产阶级革命派首先发动的，其阶级基础是中国民族",
+        "资产阶级。资产阶级革命派的骨于是一批资产阶级、小资产阶级知识分子。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15043"
+      ],
+      "rubric": [
+        "中国资产阶级民主革命是由以孙中山为首的资产阶级革命派首先发动的，其阶级基础是中国民族",
+        "资产阶级。资产阶级革命派的骨于是一批资产阶级、小资产阶级知识分子。"
+      ]
+    },
+    {
+      "id": "generated-history-2024-10-subjective-q002",
+      "courseId": "history",
+      "paperId": "generated-history-2024-10-subjective",
+      "type": "short",
+      "chapterId": "history-2",
+      "stem": "简述中国早期信仰马克思主义的三类人物",
+      "answer": [
+        "中国早期信仰马克思主义的人物，主要有三种类型:一是五四运动前的新文化运动的精神领袖，",
+        "其代表是李大钊、陈独秀。二是五四运动中的左翼骨干，其代表是毛泽东、杨匏安蔡和森、周恩来等。三",
+        "是一部分原中国同盟会会员、辛亥革命时期的活动家，以董必武、吴玉章、林伯渠等为代表。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15043"
+      ],
+      "rubric": [
+        "中国早期信仰马克思主义的人物，主要有三种类型:一是五四运动前的新文化运动的精神领袖，",
+        "其代表是李大钊、陈独秀。二是五四运动中的左翼骨干，其代表是毛泽东、杨匏安蔡和森、周恩来等。三",
+        "是一部分原中国同盟会会员、辛亥革命时期的活动家，以董必武、吴玉章、林伯渠等为代表。"
+      ]
+    },
+    {
+      "id": "generated-history-2024-10-subjective-q003",
+      "courseId": "history",
+      "paperId": "generated-history-2024-10-subjective",
+      "type": "short",
+      "chapterId": "history-3",
+      "stem": "简述中华苏维埃共和国实行的各级工农兵代表大会制度",
+      "answer": [
+        "先由苏维埃共和国公民直接",
+        "选举产生乡工农兵代表大会代表，召开乡工农兵代表大会选举产生乡苏维埃政府组成人员",
+        "在此基础上，",
+        "逐级召开区、县、省和全国工农兵代表大会，选举产生区、县、省和全国苏维埃政府。各级苏维埃政府广",
+        "泛吸收工农群众代表参加政权管理行使当家作主的权利。中华苏维埃共和国是中国历史上第一个全国性的",
+        "工农民主政权，是中国共产党在局部地区执政的重要尝试。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15043"
+      ],
+      "rubric": [
+        "先由苏维埃共和国公民直接",
+        "选举产生乡工农兵代表大会代表，召开乡工农兵代表大会选举产生乡苏维埃政府组成人员",
+        "在此基础上，",
+        "逐级召开区、县、省和全国工农兵代表大会，选举产生区、县、省和全国苏维埃政府。各级苏维埃政府广",
+        "泛吸收工农群众代表参加政权管理行使当家作主的权利。中华苏维埃共和国是中国历史上第一个全国性的",
+        "工农民主政权，是中国共产党在局部地区执政的重要尝试。"
+      ]
+    },
+    {
+      "id": "generated-history-2024-10-subjective-q004",
+      "courseId": "history",
+      "paperId": "generated-history-2024-10-subjective",
+      "type": "essay",
+      "chapterId": "history-3",
+      "stem": "简述抗日战争胜利后美国实施的扶蒋反共政策",
+      "answer": [
+        "美国继续采取自中国抗战后期就已确立的扶蒋反共政策。这一政策包含两个方面:-方面，在形势",
+        "对国民党不利时，力促国共两党进行和平谈判，以期用和平手段诱骗中共向国民党投降，使美国不战而控",
+        "制全中国:另一方面，从各方面大力加强国民党的力量，一旦和谈目的不能实现，便帮助国民党与中共决",
+        "战，以期用武力打败中共，使中国成为美国的附庸。因此，无论美国采取何种手法扶蒋反共，中国共产党",
+        "和中国人民都将面临两个前途、两种命运决战的严峻考验。",
+        "三、论述题:本大题共3小题，考生任选其中2题作答，每小题 10 分，共20 分。如果考生回答的题目超",
+        "过 2题，只按考生回答题目的前2题计分。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15043"
+      ],
+      "rubric": [
+        "美国继续采取自中国抗战后期就已确立的扶蒋反共政策。这一政策包含两个方面:-方面，在形势",
+        "对国民党不利时，力促国共两党进行和平谈判，以期用和平手段诱骗中共向国民党投降，使美国不战而控",
+        "制全中国:另一方面，从各方面大力加强国民党的力量，一旦和谈目的不能实现，便帮助国民党与中共决",
+        "战，以期用武力打败中共，使中国成为美国的附庸。因此，无论美国采取何种手法扶蒋反共，中国共产党",
+        "和中国人民都将面临两个前途、两种命运决战的严峻考验。",
+        "三、论述题:本大题共3小题，考生任选其中2题作答，每小题 10 分，共20 分。如果考生回答的题目超"
+      ]
+    },
+    {
+      "id": "generated-history-2024-10-subjective-q005",
+      "courseId": "history",
+      "paperId": "generated-history-2024-10-subjective",
+      "type": "essay",
+      "chapterId": "history-2",
+      "stem": "试述太平天国农民战争的历史意义",
+      "answer": [
+        "它沉重打击了封建统治阶级，强烈撼动了清政府的统治根基。太平天国起义坚持了 14年之久，",
+        "革命势力扩展到 18个省，规模大，时间长，影响深，加速了清王朝的衰败过程",
+        "它是中国旧式农民战争",
+        "最高峰，具有不同于以往农民战争的新的历史特点。太平天国建立了自己的政权，提出《天朝田亩制度》，",
+        "比较完整地表达农民对土地的渴望。《资政新篇》是中国近代史上第一个具有资本主义色彩的方案，反映",
+        "出太平天国新的历史特点。",
+        "太平天国对孔子和儒家经典予以严历批判，在一定程度上削弱了封建统治的精神支柱。",
+        "太平天国起",
+        "义还有力地打击了外国侵略势力。太平天国将领们拒绝不平等条约严禁鸦片贸易，与外国军队进行了英勇",
+        "斗争。第五，太平天国起义鼓舞和推动了当时的亚洲民族解放运动,冲击了西方殖民主义在亚洲的统治。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15043"
+      ],
+      "rubric": [
+        "它沉重打击了封建统治阶级，强烈撼动了清政府的统治根基。太平天国起义坚持了 14年之久，",
+        "革命势力扩展到 18个省，规模大，时间长，影响深，加速了清王朝的衰败过程",
+        "它是中国旧式农民战争",
+        "最高峰，具有不同于以往农民战争的新的历史特点。太平天国建立了自己的政权，提出《天朝田亩制度》，",
+        "比较完整地表达农民对土地的渴望。《资政新篇》是中国近代史上第一个具有资本主义色彩的方案，反映",
+        "出太平天国新的历史特点。"
+      ]
+    },
+    {
+      "id": "generated-history-2024-10-subjective-q006",
+      "courseId": "history",
+      "paperId": "generated-history-2024-10-subjective",
+      "type": "essay",
+      "chapterId": "history-1",
+      "stem": "毛泽东在《论持久战》中关于“抗日战争是持久战”“最后战争胜利属于中国”的论述",
+      "answer": [
+        "年5月至6月间，毛泽东发表《论持久战》，总结抗战10个月来的经验，集中全党智慧，",
+        "系统地阐述了抗日战争的特点、前途和发展规律，阐明了持久抗战的总方针。毛泽东指出，中日战争不是",
+        "任何别的战争，乃是半殖民地半封建的中国和帝国主义的日本之间在 20世纪 30年代进行的一个决死的",
+        "战争。全部问题的根据就在这里。中日双方存在着互相矛盾的四个特点:敌强我弱，敌小我大，敌退步我",
+        "进步，敌寡助我多助。一方面，日本是强国，中国是弱国，强国弱国的对比，决定了抗日战争只能是持久",
+        "战。另一方面，日本是小国，发动的是退步的、野蛮的侵略战争，在国际上失道寡助:而中国是大国，进",
+        "行的是进步的、正义的反侵略战争，在国际上得道多助。中国已经有了代表中华民族和中国人民根本利益",
+        "的、政治上成熟的共产党及其领导的人民军队和抗日根据地。因此，最后胜利又将是属于中国的。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15043"
+      ],
+      "rubric": [
+        "年5月至6月间，毛泽东发表《论持久战》，总结抗战10个月来的经验，集中全党智慧，",
+        "系统地阐述了抗日战争的特点、前途和发展规律，阐明了持久抗战的总方针。毛泽东指出，中日战争不是",
+        "任何别的战争，乃是半殖民地半封建的中国和帝国主义的日本之间在 20世纪 30年代进行的一个决死的",
+        "战争。全部问题的根据就在这里。中日双方存在着互相矛盾的四个特点:敌强我弱，敌小我大，敌退步我",
+        "进步，敌寡助我多助。一方面，日本是强国，中国是弱国，强国弱国的对比，决定了抗日战争只能是持久",
+        "战。另一方面，日本是小国，发动的是退步的、野蛮的侵略战争，在国际上失道寡助:而中国是大国，进"
+      ]
+    },
+    {
+      "id": "generated-history-2024-10-subjective-q007",
+      "courseId": "history",
+      "paperId": "generated-history-2024-10-subjective",
+      "type": "essay",
+      "chapterId": "history-4",
+      "stem": "改革开放前中国社会主义建设取得的主要成就",
+      "answer": [
+        "独立的、比较完整的工业体系和国民经济体系的基本建立:",
+        "人民生活水平的提高与文化、医疗、科技事业的发展",
+        "国际地位的提高与国际环境的改善。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202410月",
+        "15043"
+      ],
+      "rubric": [
+        "独立的、比较完整的工业体系和国民经济体系的基本建立:",
+        "人民生活水平的提高与文化、医疗、科技事业的发展",
+        "国际地位的提高与国际环境的改善。"
+      ]
+    },
+    {
+      "id": "generated-history-2025-10-subjective-q001",
+      "courseId": "history",
+      "paperId": "generated-history-2025-10-subjective",
+      "type": "short",
+      "chapterId": "history-1",
+      "stem": "旧民主主义时期中国人民反侵略斗争失败的主要原因",
+      "answer": [
+        "社会制度的腐败(更根本的原因)",
+        "经济技术的落后。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15043"
+      ],
+      "rubric": [
+        "社会制度的腐败(更根本的原因)",
+        "经济技术的落后。"
+      ]
+    },
+    {
+      "id": "generated-history-2025-10-subjective-q002",
+      "courseId": "history",
+      "paperId": "generated-history-2025-10-subjective",
+      "type": "short",
+      "chapterId": "history-1",
+      "stem": "中共二大的最低最高纲领",
+      "answer": [
+        "中共二大第一次提出了反帝反封建的民主革命纲领，为中国人民指出了明确的斗争",
+        "目标。指出党的最高纲领是实现社会主义、共产主义。但党在现阶段的纲领，即最低纲领是打",
+        "倒军阀",
+        "推翻国际帝国主义的压迫",
+        "统一中国为真正民主共和国。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15043"
+      ],
+      "rubric": [
+        "中共二大第一次提出了反帝反封建的民主革命纲领，为中国人民指出了明确的斗争",
+        "目标。指出党的最高纲领是实现社会主义、共产主义。但党在现阶段的纲领，即最低纲领是打",
+        "倒军阀",
+        "推翻国际帝国主义的压迫",
+        "统一中国为真正民主共和国。"
+      ]
+    },
+    {
+      "id": "generated-history-2025-10-subjective-q003",
+      "courseId": "history",
+      "paperId": "generated-history-2025-10-subjective",
+      "type": "essay",
+      "chapterId": "history-1",
+      "stem": "共冈山革命根据地创建的历史意义",
+      "answer": [
+        "点燃了“工农武装割据”的星星之火，为中国革命开辟出了农村包围城市、武装夺",
+        "取政权这样一条前人没有走过的正确道路。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15043"
+      ],
+      "rubric": [
+        "点燃了“工农武装割据”的星星之火，为中国革命开辟出了农村包围城市、武装夺",
+        "取政权这样一条前人没有走过的正确道路。"
+      ]
+    },
+    {
+      "id": "generated-history-2025-10-subjective-q004",
+      "courseId": "history",
+      "paperId": "generated-history-2025-10-subjective",
+      "type": "short",
+      "chapterId": "history-2",
+      "stem": "辛亥革命失败后革命派做的武装斗争",
+      "answer": [
+        "年孙中山发动“二次革命”",
+        "年孙中山组织中华革命党，坚持反袁武装斗争",
+        "年12月，蔡锷护国运动。",
+        "年9 月，成立护法军政府，并出师北伐(护法运动)。",
+        "年10月，孙中山将中华革命党改组为中国国民党。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15043"
+      ],
+      "rubric": [
+        "年孙中山发动“二次革命”",
+        "年孙中山组织中华革命党，坚持反袁武装斗争",
+        "年12月，蔡锷护国运动。",
+        "年9 月，成立护法军政府，并出师北伐(护法运动)。",
+        "年10月，孙中山将中华革命党改组为中国国民党。"
+      ]
+    },
+    {
+      "id": "generated-history-2025-10-subjective-q005",
+      "courseId": "history",
+      "paperId": "generated-history-2025-10-subjective",
+      "type": "short",
+      "chapterId": "history-1",
+      "stem": "中国民主各党派形成时期的社会基础和性质",
+      "answer": [
+        "中国各民主党派形成时的社会基础:民族资产阶级、城市小资产阶级以及同这些阶级",
+        "相联系的知识分子和其他爱国分子。",
+        "性质：阶级联盟性质得政党。",
+        "论述题:"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15043"
+      ],
+      "rubric": [
+        "中国各民主党派形成时的社会基础:民族资产阶级、城市小资产阶级以及同这些阶级",
+        "相联系的知识分子和其他爱国分子。",
+        "性质：阶级联盟性质得政党。",
+        "论述题:"
+      ]
+    },
+    {
+      "id": "generated-history-2025-10-subjective-q006",
+      "courseId": "history",
+      "paperId": "generated-history-2025-10-subjective",
+      "type": "essay",
+      "chapterId": "history-2",
+      "stem": "《天朝田亩制度》的意义和局限性",
+      "answer": [
+        "《天朝田亩制度》是最能体现太平天国社会理想和这次农民起义特色的纲领性文件。",
+        "确立了平均分配土地的方案。性质是以解决土地问题为中心的比较完整的社会改革方案。否定",
+        "了封建社会覯貝恂埲必基础即封建土地所有制，体现了广大农民要求平均分配土地的强烈愿望，",
+        "是对以往农民战争中“均贫富”“等贵贱”和“均平”“均田”思想的发展和超越，具有进步",
+        "意义。但并没超出农民小生产者的狭隘眼界，在很大程度上具有不切实际的空想性质。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15043"
+      ],
+      "rubric": [
+        "《天朝田亩制度》是最能体现太平天国社会理想和这次农民起义特色的纲领性文件。",
+        "确立了平均分配土地的方案。性质是以解决土地问题为中心的比较完整的社会改革方案。否定",
+        "了封建社会覯貝恂埲必基础即封建土地所有制，体现了广大农民要求平均分配土地的强烈愿望，",
+        "是对以往农民战争中“均贫富”“等贵贱”和“均平”“均田”思想的发展和超越，具有进步",
+        "意义。但并没超出农民小生产者的狭隘眼界，在很大程度上具有不切实际的空想性质。"
+      ]
+    },
+    {
+      "id": "generated-history-2025-10-subjective-q007",
+      "courseId": "history",
+      "paperId": "generated-history-2025-10-subjective",
+      "type": "short",
+      "chapterId": "history-3",
+      "stem": "抗日战争胜利的原因",
+      "answer": [
+        "以爱国主义为核心的伟大民族精神是决定因素",
+        "中国共产党的中流砥柱作用是",
+        "关键。中国共产党自成立之日起就把实现中华民族伟大复兴作为自己的历史使命。率先高举武",
+        "装抗日旗帜，广泛开展抗日救亡运动，实行正确的抗日民族统一战线政策，坚持全面抗战路线，",
+        "提出和实施持久战的战略总方针和一整套人民战争的战略灿伍，开辟广大敌后战场和抗日根据",
+        "地，成为全民族抗战的中流砥柱",
+        "全民族抗战是重要法宝",
+        "同世界所有爱好和平和正义的国家和人民、国际组织以及各种反法西斯力量的同情和",
+        "支持分不开"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15043"
+      ],
+      "rubric": [
+        "以爱国主义为核心的伟大民族精神是决定因素",
+        "中国共产党的中流砥柱作用是",
+        "关键。中国共产党自成立之日起就把实现中华民族伟大复兴作为自己的历史使命。率先高举武",
+        "装抗日旗帜，广泛开展抗日救亡运动，实行正确的抗日民族统一战线政策，坚持全面抗战路线，",
+        "提出和实施持久战的战略总方针和一整套人民战争的战略灿伍，开辟广大敌后战场和抗日根据",
+        "地，成为全民族抗战的中流砥柱"
+      ]
+    },
+    {
+      "id": "generated-history-2025-10-subjective-q008",
+      "courseId": "history",
+      "paperId": "generated-history-2025-10-subjective",
+      "type": "short",
+      "chapterId": "history-4",
+      "stem": "过渡时期总路线反映了历史的必然",
+      "answer": [
+        "过渡时期总路线的制定是党依据新中国成立后的经济、政治条件的新变化作出的",
+        "重大决策，是党的总路线、总任务及发展战略上的重大转变，是符合新中国社会发展的实际和",
+        "规律的",
+        "社会主义工业化是国家独立富强的首要条件",
+        "资本主义经济力量弱小，发展困难，不可能成为中国工业起飞的基础",
+        "对个体农业进行社会主义改造，是保证工业发展、实现国家工业化的一个必要条件",
+        "当时的国际环境也促使中国选择社会主义。",
+        "年10 月自学考试"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202510月",
+        "15043"
+      ],
+      "rubric": [
+        "过渡时期总路线的制定是党依据新中国成立后的经济、政治条件的新变化作出的",
+        "重大决策，是党的总路线、总任务及发展战略上的重大转变，是符合新中国社会发展的实际和",
+        "规律的",
+        "社会主义工业化是国家独立富强的首要条件",
+        "资本主义经济力量弱小，发展困难，不可能成为中国工业起飞的基础",
+        "对个体农业进行社会主义改造，是保证工业发展、实现国家工业化的一个必要条件"
+      ]
+    },
+    {
+      "id": "generated-history-2023-10-subjective-q001",
+      "courseId": "history",
+      "paperId": "generated-history-2023-10-subjective",
+      "type": "short",
+      "chapterId": "history-2",
+      "stem": "戊戌维新运动失败的主要原因",
+      "answer": [
+        "戊戌维新运动失败的主要原因在于维新派自身的局限和以慈禧太后为首的强大的守旧势",
+        "力的反对。当时，中国民族资本主义经济力量十分弱小，民族资产阶级的社会基础相当狭窄，远不是",
+        "封建势力的对手。民族资产阶级的政治代表维新派虽然广泛地进行了变法维新的舆论动员，但所争取",
+        "到的有力支持者甚少，只有不掌握实权的皇帝和少数帝党官僚。维新派既无严密的组织，又不掌握军",
+        "队，也没有发动群众的支持，把希望完全寄托在一个没有实权的皇帝身上，其结果只能是失败。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202310月",
+        "15043"
+      ],
+      "rubric": [
+        "戊戌维新运动失败的主要原因在于维新派自身的局限和以慈禧太后为首的强大的守旧势",
+        "力的反对。当时，中国民族资本主义经济力量十分弱小，民族资产阶级的社会基础相当狭窄，远不是",
+        "封建势力的对手。民族资产阶级的政治代表维新派虽然广泛地进行了变法维新的舆论动员，但所争取",
+        "到的有力支持者甚少，只有不掌握实权的皇帝和少数帝党官僚。维新派既无严密的组织，又不掌握军",
+        "队，也没有发动群众的支持，把希望完全寄托在一个没有实权的皇帝身上，其结果只能是失败。"
+      ]
+    },
+    {
+      "id": "generated-history-2023-10-subjective-q002",
+      "courseId": "history",
+      "paperId": "generated-history-2023-10-subjective",
+      "type": "short",
+      "chapterId": "history-1",
+      "stem": "清末“新政”实行的原因",
+      "answer": [
+        "《辛丑条约》的签订，标志着以慈禧太后为首的清政府已彻底放弃了抵抗外国侵略者的",
+        "念头，甘为“洋人的朝廷”。清王朝为取得外国列强的信任，平息国内日益高涨的民怨，安抚统治阶",
+        "级内部各派，拉拢民族资产阶级改良派，于1901年4月设立督办政务处，宣布实行“新政”。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202310月",
+        "15043"
+      ],
+      "rubric": [
+        "《辛丑条约》的签订，标志着以慈禧太后为首的清政府已彻底放弃了抵抗外国侵略者的",
+        "念头，甘为“洋人的朝廷”。清王朝为取得外国列强的信任，平息国内日益高涨的民怨，安抚统治阶",
+        "级内部各派，拉拢民族资产阶级改良派，于1901年4月设立督办政务处，宣布实行“新政”。"
+      ]
+    },
+    {
+      "id": "generated-history-2023-10-subjective-q003",
+      "courseId": "history",
+      "paperId": "generated-history-2023-10-subjective",
+      "type": "short",
+      "chapterId": "history-1",
+      "stem": "中国早期马克思主义思想运动的历史特点",
+      "answer": [
+        "第一，重视对马克思主义基本理论的学习，同第二国际的社会民主主义划清界限，坚",
+        "持了马克思主义的革命原则和正确方向。",
+        "第二，注意从中国的实际出发，初步形成了马克思主义应当与中国实际相结合的思想(尽管在",
+        "当时还没有明确提出这个命题)。",
+        "第三，开始提出知识分子应当忠于民众，到民间去，同劳动群众相结合的思想。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202310月",
+        "15043"
+      ],
+      "rubric": [
+        "第一，重视对马克思主义基本理论的学习，同第二国际的社会民主主义划清界限，坚",
+        "持了马克思主义的革命原则和正确方向。",
+        "第二，注意从中国的实际出发，初步形成了马克思主义应当与中国实际相结合的思想(尽管在",
+        "当时还没有明确提出这个命题)。",
+        "第三，开始提出知识分子应当忠于民众，到民间去，同劳动群众相结合的思想。"
+      ]
+    },
+    {
+      "id": "generated-history-2023-10-subjective-q004",
+      "courseId": "history",
+      "paperId": "generated-history-2023-10-subjective",
+      "type": "short",
+      "chapterId": "history-3",
+      "stem": "中华苏维埃第一次全国代表大会的召开及其主要内容",
+      "answer": [
+        "年11月，中华苏维埃第一次全国代表大会在江西省瑞金县叶坪村举行。大会通过",
+        "了《中华苏维埃共和国宪法大纲》以及土地法令、劳动法等法律文件",
+        "选举产生了中华苏维埃共和国中",
+        "央执行委员会",
+        "宣告了中华苏维埃共和国临时中央政府成立。毛泽东当选为中央执行委员会主席。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 6,
+      "difficulty": "较易",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202310月",
+        "15043"
+      ],
+      "rubric": [
+        "年11月，中华苏维埃第一次全国代表大会在江西省瑞金县叶坪村举行。大会通过",
+        "了《中华苏维埃共和国宪法大纲》以及土地法令、劳动法等法律文件",
+        "选举产生了中华苏维埃共和国中",
+        "央执行委员会",
+        "宣告了中华苏维埃共和国临时中央政府成立。毛泽东当选为中央执行委员会主席。"
+      ]
+    },
+    {
+      "id": "generated-history-2023-10-subjective-q005",
+      "courseId": "history",
+      "paperId": "generated-history-2023-10-subjective",
+      "type": "essay",
+      "chapterId": "history-3",
+      "stem": "中国人民抗日战争在世界反法西斯战争中的地位",
+      "answer": [
+        "第一，中国人民抗日战争是世界反法西斯战争的东方主战场。中国抗战开始最早，持续",
+        "时间最长，抵制和抗击了日本主要兵力，对日本侵略者的彻底覆灭起到了决定性作用。",
+        "第二，中国人民的论持久战，遏制了日本的“北进”计划，退避了日本的“南进”步伐，大大减",
+        "轻了其它战场的压力，为盟军完成战略转折和实施战略反攻创造了有利条件。",
+        "第三，中国作为亚太地区盟军对日作战的重要后方基地，为盟国提供了大量战略物资和军事情报。",
+        "中国军队出国作战，不仅打击了日军，还对盟军给予了实际支援。中国为战胜法西斯、维护世界和平",
+        "付出了巨大牺牲，做出了伟大贡献。",
+        "三、论述题：本大题共3小题，考生任选其中2题作答，每小题10分，共20分。",
+        "如果考生回答的题目超过2题，只按考生回答题目的前2题计分。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202310月",
+        "15043"
+      ],
+      "rubric": [
+        "第一，中国人民抗日战争是世界反法西斯战争的东方主战场。中国抗战开始最早，持续",
+        "时间最长，抵制和抗击了日本主要兵力，对日本侵略者的彻底覆灭起到了决定性作用。",
+        "第二，中国人民的论持久战，遏制了日本的“北进”计划，退避了日本的“南进”步伐，大大减",
+        "轻了其它战场的压力，为盟军完成战略转折和实施战略反攻创造了有利条件。",
+        "第三，中国作为亚太地区盟军对日作战的重要后方基地，为盟国提供了大量战略物资和军事情报。",
+        "中国军队出国作战，不仅打击了日军，还对盟军给予了实际支援。中国为战胜法西斯、维护世界和平"
+      ]
+    },
+    {
+      "id": "generated-history-2023-10-subjective-q006",
+      "courseId": "history",
+      "paperId": "generated-history-2023-10-subjective",
+      "type": "essay",
+      "chapterId": "history-1",
+      "stem": "统一战线是新民主主义革命胜利的基本经验之一，其主要内容是什么?",
+      "answer": [
+        "建立广泛的统一战线是坚持和发展革命的政治基础。统一战线中存在着两个联盟：一个",
+        "是劳动者的联盟，主要是工人、农民和城市小资产阶级的联盟，这是基本的、主要的",
+        "一个是劳动者与",
+        "非劳动者的联盟，主要是劳动者与民族资产阶级的联盟，有时还包括与一部分大资产阶级的暂时的联",
+        "盟，这是辅助的、同时又是重要的。巩固和扩大统一战线的关键，是坚持无产阶级及其政党的领导权，",
+        "率领同盟者向共同的敌人作坚决的斗争并取得胜利，对被领导者给以物质福利和政治教育。对资产阶",
+        "级采取又联合、又斗争的政策。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202310月",
+        "15043"
+      ],
+      "rubric": [
+        "建立广泛的统一战线是坚持和发展革命的政治基础。统一战线中存在着两个联盟：一个",
+        "是劳动者的联盟，主要是工人、农民和城市小资产阶级的联盟，这是基本的、主要的",
+        "一个是劳动者与",
+        "非劳动者的联盟，主要是劳动者与民族资产阶级的联盟，有时还包括与一部分大资产阶级的暂时的联",
+        "盟，这是辅助的、同时又是重要的。巩固和扩大统一战线的关键，是坚持无产阶级及其政党的领导权，",
+        "率领同盟者向共同的敌人作坚决的斗争并取得胜利，对被领导者给以物质福利和政治教育。对资产阶"
+      ]
+    },
+    {
+      "id": "generated-history-2023-10-subjective-q007",
+      "courseId": "history",
+      "paperId": "generated-history-2023-10-subjective",
+      "type": "essay",
+      "chapterId": "history-3",
+      "stem": "中国共产党在过渡时期的总路线和总任务及其特点是什么?",
+      "answer": [
+        "中共中央在1953年正式提出党在过渡时期的总路线，明确规定：“党在这个过渡时",
+        "期的总路线和总任务，是要在一个相当长的时期内，逐步实现国家的社会主义工业化，并逐步实现国",
+        "家对农业、对手工业和对资本主义工商业的社会主义改造。”",
+        "其特点是这是一条“一化三改”、“一体两翼”的总路线，即社会主义建设同社会主义改造同",
+        "时并举的总路线，一化反映了生产力方面的要求，三改则反映出对生产关系的改造，体现了发展生产",
+        "力和变革生产关系的有机统一。"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202310月",
+        "15043"
+      ],
+      "rubric": [
+        "中共中央在1953年正式提出党在过渡时期的总路线，明确规定：“党在这个过渡时",
+        "期的总路线和总任务，是要在一个相当长的时期内，逐步实现国家的社会主义工业化，并逐步实现国",
+        "家对农业、对手工业和对资本主义工商业的社会主义改造。”",
+        "其特点是这是一条“一化三改”、“一体两翼”的总路线，即社会主义建设同社会主义改造同",
+        "时并举的总路线，一化反映了生产力方面的要求，三改则反映出对生产关系的改造，体现了发展生产",
+        "力和变革生产关系的有机统一。"
+      ]
+    },
+    {
+      "id": "generated-history-2023-10-subjective-q008",
+      "courseId": "history",
+      "paperId": "generated-history-2023-10-subjective",
+      "type": "essay",
+      "chapterId": "history-4",
+      "stem": "为什么说中共十一届三中全会是新中国成立以来党的历史上具有深远意义的伟大转折",
+      "answer": [
+        "重新确立了马克思主义的思想路线。全会冲破长期“左”的错误的严重束缚，彻底否",
+        "定了“两个凡是”的错误方针，高度评价了关于真理标准问题的讨论，并且断然否定“以阶级斗争为",
+        "纲”的指导思想，恢复了马克思主义实事求是的思想路线。",
+        "全会全面分析了当前的主要矛盾和主要任务，作出了把工作重点转移到社会主义现代化建设上",
+        "来和实行改革开放的战略决策。",
+        "全会恢复了党的民主集中制优良传统，审查解决了历史上遗留的一批重大问题和一些重要领导",
+        "人功过是非问题。",
+        "为了适应社会主义现代化建设的需要，全会决定在党的生活和国家政治生活中加强民主，明确",
+        "党思想路线，加强党的领导机构和成立中央纪律检查委员会。",
+        "中共十一届三中全会是新中国成立以来党的历史上具有深远意义的伟大转折。全会结束了粉碎"
+      ],
+      "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+      "points": 10,
+      "difficulty": "较难",
+      "sourceKind": "imported",
+      "tags": [
+        "真题",
+        "PDF整理",
+        "202310月",
+        "15043"
+      ],
+      "rubric": [
+        "重新确立了马克思主义的思想路线。全会冲破长期“左”的错误的严重束缚，彻底否",
+        "定了“两个凡是”的错误方针，高度评价了关于真理标准问题的讨论，并且断然否定“以阶级斗争为",
+        "纲”的指导思想，恢复了马克思主义实事求是的思想路线。",
+        "全会全面分析了当前的主要矛盾和主要任务，作出了把工作重点转移到社会主义现代化建设上",
+        "来和实行改革开放的战略决策。",
+        "全会恢复了党的民主集中制优良传统，审查解决了历史上遗留的一批重大问题和一些重要领导"
+      ]
+    }
+  ],
+  "reviewPapers": [],
+  "reviewQuestions": [],
+  "skipped": [],
+  "stats": [
+    {
+      "paperId": "generated-xi-2025-10",
+      "source": "raw/xi-1270151-2025年10月《习概》真题答案解析-完整版.pdf",
+      "questionCount": 31,
+      "objectiveCount": 25,
+      "textCount": 6,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-xi-2025-04-choice",
+      "source": "raw/xi-1146671-2025年4月自学考试《新中概》选择题真题及答案-回忆版.pdf",
+      "questionCount": 25,
+      "objectiveCount": 25,
+      "textCount": 0,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-xi-2025-04-subjective",
+      "source": "raw/xi-1146130-2025年4月自学考试《新中概》真题及答案-回忆版.pdf",
+      "questionCount": 6,
+      "objectiveCount": 0,
+      "textCount": 6,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-marx-2025-04-choice",
+      "source": "raw/marx-1146123-2025年4月自考《马原》选择题真题及答案-回忆版.pdf",
+      "questionCount": 11,
+      "objectiveCount": 11,
+      "textCount": 0,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-marx-2025-04-subjective",
+      "source": "raw/marx-1146105-2025年4月自考《马克思主义基本原理》简答题真题及答案-回忆版.pdf",
+      "questionCount": 8,
+      "objectiveCount": 0,
+      "textCount": 8,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-marx-2022-04",
+      "source": "extracted/marx/marx-2022-04-zip.pdf",
+      "questionCount": 8,
+      "objectiveCount": 0,
+      "textCount": 8,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-marx-2023-04",
+      "source": "extracted/marx/marx-2023-04-zip.pdf",
+      "questionCount": 8,
+      "objectiveCount": 0,
+      "textCount": 8,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-marx-2024-04-zip",
+      "source": "extracted/marx/marx-2024-04-zip.pdf",
+      "questionCount": 8,
+      "objectiveCount": 0,
+      "textCount": 8,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-marx-2025-10-subjective",
+      "source": "raw/marx-1270153-2025年10月自考《马原》简答、论述真题、答案.pdf",
+      "questionCount": 8,
+      "objectiveCount": 0,
+      "textCount": 8,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-marx-2026-04-subjective",
+      "source": "raw/marx-1350778-26年4月自考-【马原】真题及答案解析.pdf",
+      "questionCount": 8,
+      "objectiveCount": 0,
+      "textCount": 8,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-marx-2024-10-subjective",
+      "source": "raw/marx-1054639-2024年10月自考《马克思主义基本原理概论》真题及答案.pdf",
+      "questionCount": 10,
+      "objectiveCount": 0,
+      "textCount": 10,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-history-2024-04",
+      "source": "raw/history-977235-2024年4月自学考试《中国近现代史纲要》真题及答案解析.pdf",
+      "questionCount": 15,
+      "objectiveCount": 6,
+      "textCount": 9,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-history-2022-04",
+      "source": "extracted/history/history-2022-04-zip.pdf",
+      "questionCount": 8,
+      "objectiveCount": 0,
+      "textCount": 8,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-history-2022-10",
+      "source": "extracted/history/history-2022-10-zip.pdf",
+      "questionCount": 4,
+      "objectiveCount": 0,
+      "textCount": 4,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-history-2023-04",
+      "source": "extracted/history/history-2023-04-zip.pdf",
+      "questionCount": 8,
+      "objectiveCount": 0,
+      "textCount": 8,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-history-2024-10-subjective",
+      "source": "raw/history-1054821-2024年10月自考《中国近现代史纲要》真题及答案解析(回忆版)-.pdf",
+      "questionCount": 7,
+      "objectiveCount": 0,
+      "textCount": 7,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-history-2025-10-subjective",
+      "source": "raw/history-1270145-2025年10月自考《中国近现代史纲要》简答、论述真题、答案.pdf",
+      "questionCount": 8,
+      "objectiveCount": 0,
+      "textCount": 8,
+      "missingAnswerCount": 0
+    },
+    {
+      "paperId": "generated-history-2023-10-subjective",
+      "source": "raw/history-941572-2023年10月自学考试《中国近现代史纲要》真题及答案考生回忆版.pdf",
+      "questionCount": 8,
+      "objectiveCount": 0,
+      "textCount": 8,
+      "missingAnswerCount": 0
+    }
+  ]
+}

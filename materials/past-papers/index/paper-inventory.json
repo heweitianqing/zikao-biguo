@@ -1,0 +1,221 @@
+{
+  "updatedAt": "2026-07-05",
+  "purpose": "自考必过舱真题整理输入清单。raw 保存原始资料，后续从这里 OCR、清洗、转成应用可导入 JSON。",
+  "structuredGenerated": {
+    "json": "structured/generated-import-bank.json",
+    "appModule": "src/data/generatedPastPapers.ts",
+    "tool": "tools/build-generated-bank.py",
+    "papers": 18,
+    "questions": 189,
+    "status": "已从本地 PDF/ZIP 生成可刷真题并接入应用内置题库；正式题库缺答案数为 0。"
+  },
+  "courses": [
+    {
+      "courseId": "xi",
+      "code": "15040",
+      "name": "习近平新时代中国特色社会主义思想概论",
+      "tenYearTarget": false,
+      "reason": "课程较新，先覆盖已公开的 2024-2026 资料，再用大纲和时政专项补训练题。",
+      "downloaded": [
+        {
+          "year": 2025,
+          "session": "4月",
+          "format": "pdf",
+          "kind": "真题及答案回忆版",
+          "path": "raw/xi-1146130-2025年4月自学考试《新中概》真题及答案-回忆版.pdf"
+        },
+        {
+          "year": 2025,
+          "session": "4月",
+          "format": "pdf",
+          "kind": "选择题真题及答案回忆版",
+          "path": "raw/xi-1146671-2025年4月自学考试《新中概》选择题真题及答案-回忆版.pdf"
+        },
+        {
+          "year": 2025,
+          "session": "10月",
+          "format": "pdf",
+          "kind": "真题答案解析完整版",
+          "path": "raw/xi-1270151-2025年10月《习概》真题答案解析-完整版.pdf"
+        },
+        {
+          "yearRange": "2024-2025",
+          "format": "rar",
+          "kind": "真题及答案解析汇总包",
+          "path": "raw/xi-1275313-《习概》2024年-2025年真题及答案解析.rar",
+          "nextAction": "需要解压工具或手工确认包内文件"
+        }
+      ],
+      "pageSnapshots": [
+        "pages/zikaosw-xi-15040-list.html",
+        "pages/zikaosw-xi-15040-2025-04.html",
+        "pages/zikaosw-xi-15040-2025-10-full.html",
+        "pages/zikaosw-xi-15040-2026-04.html",
+        "pages/zikaosw-xi-15040-2026-04-memory.html"
+      ],
+      "assetSnapshots": {
+        "images": 14,
+        "text": [
+          "text/xi-2025-04.txt",
+          "text/xi-2025-10.txt",
+          "text/xi-2026-04.txt",
+          "text/xi-2026-04-memory.txt"
+        ]
+      }
+    },
+    {
+      "courseId": "marx",
+      "code": "15044",
+      "legacyCodes": ["03709"],
+      "name": "马克思主义基本原理",
+      "tenYearTarget": true,
+      "downloaded": [
+        {
+          "yearRange": "2022-2025",
+          "format": "zip",
+          "kind": "近 4 年真题及答案汇总包",
+          "path": "raw/marx-1149252-近4年自考《马克思主义基本原理》概论真题及答案汇总(22年-25年).zip",
+          "observedInside": [
+            "2022年4月",
+            "2023年4月",
+            "2024年4月",
+            "2024年10月",
+            "2025年4月选择题",
+            "2025年4月简答题"
+          ]
+        },
+        {
+          "year": 2024,
+          "session": "4月",
+          "format": "pdf",
+          "path": "raw/marx-977157-2024年4月自学考试《马克主义基本原理》真题及答案.pdf"
+        },
+        {
+          "year": 2024,
+          "session": "10月",
+          "format": "pdf",
+          "path": "raw/marx-1054639-2024年10月自考《马克思主义基本原理概论》真题及答案.pdf"
+        },
+        {
+          "year": 2025,
+          "session": "4月",
+          "format": "pdf",
+          "path": "raw/marx-1146123-2025年4月自考《马原》选择题真题及答案-回忆版.pdf"
+        },
+        {
+          "year": 2025,
+          "session": "4月",
+          "format": "pdf",
+          "path": "raw/marx-1146105-2025年4月自考《马克思主义基本原理》简答题真题及答案-回忆版.pdf"
+        },
+        {
+          "year": 2025,
+          "session": "10月",
+          "format": "pdf",
+          "path": "raw/marx-1270153-2025年10月自考《马原》简答、论述真题、答案.pdf"
+        },
+        {
+          "year": 2026,
+          "session": "4月",
+          "format": "pdf",
+          "path": "raw/marx-1350778-26年4月自考-【马原】真题及答案解析.pdf"
+        }
+      ],
+      "webQuestionPages": {
+        "yearRange": "2016-2021",
+        "count": 12,
+        "visibleQuestionCount": 180,
+        "index": "index/older-web-pages.json",
+        "textDir": "text/older/",
+        "coverage": "已保存 2016-2021 每年 4月/10月（2020 为 8月/10月）网页题文；自考生网公开页每套只展示 15 道预览题，答案入口已保留但接口提示需要登录。"
+      },
+      "remainingTarget": "2016-2021 已补公开网页题文线索；继续寻找完整 PDF/答案，或登录后补答案，再整理成可刷 JSON。"
+    },
+    {
+      "courseId": "history",
+      "code": "15043",
+      "legacyCodes": ["03708"],
+      "name": "中国近现代史纲要",
+      "tenYearTarget": true,
+      "downloaded": [
+        {
+          "yearRange": "2022-2025",
+          "format": "zip",
+          "kind": "近 4 年真题及答案解析汇总包",
+          "path": "raw/history-1149246-近4年自考《中国近代史纲要》真题及答案解析汇总(22年-25年).zip",
+          "observedInside": [
+            "2022年4月",
+            "2022年10月",
+            "2023年4月",
+            "2023年10月",
+            "2024年4月",
+            "2024年10月",
+            "2025年4月"
+          ]
+        },
+        {
+          "year": 2023,
+          "session": "10月",
+          "format": "pdf",
+          "path": "raw/history-941572-2023年10月自学考试《中国近现代史纲要》真题及答案考生回忆版.pdf"
+        },
+        {
+          "year": 2024,
+          "session": "4月",
+          "format": "pdf",
+          "path": "raw/history-977235-2024年4月自学考试《中国近现代史纲要》真题及答案解析.pdf"
+        },
+        {
+          "year": 2024,
+          "session": "10月",
+          "format": "pdf",
+          "path": "raw/history-1054821-2024年10月自考《中国近现代史纲要》真题及答案解析(回忆版)-.pdf"
+        },
+        {
+          "year": 2025,
+          "session": "4月",
+          "format": "pdf",
+          "path": "raw/history-1146337-2025年4月自学考试《中国近现代史纲要》真题及答案-回忆版.pdf"
+        },
+        {
+          "year": 2025,
+          "session": "10月",
+          "format": "pdf",
+          "path": "raw/history-1270145-2025年10月自考《中国近现代史纲要》简答、论述真题、答案.pdf"
+        }
+      ],
+      "webQuestionPages": {
+        "yearRange": "2016-2021",
+        "count": 12,
+        "visibleQuestionCount": 180,
+        "index": "index/older-web-pages.json",
+        "textDir": "text/older/",
+        "coverage": "已保存 2016-2021 每年 4月/10月（2020 为 8月/10月）网页题文；自考生网公开页每套只展示 15 道预览题，答案入口已保留但接口提示需要登录。"
+      },
+      "remainingTarget": "2016-2021 已补公开网页题文线索；继续寻找完整 PDF/答案，或登录后补答案，再整理成可刷 JSON。"
+    },
+    {
+      "courseId": "media",
+      "code": "14265",
+      "name": "数字媒体艺术概论",
+      "tenYearTarget": false,
+      "downloaded": [],
+      "pageSnapshots": ["pages/zikaosw-media-14265-list.html"],
+      "knownStatus": "自考生网 14265 真题栏目当前显示暂无公开历年真题。",
+      "nextAction": "按大纲做章节学习和高质量模拟题，继续监控公开真题入口。"
+    },
+    {
+      "courseId": "multimedia",
+      "code": "13511",
+      "name": "多媒体技术与应用",
+      "tenYearTarget": false,
+      "downloaded": [],
+      "pageSnapshots": [
+        "pages/zikaosw-multimedia-13511.html",
+        "pages/zikaosw-multimedia-13511-papers.html"
+      ],
+      "knownStatus": "公开页列出福建卷 2022年4月、2022年10月、2023年4月三份试卷，实际文件在商城购买入口。",
+      "nextAction": "先用已建大纲训练卷刷基础；如需要完整真题，可登录/购买后再整理。"
+    }
+  ]
+}
