@@ -31,7 +31,7 @@ import { useEffect, useMemo, useState } from 'react'
 import type { CSSProperties } from 'react'
 import './App.css'
 import { courses, importTemplate, papers as seedPapers, pastPaperSources, questions as seedQuestions, sourceGapRecords } from './data/questionBank'
-import type { AnswerRecord, AppState, Course, ImportedBank, Paper, PaperAttempt, Question, QuestionMark, QuestionType } from './types'
+import type { AnswerRecord, AppState, Course, ImportedBank, Paper, PaperAttempt, Question, QuestionMark, QuestionType, SavedAiReview } from './types'
 import { parsePastedPaperText } from './utils/paperParser'
 import type { ParseDiagnostics } from './utils/paperParser'
 import {
@@ -52,6 +52,7 @@ const defaultState: AppState = {
   view: 'practice',
   attempts: {},
   questionMarks: {},
+  aiReviews: {},
   deepseekApiKey: '',
   deepseekModel: 'deepseek-chat',
   targetExamDate: '',
@@ -61,6 +62,9 @@ type AiReview = {
   questionId: string
   content: string
   loading: boolean
+  savedAt?: string
+  model?: string
+  answerSnapshot?: string
 }
 
 type MistakeReviewItem = {
@@ -490,6 +494,17 @@ function getQuestionMarkLabels(mark: QuestionMark | undefined) {
   return labels
 }
 
+function aiReviewFromSaved(saved: SavedAiReview): AiReview {
+  return {
+    questionId: saved.questionId,
+    loading: false,
+    content: saved.content,
+    savedAt: saved.updatedAt,
+    model: saved.model,
+    answerSnapshot: saved.answerSnapshot,
+  }
+}
+
 function toDateKey(date: Date) {
   const year = date.getFullYear()
   const month = String(date.getMonth() + 1).padStart(2, '0')
@@ -619,6 +634,7 @@ function App() {
   const currentAttempt = state.attempts[selectedPaper.id] ?? createAttempt(selectedPaper)
   const currentRecord = currentQuestion ? currentAttempt.answers[currentQuestion.id] : undefined
   const currentQuestionMark = currentQuestion ? state.questionMarks[currentQuestion.id] : undefined
+  const savedCurrentAiReview = currentQuestion ? state.aiReviews[currentQuestion.id] : undefined
   const answeredCount = selectedPaper.questionIds.filter((id) => currentAttempt.answers[id]?.checked).length
   const score = calculatePaperScore(selectedPaper, paperQuestions, currentAttempt.answers)
   const progress = paperQuestions.length ? Math.round((answeredCount / paperQuestions.length) * 100) : 0
@@ -656,6 +672,17 @@ function App() {
     saveState(state)
   }, [state])
 
+  useEffect(() => {
+    if (!currentQuestion) {
+      setAiReview(null)
+      return
+    }
+    if (aiReview?.questionId === currentQuestion.id && aiReview.loading) {
+      return
+    }
+    setAiReview(savedCurrentAiReview ? aiReviewFromSaved(savedCurrentAiReview) : null)
+  }, [aiReview?.loading, aiReview?.questionId, currentQuestion, savedCurrentAiReview])
+
   function patchState(patch: Partial<AppState>) {
     setState((current) => ({ ...current, ...patch }))
   }
@@ -692,6 +719,24 @@ function App() {
     })
     const label = key === 'favorite' ? '收藏' : key === 'reviewAgain' ? '再背一遍' : '已掌握'
     setNotice(`${question.stem.slice(0, 18)}${question.stem.length > 18 ? '...' : ''} 已更新标记：${label}。`)
+  }
+
+  function saveAiReview(question: Question, content: string, model: string, answerSnapshot: string) {
+    const saved: SavedAiReview = {
+      questionId: question.id,
+      content,
+      model,
+      answerSnapshot,
+      updatedAt: new Date().toISOString(),
+    }
+    setState((current) => ({
+      ...current,
+      aiReviews: {
+        ...current.aiReviews,
+        [question.id]: saved,
+      },
+    }))
+    setAiReview(aiReviewFromSaved(saved))
   }
 
   function ensureAttempt(paper: Paper) {
@@ -891,11 +936,7 @@ function App() {
     }
 
     if (!state.deepseekApiKey.trim()) {
-      setAiReview({
-        questionId: question.id,
-        loading: false,
-        content: buildLocalTextReview(question, record.textAnswer),
-      })
+      saveAiReview(question, buildLocalTextReview(question, record.textAnswer), 'local-keyword-review', record.textAnswer)
       return
     }
 
@@ -930,11 +971,12 @@ function App() {
         throw new Error(`DeepSeek 返回 ${response.status}`)
       }
       const data = (await response.json()) as { choices?: { message?: { content?: string } }[] }
-      setAiReview({
-        questionId: question.id,
-        loading: false,
-        content: data.choices?.[0]?.message?.content ?? '没有拿到评价内容，请稍后重试。',
-      })
+      saveAiReview(
+        question,
+        data.choices?.[0]?.message?.content ?? '没有拿到评价内容，请稍后重试。',
+        state.deepseekModel.trim() || 'deepseek-chat',
+        record.textAnswer,
+      )
     } catch (error) {
       setAiReview({
         questionId: question.id,
@@ -1449,6 +1491,13 @@ function App() {
                       <div>
                         <BrainCircuit size={20} />
                         <strong>{aiReview.loading ? 'AI 正在评价' : 'AI 评价'}</strong>
+                        {aiReview.savedAt && (
+                          <small>
+                            已保存 · {formatShortDate(aiReview.savedAt)}
+                            {aiReview.model ? ` · ${aiReview.model}` : ''}
+                            {currentRecord?.textAnswer.trim() !== (aiReview.answerSnapshot ?? '').trim() ? ' · 基于上次答案' : ''}
+                          </small>
+                        )}
                       </div>
                       <p>{aiReview.content}</p>
                     </section>

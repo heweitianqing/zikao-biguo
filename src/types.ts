@@ -89,6 +89,14 @@ export type QuestionMark = {
   updatedAt: string
 }
 
+export type SavedAiReview = {
+  questionId: string
+  content: string
+  model: string
+  answerSnapshot: string
+  updatedAt: string
+}
+
 export type AppState = {
   selectedCourseId: string
   selectedPaperId: string
@@ -96,6 +104,7 @@ export type AppState = {
   view: 'practice' | 'study' | 'papers' | 'mistakes' | 'resources' | 'settings' | 'report'
   attempts: Record<string, PaperAttempt>
   questionMarks: Record<string, QuestionMark>
+  aiReviews: Record<string, SavedAiReview>
   deepseekApiKey: string
   deepseekModel: string
   targetExamDate: string
