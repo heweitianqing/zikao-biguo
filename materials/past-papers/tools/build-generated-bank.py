@@ -391,7 +391,7 @@ def normalize_text(text: str) -> str:
             continue
         if "学员专用" in line or "环球网校" in line:
             continue
-        if "课程咨询" in line:
+        if "课程咨询" in line or "咨询热线" in line or "微信扫码" in line:
             continue
         cleaned.append(line)
     text = "\n".join(cleaned)
@@ -482,6 +482,46 @@ def split_answer_and_analysis(text: str) -> tuple[str, str, str]:
     return before, answer_raw, analysis
 
 
+NOISE_LINE_PATTERNS = [
+    re.compile(r"^[一二三四五六七八九十]+[、.．]\s*(单项选择题|多项选择题|简答题|论述题).*"),
+    re.compile(r"^(单项选择题|多项选择题|简答题|论述题)\s*[:：]?$"),
+    re.compile(r"^\d{4}\s*年\s*\d{1,2}\s*月\s*自学考试$"),
+    re.compile(r"^年\s*\d{1,2}\s*月\s*自学考试$"),
+    re.compile(r"^课程代码\s*[:：]?.*"),
+    re.compile(r"^答案及解析.*"),
+    re.compile(r"^【考点】.*"),
+    re.compile(r"^如果考生回答.*"),
+    re.compile(r"^回答题目的前.*"),
+    re.compile(r"^每小题\s*\d+\s*分.*"),
+    re.compile(r"^(咨询热线|微信扫码|免费约直播|扫码刷题).*"),
+]
+
+
+def is_noise_line(value: str) -> bool:
+    line = re.sub(r"\s+", " ", value).strip()
+    return not line or any(pattern.search(line) for pattern in NOISE_LINE_PATTERNS)
+
+
+def strip_embedded_noise(value: str) -> str:
+    value = re.split(
+        r"\s+[一二三四五六七八九十]+[、.．]\s*(?:单项选择题|多项选择题|简答题|论述题).*"
+        r"|\s+(?:\d{4}\s*)?年\s*\d{1,2}\s*月\s*自学考试"
+        r"|\s+(?:咨询热线|微信扫码|免费约直播|扫码刷题).*",
+        value,
+        maxsplit=1,
+    )[0]
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def clean_answer_items(items: list[str]) -> list[str]:
+    cleaned: list[str] = []
+    for item in items:
+        value = strip_embedded_noise(item)
+        if not is_noise_line(value):
+            cleaned.append(value)
+    return cleaned
+
+
 OPTION_MARKER = re.compile(r"(?<![A-Za-z])([A-H])\s*[.．、,，]\s*")
 
 
@@ -539,7 +579,7 @@ def split_text_answer(answer_raw: str) -> list[str]:
             cleaned.append(item)
     if not cleaned and answer_raw:
         cleaned = [answer_raw]
-    return cleaned[:10]
+    return clean_answer_items(cleaned)[:10]
 
 
 def infer_chapter(course: CourseMeta, stem: str, answer_raw: str) -> str:
@@ -593,6 +633,7 @@ def parse_block(course: CourseMeta, source: SourceMeta, number: int, raw_block: 
         return None
 
     explicit_points = parse_explicit_points(raw_block)
+    analysis = strip_embedded_noise(analysis)
     answer_letters = re.findall(r"[A-H]", answer_raw.upper())
     if options and answer_letters:
         question_type = "multiple" if len(answer_letters) > 1 else "single"

@@ -29,6 +29,7 @@
 ## 当前缺口
 
 - 已新增 `tools/build-generated-bank.py`，可从本地 PDF/ZIP/网页图片整理文本生成 `structured/generated-import-bank.json` 和应用内置文件 `src/data/generatedPastPapers.ts`。
+- 已新增 `tools/check-generated-bank-quality.mjs`，可用 `pnpm check:bank` 检查正式扩展包里的缺答案、题型标题、页眉页脚和广告噪声。
 - 已新增 `tools/build-zikaosw-preview-bank.mjs`，可把自考生网 2016-2021 旧年份公开预览题整理成 `structured/zikaosw-preview-bank.json`；拿到答案权限后重新运行会自动合并答案和解析。
 - 已新增 `tools/build-zikaosw-preview-app-bank.mjs`，可把旧年份预览题草稿生成到 `src/data/zikaoswPreviewBank.ts`，供资源页手动导入为练习包。
 - 当前已接入应用：19 套、195 题，正式刷题题库缺答案数为 0。覆盖习概 2025 年 4 月/10 月与 2026 年 4 月主观题，马原 2022-2026 多套选择/主观题，近代史 2022-2025 多套主观题与部分选择题。
