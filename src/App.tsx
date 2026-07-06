@@ -52,6 +52,7 @@ const defaultState: AppState = {
   view: 'practice',
   attempts: {},
   deepseekApiKey: '',
+  targetExamDate: '',
 }
 
 type AiReview = {
@@ -113,6 +114,14 @@ type ChapterStudyRow = {
   textQuestions: number
   readyPapers: number
   pendingPapers: number
+}
+
+type StudyCalendarSummary = {
+  days: { dateKey: string; label: string; count: number; isToday: boolean }[]
+  todayCount: number
+  streakDays: number
+  activeDays: number
+  daysToExam?: number
 }
 
 function createAttempt(paper: Paper) {
@@ -471,6 +480,73 @@ function formatShortDate(value: string) {
   return `${date.getMonth() + 1}/${date.getDate()}`
 }
 
+function toDateKey(date: Date) {
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
+function addDays(date: Date, offset: number) {
+  const next = new Date(date)
+  next.setHours(12, 0, 0, 0)
+  next.setDate(next.getDate() + offset)
+  return next
+}
+
+function getStudyCalendarSummary(attempts: Record<string, PaperAttempt>, targetExamDate: string): StudyCalendarSummary {
+  const activity = new Map<string, Set<string>>()
+
+  Object.values(attempts).forEach((attempt) => {
+    Object.values(attempt.answers).forEach((record) => {
+      if (!record.checked) return
+
+      const date = new Date(record.updatedAt)
+      if (Number.isNaN(date.getTime())) return
+
+      const key = toDateKey(date)
+      const questionIds = activity.get(key) ?? new Set<string>()
+      questionIds.add(record.questionId)
+      activity.set(key, questionIds)
+    })
+  })
+
+  const today = new Date()
+  today.setHours(12, 0, 0, 0)
+  const todayKey = toDateKey(today)
+  const days = Array.from({ length: 7 }, (_, index) => {
+    const date = addDays(today, index - 6)
+    const dateKey = toDateKey(date)
+    return {
+      dateKey,
+      label: `${date.getMonth() + 1}/${date.getDate()}`,
+      count: activity.get(dateKey)?.size ?? 0,
+      isToday: dateKey === todayKey,
+    }
+  })
+
+  let streakDays = 0
+  for (let offset = 0; offset > -180; offset -= 1) {
+    const key = toDateKey(addDays(today, offset))
+    if (!activity.get(key)?.size) break
+    streakDays += 1
+  }
+
+  const targetDate = targetExamDate ? new Date(`${targetExamDate}T12:00:00`) : null
+  const daysToExam =
+    targetDate && !Number.isNaN(targetDate.getTime())
+      ? Math.ceil((targetDate.getTime() - today.getTime()) / 86_400_000)
+      : undefined
+
+  return {
+    days,
+    todayCount: activity.get(todayKey)?.size ?? 0,
+    streakDays,
+    activeDays: activity.size,
+    daysToExam,
+  }
+}
+
 function App() {
   const [state, setState] = useState<AppState>(() => loadState(defaultState))
   const [imports, setImports] = useState<ImportedBank>(() => loadImports())
@@ -512,6 +588,10 @@ function App() {
   const courseById = useMemo(() => new Map(courses.map((course) => [course.id, course])), [])
 
   const selectedCourse = courses.find((course) => course.id === state.selectedCourseId) ?? courses[0]
+  const studyCalendar = useMemo(
+    () => getStudyCalendarSummary(state.attempts, state.targetExamDate),
+    [state.attempts, state.targetExamDate],
+  )
   const coursePapers = visiblePapers
     .filter((paper) => paper.courseId === selectedCourse.id)
     .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
@@ -1353,6 +1433,7 @@ function App() {
             course={selectedCourse}
             rows={chapterStudyRows}
             papers={coursePapers}
+            calendar={studyCalendar}
             onPracticeChapter={startChapterPractice}
             onOpenPapers={() => patchState({ view: 'papers' })}
             onOpenResources={() => patchState({ view: 'resources' })}
@@ -1407,7 +1488,9 @@ function App() {
         {state.view === 'settings' && (
           <SettingsView
             apiKey={state.deepseekApiKey}
+            targetExamDate={state.targetExamDate}
             onApiKeyChange={(deepseekApiKey) => patchState({ deepseekApiKey })}
+            onTargetExamDateChange={(targetExamDate) => patchState({ targetExamDate })}
             onClear={clearData}
           />
         )}
@@ -1442,6 +1525,7 @@ function StudyView({
   course,
   rows,
   papers,
+  calendar,
   onPracticeChapter,
   onOpenPapers,
   onOpenResources,
@@ -1449,6 +1533,7 @@ function StudyView({
   course: Course
   rows: ChapterStudyRow[]
   papers: Paper[]
+  calendar: StudyCalendarSummary
   onPracticeChapter: (row: ChapterStudyRow) => void
   onOpenPapers: () => void
   onOpenResources: () => void
@@ -1523,6 +1608,31 @@ function StudyView({
           <span>按整卷节奏补速度和主观题结构。</span>
         </article>
       </div>
+
+      <section className="study-calendar" aria-label="学习日历">
+        <div className="study-calendar-head">
+          <div>
+            <p className="eyebrow">学习日历</p>
+            <strong>{calendar.todayCount ? `今天已判 ${calendar.todayCount} 题` : '今天还没开始判题'}</strong>
+          </div>
+          <span>
+            连续 {calendar.streakDays} 天 · 累计 {calendar.activeDays} 天
+            {calendar.daysToExam === undefined
+              ? ' · 设置考试日后显示倒计时'
+              : calendar.daysToExam >= 0
+                ? ` · 距考试 ${calendar.daysToExam} 天`
+                : ` · 已过考试 ${Math.abs(calendar.daysToExam)} 天`}
+          </span>
+        </div>
+        <div className="study-calendar-days">
+          {calendar.days.map((day) => (
+            <div key={day.dateKey} className={day.isToday ? 'today' : ''}>
+              <strong>{day.count}</strong>
+              <span>{day.label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section className="chapter-mastery-board" aria-label="章节掌握度总览">
         <div className="chapter-mastery-head">
@@ -3286,11 +3396,15 @@ function ArchiveIcon() {
 
 function SettingsView({
   apiKey,
+  targetExamDate,
   onApiKeyChange,
+  onTargetExamDateChange,
   onClear,
 }: {
   apiKey: string
+  targetExamDate: string
   onApiKeyChange: (apiKey: string) => void
+  onTargetExamDateChange: (targetExamDate: string) => void
   onClear: () => void
 }) {
   return (
@@ -3312,6 +3426,14 @@ function SettingsView({
             onChange={(event) => onApiKeyChange(event.target.value)}
           />
           <small>Key 只保存在你的浏览器本地，用于简答题和论述题 AI 评价。</small>
+        </label>
+        <label className="setting-card">
+          <span>
+            <History size={20} />
+            目标考试日
+          </span>
+          <input type="date" value={targetExamDate} onChange={(event) => onTargetExamDateChange(event.target.value)} />
+          <small>用于学习页倒计时，只保存在浏览器本地；不填也可以正常刷题。</small>
         </label>
         <div className="setting-card">
           <span>

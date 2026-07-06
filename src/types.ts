@@ -89,6 +89,7 @@ export type AppState = {
   view: 'practice' | 'study' | 'papers' | 'mistakes' | 'resources' | 'settings' | 'report'
   attempts: Record<string, PaperAttempt>
   deepseekApiKey: string
+  targetExamDate: string
 }
 
 export type ImportedBank = {

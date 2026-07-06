@@ -499,6 +499,78 @@
   font-size: 13px;
 }
 
+.study-calendar {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 14px;
+  background: var(--paper-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.study-calendar-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.study-calendar-head strong {
+  display: block;
+  margin-top: 3px;
+  color: var(--night);
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.study-calendar-head > span {
+  color: var(--ink-muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-align: right;
+}
+
+.study-calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.study-calendar-days div {
+  min-width: 0;
+  padding: 10px 6px;
+  background: rgba(236, 228, 214, 0.45);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.study-calendar-days div.today {
+  background: rgba(39, 98, 122, 0.1);
+  border-color: rgba(39, 98, 122, 0.24);
+}
+
+.study-calendar-days strong,
+.study-calendar-days span {
+  display: block;
+}
+
+.study-calendar-days strong {
+  color: var(--night);
+  font-family: var(--mono);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.study-calendar-days span {
+  margin-top: 5px;
+  color: var(--ink-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .chapter-mastery-board {
   display: grid;
   gap: 10px;
@@ -1652,6 +1724,29 @@
   font-weight: 900;
 }
 
+.setting-card input {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 11px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  outline: none;
+}
+
+.setting-card input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(39, 98, 122, 0.14);
+}
+
+.setting-card small,
+.setting-card p {
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
 .file-button {
   position: relative;
   overflow: hidden;
@@ -2773,6 +2868,18 @@
   .study-overview,
   .study-route {
     grid-template-columns: 1fr;
+  }
+
+  .study-calendar-head {
+    display: grid;
+  }
+
+  .study-calendar-head > span {
+    text-align: left;
+  }
+
+  .study-calendar-days {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .chapter-mastery-head {
