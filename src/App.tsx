@@ -104,6 +104,11 @@ type ChapterStudyRow = {
   questions: Question[]
   checkedQuestions: number
   wrongQuestions: number
+  checkedPoints: number
+  earnedPoints: number
+  lostPoints: number
+  masteryRate: number
+  lastCheckedAt?: string
   objectiveQuestions: number
   textQuestions: number
   readyPapers: number
@@ -421,11 +426,17 @@ function getChapterStudyRows(
   return course.outline.map((chapter) => {
     const scopedQuestions = questions.filter((question) => question.courseId === course.id && question.chapterId === chapter.id)
     const questionIds = new Set(scopedQuestions.map((question) => question.id))
-    const checkedQuestions = scopedQuestions.filter((question) => getLatestCheckedAnswer(question.id, attempts)).length
-    const wrongQuestions = scopedQuestions.filter((question) => {
-      const latest = getLatestCheckedAnswer(question.id, attempts)
-      return latest ? getQuestionScore(question, latest.record) < question.points : false
-    }).length
+    const checkedItems = scopedQuestions
+      .map((question) => ({ question, latest: getLatestCheckedAnswer(question.id, attempts) }))
+      .filter((item): item is { question: Question; latest: { attempt: PaperAttempt; record: AnswerRecord } } => Boolean(item.latest))
+    const checkedQuestions = checkedItems.length
+    const wrongQuestions = checkedItems.filter((item) => getQuestionScore(item.question, item.latest.record) < item.question.points).length
+    const checkedPoints = checkedItems.reduce((sum, item) => sum + item.question.points, 0)
+    const earnedPoints = checkedItems.reduce((sum, item) => sum + getQuestionScore(item.question, item.latest.record), 0)
+    const lostPoints = Math.max(checkedPoints - earnedPoints, 0)
+    const lastCheckedAt = checkedItems
+      .map((item) => item.latest.record.updatedAt)
+      .sort((a, b) => b.localeCompare(a))[0]
     const readyPapers = papers.filter((paper) => paper.status === 'ready' && paper.questionIds.some((id) => questionIds.has(id))).length
     const pendingPapers = papers.filter((paper) => paper.status === 'needs-import' && paper.courseId === course.id).length
 
@@ -439,12 +450,25 @@ function getChapterStudyRows(
       questions: scopedQuestions,
       checkedQuestions,
       wrongQuestions,
+      checkedPoints,
+      earnedPoints,
+      lostPoints,
+      masteryRate: checkedPoints ? Math.round((earnedPoints / checkedPoints) * 100) : 0,
+      lastCheckedAt,
       objectiveQuestions: scopedQuestions.filter((question) => question.type === 'single' || question.type === 'multiple').length,
       textQuestions: scopedQuestions.filter((question) => question.type === 'short' || question.type === 'essay').length,
       readyPapers,
       pendingPapers,
     }
   })
+}
+
+function formatShortDate(value: string) {
+  const date = new Date(value)
+  if (Number.isNaN(date.getTime())) {
+    return '时间未知'
+  }
+  return `${date.getMonth() + 1}/${date.getDate()}`
 }
 
 function App() {
@@ -1434,6 +1458,13 @@ function StudyView({
   const wrongQuestions = rows.reduce((sum, row) => sum + row.wrongQuestions, 0)
   const pendingPapers = papers.filter((paper) => paper.status === 'needs-import').length
   const readyPapers = papers.filter((paper) => paper.status === 'ready').length
+  const masteryRows = [...rows].sort(
+    (a, b) =>
+      Number(Boolean(b.checkedQuestions)) - Number(Boolean(a.checkedQuestions)) ||
+      b.lostPoints - a.lostPoints ||
+      a.masteryRate - b.masteryRate ||
+      b.questions.length - a.questions.length,
+  )
 
   function rowStatus(row: ChapterStudyRow) {
     if (!row.questions.length) {
@@ -1492,6 +1523,35 @@ function StudyView({
           <span>按整卷节奏补速度和主观题结构。</span>
         </article>
       </div>
+
+      <section className="chapter-mastery-board" aria-label="章节掌握度总览">
+        <div className="chapter-mastery-head">
+          <div>
+            <p className="eyebrow">章节掌握度</p>
+            <strong>先补失分最多的章节</strong>
+          </div>
+          <span>{checkedQuestions ? `已判 ${checkedQuestions} 题` : '先刷一套卷后自动统计'}</span>
+        </div>
+        <div className="chapter-mastery-list">
+          {masteryRows.map((row) => (
+            <article key={row.id} className={row.checkedQuestions ? 'has-progress' : 'is-empty'}>
+              <div className="chapter-mastery-title">
+                <strong>{row.title}</strong>
+                <span>{row.checkedQuestions ? `${row.earnedPoints}/${row.checkedPoints} 分` : `${row.questions.length} 题待刷`}</span>
+              </div>
+              <div className="chapter-mastery-bar">
+                <span style={{ width: `${row.masteryRate}%` }} />
+              </div>
+              <div className="chapter-mastery-meta">
+                <span>已刷 {row.checkedQuestions}/{row.questions.length}</span>
+                <span>掌握 {row.checkedQuestions ? `${row.masteryRate}%` : '待测'}</span>
+                <span>失 {row.lostPoints} 分</span>
+                <span>{row.lastCheckedAt ? `最近 ${formatShortDate(row.lastCheckedAt)}` : '暂无记录'}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <div className="chapter-study-grid">
         {rows.map((row, index) => {
