@@ -57,6 +57,11 @@
   - 设置页可填写 DeepSeek API Key。
   - 简答题和论述题可点 AI 评价。
   - 未填写 Key 时使用本地估分提示。
+- 内置真题扩展包：
+  - 应用启动时异步加载 `src/data/generatedPastPapers.ts`。
+  - 当前已接入公共课真题扩展包 18 套、189 题。
+  - 覆盖习概 2025 年 4 月/10 月，马原 2022-2026 多套选择/主观题，近代史 2022-2025 多套主观题与部分选择题。
+  - 生成来源和缺口记录在 `materials/past-papers/`。
 - PWA：
   - 有 manifest、图标和 service worker。
   - 可安装到桌面或手机主屏。
@@ -67,22 +72,34 @@
 - 内置题目以官方考试计划和大纲为基础进行训练化整理。
 - 高频强化卷属于模拟训练题，不冒充历年真题。
 - 内置题库当前覆盖公共课、数媒概论、计算机的核心概念、客观题、简答和论述。
-- 历年真题目前采用“索引 + 本地导入”的方式：
-  - 仓库不直接硬编码不明授权的第三方整套真题。
+- 历年真题目前采用“内置已整理包 + 索引 + 本地导入”的方式：
+  - 已整理的公共课资料会生成到 `src/data/generatedPastPapers.ts`，打开应用即可刷。
+  - 尚未补齐答案、权限或题文的资料只保留来源索引，不强行放进正式刷题入口。
   - 下载或复制到本地的题文，可以通过资源页的“粘贴文本制卷”转成本地可刷试卷。
   - 本地导入数据保存在浏览器 localStorage，不会自动提交到仓库。
+- 当前生成题库统计：
+  - 习概 `15040`：3 套、62 题。
+  - 马原 `15044/03709`：8 套、69 题。
+  - 近代史 `15043/03708`：7 套、58 题。
+  - 合计：18 套、189 题，正式刷题题库缺答案数为 0。
 
 ## 主要文件
 
 - `src/App.tsx`：主应用、页面视图、刷题逻辑、资源页、错题本、报告、AI 评价。
 - `src/App.css`：主界面响应式样式。
 - `src/data/questionBank.ts`：课程、资料来源、真题索引、内置题库、导入模板。
+- `src/data/generatedPastPapers.ts`：由本地真题资料生成的内置真题扩展包。
 - `src/types.ts`：课程、试卷、题目、答题记录等类型。
 - `src/utils/paperParser.ts`：粘贴文本制卷解析器。
 - `src/utils/scoring.ts`：判题、估分、状态标签。
 - `src/utils/storage.ts`：localStorage 读写、导入题库存储。
 - `public/manifest.webmanifest`：PWA manifest。
 - `public/sw.js`：离线缓存 service worker。
+- `materials/past-papers/README.md`：真题资料来源、已下载文件、生成流程和缺口说明。
+- `materials/past-papers/structured/generated-import-bank.json`：生成题库的结构化中间文件。
+- `materials/past-papers/tools/build-generated-bank.py`：从本地 PDF/ZIP 等资料生成应用题库的脚本。
+- `materials/past-papers/index/source-gaps.json`：已验证但暂时无法直接入库的来源缺口。
+- `materials/past-papers/index/zikaosw-answer-queue.json`：旧年份答案抓取队列，后续需要登录权限。
 
 ## 在其他电脑继续开发
 
@@ -101,6 +118,8 @@ pnpm dev
 pnpm lint
 pnpm build
 ```
+
+当前仓库里同时存在 `pnpm-lock.yaml`、`package-lock.json`、`yarn.lock` 和 Yarn PnP 文件。项目文档仍以 pnpm 为准，但在 macOS 本机验证时，`.pnp.cjs` 会影响 pnpm 对 rolldown/oxlint 原生依赖的解析，导致 `pnpm build`、`pnpm lint` 报找不到原生 binding。临时移开 `.pnp.cjs` 和 `.pnp.loader.mjs` 后，两项检查都可以通过。后续建议尽快统一包管理器。
 
 常规开发流程：
 
@@ -152,11 +171,23 @@ D. 选项
 
 优先级高：
 
+- 统一依赖管理：
+  - 如果继续使用 pnpm，移除 Yarn PnP 文件、`yarn.lock` 和 `package-lock.json`，只保留 `pnpm-lock.yaml`。
+  - 如果改用 Yarn PnP，同步更新 README、交接文档和常用命令，并确认 Vite、Rolldown、Oxlint 原生依赖解析正常。
 - 批量补充公共课历年真题：
   - 马原 `15044/03709`
   - 近代史 `15043/03708`
   - 习概 `15040`
+- 校对新生成的 18 套真题扩展包：
+  - 核对题干是否被 PDF 换行/OCR 切断。
+  - 核对选择题选项和答案是否一一对应。
+  - 核对简答/论述题评分要点是否拆分合理。
+  - 对回忆版资料增加“需人工校对”标识或质量标签。
 - 批量补充 `13511` 多媒体技术与应用真题或高质量模拟卷。
+- 继续处理旧年份资料：
+  - 2016-2021 马原/近代史公开页只有预览题，答案入口需要登录权限。
+  - 拿到自考生网 Cookie 后，可用 `ZIKAOSW_COOKIE=... node materials/past-papers/tools/fetch-zikaosw-answers.mjs` 批量拉取答案。
+  - 中国自考资料网 2016-2026 打包页需要登录/购买，已记录在 `source-gaps.json`。
 - 增加“导入质量检查”：
   - 标出疑似答案缺失。
   - 标出解析过短。
@@ -206,7 +237,7 @@ D. 选项
 
 ## 当前注意事项
 
-- 不要把来源不明、版权状态不清的完整第三方真题直接硬编码进仓库。
+- 不要把来源不明、版权状态不清的完整第三方真题直接硬编码进仓库；未确认的资料先放索引和缺口记录。
 - 可以把自己的本地整理题库通过导入 JSON 使用；如果要提交进仓库，最好确认来源和授权。
 - DeepSeek API Key 只保存在浏览器本地。
 - localStorage 数据清空后，答题记录和本地导入卷会消失；重要导入卷要先备份。
@@ -214,6 +245,7 @@ D. 选项
 
 ## 最近提交
 
+- `a187ebf` feat: 修改
 - `1a93bcc` Allow score correction for pasted papers
 - `ab2cc18` Parse subjective answers from pasted papers
 - `0c02cd0` Add course study queue
