@@ -30,8 +30,10 @@
 
 - 已新增 `tools/build-generated-bank.py`，可从本地 PDF/ZIP 生成 `structured/generated-import-bank.json` 和应用内置文件 `src/data/generatedPastPapers.ts`。
 - 已新增 `tools/build-zikaosw-preview-bank.mjs`，可把自考生网 2016-2021 旧年份公开预览题整理成 `structured/zikaosw-preview-bank.json`；拿到答案权限后重新运行会自动合并答案和解析。
+- 已新增 `tools/build-zikaosw-preview-app-bank.mjs`，可把旧年份预览题草稿生成到 `src/data/zikaoswPreviewBank.ts`，供资源页手动导入为练习包。
 - 当前已接入应用：18 套、189 题，正式刷题题库缺答案数为 0。覆盖习概 2025 年 4 月/10 月，马原 2022-2026 多套选择/主观题，近代史 2022-2025 多套主观题与部分选择题。
 - 旧年份预览题草稿当前为 24 套、360 题，其中已通过华夏大地教育网、安徽自考365、江苏自考网、浙江自考网、诚为径教育公开页交叉补齐全部 24 套预览题共 360 道答案；来源记录在 `index/public-answer-overrides.json`。
+- 旧年份预览题已可在应用资源页一键导入；导入后作为本地导入卷使用，可删除或导出，但不作为完整真题自动进入正式扩展包。
 - ZIP 汇总包已解压到 `extracted/` 并纳入生成流程；没有选项或答案不完整的选择题不会强行进入正式刷题入口。
 - 习概 RAR 包已确认可读取，包内主要是已下载过的 2025 年 4 月/10 月资料，暂不重复导入。
 - 马原、近代史 2016-2021 的公开网页每套只展示 15 道预览题，不是完整卷；答案入口已保存。2026-07-06 已用登录态验证，页面显示“查看答案(剩0次)”和“需开通搜题包查看答案”，说明还需要搜题包或可用次数。
@@ -63,8 +65,12 @@
    ```bash
    node tools/build-zikaosw-preview-bank.mjs
    ```
-   当前会生成 24 套、360 道预览题，其中 360 道已有公开交叉答案；这些题只是草稿，不会自动进入正式刷题入口。
-5. 如果已登录并拥有自考生网搜题包或可用查看次数，先小批量验证答案接口：
+   当前会生成 24 套、360 道预览题，其中 360 道已有公开交叉答案；这些题只是预览练习，不会自动进入正式真题扩展包。
+5. 如果要更新应用资源页的一键导入练习包：
+   ```bash
+   pnpm build:preview-bank
+   ```
+6. 如果已登录并拥有自考生网搜题包或可用查看次数，先小批量验证答案接口：
    ```bash
    ZIKAOSW_COOKIE='登录后的 Cookie' ZIKAOSW_LIMIT=5 ZIKAOSW_DELAY_MS=800 node tools/fetch-zikaosw-answers.mjs
    ```
@@ -75,6 +81,6 @@
    ZIKAOSW_COOKIE='登录后的 Cookie' ZIKAOSW_OFFSET=240 ZIKAOSW_LIMIT=120 node tools/fetch-zikaosw-answers.mjs
    ```
    抓到答案后再次运行 `node tools/build-zikaosw-preview-bank.mjs`，会把答案和解析合并进 `structured/zikaosw-preview-bank.json`。
-6. 对 PDF/图片做 OCR，抽出题干、选项、答案、解析。
-7. 用应用资源页的“粘贴文本制卷”导入并校正分值。
-8. 最后再考虑免费数据库，只存结构化 JSON 和来源索引，不把来源不清的整套第三方资料硬编码进题库。
+7. 对 PDF/图片做 OCR，抽出题干、选项、答案、解析。
+8. 用应用资源页的“粘贴文本制卷”导入并校正分值。
+9. 最后再考虑免费数据库，只存结构化 JSON 和来源索引，不把来源不清的整套第三方资料硬编码进题库。

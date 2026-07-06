@@ -6,6 +6,7 @@
   "packageManager": "pnpm@11.7.0",
   "scripts": {
     "dev": "vite",
+    "build:preview-bank": "node materials/past-papers/tools/build-zikaosw-preview-app-bank.mjs",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"

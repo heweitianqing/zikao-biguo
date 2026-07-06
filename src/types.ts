@@ -56,7 +56,7 @@ export type Paper = {
   courseId: string
   title: string
   year: number
-  session: '4月' | '10月' | '样卷' | '专项'
+  session: '4月' | '8月' | '10月' | '样卷' | '专项'
   sourceKind: SourceKind
   status: 'ready' | 'needs-import'
   description: string

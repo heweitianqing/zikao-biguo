@@ -66,7 +66,8 @@
   - 自考生网 2016-2021 马原/近代史公开预览题已整理成结构化草稿。
   - 当前草稿为 24 套、360 题，保存在 `materials/past-papers/structured/zikaosw-preview-bank.json`。
   - 已通过华夏大地教育网、安徽自考365、江苏自考网、浙江自考网、诚为径教育公开页交叉补齐全部 24 套预览题共 360 道答案。
-  - 这些题暂未接入正式刷题入口，等待开通自考生网搜题包、抓取答案或找到完整 PDF 后再升级。
+  - 资源页可一键导入“旧年份预览题练习包”，导入后进入本地导入卷，可开刷、导出、校正或删除。
+  - 这些题仍不自动混入正式真题包；每套只有 15 道公开预览题，等待找到完整 PDF 后再升级。
 - PWA：
   - 有 manifest、图标和 service worker。
   - 可安装到桌面或手机主屏。
@@ -80,6 +81,7 @@
 - 历年真题目前采用“内置已整理包 + 索引 + 本地导入”的方式：
   - 已整理的公共课资料会生成到 `src/data/generatedPastPapers.ts`，打开应用即可刷。
   - 尚未补齐答案、权限或题文的资料只保留来源索引，不强行放进正式刷题入口。
+  - 旧年份 24 套预览题可在资源页手动导入为本地练习包；它们是预览练习，不按完整卷统计。
   - 下载或复制到本地的题文，可以通过资源页的“粘贴文本制卷”转成本地可刷试卷。
   - 本地导入数据保存在浏览器 localStorage，不会自动提交到仓库。
 - 当前生成题库统计：
@@ -94,6 +96,7 @@
 - `src/App.css`：主界面响应式样式。
 - `src/data/questionBank.ts`：课程、资料来源、真题索引、内置题库、导入模板。
 - `src/data/generatedPastPapers.ts`：由本地真题资料生成的内置真题扩展包。
+- `src/data/zikaoswPreviewBank.ts`：由旧年份公开预览题生成的懒加载练习包，资源页手动导入。
 - `src/types.ts`：课程、试卷、题目、答题记录等类型。
 - `src/utils/paperParser.ts`：粘贴文本制卷解析器。
 - `src/utils/scoring.ts`：判题、估分、状态标签。
@@ -105,6 +108,7 @@
 - `materials/past-papers/structured/zikaosw-preview-bank.json`：自考生网旧年份公开预览题草稿，当前 24 套、360 题，其中 360 道已有公开交叉答案。
 - `materials/past-papers/tools/build-generated-bank.py`：从本地 PDF/ZIP 等资料生成应用题库的脚本。
 - `materials/past-papers/tools/build-zikaosw-preview-bank.mjs`：从旧网页题文和答案抓取结果生成预览题草稿的脚本。
+- `materials/past-papers/tools/build-zikaosw-preview-app-bank.mjs`：把预览题草稿转成前端可懒加载的数据包。
 - `materials/past-papers/index/source-gaps.json`：已验证但暂时无法直接入库的来源缺口。
 - `materials/past-papers/index/zikaosw-answer-queue.json`：旧年份答案抓取队列，后续需要自考生网搜题包或可用查看次数。
 - `materials/past-papers/index/zikaosw-access-check.json`：自考生网登录态验证记录，不含 Cookie 和账号信息。
@@ -126,6 +130,12 @@ pnpm dev
 ```bash
 pnpm lint
 pnpm build
+```
+
+更新旧年份预览题练习包：
+
+```bash
+pnpm build:preview-bank
 ```
 
 当前项目已统一使用 pnpm。`package.json` 声明了 `pnpm@11.7.0`，仓库只保留 `pnpm-lock.yaml`，不要提交 `package-lock.json`、`yarn.lock`、`.pnp.*` 或 `.yarn/`。

@@ -2287,6 +2287,7 @@ function ResourcesView({
   const [builderMessage, setBuilderMessage] = useState('支持每题带答案，也支持卷尾统一“参考答案”。')
   const [builderPreview, setBuilderPreview] = useState<BuilderPreview | null>(null)
   const [prefilledPaperId, setPrefilledPaperId] = useState<string | null>(null)
+  const [previewPackLoading, setPreviewPackLoading] = useState(false)
   const importedQuestionCount = (paperId: string) =>
     importedBank.questions.filter((question) => question.paperId === paperId).length
   const importedQuestionsForPaper = (paper: Paper) => {
@@ -2312,6 +2313,10 @@ function ResourcesView({
   })
   const loginGapRecords = sourceGapRecords.filter((record) => record.accessStatus === 'requires-login-or-purchase')
   const previewGapRecords = sourceGapRecords.filter((record) => record.accessStatus !== 'requires-login-or-purchase')
+  const previewPackPapers = importedBank.papers.filter((paper) => paper.id.startsWith('zikaosw-') && paper.id.endsWith('-preview'))
+  const previewPackQuestionTotal = importedBank.questions.filter(
+    (question) => question.paperId.startsWith('zikaosw-') && question.paperId.endsWith('-preview'),
+  ).length
 
   function prefillBuilderFromPaper(paper: Paper) {
     const course = courses.find((item) => item.id === paper.courseId) ?? selectedCourse
@@ -2380,6 +2385,25 @@ function ResourcesView({
     onImportBank(builderPreview.bank, '已从预览确认导入')
     setBuilderMessage(`已导入 ${builderPreview.bank.questions.length} 道题。`)
     setBuilderPreview(null)
+  }
+
+  async function importPreviewPack() {
+    setPreviewPackLoading(true)
+    try {
+      const { zikaoswPreviewPapers, zikaoswPreviewQuestions } = await import('./data/zikaoswPreviewBank')
+      onImportBank(
+        {
+          papers: zikaoswPreviewPapers,
+          questions: zikaoswPreviewQuestions,
+        },
+        '已导入旧年份预览题练习包',
+      )
+      setBuilderMessage(`已导入 ${zikaoswPreviewPapers.length} 套旧年份预览题，共 ${zikaoswPreviewQuestions.length} 道。`)
+    } catch (error) {
+      setBuilderMessage(`预览题练习包加载失败：${error instanceof Error ? error.message : '未知错误'}`)
+    } finally {
+      setPreviewPackLoading(false)
+    }
   }
 
   function loadImportedPaperToPreview(paper: Paper) {
@@ -2544,6 +2568,37 @@ function ResourcesView({
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="resource-box preview-pack-box">
+          <div>
+            <ClipboardCheck size={22} />
+            <strong>旧年份预览题练习包</strong>
+          </div>
+          <p>马原/近代史 2016-2021 年公开预览题，24 套、360 道答案已补齐。每套只有 15 道，不当作完整真题自动加载。</p>
+          <div className="preview-pack-stats">
+            <span>
+              <strong>24</strong>
+              <small>套预览</small>
+            </span>
+            <span>
+              <strong>360</strong>
+              <small>道已补答案</small>
+            </span>
+            <span>
+              <strong>{previewPackPapers.length}</strong>
+              <small>本地已导入</small>
+            </span>
+          </div>
+          <button type="button" className="primary" onClick={importPreviewPack} disabled={previewPackLoading}>
+            <Upload size={18} />
+            {previewPackLoading ? '导入中...' : previewPackPapers.length ? '重新导入练习包' : '导入练习包'}
+          </button>
+          <small>
+            {previewPackPapers.length
+              ? `已在本地导入 ${previewPackPapers.length} 套、${previewPackQuestionTotal} 题，可在下方本地导入卷管理。`
+              : '导入后会出现在本地导入卷，可开刷、导出或删除。'}
+          </small>
         </div>
 
         <div className="resource-box gap-tracker">
@@ -2737,6 +2792,7 @@ function ResourcesView({
                 }}
               >
                 <option value="4月">4月</option>
+                <option value="8月">8月</option>
                 <option value="10月">10月</option>
                 <option value="专项">专项</option>
                 <option value="样卷">样卷</option>
