@@ -1,7 +1,7 @@
 import type { Paper, Question } from '../types'
 
 // 由 materials/past-papers/tools/build-generated-bank.py 生成。
-// 来源是本地已下载 PDF 真题，保留为代码数据是为了让应用打开即可刷题。
+// 来源是本地已下载 PDF/ZIP/网页图片真题，保留为代码数据是为了让应用打开即可刷题。
 export const generatedPastPapers = [
   {
     "id": "generated-xi-2025-10",
@@ -105,6 +105,26 @@ export const generatedPastPapers = [
       "generated-xi-2025-04-subjective-q004",
       "generated-xi-2025-04-subjective-q005",
       "generated-xi-2025-04-subjective-q006"
+    ]
+  },
+  {
+    "id": "generated-xi-2026-04-subjective",
+    "courseId": "xi",
+    "title": "15040 2026 年 4 月简答论述真题",
+    "year": 2026,
+    "session": "4月",
+    "sourceKind": "imported",
+    "status": "ready",
+    "description": "由本地网页图片人工校对整理生成，来源：materials/past-papers/text/manual/generated-xi-2026-04-subjective.txt。部分回忆版题目后续仍需人工校对。",
+    "minutes": 150,
+    "totalScore": 50,
+    "questionIds": [
+      "generated-xi-2026-04-subjective-q001",
+      "generated-xi-2026-04-subjective-q002",
+      "generated-xi-2026-04-subjective-q003",
+      "generated-xi-2026-04-subjective-q004",
+      "generated-xi-2026-04-subjective-q005",
+      "generated-xi-2026-04-subjective-q006"
     ]
   },
   {
@@ -1133,7 +1153,7 @@ export const generatedPastQuestions = [
       "“两个结合”:马克思主义基本原理同中国具体实际相结合(第一个结合)、同中华优秀传统",
       "文化相结合(第二个结合)。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -1221,7 +1241,7 @@ export const generatedPastQuestions = [
       "党在新时代的强军目标是建设一支听党指挥、能打胜仗、作风优良的人民军队，把人民军",
       "队建设成为世界一流军队。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -1253,7 +1273,7 @@ export const generatedPastQuestions = [
       "国际体系和国际秩序深度调整",
       "三、论述题"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -1290,7 +1310,7 @@ export const generatedPastQuestions = [
       "围绕提高科学执政、民主执政、依法执政水平，深化党的建设制度改革。",
       "年10 月自学考试"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -1325,7 +1345,7 @@ export const generatedPastQuestions = [
     "answer": [
       "D"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1352,7 +1372,7 @@ export const generatedPastQuestions = [
     "answer": [
       "B"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1379,7 +1399,7 @@ export const generatedPastQuestions = [
     "answer": [
       "A"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1406,7 +1426,7 @@ export const generatedPastQuestions = [
     "answer": [
       "A"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1433,7 +1453,7 @@ export const generatedPastQuestions = [
     "answer": [
       "D"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1460,7 +1480,7 @@ export const generatedPastQuestions = [
     "answer": [
       "B"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1487,7 +1507,7 @@ export const generatedPastQuestions = [
     "answer": [
       "C"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1514,7 +1534,7 @@ export const generatedPastQuestions = [
     "answer": [
       "D"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1541,7 +1561,7 @@ export const generatedPastQuestions = [
     "answer": [
       "B"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1568,7 +1588,7 @@ export const generatedPastQuestions = [
     "answer": [
       "B"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1595,7 +1615,7 @@ export const generatedPastQuestions = [
     "answer": [
       "B"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1622,7 +1642,7 @@ export const generatedPastQuestions = [
     "answer": [
       "C"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1649,7 +1669,7 @@ export const generatedPastQuestions = [
     "answer": [
       "C"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1676,7 +1696,7 @@ export const generatedPastQuestions = [
     "answer": [
       "A"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1703,7 +1723,7 @@ export const generatedPastQuestions = [
     "answer": [
       "B"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1730,7 +1750,7 @@ export const generatedPastQuestions = [
     "answer": [
       "C"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1757,7 +1777,7 @@ export const generatedPastQuestions = [
     "answer": [
       "A"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1784,7 +1804,7 @@ export const generatedPastQuestions = [
     "answer": [
       "D"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1811,7 +1831,7 @@ export const generatedPastQuestions = [
     "answer": [
       "D"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1838,7 +1858,7 @@ export const generatedPastQuestions = [
     "answer": [
       "C"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1865,7 +1885,7 @@ export const generatedPastQuestions = [
     "answer": [
       "B"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1892,7 +1912,7 @@ export const generatedPastQuestions = [
     "answer": [
       "A"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1919,7 +1939,7 @@ export const generatedPastQuestions = [
     "answer": [
       "C"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1946,7 +1966,7 @@ export const generatedPastQuestions = [
     "answer": [
       "D"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1973,7 +1993,7 @@ export const generatedPastQuestions = [
     "answer": [
       "A"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -1997,7 +2017,7 @@ export const generatedPastQuestions = [
       "个确立”是新时代党和国家事业取得历史性成就、发生历史性变革的决定性因素，是党和人",
       "民应对一切不确定性的最大确定性、最大底气、最大保证。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -2032,7 +2052,7 @@ export const generatedPastQuestions = [
       "是全党全国各族人民为实现中华民族伟大复兴而奋斗的行动指南，是新时代党和国家",
       "事业发展的根本遵循。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -2063,7 +2083,7 @@ export const generatedPastQuestions = [
       "始终保持党同人民群众的血肉联系",
       "热爱人民、尊重人民、敬畏人民。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -2092,7 +2112,7 @@ export const generatedPastQuestions = [
       "需要的重要保证",
       "是维护国家长治久安的必然要求。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -2119,7 +2139,7 @@ export const generatedPastQuestions = [
     "answer": [
       "连续性、创新性、统一性、包容性、和平性。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -2169,6 +2189,168 @@ export const generatedPastQuestions = [
       "构建人类命运共同体理念顺应了历史潮流，回应了时代要求，凝聚了各国共识，为人",
       "类社会实现共同发展、持续繁荣、长治久安绘制了蓝图，对中国的和平发展、世界的繁荣进",
       "步都具有重大而深远的意义。"
+    ]
+  },
+  {
+    "id": "generated-xi-2026-04-subjective-q001",
+    "courseId": "xi",
+    "paperId": "generated-xi-2026-04-subjective",
+    "type": "short",
+    "chapterId": "xi-2",
+    "stem": "实现高水平科技自立自强的重大意义",
+    "answer": [
+      "实现高水平科技自立自强是国家强盛和民族复兴的战略基石。",
+      "实现高水平科技自立自强是应对风险挑战和维护国家利益的必然选择。",
+      "实现高水平科技自立自强是构建新发展格局、推动高质量发展、满足人民美好生活需要的内在要求。"
+    ],
+    "analysis": "题文和答案来自自考生网 2026 年 4 月 15040 习概考生回忆版答案图片，已按图片人工录入。",
+    "points": 6,
+    "difficulty": "较易",
+    "sourceKind": "imported",
+    "tags": [
+      "真题",
+      "图片整理",
+      "20264月",
+      "15040"
+    ],
+    "rubric": [
+      "实现高水平科技自立自强是国家强盛和民族复兴的战略基石。",
+      "实现高水平科技自立自强是应对风险挑战和维护国家利益的必然选择。",
+      "实现高水平科技自立自强是构建新发展格局、推动高质量发展、满足人民美好生活需要的内在要求。"
+    ]
+  },
+  {
+    "id": "generated-xi-2026-04-subjective-q002",
+    "courseId": "xi",
+    "paperId": "generated-xi-2026-04-subjective",
+    "type": "short",
+    "chapterId": "xi-1",
+    "stem": "社会主义核心价值观的基本内容",
+    "answer": [
+      "社会主义核心价值观的基本内容是富强、民主、文明、和谐，自由、平等、公正、法治，爱国、敬业、诚信、友善。"
+    ],
+    "analysis": "题文和答案来自自考生网 2026 年 4 月 15040 习概考生回忆版答案图片，已按图片人工录入。",
+    "points": 6,
+    "difficulty": "较易",
+    "sourceKind": "imported",
+    "tags": [
+      "真题",
+      "图片整理",
+      "20264月",
+      "15040"
+    ],
+    "rubric": [
+      "社会主义核心价值观的基本内容是富强、民主、文明、和谐，自由、平等、公正、法治，爱国、敬业、诚信、友善。"
+    ]
+  },
+  {
+    "id": "generated-xi-2026-04-subjective-q003",
+    "courseId": "xi",
+    "paperId": "generated-xi-2026-04-subjective",
+    "type": "short",
+    "chapterId": "xi-1",
+    "stem": "如何坚持和完善“一国两制”制度体系",
+    "answer": [
+      "加强依法治理相关制度和机制建设。",
+      "健全中央行使全面管治权的制度。",
+      "为落实爱国者治理提供制度保障。"
+    ],
+    "analysis": "题文和答案来自自考生网 2026 年 4 月 15040 习概考生回忆版答案图片，已按图片人工录入。",
+    "points": 6,
+    "difficulty": "较易",
+    "sourceKind": "imported",
+    "tags": [
+      "真题",
+      "图片整理",
+      "20264月",
+      "15040"
+    ],
+    "rubric": [
+      "加强依法治理相关制度和机制建设。",
+      "健全中央行使全面管治权的制度。",
+      "为落实爱国者治理提供制度保障。"
+    ]
+  },
+  {
+    "id": "generated-xi-2026-04-subjective-q004",
+    "courseId": "xi",
+    "paperId": "generated-xi-2026-04-subjective",
+    "type": "short",
+    "chapterId": "xi-1",
+    "stem": "如何坚持标本兼治开展反腐败斗争",
+    "answer": [
+      "构建起党全面领导的反腐败工作格局。",
+      "“打虎”“拍蝇”“猎狐”多管齐下。",
+      "把权力关进制度的笼子里。反腐倡廉的核心是制度制约和监督权力。"
+    ],
+    "analysis": "题文和答案来自自考生网 2026 年 4 月 15040 习概考生回忆版答案图片，已按图片人工录入。",
+    "points": 6,
+    "difficulty": "较易",
+    "sourceKind": "imported",
+    "tags": [
+      "真题",
+      "图片整理",
+      "20264月",
+      "15040"
+    ],
+    "rubric": [
+      "构建起党全面领导的反腐败工作格局。",
+      "“打虎”“拍蝇”“猎狐”多管齐下。",
+      "把权力关进制度的笼子里。反腐倡廉的核心是制度制约和监督权力。"
+    ]
+  },
+  {
+    "id": "generated-xi-2026-04-subjective-q005",
+    "courseId": "xi",
+    "paperId": "generated-xi-2026-04-subjective",
+    "type": "short",
+    "chapterId": "xi-1",
+    "stem": "习近平“四大全球倡议”的内容",
+    "answer": [
+      "习近平“四大全球倡议”是指全球发展倡议、全球安全倡议、全球文明倡议、全球治理倡议。"
+    ],
+    "analysis": "题文和答案来自自考生网 2026 年 4 月 15040 习概考生回忆版答案图片，已按图片人工录入。",
+    "points": 6,
+    "difficulty": "较易",
+    "sourceKind": "imported",
+    "tags": [
+      "真题",
+      "图片整理",
+      "20264月",
+      "15040"
+    ],
+    "rubric": [
+      "习近平“四大全球倡议”是指全球发展倡议、全球安全倡议、全球文明倡议、全球治理倡议。"
+    ]
+  },
+  {
+    "id": "generated-xi-2026-04-subjective-q006",
+    "courseId": "xi",
+    "paperId": "generated-xi-2026-04-subjective",
+    "type": "essay",
+    "chapterId": "xi-1",
+    "stem": "如何理解党中央集中统一领导是党的领导最高原则",
+    "answer": [
+      "党中央集中统一领导是一个成熟的马克思主义执政党的重大建党原则。",
+      "必须坚决贯彻党的理论、路线方针政策和党中央决策部署。",
+      "最关键的是坚决维护习近平同志党中央的核心、全党的核心地位。",
+      "同坚持党的民主集中制是完全一致的。"
+    ],
+    "analysis": "题文和答案来自自考生网 2026 年 4 月 15040 习概考生回忆版答案图片，已按图片人工录入。",
+    "points": 10,
+    "difficulty": "较难",
+    "sourceKind": "imported",
+    "tags": [
+      "真题",
+      "图片整理",
+      "20264月",
+      "15040"
+    ],
+    "rubric": [
+      "党中央集中统一领导是一个成熟的马克思主义执政党的重大建党原则。",
+      "必须坚决贯彻党的理论、路线方针政策和党中央决策部署。",
+      "最关键的是坚决维护习近平同志党中央的核心、全党的核心地位。",
+      "同坚持党的民主集中制是完全一致的。"
     ]
   },
   {
@@ -2457,7 +2639,7 @@ export const generatedPastQuestions = [
     "answer": [
       "C"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -2481,7 +2663,7 @@ export const generatedPastQuestions = [
       "解放、全人类解放和每个人自由而全面发展的学说，是无产阶级政党和社会主义国家的指导思想，是指引",
       "人民创造美好生活的行动指南。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -2511,7 +2693,7 @@ export const generatedPastQuestions = [
       "已被逻辑证明了的东西，还必须经过实践的检验，并最终服从实践检验的结果。逻辑证明不能取",
       "代实践作为检验真理的标准，实践才是检验真理的唯一标准。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -2544,7 +2726,7 @@ export const generatedPastQuestions = [
       "④ 支付手段职能。",
       "⑤ 世界货币职能。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -2578,7 +2760,7 @@ export const generatedPastQuestions = [
       "相反，在需要刺激经济发展、走出萧条与不景气阴影的时候，则",
       "适当降低利率来刺激投资与消费。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -2612,7 +2794,7 @@ export const generatedPastQuestions = [
       "在组织方面，马克思主义政党要领导全体人民有组织、有系统、有管理、有序地进行社会主义的",
       "各项建设事业。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -2650,7 +2832,7 @@ export const generatedPastQuestions = [
       "- 正确发挥人的主观能动性的根本途径是实践",
       "- 正确发挥人的主观能动性，还依赖于一定的物质条件和物质手段"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -2682,7 +2864,7 @@ export const generatedPastQuestions = [
       "解决社会基本矛盾、促进生产力发展、推动社会进步的有效途径和手段。③中国的社会主义",
       "改革是社会主义制度的自我完善和自我发展，改革是社会主义社会发展的强大动力。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -2718,7 +2900,7 @@ export const generatedPastQuestions = [
       "值降低到这个界限以下，劳动力就只能在萎缩的状态下维持。",
       "劳动力商品在使用价值上有一个很突出的特点，就是它的使用价值是价值的源泉，在"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -2756,7 +2938,7 @@ export const generatedPastQuestions = [
       "的出发点和归宿。",
       "【考点】绪论——马克思主义科学性与革命性的统一"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -2788,7 +2970,7 @@ export const generatedPastQuestions = [
       "性质：认识客体具有客观性和对象性。",
       "【考点】认识的本质及其规律——认识的本质"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -2819,7 +3001,7 @@ export const generatedPastQuestions = [
       "护资本主义剥削制度的思想体系。",
       "【考点】资本主义制度的形成及其本质——资本主义的政治制度和意识形态"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -2856,7 +3038,7 @@ export const generatedPastQuestions = [
       "国家直接掌握的垄断资本，即国有经济、国有企业",
       "国家和私人资本在企业内部结合，即国有资本与私人资本结合在一个企业中的形式"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -2892,7 +3074,7 @@ export const generatedPastQuestions = [
       "每小题10分，共20分)",
       "咨询热线：400-678-3456 微信扫码刷题 免费约直播领资料"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -2928,7 +3110,7 @@ export const generatedPastQuestions = [
       "理论基础。",
       "【考点】物质世界及其发展规律——物质世界的普遍联系和永恒发展"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -2961,7 +3143,7 @@ export const generatedPastQuestions = [
       "了人类社会历史的发展规律。社会历史规律不是别的，就是人的活动的规律。",
       "【考点】人类社会及其发展规律——社会基本矛盾及其运动规律"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -2993,7 +3175,7 @@ export const generatedPastQuestions = [
       "贷资本家的一部分剩余价值，其本质是剩余价值的特殊转化形式。",
       "【考点】资本主义制度的形成及其本质——资本的流通过程和剩余价值的分配"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -3024,7 +3206,7 @@ export const generatedPastQuestions = [
       "德国古典哲学,英国古典政治经济学和英法两国的空想社会主义学说分别是",
       "马克思主义哲学、马克思主义政治经济学和科学社会=义的百接理论来源。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3057,7 +3239,7 @@ export const generatedPastQuestions = [
       "核心是:实事求是。党的思想路线经历了一个形成、发展和完善的过程。我党历",
       "史上自觉地提出并第一次使用“思想路线”这一概念的是毛泽东。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3088,7 +3270,7 @@ export const generatedPastQuestions = [
       "认为历史是由英雄人物特别是他们的总志创造的。否定人民群众是历史的创造者.",
       "这是历史唯心主义的两个根本的缺陷。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3115,7 +3297,7 @@ export const generatedPastQuestions = [
       "社会总产品的实现也即社会总产品的补偿。它包括社会总产品的价值补偿和社会",
       "总产品的物质补偿两个方面。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3149,7 +3331,7 @@ export const generatedPastQuestions = [
       "第四，社会主义国家的存在与发展，社会t义运动的影响与斗争是当代资本主义",
       "变化发展的国际"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -3187,7 +3369,7 @@ export const generatedPastQuestions = [
       "的态度。",
       "一方面要取其精华，吸收其中的合理成分，为我所用:另一方面，要弃其情怕，"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -3225,7 +3407,7 @@ export const generatedPastQuestions = [
       "遇，积极参与全球化进程.发展中国家对全球化带来的风险和安全问题要有充分",
       "的认识.要积极采取各种措施趋利通害。费努力争取建立公正合理的国际经济政"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -3263,7 +3445,7 @@ export const generatedPastQuestions = [
       "共产主义既是-种理想的社会制度，又是一种社会运动。共产主义作为-种社",
       "会运动，自从马克思和恩格斯在一百多年前创立了科学共产主义学说以来，就已"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -3301,7 +3483,7 @@ export const generatedPastQuestions = [
       "C. 任何事物都处于特定的历史环境中，受到限制。",
       "②从认识主体方面:人的认识受到主体的知识水平、认识能力等方面的限制"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3338,7 +3520,7 @@ export const generatedPastQuestions = [
       "是形成社会关系的基础",
       "决定社会制度的性质和更替。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3376,7 +3558,7 @@ export const generatedPastQuestions = [
       "创造商品的价值，是价值的唯一源泉",
       "是生产商品劳动的社会属性，反映商品生产者的社会关系。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -3411,7 +3593,7 @@ export const generatedPastQuestions = [
       "主要手段:经济手段。",
       "主要政策:财政政策货币政策以及一定程度上的经济计划。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3444,7 +3626,7 @@ export const generatedPastQuestions = [
       "意识，树立了集体主义为核心的共产主义人生观、价值观和道德观。",
       "三、论述题"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3479,7 +3661,7 @@ export const generatedPastQuestions = [
       "要求我们在社会主义建设和改革过程中，把远大的理想和目标同有步骤、分阶段的踏实肯",
       "干、稳步前进的精神结合起来，反对急于求成。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -3516,7 +3698,7 @@ export const generatedPastQuestions = [
       "④最后，整个社会劳动生产率都提高了，所以，相对剩余价值生产是以社会劳动生产率提",
       "高为条件的。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -3552,7 +3734,7 @@ export const generatedPastQuestions = [
       "⑤社会化大生产的发展要求国家出面进行某些宏观经济调控。⑥经济利益关系的调整方面，",
       "国家的再分配功能越来越重要。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -3587,7 +3769,7 @@ export const generatedPastQuestions = [
       "发展的理论(发展性)。马克思主义具有与时俱进的理论品质。",
       "马克思主义的基本特征，如果用一句话来概括就是科学性与革命性的统一。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3624,7 +3806,7 @@ export const generatedPastQuestions = [
       "为正确，谬误转化为真理。③在批判谬误中发展真理，是谬误向真理转化的另一",
       "种形式。谬误可以起到反面教员的作用，警示人们要更加正确地认识世界。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -3657,7 +3839,7 @@ export const generatedPastQuestions = [
       "在时间上继起，也就是说，产业资本循环中三种职能形式的转化必须保持时间上",
       "的依次连续性。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3688,7 +3870,7 @@ export const generatedPastQuestions = [
       "活动越来越超出某一国家和地区的范围而相互联系、相互依存的过程。",
       "表现:生产全球化、贸易全球化、金融全球化。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3718,7 +3900,7 @@ export const generatedPastQuestions = [
       "在社会主义社会发展中不断深化对未来共产主义社会的认识。",
       "立足于揭示未来社会的一般特征，而不对各种细节作具体描绘。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3754,7 +3936,7 @@ export const generatedPastQuestions = [
       "大理论成果，指引中国革命、建设、改革取得伟大胜利，同时又用中国经验和理",
       "论创新丰富发展了马克思主义。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -3789,7 +3971,7 @@ export const generatedPastQuestions = [
       "内部各种形式之间存在相互影响且各自具有历史继承性③社会意识对社会存在",
       "具有能动的反作用。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -3825,7 +4007,7 @@ export const generatedPastQuestions = [
       "和无产阶级两大阶级之间的矛盾和斗争。",
       "年10 月自学考试"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -3861,7 +4043,7 @@ export const generatedPastQuestions = [
       "公民层面:爱国、",
       "敬业、诚信、友善。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3893,7 +4075,7 @@ export const generatedPastQuestions = [
       "关系:二者是辩证统一的。社会存在决定社会意识，社会意识是",
       "社会存在的反映，并反作用于社会存在。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3926,7 +4108,7 @@ export const generatedPastQuestions = [
       "转化，是随着资本主义大工业的出现和发展而完成的，反映了从小",
       "商品生产到资本主义商品生产的历史发展过程。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -3964,7 +4146,7 @@ export const generatedPastQuestions = [
       "知识型和服务型劳动者的数量不断增加，劳动方式发生新变化。4",
       "经济调节机制和经济危机形态的变化。资本主义国家为尽快恢复国"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -3999,7 +4181,7 @@ export const generatedPastQuestions = [
       "原因",
       "论述题:"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -4037,7 +4219,7 @@ export const generatedPastQuestions = [
       "要抓住重点。我国坚持以经济建设为中心和一系列“两手抓”的方",
       "针，就是坚持两点论和重点论统一的具体表现。认识我国改革开放"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -4070,7 +4252,7 @@ export const generatedPastQuestions = [
       "小，反之就越大。商品的价值量与生产商品所耗费的社会必要劳动",
       "时间成正比，与劳动生产率成反比"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -4107,7 +4289,7 @@ export const generatedPastQuestions = [
       "年 4 月全专业考试科目真题，已更新至：",
       "也可复制链接进入："
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -4215,7 +4397,7 @@ export const generatedPastQuestions = [
       "有使用价",
       "值但没有价值的物品，也不是商品，价值是商品的最本质因素。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -4247,7 +4429,7 @@ export const generatedPastQuestions = [
       "仅仅是谋生手段，个人消费品的分配应当实行技劳分配原则，这种分配方式尽",
       "管存在历史局限性，但在社会主义阶段是无法避免的。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -4283,7 +4465,7 @@ export const generatedPastQuestions = [
       "能有价值，使用价值是价值的物质承担者，面价值则寓于使用价值之中",
       "有使用"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -4315,7 +4497,7 @@ export const generatedPastQuestions = [
       "在私人资本输出增长的问时，国家资本的输出也",
       "在增长，并日益成为占重要地位的资本输出形式。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -4348,7 +4530,7 @@ export const generatedPastQuestions = [
       "认识主体具有能动性，这是认识主体的突出特点。",
       "论述题"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -4386,7 +4568,7 @@ export const generatedPastQuestions = [
       "必胜的信心，高举中国特色社会主义的伟大旗帆，坚定不移地建建设中国特色",
       "社会主义道路，不要被一时的表面现象所迷惑，不要因暂时的挫折而动摇。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -4424,7 +4606,7 @@ export const generatedPastQuestions = [
       "第二，各国在不同的社会形态中所具有的典型意义不同",
       "第三,人类社会"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -4460,7 +4642,7 @@ export const generatedPastQuestions = [
       "越低，年剩余价值率为一年内生产的剩余价值总量与一年内预付的可变资本总",
       "量的比率。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -4495,7 +4677,7 @@ export const generatedPastQuestions = [
     "answer": [
       "A"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -4522,7 +4704,7 @@ export const generatedPastQuestions = [
     "answer": [
       "C"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -4549,7 +4731,7 @@ export const generatedPastQuestions = [
     "answer": [
       "B"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -4575,7 +4757,7 @@ export const generatedPastQuestions = [
     "answer": [
       "B"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -4602,7 +4784,7 @@ export const generatedPastQuestions = [
     "answer": [
       "C"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -4623,7 +4805,7 @@ export const generatedPastQuestions = [
     "answer": [
       "A"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -4653,7 +4835,7 @@ export const generatedPastQuestions = [
     "answer": [
       "A"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 2,
     "difficulty": "易",
     "sourceKind": "imported",
@@ -4675,7 +4857,7 @@ export const generatedPastQuestions = [
       "国民党一大确立联俄、联共、扶助农工政策，大会的成功召开，标志着第一次国共",
       "合作的革命统一战线正式形成。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -4708,7 +4890,7 @@ export const generatedPastQuestions = [
       "科学概括，它是在以毛泽东为主要代表的中国共产党人同当 时党内盛行的把马克思主义",
       "教条化、把共产国际决议和劳联经验神圣化的错误倾向作坚决斗争的基础上逐步形成的。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -4746,7 +4928,7 @@ export const generatedPastQuestions = [
       "党黑暗统治的正确政策和策略，不仅成功地领导了解放区军民在第1条战线的革命斗争，",
       "而且成功地领导了国统区人民在第二条战线的命斗争。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -4779,7 +4961,7 @@ export const generatedPastQuestions = [
       "坚持马克思主义的指导地位，实行“百花齐放、百家争鸣”的方针，对古今中外的优秀文",
       "化实行“古为今用、洋为中用、百花齐放推陈出新”的方针。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -4812,7 +4994,7 @@ export const generatedPastQuestions = [
       "富裕，基本实现现代化。“三步走”发展战略及相关政策的制定，进步解决了中国现代化",
       "建设的目标、步骤等关系全局的重大问题，对中国未来几十年的发展具有深远的影响。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -4850,7 +5032,7 @@ export const generatedPastQuestions = [
       "个具有资本主义色彩的方案，缺点是没有提出涉及农民土地问题的具体方案。它的主要内",
       "容有:在政治方面，主张“禁朋党之弊”，加强中央集权，制定法律、制度。在经济方面，"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -4886,7 +5068,7 @@ export const generatedPastQuestions = [
       "中国人民抗日战争的胜利，促进了中华民",
       "族的觉醒，开辟了中华民族伟大复兴的光明前景。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -4921,7 +5103,7 @@ export const generatedPastQuestions = [
       "本国情，牢牢立足社会主义初级阶段这个最大实际，牢牢坚持党的基本路线这个党和国家",
       "的生命线、人民的幸福线。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -4955,7 +5137,7 @@ export const generatedPastQuestions = [
       "水师、武备学堂，属于专门培养军事指挥人才和训练作战技术的近代军事学校，如李鸿章创办的天津水师学堂、天津武备",
       "学堂，张之洞创办的广东水陆师学堂、湖北武备学堂及江南陆师学堂，曾国荃创办的江南水师学堂等。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -4987,7 +5169,7 @@ export const generatedPastQuestions = [
       "发动第一次护法运动",
       "第二次护法运动。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -5018,7 +5200,7 @@ export const generatedPastQuestions = [
       "立各级士兵委员会，在部队中实行民主管理。",
       "意义：三湾改编是建设共产党领导的新型人民军队的重要开端。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5051,7 +5233,7 @@ export const generatedPastQuestions = [
       "在战略相持阶段，敌后游击战争成为主要的抗日作战方式。日军逐步将主要兵力用于敌后战场，以保持和巩固其占领地。",
       "敌后根据地的建立和武装力量的壮大还使得游击战为人民军队进行战略反攻准备了条件。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5084,7 +5266,7 @@ export const generatedPastQuestions = [
       "三、论述题：本大题共3小题，考生任选其中2题作答，每小题10分，共20分。如果考生回答的题目超过2题，只按考生",
       "回答题目的前2题计分。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5117,7 +5299,7 @@ export const generatedPastQuestions = [
       "中国各地区经济、政治和文化发展极不平衡，长期处于不统一状态。",
       "人民毫无政治权利，生活极端贫困化。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5154,7 +5336,7 @@ export const generatedPastQuestions = [
       "共产党)领导的以工农联盟为基础的人民民主专政。这个专政必须和国际革命力量团结一致。",
       "咨询热线：400-678-3456 微信扫码刷题 免费约直播领资料"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5189,7 +5371,7 @@ export const generatedPastQuestions = [
       "等“十四个坚持”，这是实现总任务的“路线图”和“方法论”，“八个明确”和“十四个坚持”有机融合、有机统一，是习近平新时代中",
       "国特色社会主义思想的核心内容。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5223,7 +5405,7 @@ export const generatedPastQuestions = [
       "没有反帝国主义，没有完成反帝反封建的任务。",
       "没有改变中国社会的性质"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -5257,7 +5439,7 @@ export const generatedPastQuestions = [
       "维护清朝统治:洋务运动的发起者是地主阶级洋务派，他们和顽固派的区别就是在于是否向西方学习，",
       "但根本目的是相同的，都是为了维护清朝统治。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -5289,7 +5471,7 @@ export const generatedPastQuestions = [
       "意义：意义是整风运动是一场伟大的思想解放运动,在全党范围确立起一切从实际出发、理论联系实际、实",
       "事求是马克思主义思想路线。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5323,7 +5505,7 @@ export const generatedPastQuestions = [
       "第三、由于从破产农民出身的成分占多数，中国无产阶级和广大的农民有一种天然的联系，便利于他们和",
       "农民结成亲密的联盟。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -5357,7 +5539,7 @@ export const generatedPastQuestions = [
       "太平天国农民起义发生前十年，包括广西在内全国自然灾害频发，大量灾民",
       "流离失所。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -5393,7 +5575,7 @@ export const generatedPastQuestions = [
       "又抽出相当多的兵力用来限制、打击共产党及其领导的八路军、新四军，制造了",
       "多次的反共'摩擦\"事件。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -5429,7 +5611,7 @@ export const generatedPastQuestions = [
       "毛泽东为政协第一届全国委员会主席。人民政协的召开，标志着中国的新型政党",
       "制度一中国共产党领导的多党合作和政治协商制度的确立。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5465,7 +5647,7 @@ export const generatedPastQuestions = [
       "意义:是对国家重大建设项目、生产力分布和国民经济重要比例关系等作出规划，",
       "为国民经济发展远景规定目标和方向。为社会主义现代化建设进行良好的探索。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5503,7 +5685,7 @@ export const generatedPastQuestions = [
       "人民民主不断扩大，文化软实力显著增强,人民生活水平全面提高资源节约型、",
       "环境友好型社会建设取得重大进展。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5540,7 +5722,7 @@ export const generatedPastQuestions = [
       "年，英国政府代表、驻华商务监督义律扬言要用武力打开中国国门。与此",
       "同时，法、美、俄等国也有侵略中国的欲望。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5574,7 +5756,7 @@ export const generatedPastQuestions = [
       "正式宣告了中国共",
       "产党的成立。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5612,7 +5794,7 @@ export const generatedPastQuestions = [
       "解放区出现了新面貌:广大农民对中国共产党更加信任和拥护，工农联盟以及解",
       "放区的人民民主政权得到进一步巩固和加强"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5642,7 +5824,7 @@ export const generatedPastQuestions = [
       "中国资产阶级民主革命是由以孙中山为首的资产阶级革命派首先发动的，其阶级基础是中国民族",
       "资产阶级。资产阶级革命派的骨于是一批资产阶级、小资产阶级知识分子。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -5669,7 +5851,7 @@ export const generatedPastQuestions = [
       "其代表是李大钊、陈独秀。二是五四运动中的左翼骨干，其代表是毛泽东、杨匏安蔡和森、周恩来等。三",
       "是一部分原中国同盟会会员、辛亥革命时期的活动家，以董必武、吴玉章、林伯渠等为代表。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -5700,7 +5882,7 @@ export const generatedPastQuestions = [
       "泛吸收工农群众代表参加政权管理行使当家作主的权利。中华苏维埃共和国是中国历史上第一个全国性的",
       "工农民主政权，是中国共产党在局部地区执政的重要尝试。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -5735,7 +5917,7 @@ export const generatedPastQuestions = [
       "三、论述题:本大题共3小题，考生任选其中2题作答，每小题 10 分，共20 分。如果考生回答的题目超",
       "过 2题，只按考生回答题目的前2题计分。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5773,7 +5955,7 @@ export const generatedPastQuestions = [
       "义还有力地打击了外国侵略势力。太平天国将领们拒绝不平等条约严禁鸦片贸易，与外国军队进行了英勇",
       "斗争。第五，太平天国起义鼓舞和推动了当时的亚洲民族解放运动,冲击了西方殖民主义在亚洲的统治。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5809,7 +5991,7 @@ export const generatedPastQuestions = [
       "行的是进步的、正义的反侵略战争，在国际上得道多助。中国已经有了代表中华民族和中国人民根本利益",
       "的、政治上成熟的共产党及其领导的人民军队和抗日根据地。因此，最后胜利又将是属于中国的。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5840,7 +6022,7 @@ export const generatedPastQuestions = [
       "人民生活水平的提高与文化、医疗、科技事业的发展",
       "国际地位的提高与国际环境的改善。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5867,7 +6049,7 @@ export const generatedPastQuestions = [
       "社会制度的腐败(更根本的原因)",
       "经济技术的落后。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -5896,7 +6078,7 @@ export const generatedPastQuestions = [
       "推翻国际帝国主义的压迫",
       "统一中国为真正民主共和国。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -5925,7 +6107,7 @@ export const generatedPastQuestions = [
       "点燃了“工农武装割据”的星星之火，为中国革命开辟出了农村包围城市、武装夺",
       "取政权这样一条前人没有走过的正确道路。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -5954,7 +6136,7 @@ export const generatedPastQuestions = [
       "年9 月，成立护法军政府，并出师北伐(护法运动)。",
       "年10月，孙中山将中华革命党改组为中国国民党。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -5985,7 +6167,7 @@ export const generatedPastQuestions = [
       "性质：阶级联盟性质得政党。",
       "论述题:"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -6016,7 +6198,7 @@ export const generatedPastQuestions = [
       "是对以往农民战争中“均贫富”“等贵贱”和“均平”“均田”思想的发展和超越，具有进步",
       "意义。但并没超出农民小生产者的狭隘眼界，在很大程度上具有不切实际的空想性质。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -6052,7 +6234,7 @@ export const generatedPastQuestions = [
       "同世界所有爱好和平和正义的国家和人民、国际组织以及各种反法西斯力量的同情和",
       "支持分不开"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -6088,7 +6270,7 @@ export const generatedPastQuestions = [
       "当时的国际环境也促使中国选择社会主义。",
       "年10 月自学考试"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -6121,7 +6303,7 @@ export const generatedPastQuestions = [
       "到的有力支持者甚少，只有不掌握实权的皇帝和少数帝党官僚。维新派既无严密的组织，又不掌握军",
       "队，也没有发动群众的支持，把希望完全寄托在一个没有实权的皇帝身上，其结果只能是失败。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -6151,7 +6333,7 @@ export const generatedPastQuestions = [
       "念头，甘为“洋人的朝廷”。清王朝为取得外国列强的信任，平息国内日益高涨的民怨，安抚统治阶",
       "级内部各派，拉拢民族资产阶级改良派，于1901年4月设立督办政务处，宣布实行“新政”。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -6181,7 +6363,7 @@ export const generatedPastQuestions = [
       "当时还没有明确提出这个命题)。",
       "第三，开始提出知识分子应当忠于民众，到民间去，同劳动群众相结合的思想。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -6213,7 +6395,7 @@ export const generatedPastQuestions = [
       "央执行委员会",
       "宣告了中华苏维埃共和国临时中央政府成立。毛泽东当选为中央执行委员会主席。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 6,
     "difficulty": "较易",
     "sourceKind": "imported",
@@ -6249,7 +6431,7 @@ export const generatedPastQuestions = [
       "三、论述题：本大题共3小题，考生任选其中2题作答，每小题10分，共20分。",
       "如果考生回答的题目超过2题，只按考生回答题目的前2题计分。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -6284,7 +6466,7 @@ export const generatedPastQuestions = [
       "率领同盟者向共同的敌人作坚决的斗争并取得胜利，对被领导者给以物质福利和政治教育。对资产阶",
       "级采取又联合、又斗争的政策。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -6318,7 +6500,7 @@ export const generatedPastQuestions = [
       "时并举的总路线，一化反映了生产力方面的要求，三改则反映出对生产关系的改造，体现了发展生产",
       "力和变革生产关系的有机统一。"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",
@@ -6356,7 +6538,7 @@ export const generatedPastQuestions = [
       "党思想路线，加强党的领导机构和成立中央纪律检查委员会。",
       "中共十一届三中全会是新中国成立以来党的历史上具有深远意义的伟大转折。全会结束了粉碎"
     ],
-    "analysis": "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+    "analysis": "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
     "points": 10,
     "difficulty": "较难",
     "sourceKind": "imported",

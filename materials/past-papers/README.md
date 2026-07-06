@@ -28,10 +28,10 @@
 
 ## 当前缺口
 
-- 已新增 `tools/build-generated-bank.py`，可从本地 PDF/ZIP 生成 `structured/generated-import-bank.json` 和应用内置文件 `src/data/generatedPastPapers.ts`。
+- 已新增 `tools/build-generated-bank.py`，可从本地 PDF/ZIP/网页图片整理文本生成 `structured/generated-import-bank.json` 和应用内置文件 `src/data/generatedPastPapers.ts`。
 - 已新增 `tools/build-zikaosw-preview-bank.mjs`，可把自考生网 2016-2021 旧年份公开预览题整理成 `structured/zikaosw-preview-bank.json`；拿到答案权限后重新运行会自动合并答案和解析。
 - 已新增 `tools/build-zikaosw-preview-app-bank.mjs`，可把旧年份预览题草稿生成到 `src/data/zikaoswPreviewBank.ts`，供资源页手动导入为练习包。
-- 当前已接入应用：18 套、189 题，正式刷题题库缺答案数为 0。覆盖习概 2025 年 4 月/10 月，马原 2022-2026 多套选择/主观题，近代史 2022-2025 多套主观题与部分选择题。
+- 当前已接入应用：19 套、195 题，正式刷题题库缺答案数为 0。覆盖习概 2025 年 4 月/10 月与 2026 年 4 月主观题，马原 2022-2026 多套选择/主观题，近代史 2022-2025 多套主观题与部分选择题。
 - 旧年份预览题草稿当前为 24 套、360 题，其中已通过华夏大地教育网、安徽自考365、江苏自考网、浙江自考网、诚为径教育公开页交叉补齐全部 24 套预览题共 360 道答案；来源记录在 `index/public-answer-overrides.json`。
 - 旧年份预览题已可在应用资源页一键导入；导入后作为本地导入卷使用，可删除或导出，但不作为完整真题自动进入正式扩展包。
 - ZIP 汇总包已解压到 `extracted/` 并纳入生成流程；没有选项或答案不完整的选择题不会强行进入正式刷题入口。

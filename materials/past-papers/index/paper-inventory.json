@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-05",
+  "updatedAt": "2026-07-06",
   "purpose": "自考必过舱真题整理输入清单。raw 保存原始资料，后续从这里 OCR、清洗、转成应用可导入 JSON。",
   "structuredGenerated": {
     "json": "structured/generated-import-bank.json",
     "appModule": "src/data/generatedPastPapers.ts",
     "tool": "tools/build-generated-bank.py",
-    "papers": 18,
-    "questions": 189,
-    "status": "已从本地 PDF/ZIP 生成可刷真题并接入应用内置题库；正式题库缺答案数为 0。"
+    "papers": 19,
+    "questions": 195,
+    "status": "已从本地 PDF/ZIP/网页图片整理文本生成可刷真题并接入应用内置题库；正式题库缺答案数为 0。"
   },
   "courses": [
     {
@@ -59,9 +59,16 @@
           "text/xi-2025-04.txt",
           "text/xi-2025-10.txt",
           "text/xi-2026-04.txt",
-          "text/xi-2026-04-memory.txt"
+          "text/xi-2026-04-memory.txt",
+          "text/manual/generated-xi-2026-04-subjective.txt"
         ]
-      }
+      },
+      "appReady": [
+        "2025年4月选择题",
+        "2025年4月简答论述题",
+        "2025年10月真题答案解析",
+        "2026年4月简答论述题"
+      ]
     },
     {
       "courseId": "marx",

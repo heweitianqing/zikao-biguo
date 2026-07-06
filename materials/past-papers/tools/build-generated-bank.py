@@ -49,6 +49,8 @@ class SourceMeta:
         path = Path(self.filename)
         if path.parts and path.parts[0] in {"raw", "extracted"}:
             return ROOT / path
+        if path.parts and path.parts[0] == "text":
+            return ROOT / path
         return RAW_DIR / self.filename
 
 
@@ -124,6 +126,18 @@ SOURCES: list[SourceMeta] = [
         session="4月",
         filename="xi-1146130-2025年4月自学考试《新中概》真题及答案-回忆版.pdf",
         parser="numbered",
+        min_number=26,
+        max_number=31,
+        total_score=50,
+    ),
+    SourceMeta(
+        course_id="xi",
+        paper_id="generated-xi-2026-04-subjective",
+        title="15040 2026 年 4 月简答论述真题",
+        year=2026,
+        session="4月",
+        filename="text/manual/generated-xi-2026-04-subjective.txt",
+        parser="short_essay",
         min_number=26,
         max_number=31,
         total_score=50,
@@ -398,6 +412,9 @@ def normalize_text(text: str) -> str:
 
 def extract_pdf_text(source: SourceMeta) -> str:
     path = source.file_path
+    if path.suffix.lower() == ".txt":
+        return normalize_text(path.read_text(encoding="utf-8"))
+
     with pdfplumber.open(path) as pdf:
         text = "\n".join(page.extract_text() or "" for page in pdf.pages)
     normalized = normalize_text(text)
@@ -584,12 +601,16 @@ def parse_block(course: CourseMeta, source: SourceMeta, number: int, raw_block: 
         question_type = "single"
         answer = ["待补充答案"]
     else:
-        question_type = infer_subjective_type(number, stem, answer_raw)
+        if source.parser == "short_essay" and source.max_number is not None and number < source.max_number:
+            question_type = "short"
+        else:
+            question_type = infer_subjective_type(number, stem, answer_raw)
         answer = split_text_answer(answer_raw) or ["待补充答案"]
 
     question_id = f"{source.paper_id}-q{sequence:03d}"
     points = points_for(question_type, number, explicit_points)
-    tags = ["真题", "PDF整理", f"{source.year}{source.session}", course.code]
+    source_tag = "图片整理" if source.file_path.suffix.lower() == ".txt" else "PDF整理"
+    tags = ["真题", source_tag, f"{source.year}{source.session}", course.code]
     if "待补充答案" in answer:
         tags.append("待校对答案")
 
@@ -603,7 +624,7 @@ def parse_block(course: CourseMeta, source: SourceMeta, number: int, raw_block: 
         **({"options": options} if options else {}),
         "answer": answer,
         "analysis": re.sub(r"\s+", " ", analysis).strip()
-        or "本题由本地 PDF 真题整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
+        or "本题由本地真题资料整理生成，解析待进一步校对，可结合教材补充页码和易错点。",
         "points": points,
         "difficulty": "较难" if question_type == "essay" else "较易" if question_type == "short" else "易",
         "sourceKind": "imported",
@@ -630,6 +651,7 @@ def parse_source(source: SourceMeta) -> tuple[dict, list[dict], dict]:
         if parsed:
             questions.append(parsed)
 
+    source_label = "由本地网页图片人工校对整理生成" if source.file_path.suffix.lower() == ".txt" else "由本地 PDF 自动整理生成"
     paper = {
         "id": source.paper_id,
         "courseId": source.course_id,
@@ -638,7 +660,7 @@ def parse_source(source: SourceMeta) -> tuple[dict, list[dict], dict]:
         "session": source.session,
         "sourceKind": "imported",
         "status": "ready",
-        "description": f"由本地 PDF 自动整理生成，来源：materials/past-papers/{source.file_path.relative_to(ROOT)}。部分回忆版题目后续仍需人工校对。",
+        "description": f"{source_label}，来源：materials/past-papers/{source.file_path.relative_to(ROOT)}。部分回忆版题目后续仍需人工校对。",
         "minutes": course.exam_minutes,
         "totalScore": max(sum(question["points"] for question in questions), source.total_score),
         "questionIds": [question["id"] for question in questions],
@@ -669,7 +691,7 @@ def write_json_bank(
     STRUCTURED_DIR.mkdir(parents=True, exist_ok=True)
     bank = {
         "updatedAt": UPDATED_AT,
-        "note": "由 materials/past-papers/tools/build-generated-bank.py 从本地 PDF 真题抽取。papers/questions 为已进入应用的可刷题，reviewPapers/reviewQuestions 为待补答案或待校对资料。",
+        "note": "由 materials/past-papers/tools/build-generated-bank.py 从本地 PDF/ZIP/网页图片真题资料抽取。papers/questions 为已进入应用的可刷题，reviewPapers/reviewQuestions 为待补答案或待校对资料。",
         "papers": list(papers),
         "questions": list(questions),
         "reviewPapers": list(review_papers),
@@ -691,7 +713,7 @@ def write_ts_module(papers: list[dict], questions: list[dict]) -> None:
                 "import type { Paper, Question } from '../types'",
                 "",
                 "// 由 materials/past-papers/tools/build-generated-bank.py 生成。",
-                "// 来源是本地已下载 PDF 真题，保留为代码数据是为了让应用打开即可刷题。",
+                "// 来源是本地已下载 PDF/ZIP/网页图片真题，保留为代码数据是为了让应用打开即可刷题。",
                 f"export const generatedPastPapers = {ts_literal(papers)} satisfies Paper[]",
                 "",
                 f"export const generatedPastQuestions = {ts_literal(questions)} satisfies Question[]",
