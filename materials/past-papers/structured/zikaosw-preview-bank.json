@@ -6,7 +6,7 @@
   "publicAnswerOverrides": "index/public-answer-overrides.json",
   "totalPapers": 24,
   "totalQuestions": 360,
-  "totalWithAnswers": 195,
+  "totalWithAnswers": 300,
   "parseWarnings": [],
   "note": "这是旧年份公开预览题的结构化草稿。未抓到答案的题不会接入正式刷题入口，登录抓取答案后可重新生成。",
   "papers": [
@@ -17,8 +17,8 @@
       "year": 2016,
       "session": "4月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -46,8 +46,8 @@
       "year": 2016,
       "session": "10月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -75,8 +75,8 @@
       "year": 2017,
       "session": "4月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -104,8 +104,8 @@
       "year": 2017,
       "session": "10月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -133,8 +133,8 @@
       "year": 2018,
       "session": "4月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -162,8 +162,8 @@
       "year": 2018,
       "session": "10月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -191,8 +191,8 @@
       "year": 2019,
       "session": "4月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -722,9 +722,9 @@
         "文和团抗击八国联军的斗争"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -733,14 +733,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108196",
         "answerUrl": "https://www.zikaosw.cn/daan/108196.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -757,9 +763,9 @@
         "创立新式学堂"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -768,14 +774,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108197",
         "answerUrl": "https://www.zikaosw.cn/daan/108197.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -792,9 +804,9 @@
         "物竞天择，适者生存"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -803,14 +815,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108199",
         "answerUrl": "https://www.zikaosw.cn/daan/108199.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -827,9 +845,9 @@
         "《日本变政考》"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -838,14 +856,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108205",
         "answerUrl": "https://www.zikaosw.cn/daan/108205.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -862,9 +886,9 @@
         "保路运动"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -873,14 +897,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108207",
         "answerUrl": "https://www.zikaosw.cn/daan/108207.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -897,9 +927,9 @@
         "毛国乐"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -908,14 +938,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108209",
         "answerUrl": "https://www.zikaosw.cn/daan/108209.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -932,9 +968,9 @@
         "社会主义"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -943,14 +979,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108211",
         "answerUrl": "https://www.zikaosw.cn/daan/108211.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -967,9 +1009,9 @@
         "冯玉祥"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -978,14 +1020,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108213",
         "answerUrl": "https://www.zikaosw.cn/daan/108213.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -1002,9 +1050,9 @@
         "百色起义"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1013,14 +1061,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108214",
         "answerUrl": "https://www.zikaosw.cn/daan/108214.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -1037,9 +1091,9 @@
         "八一三事变"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1048,14 +1102,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108216",
         "answerUrl": "https://www.zikaosw.cn/daan/108216.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -1072,9 +1132,9 @@
         "晋绥干部会议"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1083,14 +1143,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108217",
         "answerUrl": "https://www.zikaosw.cn/daan/108217.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -1107,9 +1173,9 @@
         "中条山战役"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1118,14 +1184,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108220",
         "answerUrl": "https://www.zikaosw.cn/daan/108220.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -1142,9 +1214,9 @@
         "《论联合政府》"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1153,14 +1225,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108222",
         "answerUrl": "https://www.zikaosw.cn/daan/108222.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -1177,9 +1255,9 @@
         "左权"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1188,14 +1266,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108223",
         "answerUrl": "https://www.zikaosw.cn/daan/108223.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -1212,9 +1296,9 @@
         "***"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1223,14 +1307,20 @@
         "自考生网",
         "2016年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108224",
         "answerUrl": "https://www.zikaosw.cn/daan/108224.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934612.html",
         "textFile": "text/older/history-2016-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2695",
+          "localPage": "pages/cwj-history-2016-04-p1.html; pages/cwj-history-2016-04-p2.html",
+          "localText": "text/cwj-history-2016-04.txt"
+        }
       }
     },
     {
@@ -1247,9 +1337,9 @@
         "军事装备落后"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1258,14 +1348,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35028",
         "answerUrl": "https://www.zikaosw.cn/daan/35028.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1282,9 +1378,9 @@
         "《资政新篇》"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1293,14 +1389,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35029",
         "answerUrl": "https://www.zikaosw.cn/daan/35029.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1317,9 +1419,9 @@
         "《变法通义》"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1328,14 +1430,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35030",
         "answerUrl": "https://www.zikaosw.cn/daan/35030.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1352,9 +1460,9 @@
         "革命派与改良派的论战"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1363,14 +1471,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35031",
         "answerUrl": "https://www.zikaosw.cn/daan/35031.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1387,9 +1501,9 @@
         "岳王会"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1398,14 +1512,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35032",
         "answerUrl": "https://www.zikaosw.cn/daan/35032.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1422,9 +1542,9 @@
         "要不要废科举，兴学堂"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1433,14 +1553,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35033",
         "answerUrl": "https://www.zikaosw.cn/daan/35033.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1457,9 +1583,9 @@
         "武昌起义"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1468,14 +1594,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35034",
         "answerUrl": "https://www.zikaosw.cn/daan/35034.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1492,9 +1624,9 @@
         "《中华民国临时约法》"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1503,14 +1635,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35035",
         "answerUrl": "https://www.zikaosw.cn/daan/35035.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1527,9 +1665,9 @@
         "北伐战争"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1538,14 +1676,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35036",
         "answerUrl": "https://www.zikaosw.cn/daan/35036.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1562,9 +1706,9 @@
         "《祝福》"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1573,14 +1717,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35037",
         "answerUrl": "https://www.zikaosw.cn/daan/35037.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1597,9 +1747,9 @@
         "中华全国总工会"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1608,14 +1758,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35038",
         "answerUrl": "https://www.zikaosw.cn/daan/35038.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1632,9 +1788,9 @@
         "《中国革命和中国共产党》"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1643,14 +1799,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35039",
         "answerUrl": "https://www.zikaosw.cn/daan/35039.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1667,9 +1829,9 @@
         "冀中回民支队"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1678,14 +1840,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35040",
         "answerUrl": "https://www.zikaosw.cn/daan/35040.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1702,9 +1870,9 @@
         "枣宜战役"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1713,14 +1881,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35041",
         "answerUrl": "https://www.zikaosw.cn/daan/35041.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1737,9 +1911,9 @@
         "中共六届七中全会"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2016年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1748,14 +1922,20 @@
         "自考生网",
         "2016年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "35042",
         "answerUrl": "https://www.zikaosw.cn/daan/35042.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932907.html",
         "textFile": "text/older/history-2016-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2016年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2696/p1",
+          "localPage": "pages/cwj-history-2016-10.html",
+          "localText": "text/cwj-history-2016-10.txt"
+        }
       }
     },
     {
@@ -1772,9 +1952,9 @@
         "资本主义社会"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1783,14 +1963,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1549",
         "answerUrl": "https://www.zikaosw.cn/daan/1549.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -1807,9 +1993,9 @@
         "王韬"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1818,14 +2004,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1550",
         "answerUrl": "https://www.zikaosw.cn/daan/1550.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -1842,9 +2034,9 @@
         "译书馆"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1853,14 +2045,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1552",
         "answerUrl": "https://www.zikaosw.cn/daan/1552.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -1877,9 +2075,9 @@
         "四川"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1888,14 +2086,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1553",
         "answerUrl": "https://www.zikaosw.cn/daan/1553.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -1912,9 +2116,9 @@
         "《中华民国宪法》"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1923,14 +2127,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1555",
         "answerUrl": "https://www.zikaosw.cn/daan/1555.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -1947,9 +2157,9 @@
         "中共四大"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1958,14 +2168,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1557",
         "answerUrl": "https://www.zikaosw.cn/daan/1557.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -1982,9 +2198,9 @@
         "重工业方面开始"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -1993,14 +2209,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1559",
         "answerUrl": "https://www.zikaosw.cn/daan/1559.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -2017,9 +2239,9 @@
         "洛川会议"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2028,14 +2250,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1560",
         "answerUrl": "https://www.zikaosw.cn/daan/1560.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -2052,9 +2280,9 @@
         "二二八起义"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2063,14 +2291,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1561",
         "answerUrl": "https://www.zikaosw.cn/daan/1561.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -2087,9 +2321,9 @@
         "战略决战阶段"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2098,14 +2332,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1562",
         "answerUrl": "https://www.zikaosw.cn/daan/1562.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -2122,9 +2362,9 @@
         "百团大战"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2133,14 +2373,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1564",
         "answerUrl": "https://www.zikaosw.cn/daan/1564.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -2157,9 +2403,9 @@
         "打过长江去，解放全中国"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2168,14 +2414,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1566",
         "answerUrl": "https://www.zikaosw.cn/daan/1566.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -2192,9 +2444,9 @@
         "“五反”运动"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2203,14 +2455,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1567",
         "answerUrl": "https://www.zikaosw.cn/daan/1567.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -2227,9 +2485,9 @@
         "没收官僚资本"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2238,14 +2496,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1568",
         "answerUrl": "https://www.zikaosw.cn/daan/1568.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -2262,9 +2526,9 @@
         "“四马分肥”"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2273,14 +2537,20 @@
         "自考生网",
         "2017年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1569",
         "answerUrl": "https://www.zikaosw.cn/daan/1569.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932269.html",
         "textFile": "text/older/history-2017-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2697",
+          "localPage": "pages/cwj-history-2017-04.html",
+          "localText": "text/cwj-history-2017-04.txt"
+        }
       }
     },
     {
@@ -2297,9 +2567,9 @@
         "封建主义与人民大众的矛盾"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2308,14 +2578,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13892",
         "answerUrl": "https://www.zikaosw.cn/daan/13892.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2332,9 +2608,9 @@
         "创立新式学堂"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2343,14 +2619,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13893",
         "answerUrl": "https://www.zikaosw.cn/daan/13893.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2367,9 +2649,9 @@
         "《万国公报》"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2378,14 +2660,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13894",
         "answerUrl": "https://www.zikaosw.cn/daan/13894.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2402,9 +2690,9 @@
         "日本与俄国"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2413,14 +2701,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13895",
         "answerUrl": "https://www.zikaosw.cn/daan/13895.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2437,9 +2731,9 @@
         "陈天华"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2448,14 +2742,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13896",
         "answerUrl": "https://www.zikaosw.cn/daan/13896.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2472,9 +2772,9 @@
         "省港工人罢工"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2483,14 +2783,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13897",
         "answerUrl": "https://www.zikaosw.cn/daan/13897.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2507,9 +2813,9 @@
         "中国国民党革命委员会"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2518,14 +2824,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13898",
         "answerUrl": "https://www.zikaosw.cn/daan/13898.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2542,9 +2854,9 @@
         "红四方面军"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2553,14 +2865,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13899",
         "answerUrl": "https://www.zikaosw.cn/daan/13899.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2577,9 +2895,9 @@
         "卢沟桥事变"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2588,14 +2906,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13900",
         "answerUrl": "https://www.zikaosw.cn/daan/13900.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2612,9 +2936,9 @@
         "戴安澜"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2623,14 +2947,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13901",
         "answerUrl": "https://www.zikaosw.cn/daan/13901.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2647,9 +2977,9 @@
         "百团大战"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2658,14 +2988,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13902",
         "answerUrl": "https://www.zikaosw.cn/daan/13902.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2682,9 +3018,9 @@
         "北平谈判"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2693,14 +3029,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13903",
         "answerUrl": "https://www.zikaosw.cn/daan/13903.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2717,9 +3059,9 @@
         "重点进攻山东解放区"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2728,14 +3070,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13904",
         "answerUrl": "https://www.zikaosw.cn/daan/13904.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2752,9 +3100,9 @@
         "1948 年"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2763,14 +3111,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13905",
         "answerUrl": "https://www.zikaosw.cn/daan/13905.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2787,9 +3141,9 @@
         "重点发展城市经济"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2798,14 +3152,20 @@
         "自考生网",
         "2017年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "13906",
         "answerUrl": "https://www.zikaosw.cn/daan/13906.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932383.html",
         "textFile": "text/older/history-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2698/p1",
+          "localPage": "pages/cwj-history-2017-10.html",
+          "localText": "text/cwj-history-2017-10.txt"
+        }
       }
     },
     {
@@ -2822,9 +3182,9 @@
         "俄国"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2833,14 +3193,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1646",
         "answerUrl": "https://www.zikaosw.cn/daan/1646.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -2857,9 +3223,9 @@
         "《瑗珲条约》"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2868,14 +3234,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1647",
         "answerUrl": "https://www.zikaosw.cn/daan/1647.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -2892,9 +3264,9 @@
         "《万国公报》"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2903,14 +3275,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1649",
         "answerUrl": "https://www.zikaosw.cn/daan/1649.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -2927,9 +3305,9 @@
         "义和团抗击八国联军的斗争"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2938,14 +3316,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1651",
         "answerUrl": "https://www.zikaosw.cn/daan/1651.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -2962,9 +3346,9 @@
         "魏源"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -2973,14 +3357,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1652",
         "answerUrl": "https://www.zikaosw.cn/daan/1652.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -2997,9 +3387,9 @@
         "《资政新篇》"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3008,14 +3398,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1653",
         "answerUrl": "https://www.zikaosw.cn/daan/1653.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -3032,9 +3428,9 @@
         "《新民丛报》"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3043,14 +3439,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1656",
         "answerUrl": "https://www.zikaosw.cn/daan/1656.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -3067,9 +3469,9 @@
         "北伐战争"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3078,14 +3480,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1658",
         "answerUrl": "https://www.zikaosw.cn/daan/1658.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -3102,9 +3510,9 @@
         "《孔乙已》"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3113,14 +3521,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1659",
         "answerUrl": "https://www.zikaosw.cn/daan/1659.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -3137,9 +3551,9 @@
         "国民革命"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3148,14 +3562,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1661",
         "answerUrl": "https://www.zikaosw.cn/daan/1661.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -3172,9 +3592,9 @@
         "福建省上杭县"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3183,14 +3603,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1663",
         "answerUrl": "https://www.zikaosw.cn/daan/1663.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -3207,9 +3633,9 @@
         "从金融业方面开始的"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3218,14 +3644,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1664",
         "answerUrl": "https://www.zikaosw.cn/daan/1664.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -3242,9 +3674,9 @@
         "百色起义"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3253,14 +3685,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1666",
         "answerUrl": "https://www.zikaosw.cn/daan/1666.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -3277,9 +3715,9 @@
         "二二八起义"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3288,14 +3726,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1667",
         "answerUrl": "https://www.zikaosw.cn/daan/1667.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -3312,9 +3756,9 @@
         "重点进攻山东解放区"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3323,14 +3767,20 @@
         "自考生网",
         "2018年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1668",
         "answerUrl": "https://www.zikaosw.cn/daan/1668.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932271.html",
         "textFile": "text/older/history-2018-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2699",
+          "localPage": "pages/cwj-history-2018-04.html",
+          "localText": "text/cwj-history-2018-04.txt"
+        }
       }
     },
     {
@@ -3347,9 +3797,9 @@
         "封建主义和资本主义的矛盾"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3358,14 +3808,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1435",
         "answerUrl": "https://www.zikaosw.cn/daan/1435.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3382,9 +3838,9 @@
         "文化渗透"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3393,14 +3849,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1444",
         "answerUrl": "https://www.zikaosw.cn/daan/1444.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3417,9 +3879,9 @@
         "安庆失守"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3428,14 +3890,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1449",
         "answerUrl": "https://www.zikaosw.cn/daan/1449.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3452,9 +3920,9 @@
         "《盛世危言》"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3463,14 +3931,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1457",
         "answerUrl": "https://www.zikaosw.cn/daan/1457.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3487,9 +3961,9 @@
         "天津机器局"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3498,14 +3972,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1460",
         "answerUrl": "https://www.zikaosw.cn/daan/1460.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3522,9 +4002,9 @@
         "辛亥革命时期"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3533,14 +4013,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1463",
         "answerUrl": "https://www.zikaosw.cn/daan/1463.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3557,9 +4043,9 @@
         "革命派与改良派的论战"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3568,14 +4054,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1464",
         "answerUrl": "https://www.zikaosw.cn/daan/1464.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3592,9 +4084,9 @@
         "《变法通义》"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3603,14 +4095,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1465",
         "answerUrl": "https://www.zikaosw.cn/daan/1465.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3627,9 +4125,9 @@
         "美国与俄国"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3638,14 +4136,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1466",
         "answerUrl": "https://www.zikaosw.cn/daan/1466.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3662,9 +4166,9 @@
         "四川"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3673,14 +4177,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1467",
         "answerUrl": "https://www.zikaosw.cn/daan/1467.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3697,9 +4207,9 @@
         "社会主义"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3708,14 +4218,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1468",
         "answerUrl": "https://www.zikaosw.cn/daan/1468.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3732,9 +4248,9 @@
         "张学良"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3743,14 +4259,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1469",
         "answerUrl": "https://www.zikaosw.cn/daan/1469.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3767,9 +4289,9 @@
         "中共六届七中全会"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3778,14 +4300,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1470",
         "answerUrl": "https://www.zikaosw.cn/daan/1470.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3802,9 +4330,9 @@
         "陕北吴起镇"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3813,14 +4341,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1471",
         "answerUrl": "https://www.zikaosw.cn/daan/1471.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3837,9 +4371,9 @@
         "昆仑关战役"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3848,14 +4382,20 @@
         "自考生网",
         "2018年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1472",
         "answerUrl": "https://www.zikaosw.cn/daan/1472.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932266.html",
         "textFile": "text/older/history-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2700/p1",
+          "localPage": "pages/cwj-history-2018-10.html",
+          "localText": "text/cwj-history-2018-10.txt"
+        }
       }
     },
     {
@@ -3872,9 +4412,9 @@
         "封建主义和资本主义的矛盾"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3883,14 +4423,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108026",
         "answerUrl": "https://www.zikaosw.cn/daan/108026.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
@@ -3907,9 +4453,9 @@
         "文化渗透"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3918,14 +4464,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108028",
         "answerUrl": "https://www.zikaosw.cn/daan/108028.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
@@ -3942,9 +4494,9 @@
         "武昌起义"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3953,14 +4505,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108031",
         "answerUrl": "https://www.zikaosw.cn/daan/108031.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
@@ -3977,9 +4535,9 @@
         "湖北"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -3988,14 +4546,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108033",
         "answerUrl": "https://www.zikaosw.cn/daan/108033.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
@@ -4012,9 +4576,9 @@
         "华盛顿会议上中国外交的受控"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -4023,14 +4587,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108036",
         "answerUrl": "https://www.zikaosw.cn/daan/108036.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
@@ -4047,9 +4617,9 @@
         "杨匏安"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -4058,14 +4628,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108037",
         "answerUrl": "https://www.zikaosw.cn/daan/108037.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
@@ -4082,9 +4658,9 @@
         "从金融业方面开始的"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -4093,14 +4669,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108038",
         "answerUrl": "https://www.zikaosw.cn/daan/108038.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
@@ -4117,9 +4699,9 @@
         "百色起义"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -4128,14 +4710,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108039",
         "answerUrl": "https://www.zikaosw.cn/daan/108039.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
@@ -4152,9 +4740,9 @@
         "伪“中华民国国民政府”"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -4163,14 +4751,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108040",
         "answerUrl": "https://www.zikaosw.cn/daan/108040.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
@@ -4187,9 +4781,9 @@
         "冀中回民支队"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -4198,14 +4792,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108041",
         "answerUrl": "https://www.zikaosw.cn/daan/108041.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
@@ -4222,9 +4822,9 @@
         "戴安澜"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -4233,14 +4833,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108042",
         "answerUrl": "https://www.zikaosw.cn/daan/108042.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
@@ -4257,9 +4863,9 @@
         "《论联合政府》"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -4268,14 +4874,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108045",
         "answerUrl": "https://www.zikaosw.cn/daan/108045.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
@@ -4292,9 +4904,9 @@
         "旧金山会议"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -4303,14 +4915,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108047",
         "answerUrl": "https://www.zikaosw.cn/daan/108047.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
@@ -4327,9 +4945,9 @@
         "1951年 10月"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -4338,14 +4956,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108050",
         "answerUrl": "https://www.zikaosw.cn/daan/108050.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
@@ -4362,9 +4986,9 @@
         "公私合营"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03708中国近现代史纲要考试真题答案解析。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -4373,14 +4997,20 @@
         "自考生网",
         "2019年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "108052",
         "answerUrl": "https://www.zikaosw.cn/daan/108052.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934611.html",
         "textFile": "text/older/history-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03708中国近现代史纲要考试真题答案解析",
+          "url": "https://zikao.cwjedu.com/lnzt/2701/p1",
+          "localPage": "pages/cwj-history-2019-04.html",
+          "localText": "text/cwj-history-2019-04.txt"
+        }
       }
     },
     {
