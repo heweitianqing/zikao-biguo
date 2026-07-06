@@ -182,6 +182,7 @@ function buildLocalTextReview(question: Question, textAnswer: string) {
     .filter(Boolean)
   const hitItems = reviewItems.filter((item) => itemMatchesAnswer(item, textAnswer))
   const missingItems = reviewItems.filter((item) => !itemMatchesAnswer(item, textAnswer)).slice(0, 5)
+  const checklist = reviewItems.slice(0, 8).map((item) => `${itemMatchesAnswer(item, textAnswer) ? '[x]' : '[ ]'} ${item}`)
   const answerLength = textAnswer.trim().length
   const structureTip =
     question.type === 'essay'
@@ -196,6 +197,8 @@ function buildLocalTextReview(question: Question, textAnswer: string) {
 
   return [
     `本地评价：约 ${score}/${question.points} 分。`,
+    '评分点清单：',
+    checklist.length ? checklist.join('\n') : '[ ] 暂无可拆分评分点',
     `命中要点：${hitItems.length ? hitItems.slice(0, 6).join('；') : '暂未明显命中参考要点'}`,
     `可能漏点：${missingItems.length ? missingItems.join('；') : '主要参考要点基本覆盖'}`,
     `下一步：${lengthTip}${structureTip}`,
@@ -954,7 +957,7 @@ function App() {
             {
               role: 'system',
               content:
-                '你是上海自考阅卷助教。按自考简答/论述题标准，给出分数、命中要点、漏点和下一轮背诵建议。必须依据题目和参考要点评价，不要编造官方答案。',
+                '你是上海自考阅卷助教。按自考简答/论述题标准评价。必须依据题目、参考要点和评分点，不要编造官方答案。输出固定为：1. 估分；2. 评分点清单，每个评分点用 [x] 或 [ ] 标记并简述理由；3. 主要漏点；4. 下一轮背诵建议。',
             },
             {
               role: 'user',
