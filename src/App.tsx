@@ -2571,10 +2571,10 @@ function ResourcesView({
               const course = courses.find((item) => item.id === record.courseId)
               const statusLabel =
                 record.accessStatus === 'requires-login-or-purchase'
-                  ? '待登录'
+                  ? '待登录/购买'
                   : record.accessStatus === 'public-preview-only'
                     ? '只有预览'
-                    : '答案受限'
+                    : '需搜题包'
               return (
                 <article key={`${record.courseId}-${record.sourceUrl}-${record.title}`} className={`gap-item gap-${record.accessStatus}`}>
                   <div>
@@ -2652,7 +2652,11 @@ function ResourcesView({
                       {gapRecords.slice(0, 2).map((record) => (
                         <a key={`${record.sourceUrl}-${record.title}`} href={record.sourceUrl} target="_blank" rel="noreferrer">
                           <KeyRound size={14} />
-                          {record.accessStatus === 'requires-login-or-purchase' ? '待登录' : '线索'} · {record.coverage}
+                          {record.accessStatus === 'requires-login-or-purchase'
+                            ? '待登录'
+                            : record.accessStatus === 'answer-links-blocked'
+                              ? '需搜题包'
+                              : '线索'} · {record.coverage}
                         </a>
                       ))}
                     </div>

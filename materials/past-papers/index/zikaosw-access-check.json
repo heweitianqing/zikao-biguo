@@ -1,0 +1,13 @@
+{
+  "updatedAt": "2026-07-06",
+  "checkedUrl": "https://www.zikaosw.cn/daan/108196.html",
+  "loginState": "logged-in",
+  "loginSignals": [
+    "我的订单",
+    "会员中心"
+  ],
+  "answerButton": "查看答案(剩0次)",
+  "blockingMessage": "需开通搜题包查看答案",
+  "conclusion": "账号已登录，但当前没有可用搜题次数；自考生网旧年份答案入口需要开通搜题包或补充可用次数后才能批量抓取答案。",
+  "sensitiveDataStored": false
+}

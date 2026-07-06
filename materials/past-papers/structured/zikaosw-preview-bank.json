@@ -3,9 +3,10 @@
   "sourceIndex": "index/older-web-pages.json",
   "sourceQueue": "index/zikaosw-answer-queue.json",
   "answerResults": null,
+  "publicAnswerOverrides": "index/public-answer-overrides.json",
   "totalPapers": 24,
   "totalQuestions": 360,
-  "totalWithAnswers": 0,
+  "totalWithAnswers": 15,
   "parseWarnings": [],
   "note": "这是旧年份公开预览题的结构化草稿。未抓到答案的题不会接入正式刷题入口，登录抓取答案后可重新生成。",
   "papers": [
@@ -335,8 +336,8 @@
       "year": 2021,
       "session": "10月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -6496,9 +6497,9 @@
         "地主阶级和资产阶级的矛盾"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6507,14 +6508,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023290",
         "answerUrl": "https://www.zikaosw.cn/daan/19023290.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {
@@ -6531,9 +6538,9 @@
         "魏源"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6542,14 +6549,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023291",
         "answerUrl": "https://www.zikaosw.cn/daan/19023291.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {
@@ -6566,9 +6579,9 @@
         "要不要实行平均地权"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6577,14 +6590,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023292",
         "answerUrl": "https://www.zikaosw.cn/daan/19023292.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {
@@ -6601,9 +6620,9 @@
         "国民党"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6612,14 +6631,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023293",
         "answerUrl": "https://www.zikaosw.cn/daan/19023293.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {
@@ -6636,9 +6661,9 @@
         "《.驳康有为论革命书》"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6647,14 +6672,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023294",
         "answerUrl": "https://www.zikaosw.cn/daan/19023294.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {
@@ -6671,9 +6702,9 @@
         "《中华民国临时约法》"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6682,14 +6713,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023295",
         "answerUrl": "https://www.zikaosw.cn/daan/19023295.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {
@@ -6706,9 +6743,9 @@
         "北伐战争"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6717,14 +6754,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023296",
         "answerUrl": "https://www.zikaosw.cn/daan/19023296.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {
@@ -6741,9 +6784,9 @@
         "中共四大"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6752,14 +6795,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023297",
         "answerUrl": "https://www.zikaosw.cn/daan/19023297.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {
@@ -6776,9 +6825,9 @@
         "五卅运动"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6787,14 +6836,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023298",
         "answerUrl": "https://www.zikaosw.cn/daan/19023298.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {
@@ -6811,9 +6866,9 @@
         "《中国的红色政权为什么能够存在?》"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6822,14 +6877,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023299",
         "answerUrl": "https://www.zikaosw.cn/daan/19023299.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {
@@ -6846,9 +6907,9 @@
         "古田会议"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6857,14 +6918,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023300",
         "answerUrl": "https://www.zikaosw.cn/daan/19023300.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {
@@ -6881,9 +6948,9 @@
         "《对时局的意见》"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6892,14 +6959,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023301",
         "answerUrl": "https://www.zikaosw.cn/daan/19023301.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {
@@ -6916,9 +6989,9 @@
         "五二○惨案"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6927,14 +7000,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023302",
         "answerUrl": "https://www.zikaosw.cn/daan/19023302.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {
@@ -6951,9 +7030,9 @@
         "中国民主同盟"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6962,14 +7041,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023303",
         "answerUrl": "https://www.zikaosw.cn/daan/19023303.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {
@@ -6986,9 +7071,9 @@
         "渡江战役"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年10月自考03708中国近现代史纲要真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6997,14 +7082,20 @@
         "自考生网",
         "2021年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "19023304",
         "answerUrl": "https://www.zikaosw.cn/daan/19023304.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3943892.html",
         "textFile": "text/older/history-2021-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年10月自考03708中国近现代史纲要真题及答案",
+          "url": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+          "localPage": "pages/edu-edu-history-2021-10.html",
+          "localText": "text/edu-edu-history-2021-10.txt"
+        }
       }
     },
     {

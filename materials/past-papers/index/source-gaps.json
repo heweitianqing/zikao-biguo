@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05",
+  "updatedAt": "2026-07-06",
   "purpose": "记录已经验证过但暂时不能直接进入刷题题库的真题来源，避免重复搜索；后续登录、购买或拿到完整文件后再继续清洗。",
   "records": [
     {
@@ -156,9 +156,9 @@
       "title": "自考生网 2016-2021 近代史旧年份预览题",
       "sourceUrl": "https://www.zikaosw.cn/lnzt/subject-9.html",
       "localIndex": "index/older-web-pages.json",
-      "coverageClaim": "2016-2021 每套公开约 15 道预览题，答案链接已失效或需要登录。",
-      "accessStatus": "partial-preview-only",
-      "currentUse": "只作为题文和年份线索，不进入正式刷题题库。"
+      "coverageClaim": "2016-2021 每套公开约 15 道预览题，答案入口需要搜题包或可用查看次数。",
+      "accessStatus": "answer-links-blocked",
+      "currentUse": "已登录验证仍显示“查看答案(剩0次)”和“需开通搜题包查看答案”；只作为题文和年份线索，不进入正式刷题题库。"
     },
     {
       "courseId": "marx",
@@ -167,9 +167,9 @@
       "title": "自考生网 2016-2021 马原旧年份预览题",
       "sourceUrl": "https://www.zikaosw.cn/lnzt/subject-702.html",
       "localIndex": "index/older-web-pages.json",
-      "coverageClaim": "2016-2021 每套公开约 15 道预览题，答案链接已失效或需要登录。",
-      "accessStatus": "partial-preview-only",
-      "currentUse": "只作为题文和年份线索，不进入正式刷题题库。"
+      "coverageClaim": "2016-2021 每套公开约 15 道预览题，答案入口需要搜题包或可用查看次数。",
+      "accessStatus": "answer-links-blocked",
+      "currentUse": "已登录验证仍显示“查看答案(剩0次)”和“需开通搜题包查看答案”；只作为题文和年份线索，不进入正式刷题题库。"
     }
   ]
 }

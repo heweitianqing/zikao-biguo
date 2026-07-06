@@ -1,0 +1,34 @@
+{
+  "updatedAt": "2026-07-06",
+  "purpose": "记录从公开页面交叉验证到的答案，用于补齐自考生网旧年份预览题。这里只保存结构化答案，不保存整页转载正文。",
+  "records": [
+    {
+      "courseId": "history",
+      "code": "15043",
+      "legacyCode": "03708",
+      "year": 2021,
+      "session": "10月",
+      "sourceTitle": "2021年10月自考03708中国近现代史纲要真题及答案",
+      "sourceUrl": "https://www.edu-edu.com/zikao/lnzt/49190.html",
+      "localPage": "pages/edu-edu-history-2021-10.html",
+      "localText": "text/edu-edu-history-2021-10.txt",
+      "answers": [
+        { "questionNo": 1, "answer": ["A"] },
+        { "questionNo": 2, "answer": ["D"] },
+        { "questionNo": 3, "answer": ["B"] },
+        { "questionNo": 4, "answer": ["A"] },
+        { "questionNo": 5, "answer": ["C"] },
+        { "questionNo": 6, "answer": ["D"] },
+        { "questionNo": 7, "answer": ["A"] },
+        { "questionNo": 8, "answer": ["B"] },
+        { "questionNo": 9, "answer": ["D"] },
+        { "questionNo": 10, "answer": ["C"] },
+        { "questionNo": 11, "answer": ["C"] },
+        { "questionNo": 12, "answer": ["C"] },
+        { "questionNo": 13, "answer": ["C"] },
+        { "questionNo": 14, "answer": ["C"] },
+        { "questionNo": 15, "answer": ["A"] }
+      ]
+    }
+  ]
+}

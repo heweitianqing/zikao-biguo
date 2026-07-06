@@ -471,7 +471,7 @@ export const sourceGapRecords = [
     localRef: 'materials/past-papers/index/older-web-pages.json',
     coverage: '2016-2021 每套公开约 15 道预览题',
     accessStatus: 'answer-links-blocked',
-    currentUse: '答案入口已失效或需登录；只作为题文和年份线索。',
+    currentUse: '已登录验证仍显示“查看答案(剩0次)”和“需开通搜题包查看答案”；目前只作为题文和年份线索。',
   },
   {
     courseId: 'marx',
@@ -482,7 +482,7 @@ export const sourceGapRecords = [
     localRef: 'materials/past-papers/index/older-web-pages.json',
     coverage: '2016-2021 每套公开约 15 道预览题',
     accessStatus: 'answer-links-blocked',
-    currentUse: '答案入口已失效或需登录；只作为题文和年份线索。',
+    currentUse: '已登录验证仍显示“查看答案(剩0次)”和“需开通搜题包查看答案”；目前只作为题文和年份线索。',
   },
 ] as const
 

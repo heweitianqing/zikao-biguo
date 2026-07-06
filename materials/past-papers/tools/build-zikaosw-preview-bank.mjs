@@ -7,6 +7,7 @@ const rootDir = path.resolve(__dirname, '..')
 const olderIndexPath = path.join(rootDir, 'index', 'older-web-pages.json')
 const queuePath = path.join(rootDir, 'index', 'zikaosw-answer-queue.json')
 const answerResultsPath = path.join(rootDir, 'index', 'zikaosw-answer-fetch-results.json')
+const publicAnswerOverridesPath = path.join(rootDir, 'index', 'public-answer-overrides.json')
 const outputPath = path.join(rootDir, 'structured', 'zikaosw-preview-bank.json')
 
 const courseMeta = {
@@ -164,11 +165,37 @@ function buildAnswersById(payload) {
   return answersById
 }
 
+function overrideKey(record) {
+  return `${record.courseId}-${record.year}-${record.session}-${record.questionNo}`
+}
+
+function buildOverridesByQuestion(payload) {
+  const overrides = new Map()
+  for (const record of payload.records ?? []) {
+    for (const answer of record.answers ?? []) {
+      overrides.set(
+        overrideKey({ ...record, questionNo: answer.questionNo }),
+        {
+          answer: answer.answer,
+          analysis: answer.analysis,
+          sourceTitle: record.sourceTitle,
+          sourceUrl: record.sourceUrl,
+          localPage: record.localPage,
+          localText: record.localText,
+        },
+      )
+    }
+  }
+  return overrides
+}
+
 const olderIndex = readJson(olderIndexPath)
 const queue = readJson(queuePath)
 const queueByAnswerId = new Map(queue.records.map((record) => [record.answerId, record]))
 const answerResults = readJson(answerResultsPath, { records: [] })
 const answersById = buildAnswersById(answerResults)
+const publicAnswerOverrides = readJson(publicAnswerOverridesPath, { records: [] })
+const overridesByQuestion = buildOverridesByQuestion(publicAnswerOverrides)
 
 const papers = []
 const questions = []
@@ -182,14 +209,20 @@ for (const sourceRecord of olderIndex.records) {
   for (const parsed of parsedQuestions) {
     const queueRecord = queueByAnswerId.get(parsed.answerId)
     const fetched = answersById.get(parsed.answerId)
+    const override = overridesByQuestion.get(overrideKey({ ...sourceRecord, questionNo: parsed.questionNo }))
     const hasFetchedAnswer = Boolean(fetched?.success && (fetched.answer || fetched.analysis))
+    const hasOverrideAnswer = Boolean(override?.answer?.length)
     const answer =
       parsed.options.length > 0
         ? hasFetchedAnswer
           ? parseFetchedChoice(fetched.answer)
-          : []
+          : hasOverrideAnswer
+            ? override.answer
+            : []
         : hasFetchedAnswer
           ? splitSubjectiveAnswer(fetched.answer)
+          : hasOverrideAnswer
+            ? override.answer
           : []
     const normalizedAnswer = answer.length ? answer : ['待补充答案']
     const questionType = parsed.options.length > 0 ? (normalizedAnswer.length > 1 ? 'multiple' : 'single') : 'short'
@@ -204,7 +237,10 @@ for (const sourceRecord of olderIndex.records) {
       stem: parsed.stem,
       ...(parsed.options.length ? { options: parsed.options } : {}),
       answer: normalizedAnswer,
-      analysis: normalizeText(fetched?.analysis) || '自考生网页预览题，答案和解析待登录抓取后补齐。',
+      analysis:
+        normalizeText(fetched?.analysis) ||
+        normalizeText(override?.analysis) ||
+        (hasOverrideAnswer ? `答案来自公开页面交叉校验：${override.sourceTitle}。解析待继续补充。` : '自考生网页预览题，答案和解析待登录抓取后补齐。'),
       points: questionType === 'multiple' ? 4 : 2,
       difficulty: '易',
       sourceKind: 'imported',
@@ -213,7 +249,7 @@ for (const sourceRecord of olderIndex.records) {
         '自考生网',
         `${sourceRecord.year}年${sourceRecord.session}`,
         sourceRecord.legacyCode,
-        ...(hasFetchedAnswer ? ['已抓答案'] : ['待抓答案']),
+        ...(hasFetchedAnswer ? ['已抓答案'] : hasOverrideAnswer ? ['公开答案'] : ['待抓答案']),
       ],
       source: {
         answerId: parsed.answerId,
@@ -221,6 +257,16 @@ for (const sourceRecord of olderIndex.records) {
         sourceUrl: sourceRecord.sourceUrl,
         textFile: sourceRecord.textFile,
         accessStatus: queueRecord?.accessStatus ?? sourceRecord.answerStatus,
+        ...(override
+          ? {
+              publicAnswerSource: {
+                title: override.sourceTitle,
+                url: override.sourceUrl,
+                localPage: override.localPage,
+                localText: override.localText,
+              },
+            }
+          : {}),
       },
     })
   }
@@ -259,6 +305,7 @@ const output = {
   sourceIndex: path.relative(rootDir, olderIndexPath),
   sourceQueue: path.relative(rootDir, queuePath),
   answerResults: fs.existsSync(answerResultsPath) ? path.relative(rootDir, answerResultsPath) : null,
+  publicAnswerOverrides: path.relative(rootDir, publicAnswerOverridesPath),
   totalPapers: papers.length,
   totalQuestions: questions.length,
   totalWithAnswers: questions.filter((question) => !question.answer.includes('待补充答案')).length,
