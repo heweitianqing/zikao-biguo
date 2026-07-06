@@ -1177,6 +1177,10 @@
   color: var(--ink-soft);
 }
 
+.ai-panel p {
+  white-space: pre-line;
+}
+
 .analysis-panel ul {
   margin: 8px 0 12px;
   color: var(--ink);

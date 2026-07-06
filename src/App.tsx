@@ -145,6 +145,42 @@ function getPaperSlotKey(paper: Pick<Paper, 'courseId' | 'year' | 'session'>) {
   return `${paper.courseId}-${paper.year}-${paper.session}`
 }
 
+function normalizeReviewText(value: string) {
+  return value.replace(/\s/g, '').replace(/[，。；、,.!?！？:："'“”‘’（）()《》]/g, '')
+}
+
+function itemMatchesAnswer(item: string, textAnswer: string, minLength = 4) {
+  const needle = normalizeReviewText(item).slice(0, Math.max(Math.min(item.length, 8), minLength))
+  return needle.length >= minLength && normalizeReviewText(textAnswer).includes(needle)
+}
+
+function buildLocalTextReview(question: Question, textAnswer: string) {
+  const score = scoreTextAnswer(question, textAnswer)
+  const reviewItems = Array.from(new Set([...(question.rubric ?? []), ...question.answer]))
+    .map((item) => item.trim())
+    .filter(Boolean)
+  const hitItems = reviewItems.filter((item) => itemMatchesAnswer(item, textAnswer))
+  const missingItems = reviewItems.filter((item) => !itemMatchesAnswer(item, textAnswer)).slice(0, 5)
+  const answerLength = textAnswer.trim().length
+  const structureTip =
+    question.type === 'essay'
+      ? '论述题建议按“总观点 + 分点展开 + 结合题干收束”来写，避免只堆关键词。'
+      : '简答题建议按序号分点写，每点先写关键词，再补一句解释。'
+  const lengthTip =
+    answerLength < 40
+      ? '当前答案偏短，建议至少写出 3 个以上完整要点。'
+      : answerLength < 90
+        ? '当前篇幅基本可用，还可以补充关键词之间的逻辑关系。'
+        : '当前篇幅较充分，下一步重点检查是否覆盖核心表述。'
+
+  return [
+    `本地评价：约 ${score}/${question.points} 分。`,
+    `命中要点：${hitItems.length ? hitItems.slice(0, 6).join('；') : '暂未明显命中参考要点'}`,
+    `可能漏点：${missingItems.length ? missingItems.join('；') : '主要参考要点基本覆盖'}`,
+    `下一步：${lengthTip}${structureTip}`,
+  ].join('\n')
+}
+
 function filterCoveredIndexPapers(papers: Paper[]) {
   const coveredSlots = new Set(
     papers
@@ -705,14 +741,10 @@ function App() {
     }
 
     if (!state.deepseekApiKey.trim()) {
-      const rubric = question.rubric?.join('、') || question.answer.join('、')
       setAiReview({
         questionId: question.id,
         loading: false,
-        content: `本地评价：这题应覆盖 ${rubric}。当前按关键词估分 ${scoreTextAnswer(
-          question,
-          record.textAnswer,
-        )}/${question.points}。配置 DeepSeek API Key 后可获得更细的逐点反馈。`,
+        content: buildLocalTextReview(question, record.textAnswer),
       })
       return
     }
@@ -731,7 +763,7 @@ function App() {
             {
               role: 'system',
               content:
-                '你是上海自考阅卷助教。按自考简答/论述题标准，给出分数、命中要点、漏点和下一轮背诵建议。不要编造官方答案。',
+                '你是上海自考阅卷助教。按自考简答/论述题标准，给出分数、命中要点、漏点和下一轮背诵建议。必须依据题目和参考要点评价，不要编造官方答案。',
             },
             {
               role: 'user',
@@ -741,6 +773,7 @@ function App() {
             },
           ],
           temperature: 0.2,
+          max_tokens: 700,
         }),
       })
       if (!response.ok) {
