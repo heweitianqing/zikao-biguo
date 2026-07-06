@@ -5,7 +5,9 @@ import { fileURLToPath } from 'node:url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const rootDir = path.resolve(__dirname, '..')
 const queuePath = path.join(rootDir, 'index', 'zikaosw-answer-queue.json')
-const outputPath = path.join(rootDir, 'index', 'zikaosw-answer-fetch-results.json')
+const outputPath = process.env.ZIKAOSW_OUTPUT
+  ? path.resolve(process.cwd(), process.env.ZIKAOSW_OUTPUT)
+  : path.join(rootDir, 'index', 'zikaosw-answer-fetch-results.json')
 
 const cookie = process.env.ZIKAOSW_COOKIE?.trim()
 const limit = Number.parseInt(process.env.ZIKAOSW_LIMIT ?? '', 10)
@@ -33,6 +35,19 @@ function normalizeText(value) {
     .replace(/[ \t]+\n/g, '\n')
     .replace(/\n{3,}/g, '\n\n')
     .trim()
+}
+
+function readExistingResults() {
+  if (!fs.existsSync(outputPath)) {
+    return []
+  }
+
+  try {
+    const parsed = JSON.parse(fs.readFileSync(outputPath, 'utf8'))
+    return Array.isArray(parsed.records) ? parsed.records : []
+  } catch {
+    return []
+  }
 }
 
 const queue = JSON.parse(fs.readFileSync(queuePath, 'utf8'))
@@ -80,19 +95,34 @@ for (const [index, record] of records.entries()) {
   }
 }
 
+const existingById = new Map(readExistingResults().map((record) => [record.answerId, record]))
+for (const result of results) {
+  existingById.set(result.answerId, result)
+}
+const mergedRecords = queue.records.map((record) => existingById.get(record.answerId)).filter(Boolean)
+const mergedIds = new Set(mergedRecords.map((record) => record.answerId))
+for (const record of existingById.values()) {
+  if (!mergedIds.has(record.answerId)) {
+    mergedRecords.push(record)
+  }
+}
+
+fs.mkdirSync(path.dirname(outputPath), { recursive: true })
 fs.writeFileSync(
   outputPath,
   `${JSON.stringify(
     {
       updatedAt: new Date().toISOString(),
       sourceQueue: path.relative(rootDir, queuePath),
+      totalQueued: queue.total,
       totalRequested: records.length,
-      totalSuccess: results.filter((result) => result.success).length,
-      records: results,
+      totalFetched: mergedRecords.length,
+      totalSuccess: mergedRecords.filter((result) => result.success).length,
+      records: mergedRecords,
     },
     null,
     2,
   )}\n`,
 )
 
-console.log(`Saved ${results.length} fetch results to ${path.relative(rootDir, outputPath)}.`)
+console.log(`Saved ${mergedRecords.length} merged fetch results to ${path.relative(rootDir, outputPath)}.`)

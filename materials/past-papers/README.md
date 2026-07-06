@@ -33,7 +33,7 @@
 - ZIP 汇总包已解压到 `extracted/` 并纳入生成流程；没有选项或答案不完整的选择题不会强行进入正式刷题入口。
 - 习概 RAR 包已确认可读取，包内主要是已下载过的 2025 年 4 月/10 月资料，暂不重复导入。
 - 马原、近代史 2016-2021 的公开网页每套只展示 15 道预览题，不是完整卷；答案入口已保存，但站点接口提示需要登录。
-- 已整理 `index/zikaosw-answer-queue.json`：包含 2016-2021 马原/近代史预览题共 360 个答案入口。后续如果登录账号具备查看答案权限，可用 `tools/fetch-zikaosw-answers.mjs` 批量抓取答案，再清洗成可刷 JSON。
+- 已整理 `index/zikaosw-answer-queue.json`：包含 2016-2021 马原/近代史预览题共 360 个答案入口。后续如果登录账号具备查看答案权限，可用 `tools/fetch-zikaosw-answers.mjs` 分批抓取答案；脚本会合并已有结果，避免分批运行时覆盖旧数据。
 - 新增 `index/source-gaps.json`：记录已验证过但暂时不能直接入库的来源，包括中国自考资料网马原/近代史 2016-2026 打包页、单年份示例页和自考生网旧年份预览题。
 - 中国自考资料网近代史、马原打包页均显示 2016-2026 多套完整真题及答案，但需要登录/购买；已保存页面、搜索结果和部分示例图片到 `pages/`、`images/zikaoe/`。
 - 环球网校“历年真题”分类目前只提供近几年 PDF/ZIP，未找到 2016-2021 的公开 PDF。
@@ -50,7 +50,16 @@
 1. 优先解压 `raw/` 里的 ZIP/RAR，确认是否有重复卷。
 2. 先处理已有 PDF/ZIP，它们大多自带答案，适合优先转成可刷题。
 3. 旧网页题文先按 `index/older-web-pages.json` 对齐题号和答案入口，登录或找到 PDF 后再补答案。
-4. 如果已登录并拥有自考生网查看答案权限，用 `ZIKAOSW_COOKIE=... node tools/fetch-zikaosw-answers.mjs` 拉取 `index/zikaosw-answer-queue.json` 中的答案。
+4. 如果已登录并拥有自考生网查看答案权限，先小批量验证答案接口：
+   ```bash
+   ZIKAOSW_COOKIE='登录后的 Cookie' ZIKAOSW_LIMIT=5 ZIKAOSW_DELAY_MS=800 node tools/fetch-zikaosw-answers.mjs
+   ```
+   成功后再分批跑全量，例如：
+   ```bash
+   ZIKAOSW_COOKIE='登录后的 Cookie' ZIKAOSW_OFFSET=0 ZIKAOSW_LIMIT=120 node tools/fetch-zikaosw-answers.mjs
+   ZIKAOSW_COOKIE='登录后的 Cookie' ZIKAOSW_OFFSET=120 ZIKAOSW_LIMIT=120 node tools/fetch-zikaosw-answers.mjs
+   ZIKAOSW_COOKIE='登录后的 Cookie' ZIKAOSW_OFFSET=240 ZIKAOSW_LIMIT=120 node tools/fetch-zikaosw-answers.mjs
+   ```
 5. 对 PDF/图片做 OCR，抽出题干、选项、答案、解析。
 6. 用应用资源页的“粘贴文本制卷”导入并校正分值。
 7. 最后再考虑免费数据库，只存结构化 JSON 和来源索引，不把来源不清的整套第三方资料硬编码进题库。
