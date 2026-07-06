@@ -2153,6 +2153,13 @@ type PreviewQualityIssue = {
   count: number
 }
 
+const defaultPreviewPoints: Record<QuestionType, number> = {
+  single: 2,
+  multiple: 4,
+  short: 8,
+  essay: 14,
+}
+
 function isPlaceholderAnalysis(question: Question) {
   const analysis = question.analysis.trim()
   return !analysis || /暂未提供解析|待登录抓取|待进一步校对/.test(analysis)
@@ -2391,6 +2398,7 @@ function ResourcesView({
   const [builderMessage, setBuilderMessage] = useState('支持每题带答案，也支持卷尾统一“参考答案”。')
   const [builderPreview, setBuilderPreview] = useState<BuilderPreview | null>(null)
   const [prefilledPaperId, setPrefilledPaperId] = useState<string | null>(null)
+  const [previewPointDefaults, setPreviewPointDefaults] = useState<Record<QuestionType, number>>(defaultPreviewPoints)
   const [previewPackLoading, setPreviewPackLoading] = useState(false)
   const importedQuestionCount = (paperId: string) =>
     importedBank.questions.filter((question) => question.paperId === paperId).length
@@ -2592,6 +2600,38 @@ function ResourcesView({
 
   function updatePreviewQuestionPoints(question: Question, value: string) {
     updatePreviewQuestion(question.id, { points: readPositiveInteger(value, question.points) })
+  }
+
+  function updatePreviewPointDefault(type: QuestionType, value: string) {
+    setPreviewPointDefaults((current) => ({
+      ...current,
+      [type]: readPositiveInteger(value, current[type]),
+    }))
+  }
+
+  function applyPreviewPointsByType() {
+    setBuilderPreview((current) => {
+      if (!current?.bank.questions.length) {
+        setBuilderMessage('还没有可批量设置分值的预览。')
+        return current
+      }
+
+      const nextQuestions = current.bank.questions.map((question) => ({
+        ...question,
+        points: previewPointDefaults[question.type],
+      }))
+      const nextScore = nextQuestions.reduce((sum, question) => sum + question.points, 0)
+      const nextPaper = current.bank.papers[0]
+
+      setBuilderMessage(`已按题型批量设置分值，题目合计 ${nextScore} 分。`)
+      return {
+        ...current,
+        bank: {
+          papers: nextPaper ? [{ ...nextPaper, totalScore: Math.max(nextScore, 1) }] : [],
+          questions: nextQuestions,
+        },
+      }
+    })
   }
 
   function updatePreviewAnswer(question: Question, value: string) {
@@ -2958,6 +2998,23 @@ function ResourcesView({
                     </label>
                     <button type="button" onClick={syncPreviewPaperScore} disabled={previewPaper.totalScore === previewStats.score}>
                       按题目合计
+                    </button>
+                  </div>
+                  <div className="preview-type-points" aria-label="按题型批量设置分值">
+                    {(['single', 'multiple', 'short', 'essay'] as QuestionType[]).map((type) => (
+                      <label key={type}>
+                        <span>{questionLabel(type)}</span>
+                        <input
+                          type="number"
+                          min={1}
+                          step={1}
+                          value={previewPointDefaults[type]}
+                          onChange={(event) => updatePreviewPointDefault(type, event.target.value)}
+                        />
+                      </label>
+                    ))}
+                    <button type="button" onClick={applyPreviewPointsByType}>
+                      批量应用分值
                     </button>
                   </div>
                   <div className="preview-metrics">

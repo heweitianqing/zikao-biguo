@@ -1934,13 +1934,28 @@
   gap: 8px;
 }
 
+.preview-type-points {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(56px, 1fr)) auto;
+  gap: 8px;
+  align-items: end;
+  max-width: min(100%, 560px);
+}
+
 .preview-score-controls label {
   display: grid;
   gap: 4px;
   min-width: 96px;
 }
 
+.preview-type-points label {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
 .preview-score-controls span,
+.preview-type-points span,
 .point-field span {
   color: var(--ink-muted);
   font-size: 12px;
@@ -1948,6 +1963,7 @@
 }
 
 .preview-score-controls input,
+.preview-type-points input,
 .preview-edit-grid input {
   width: 100%;
   min-width: 0;
@@ -1965,6 +1981,14 @@
   min-height: 38px;
   padding: 7px 10px;
   font-size: 13px;
+}
+
+.preview-type-points button {
+  align-self: end;
+  min-height: 38px;
+  padding: 7px 10px;
+  font-size: 13px;
+  white-space: nowrap;
 }
 
 .preview-score-controls button:disabled {
@@ -2100,7 +2124,8 @@
 
 .preview-edit-grid input:focus,
 .preview-edit-grid textarea:focus,
-.preview-score-controls input:focus {
+.preview-score-controls input:focus,
+.preview-type-points input:focus {
   border-color: var(--blue);
   box-shadow: 0 0 0 3px rgba(39, 98, 122, 0.14);
 }
@@ -2496,6 +2521,17 @@
 
   .preview-score-controls {
     justify-content: flex-start;
+  }
+
+  .preview-type-points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: none;
+  }
+
+  .preview-type-points button {
+    grid-column: 1 / -1;
+    justify-self: start;
   }
 
   .preview-metrics,
