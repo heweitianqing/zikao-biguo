@@ -293,7 +293,7 @@ for (const sourceRecord of olderIndex.records) {
     session: sourceRecord.session,
     sourceKind: 'imported',
     status: answeredCount === paperQuestionIds.length ? 'ready' : 'needs-import',
-    description: `自考生网旧年份公开预览题，仅 ${paperQuestionIds.length} 道；${answeredCount} 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。`,
+    description: `自考生网旧年份公开预览题，仅 ${paperQuestionIds.length} 道；${answeredCount} 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。`,
     minutes: meta.minutes,
     totalScore: paperQuestionIds.length * 2,
     questionIds: paperQuestionIds,

@@ -6,7 +6,7 @@
   "publicAnswerOverrides": "index/public-answer-overrides.json",
   "totalPapers": 24,
   "totalQuestions": 360,
-  "totalWithAnswers": 15,
+  "totalWithAnswers": 75,
   "parseWarnings": [],
   "note": "这是旧年份公开预览题的结构化草稿。未抓到答案的题不会接入正式刷题入口，登录抓取答案后可重新生成。",
   "papers": [
@@ -18,7 +18,7 @@
       "session": "4月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -47,7 +47,7 @@
       "session": "10月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -76,7 +76,7 @@
       "session": "4月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -105,7 +105,7 @@
       "session": "10月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -134,7 +134,7 @@
       "session": "4月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -163,7 +163,7 @@
       "session": "10月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -192,7 +192,7 @@
       "session": "4月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -221,7 +221,7 @@
       "session": "10月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -249,8 +249,8 @@
       "year": 2020,
       "session": "8月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -278,8 +278,8 @@
       "year": 2020,
       "session": "10月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -307,8 +307,8 @@
       "year": 2021,
       "session": "4月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -337,7 +337,7 @@
       "session": "10月",
       "sourceKind": "imported",
       "status": "ready",
-      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -366,7 +366,7 @@
       "session": "4月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -395,7 +395,7 @@
       "session": "10月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -424,7 +424,7 @@
       "session": "4月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -453,7 +453,7 @@
       "session": "10月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -482,7 +482,7 @@
       "session": "4月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -511,7 +511,7 @@
       "session": "10月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -540,7 +540,7 @@
       "session": "4月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -569,7 +569,7 @@
       "session": "10月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -598,7 +598,7 @@
       "session": "8月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -627,7 +627,7 @@
       "session": "10月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -655,8 +655,8 @@
       "year": 2021,
       "session": "4月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -685,7 +685,7 @@
       "session": "10月",
       "sourceKind": "imported",
       "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有抓取答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -4922,9 +4922,9 @@
         "俄国"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -4933,14 +4933,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032808",
         "answerUrl": "https://www.zikaosw.cn/daan/1032808.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -4957,9 +4963,9 @@
         "《北京条约》"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -4968,14 +4974,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032809",
         "answerUrl": "https://www.zikaosw.cn/daan/1032809.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -4992,9 +5004,9 @@
         "《猛回头》"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5003,14 +5015,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032810",
         "answerUrl": "https://www.zikaosw.cn/daan/1032810.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -5027,9 +5045,9 @@
         "武昌起义"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5038,14 +5056,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032811",
         "answerUrl": "https://www.zikaosw.cn/daan/1032811.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -5062,9 +5086,9 @@
         "开展土地革命和武装斗争"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5073,14 +5097,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032812",
         "answerUrl": "https://www.zikaosw.cn/daan/1032812.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -5097,9 +5127,9 @@
         "右倾投降主义"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5108,14 +5138,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032813",
         "answerUrl": "https://www.zikaosw.cn/daan/1032813.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -5132,9 +5168,9 @@
         "二二八起义"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5143,14 +5179,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032814",
         "answerUrl": "https://www.zikaosw.cn/daan/1032814.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -5167,9 +5209,9 @@
         "中共六届七中全会"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5178,14 +5220,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032815",
         "answerUrl": "https://www.zikaosw.cn/daan/1032815.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -5202,9 +5250,9 @@
         "大华围攻东北解放区"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5213,14 +5261,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032816",
         "answerUrl": "https://www.zikaosw.cn/daan/1032816.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -5237,9 +5291,9 @@
         "“两个务必”的要求"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5248,14 +5302,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032817",
         "answerUrl": "https://www.zikaosw.cn/daan/1032817.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -5272,9 +5332,9 @@
         "“两条腿”走路"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5283,14 +5343,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032818",
         "answerUrl": "https://www.zikaosw.cn/daan/1032818.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -5307,9 +5373,9 @@
         "“七千人大会”"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5318,14 +5384,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032819",
         "answerUrl": "https://www.zikaosw.cn/daan/1032819.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -5342,9 +5414,9 @@
         "第一颗人造卫星发射成功"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5353,14 +5425,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032820",
         "answerUrl": "https://www.zikaosw.cn/daan/1032820.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -5377,9 +5455,9 @@
         "“反攻倒算”"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5388,14 +5466,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032821",
         "answerUrl": "https://www.zikaosw.cn/daan/1032821.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -5412,9 +5496,9 @@
         "实现了中法关系正常化"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年8月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5423,14 +5507,20 @@
         "自考生网",
         "2020年8月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1032822",
         "answerUrl": "https://www.zikaosw.cn/daan/1032822.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3935984.html",
         "textFile": "text/older/history-2020-08.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年8月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/583.html",
+          "localPage": "pages/ahzk365-history-2020-08.html",
+          "localText": "text/ahzk365-history-2020-08.txt"
+        }
       }
     },
     {
@@ -5447,9 +5537,9 @@
         "社会主义与资本主义之间的矛盾"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5458,14 +5548,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279273",
         "answerUrl": "https://www.zikaosw.cn/daan/1279273.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5482,9 +5578,9 @@
         "文化渗透"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5493,14 +5589,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279274",
         "answerUrl": "https://www.zikaosw.cn/daan/1279274.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5517,9 +5619,9 @@
         "马关条约"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5528,14 +5630,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279275",
         "answerUrl": "https://www.zikaosw.cn/daan/1279275.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5552,9 +5660,9 @@
         "义和团抗击八国联军的斗争"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5563,14 +5671,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279276",
         "answerUrl": "https://www.zikaosw.cn/daan/1279276.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5587,9 +5701,9 @@
         "资政新篇"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5598,14 +5712,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279277",
         "answerUrl": "https://www.zikaosw.cn/daan/1279277.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5622,9 +5742,9 @@
         "安庆失手"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5633,14 +5753,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279278",
         "answerUrl": "https://www.zikaosw.cn/daan/1279278.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5657,9 +5783,9 @@
         "维新变法，救亡国存"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5668,14 +5794,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279279",
         "answerUrl": "https://www.zikaosw.cn/daan/1279279.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5692,9 +5824,9 @@
         "天津机器局"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5703,14 +5835,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279280",
         "answerUrl": "https://www.zikaosw.cn/daan/1279280.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5727,9 +5865,9 @@
         "维新派与守固派的论战"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5738,14 +5876,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279281",
         "answerUrl": "https://www.zikaosw.cn/daan/1279281.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5762,9 +5906,9 @@
         "军事装备落后"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5773,14 +5917,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279282",
         "answerUrl": "https://www.zikaosw.cn/daan/1279282.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5797,9 +5947,9 @@
         "李大钊"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5808,14 +5958,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279283",
         "answerUrl": "https://www.zikaosw.cn/daan/1279283.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5832,9 +5988,9 @@
         "中华全国总工会"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5843,14 +5999,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279284",
         "answerUrl": "https://www.zikaosw.cn/daan/1279284.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5867,9 +6029,9 @@
         "中华职业教育社"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5878,14 +6040,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279285",
         "answerUrl": "https://www.zikaosw.cn/daan/1279285.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5902,9 +6070,9 @@
         "陕北吴起镇"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5913,14 +6081,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279286",
         "answerUrl": "https://www.zikaosw.cn/daan/1279286.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5937,9 +6111,9 @@
         "卢沟桥事变"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2020年10月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5948,14 +6122,20 @@
         "自考生网",
         "2020年10月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "1279287",
         "answerUrl": "https://www.zikaosw.cn/daan/1279287.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3940784.html",
         "textFile": "text/older/history-2020-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2020年10月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/582.html",
+          "localPage": "pages/ahzk365-history-2020-10.html",
+          "localText": "text/ahzk365-history-2020-10.txt"
+        }
       }
     },
     {
@@ -5972,9 +6152,9 @@
         "半殖民地半封建社会"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -5983,14 +6163,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259612",
         "answerUrl": "https://www.zikaosw.cn/daan/5259612.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -6007,9 +6193,9 @@
         "《瑗晖条约》"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6018,14 +6204,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259624",
         "answerUrl": "https://www.zikaosw.cn/daan/5259624.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -6042,9 +6234,9 @@
         "帝国主义与中华民族的矛盾"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6053,14 +6245,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259629",
         "answerUrl": "https://www.zikaosw.cn/daan/5259629.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -6077,9 +6275,9 @@
         "三元里人民抗英斗争"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6088,14 +6286,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259637",
         "answerUrl": "https://www.zikaosw.cn/daan/5259637.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -6112,9 +6316,9 @@
         "三元里人民抗英斗争"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6123,14 +6327,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259638",
         "answerUrl": "https://www.zikaosw.cn/daan/5259638.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -6147,9 +6357,9 @@
         "三元里人民抗英斗争"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6158,14 +6368,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259639",
         "answerUrl": "https://www.zikaosw.cn/daan/5259639.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -6182,9 +6398,9 @@
         "军事装备落后"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6193,14 +6409,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259650",
         "answerUrl": "https://www.zikaosw.cn/daan/5259650.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -6217,9 +6439,9 @@
         "《救亡决论》"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6228,14 +6450,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259654",
         "answerUrl": "https://www.zikaosw.cn/daan/5259654.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -6252,9 +6480,9 @@
         "辛亥革命时期"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6263,14 +6491,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259662",
         "answerUrl": "https://www.zikaosw.cn/daan/5259662.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -6287,9 +6521,9 @@
         "《伤逝》"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6298,14 +6532,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259666",
         "answerUrl": "https://www.zikaosw.cn/daan/5259666.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -6322,9 +6562,9 @@
         "京汉铁路工人罢工"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6333,14 +6573,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259676",
         "answerUrl": "https://www.zikaosw.cn/daan/5259676.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -6357,9 +6603,9 @@
         "开展土地革命和武装斗争"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6368,14 +6614,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259680",
         "answerUrl": "https://www.zikaosw.cn/daan/5259680.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -6392,9 +6644,9 @@
         "张学良和杨虎城"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6403,14 +6655,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259685",
         "answerUrl": "https://www.zikaosw.cn/daan/5259685.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -6427,9 +6685,9 @@
         "陕北保安地区"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6438,14 +6696,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259689",
         "answerUrl": "https://www.zikaosw.cn/daan/5259689.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -6462,9 +6726,9 @@
         "枣宜战役"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03708《中国近现代史纲要》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -6473,14 +6737,20 @@
         "自考生网",
         "2021年4月",
         "03708",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5259699",
         "answerUrl": "https://www.zikaosw.cn/daan/5259699.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942617.html",
         "textFile": "text/older/history-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03708《中国近现代史纲要》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/581.html",
+          "localPage": "pages/ahzk365-history-2021-04.html",
+          "localText": "text/ahzk365-history-2021-04.txt"
+        }
       }
     },
     {
@@ -12362,9 +12632,9 @@
         "包括马克思和恩格斯及其后继者的理论"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12373,14 +12643,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286581",
         "answerUrl": "https://www.zikaosw.cn/daan/5286581.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {
@@ -12397,9 +12673,9 @@
         "完备的理论体系和严密的逻辑结构"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12408,14 +12684,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286586",
         "answerUrl": "https://www.zikaosw.cn/daan/5286586.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {
@@ -12432,9 +12714,9 @@
         "可知论"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12443,14 +12725,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286594",
         "answerUrl": "https://www.zikaosw.cn/daan/5286594.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {
@@ -12467,9 +12755,9 @@
         "永恒性"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12478,14 +12766,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286595",
         "answerUrl": "https://www.zikaosw.cn/daan/5286595.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {
@@ -12502,9 +12796,9 @@
         "坚持具体问题具体分析"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12513,14 +12807,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286596",
         "answerUrl": "https://www.zikaosw.cn/daan/5286596.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {
@@ -12537,9 +12837,9 @@
         "诡辩论"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12548,14 +12848,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286597",
         "answerUrl": "https://www.zikaosw.cn/daan/5286597.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {
@@ -12572,9 +12878,9 @@
         "实践一感性—理性"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12583,14 +12889,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286598",
         "answerUrl": "https://www.zikaosw.cn/daan/5286598.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {
@@ -12607,9 +12919,9 @@
         "真理既是完整的又是具体的"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12618,14 +12930,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286599",
         "answerUrl": "https://www.zikaosw.cn/daan/5286599.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {
@@ -12642,9 +12960,9 @@
         "与逻辑规则相符合"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12653,14 +12971,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286600",
         "answerUrl": "https://www.zikaosw.cn/daan/5286600.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {
@@ -12677,9 +13001,9 @@
         "社会物质生活的总和"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12688,14 +13012,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286602",
         "answerUrl": "https://www.zikaosw.cn/daan/5286602.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {
@@ -12712,9 +13042,9 @@
         "协作关系"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12723,14 +13053,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286603",
         "answerUrl": "https://www.zikaosw.cn/daan/5286603.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {
@@ -12747,9 +13083,9 @@
         "上层建筑的任何部分的变化都与它的经济基础直接相关"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12758,14 +13094,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286605",
         "answerUrl": "https://www.zikaosw.cn/daan/5286605.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {
@@ -12782,9 +13124,9 @@
         "人的肉体存在及其特性"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12793,14 +13135,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286606",
         "answerUrl": "https://www.zikaosw.cn/daan/5286606.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {
@@ -12817,9 +13165,9 @@
         "没有关系"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12828,14 +13176,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286607",
         "answerUrl": "https://www.zikaosw.cn/daan/5286607.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {
@@ -12852,9 +13206,9 @@
         "劳动者有人身自由且丧失一切生产资料"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：2021年4月自考03709《马克思主义基本原理概论》真题及答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -12863,14 +13217,20 @@
         "自考生网",
         "2021年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "5286608",
         "answerUrl": "https://www.zikaosw.cn/daan/5286608.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3942776.html",
         "textFile": "text/older/marx-2021-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "2021年4月自考03709《马克思主义基本原理概论》真题及答案",
+          "url": "https://ahzk365.com.cn/zhenti/ggk/586.html",
+          "localPage": "pages/ahzk365-marx-2021-04.html",
+          "localText": "text/ahzk365-marx-2021-04.txt"
+        }
       }
     },
     {

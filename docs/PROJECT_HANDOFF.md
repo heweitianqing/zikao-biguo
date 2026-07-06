@@ -65,7 +65,7 @@
 - 旧年份预览题整理：
   - 自考生网 2016-2021 马原/近代史公开预览题已整理成结构化草稿。
   - 当前草稿为 24 套、360 题，保存在 `materials/past-papers/structured/zikaosw-preview-bank.json`。
-  - 已通过华夏大地教育网公开页交叉补齐 2021 年 10 月近代史预览题 15 道答案。
+  - 已通过华夏大地教育网、安徽自考365公开页交叉补齐 5 套预览题共 75 道答案。
   - 这些题暂未接入正式刷题入口，等待开通自考生网搜题包、抓取答案或找到完整 PDF 后再升级。
 - PWA：
   - 有 manifest、图标和 service worker。
@@ -102,13 +102,13 @@
 - `public/sw.js`：离线缓存 service worker。
 - `materials/past-papers/README.md`：真题资料来源、已下载文件、生成流程和缺口说明。
 - `materials/past-papers/structured/generated-import-bank.json`：生成题库的结构化中间文件。
-- `materials/past-papers/structured/zikaosw-preview-bank.json`：自考生网旧年份公开预览题草稿，当前 24 套、360 题，待补答案。
+- `materials/past-papers/structured/zikaosw-preview-bank.json`：自考生网旧年份公开预览题草稿，当前 24 套、360 题，其中 75 道已有公开交叉答案。
 - `materials/past-papers/tools/build-generated-bank.py`：从本地 PDF/ZIP 等资料生成应用题库的脚本。
 - `materials/past-papers/tools/build-zikaosw-preview-bank.mjs`：从旧网页题文和答案抓取结果生成预览题草稿的脚本。
 - `materials/past-papers/index/source-gaps.json`：已验证但暂时无法直接入库的来源缺口。
 - `materials/past-papers/index/zikaosw-answer-queue.json`：旧年份答案抓取队列，后续需要自考生网搜题包或可用查看次数。
 - `materials/past-papers/index/zikaosw-access-check.json`：自考生网登录态验证记录，不含 Cookie 和账号信息。
-- `materials/past-papers/index/public-answer-overrides.json`：公开页面答案交叉补齐表，目前包含 2021 年 10 月近代史 15 道预览题答案。
+- `materials/past-papers/index/public-answer-overrides.json`：公开页面答案交叉补齐表，目前包含近代史 2020 年 8 月/10 月、2021 年 4 月/10 月，以及马原 2021 年 4 月的前 15 道预览题答案。
 
 ## 在其他电脑继续开发
 
@@ -192,6 +192,7 @@ D. 选项
 - 批量补充 `13511` 多媒体技术与应用真题或高质量模拟卷。
 - 继续处理旧年份资料：
   - 2016-2021 马原/近代史公开页只有预览题，答案入口登录后仍提示需要搜题包/可用次数。
+  - 当前已从公开网页交叉补齐 75 道预览题答案，剩余年份继续优先找公开真题答案页面或完整 PDF。
   - 拿到自考生网 Cookie 且账号具备搜题包次数后，可用 `ZIKAOSW_COOKIE=... node materials/past-papers/tools/fetch-zikaosw-answers.mjs` 批量拉取答案。
   - 如果从其他公开页面找到答案，可先补 `materials/past-papers/index/public-answer-overrides.json`，再运行预览题生成脚本合并。
   - 抓到答案后运行 `node materials/past-papers/tools/build-zikaosw-preview-bank.mjs` 合并答案，检查 `structured/zikaosw-preview-bank.json`。
