@@ -7,9 +7,22 @@ type ParserMeta = {
   session: Paper['session']
 }
 
+export type ParseDiagnostics = {
+  rawChars: number
+  questionSectionChars: number
+  answerSectionChars: number
+  questionBlocks: number
+  objectiveAnswerCount: number
+  textAnswerCount: number
+  analysisCount: number
+  questionSectionPreview: string
+  answerSectionPreview: string
+}
+
 type ParseResult = {
   bank: ImportedBank
   warnings: string[]
+  diagnostics: ParseDiagnostics
 }
 
 function normalizeId(input: string) {
@@ -258,6 +271,16 @@ function difficultyFor(type: Question['type']): Question['difficulty'] {
   return '易'
 }
 
+function previewText(text: string) {
+  return text
+    .replace(/\r/g, '')
+    .split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .join('\n')
+    .slice(0, 260)
+}
+
 export function parsePastedPaperText(rawText: string, course: Course, meta: ParserMeta): ParseResult {
   const warnings: string[] = []
   const globalSections = splitGlobalAnswerSection(rawText)
@@ -348,5 +371,16 @@ export function parsePastedPaperText(rawText: string, course: Course, meta: Pars
       questions,
     },
     warnings,
+    diagnostics: {
+      rawChars: rawText.replace(/\s/g, '').length,
+      questionSectionChars: globalSections.questionText.replace(/\s/g, '').length,
+      answerSectionChars: globalSections.answerText.replace(/\s/g, '').length,
+      questionBlocks: blocks.length,
+      objectiveAnswerCount: globalAnswerMap.size,
+      textAnswerCount: globalTextAnswerMap.size,
+      analysisCount: globalAnalysisMap.size,
+      questionSectionPreview: previewText(globalSections.questionText),
+      answerSectionPreview: previewText(globalSections.answerText),
+    },
   }
 }

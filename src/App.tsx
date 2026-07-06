@@ -33,6 +33,7 @@ import './App.css'
 import { courses, importTemplate, papers as seedPapers, pastPaperSources, questions as seedQuestions, sourceGapRecords } from './data/questionBank'
 import type { AnswerRecord, AppState, Course, ImportedBank, Paper, PaperAttempt, Question, QuestionType } from './types'
 import { parsePastedPaperText } from './utils/paperParser'
+import type { ParseDiagnostics } from './utils/paperParser'
 import {
   calculatePaperScore,
   getQuestionScore,
@@ -2144,6 +2145,7 @@ function ReportView({
 type BuilderPreview = {
   bank: ImportedBank
   warnings: string[]
+  diagnostics?: ParseDiagnostics
 }
 
 type PreviewQualityIssue = {
@@ -3047,6 +3049,30 @@ function ResourcesView({
                   <span>质量检查通过</span>
                 )}
               </div>
+
+              {builderPreview.diagnostics && (
+                <div className="preview-sections">
+                  <div className="preview-section-stats">
+                    <span>原文 {builderPreview.diagnostics.rawChars} 字</span>
+                    <span>题干区 {builderPreview.diagnostics.questionSectionChars} 字</span>
+                    <span>答案区 {builderPreview.diagnostics.answerSectionChars} 字</span>
+                    <span>{builderPreview.diagnostics.questionBlocks} 个题目块</span>
+                    <span>{builderPreview.diagnostics.objectiveAnswerCount} 条客观答案</span>
+                    <span>{builderPreview.diagnostics.textAnswerCount} 条主观答案</span>
+                    <span>{builderPreview.diagnostics.analysisCount} 条解析</span>
+                  </div>
+                  <div className="preview-section-grid">
+                    <details open>
+                      <summary>题干区预览</summary>
+                      <p>{builderPreview.diagnostics.questionSectionPreview || '未识别到题干区。'}</p>
+                    </details>
+                    <details open={Boolean(builderPreview.diagnostics.answerSectionPreview)}>
+                      <summary>答案/解析区预览</summary>
+                      <p>{builderPreview.diagnostics.answerSectionPreview || '未识别到独立答案区，解析器会尝试从每题内部读取答案。'}</p>
+                    </details>
+                  </div>
+                </div>
+              )}
 
               <div className="preview-question-list">
                 {builderPreview.bank.questions.map((question, index) => {
