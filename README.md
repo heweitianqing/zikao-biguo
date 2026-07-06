@@ -24,7 +24,7 @@
 
 ## 开发
 
-当前项目文档和脚本以 pnpm 为准：
+当前项目统一使用 pnpm：
 
 ```bash
 pnpm install

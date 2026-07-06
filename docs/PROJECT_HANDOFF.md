@@ -119,7 +119,7 @@ pnpm lint
 pnpm build
 ```
 
-当前仓库里同时存在 `pnpm-lock.yaml`、`package-lock.json`、`yarn.lock` 和 Yarn PnP 文件。项目文档仍以 pnpm 为准，但在 macOS 本机验证时，`.pnp.cjs` 会影响 pnpm 对 rolldown/oxlint 原生依赖的解析，导致 `pnpm build`、`pnpm lint` 报找不到原生 binding。临时移开 `.pnp.cjs` 和 `.pnp.loader.mjs` 后，两项检查都可以通过。后续建议尽快统一包管理器。
+当前项目已统一使用 pnpm。`package.json` 声明了 `pnpm@11.7.0`，仓库只保留 `pnpm-lock.yaml`，不要提交 `package-lock.json`、`yarn.lock`、`.pnp.*` 或 `.yarn/`。
 
 常规开发流程：
 
@@ -171,9 +171,6 @@ D. 选项
 
 优先级高：
 
-- 统一依赖管理：
-  - 如果继续使用 pnpm，移除 Yarn PnP 文件、`yarn.lock` 和 `package-lock.json`，只保留 `pnpm-lock.yaml`。
-  - 如果改用 Yarn PnP，同步更新 README、交接文档和常用命令，并确认 Vite、Rolldown、Oxlint 原生依赖解析正常。
 - 批量补充公共课历年真题：
   - 马原 `15044/03709`
   - 近代史 `15043/03708`

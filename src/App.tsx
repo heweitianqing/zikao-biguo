@@ -557,13 +557,13 @@ function App() {
           ? existing.answer.filter((item) => item !== choice)
           : [...(existing?.answer ?? []), choice]
         : [choice]
-      const earned = scoreObjective(question, nextAnswer)
+      const checked = !isMultiple
       const nextRecord: AnswerRecord = {
         questionId: question.id,
         answer: nextAnswer,
         textAnswer: existing?.textAnswer ?? '',
-        checked: true,
-        earned,
+        checked,
+        earned: checked ? scoreObjective(question, nextAnswer) : 0,
         updatedAt: new Date().toISOString(),
       }
       return {
@@ -1185,6 +1185,12 @@ function App() {
                       <ChevronLeft size={18} />
                       上一题
                     </button>
+                    {currentQuestion.type === 'multiple' && (
+                      <button className="primary" type="button" onClick={() => checkQuestion(currentQuestion)}>
+                        <CheckCircle2 size={18} />
+                        提交本题
+                      </button>
+                    )}
                     {(currentQuestion.type === 'short' || currentQuestion.type === 'essay') && (
                       <>
                         <button className="primary" type="button" onClick={() => checkQuestion(currentQuestion)}>
