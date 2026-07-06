@@ -2158,12 +2158,64 @@ function isPlaceholderAnalysis(question: Question) {
   return !analysis || /暂未提供解析|待登录抓取|待进一步校对/.test(analysis)
 }
 
+function isObjectiveQuestion(question: Question) {
+  return question.type === 'single' || question.type === 'multiple'
+}
+
+function isTextQuestion(question: Question) {
+  return question.type === 'short' || question.type === 'essay'
+}
+
+function hasOptionShortage(question: Question) {
+  return isObjectiveQuestion(question) && (question.options?.length ?? 0) < 4
+}
+
+function hasInvalidChoiceAnswer(question: Question) {
+  if (!isObjectiveQuestion(question) || question.answer.includes('待补充答案')) {
+    return false
+  }
+  const optionCount = question.options?.length ?? 0
+  return question.answer.some((answer) => {
+    const index = answer.trim().toUpperCase().charCodeAt(0) - 65
+    return index < 0 || index >= optionCount
+  })
+}
+
+function hasInvalidPoints(question: Question) {
+  return !Number.isFinite(question.points) || question.points <= 0
+}
+
+function hasUnusualPoints(question: Question) {
+  if (hasInvalidPoints(question)) {
+    return false
+  }
+  const normalPoints: Record<QuestionType, number[]> = {
+    single: [1, 2],
+    multiple: [2, 4],
+    short: [6, 8, 10],
+    essay: [10, 12, 14, 15],
+  }
+  return !normalPoints[question.type].includes(question.points)
+}
+
+function hasShortAnalysis(question: Question) {
+  return !isPlaceholderAnalysis(question) && question.analysis.replace(/\s/g, '').length < 12
+}
+
+function hasShortTextAnswer(question: Question) {
+  return (
+    isTextQuestion(question) &&
+    !question.answer.includes('待补充答案') &&
+    question.answer.join('').replace(/\s/g, '').length < 10
+  )
+}
+
 function getPreviewStats(bank: ImportedBank) {
   const questions = bank.questions
   return {
     total: questions.length,
-    objective: questions.filter((question) => question.type === 'single' || question.type === 'multiple').length,
-    text: questions.filter((question) => question.type === 'short' || question.type === 'essay').length,
+    objective: questions.filter(isObjectiveQuestion).length,
+    text: questions.filter(isTextQuestion).length,
     missingAnswer: questions.filter((question) => question.answer.includes('待补充答案')).length,
     missingAnalysis: questions.filter(isPlaceholderAnalysis).length,
     score: questions.reduce((sum, question) => sum + question.points, 0),
@@ -2173,23 +2225,12 @@ function getPreviewStats(bank: ImportedBank) {
 function getPreviewQualityIssues(bank: ImportedBank): PreviewQualityIssue[] {
   const paper = bank.papers[0]
   const stats = getPreviewStats(bank)
-  const objectiveOptionIssues = bank.questions.filter(
-    (question) => (question.type === 'single' || question.type === 'multiple') && (question.options?.length ?? 0) < 2,
-  )
-  const invalidChoiceAnswers = bank.questions.filter((question) => {
-    if (question.type !== 'single' && question.type !== 'multiple') {
-      return false
-    }
-    if (question.answer.includes('待补充答案')) {
-      return false
-    }
-    const optionCount = question.options?.length ?? 0
-    return question.answer.some((answer) => {
-      const index = answer.trim().toUpperCase().charCodeAt(0) - 65
-      return index < 0 || index >= optionCount
-    })
-  })
-  const pointIssues = bank.questions.filter((question) => !Number.isFinite(question.points) || question.points <= 0)
+  const objectiveOptionIssues = bank.questions.filter(hasOptionShortage)
+  const invalidChoiceAnswers = bank.questions.filter(hasInvalidChoiceAnswer)
+  const pointIssues = bank.questions.filter(hasInvalidPoints)
+  const unusualPointIssues = bank.questions.filter(hasUnusualPoints)
+  const shortAnalysisIssues = bank.questions.filter(hasShortAnalysis)
+  const shortTextAnswerIssues = bank.questions.filter(hasShortTextAnswer)
   const paperQuestionMismatch = paper ? Math.abs((paper.questionIds?.length ?? 0) - bank.questions.length) : 0
 
   return [
@@ -2208,7 +2249,7 @@ function getPreviewQualityIssues(bank: ImportedBank): PreviewQualityIssue[] {
     {
       id: 'option-shortage',
       label: '选项不足',
-      detail: '客观题选项少于 2 个，通常是 OCR 或粘贴换行漏识别。',
+      detail: '客观题选项少于 4 个，通常是 OCR 或粘贴换行漏识别。',
       count: objectiveOptionIssues.length,
     },
     {
@@ -2222,6 +2263,24 @@ function getPreviewQualityIssues(bank: ImportedBank): PreviewQualityIssue[] {
       label: '分值异常',
       detail: '单题分值为空、为 0 或不是有效数字。',
       count: pointIssues.length,
+    },
+    {
+      id: 'unusual-points',
+      label: '分值需确认',
+      detail: '单题分值不在常见自考分值范围内，建议按真题卷面核对。',
+      count: unusualPointIssues.length,
+    },
+    {
+      id: 'short-analysis',
+      label: '解析过短',
+      detail: '解析不是占位文案，但内容过短，建议补教材考点或易错点。',
+      count: shortAnalysisIssues.length,
+    },
+    {
+      id: 'short-text-answer',
+      label: '要点过短',
+      detail: '主观题参考要点过短，可能没有完整复制答案。',
+      count: shortTextAnswerIssues.length,
     },
     {
       id: 'score-mismatch',
@@ -2246,11 +2305,23 @@ function getQuestionQualityLabels(question: Question) {
   if (isPlaceholderAnalysis(question)) {
     labels.push('缺解析')
   }
-  if ((question.type === 'single' || question.type === 'multiple') && (question.options?.length ?? 0) < 2) {
+  if (hasShortAnalysis(question)) {
+    labels.push('解析过短')
+  }
+  if (hasShortTextAnswer(question)) {
+    labels.push('要点过短')
+  }
+  if (hasOptionShortage(question)) {
     labels.push('选项不足')
   }
-  if (!Number.isFinite(question.points) || question.points <= 0) {
+  if (hasInvalidChoiceAnswer(question)) {
+    labels.push('答案越界')
+  }
+  if (hasInvalidPoints(question)) {
     labels.push('分值异常')
+  }
+  if (hasUnusualPoints(question)) {
+    labels.push('分值需确认')
   }
   return labels
 }
