@@ -158,7 +158,7 @@
       "localIndex": "index/older-web-pages.json",
       "coverageClaim": "2016-2021 每套公开约 15 道预览题，答案入口需要搜题包或可用查看次数。",
       "accessStatus": "answer-links-blocked",
-      "currentUse": "已登录验证仍显示“查看答案(剩0次)”和“需开通搜题包查看答案”；只作为题文和年份线索，不进入正式刷题题库。"
+      "currentUse": "自考生网答案仍需搜题包；已用公开页面交叉补齐答案，可在资源页导入旧年份预览题练习包。仍不是完整真题卷。"
     },
     {
       "courseId": "marx",
@@ -169,7 +169,7 @@
       "localIndex": "index/older-web-pages.json",
       "coverageClaim": "2016-2021 每套公开约 15 道预览题，答案入口需要搜题包或可用查看次数。",
       "accessStatus": "answer-links-blocked",
-      "currentUse": "已登录验证仍显示“查看答案(剩0次)”和“需开通搜题包查看答案”；只作为题文和年份线索，不进入正式刷题题库。"
+      "currentUse": "自考生网答案仍需搜题包；已用公开页面交叉补齐答案，可在资源页导入旧年份预览题练习包。仍不是完整真题卷。"
     }
   ]
 }
