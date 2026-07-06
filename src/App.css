@@ -1015,6 +1015,40 @@
   margin-bottom: 16px;
 }
 
+.question-mark-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -6px 0 18px;
+}
+
+.question-mark-actions button {
+  min-height: 34px;
+  padding: 6px 10px;
+  color: var(--ink-soft);
+  background: rgba(236, 228, 214, 0.5);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.question-mark-actions button.active {
+  color: #fffaf0;
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.question-mark-actions button.active.review {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.question-mark-actions button.active.mastered {
+  background: var(--green);
+  border-color: var(--green);
+}
+
 .question-card h3 {
   font-size: clamp(24px, 3.2vw, 36px);
 }
@@ -1450,6 +1484,27 @@
 .paper-item small,
 .mistake-list small {
   color: var(--ink-muted);
+}
+
+.question-mark-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 7px;
+}
+
+.question-mark-badges em {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 3px 8px;
+  color: var(--blue);
+  background: rgba(39, 98, 122, 0.08);
+  border: 1px solid rgba(39, 98, 122, 0.2);
+  border-radius: 999px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
 }
 
 .paper-type-strip {

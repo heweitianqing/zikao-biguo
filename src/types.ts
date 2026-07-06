@@ -82,12 +82,20 @@ export type PaperAttempt = {
   submittedAt?: string
 }
 
+export type QuestionMark = {
+  favorite?: boolean
+  reviewAgain?: boolean
+  mastered?: boolean
+  updatedAt: string
+}
+
 export type AppState = {
   selectedCourseId: string
   selectedPaperId: string
   selectedQuestionIndex: number
   view: 'practice' | 'study' | 'papers' | 'mistakes' | 'resources' | 'settings' | 'report'
   attempts: Record<string, PaperAttempt>
+  questionMarks: Record<string, QuestionMark>
   deepseekApiKey: string
   targetExamDate: string
 }

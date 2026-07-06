@@ -31,7 +31,7 @@ import { useEffect, useMemo, useState } from 'react'
 import type { CSSProperties } from 'react'
 import './App.css'
 import { courses, importTemplate, papers as seedPapers, pastPaperSources, questions as seedQuestions, sourceGapRecords } from './data/questionBank'
-import type { AnswerRecord, AppState, Course, ImportedBank, Paper, PaperAttempt, Question, QuestionType } from './types'
+import type { AnswerRecord, AppState, Course, ImportedBank, Paper, PaperAttempt, Question, QuestionMark, QuestionType } from './types'
 import { parsePastedPaperText } from './utils/paperParser'
 import type { ParseDiagnostics } from './utils/paperParser'
 import {
@@ -51,6 +51,7 @@ const defaultState: AppState = {
   selectedQuestionIndex: 0,
   view: 'practice',
   attempts: {},
+  questionMarks: {},
   deepseekApiKey: '',
   targetExamDate: '',
 }
@@ -480,6 +481,14 @@ function formatShortDate(value: string) {
   return `${date.getMonth() + 1}/${date.getDate()}`
 }
 
+function getQuestionMarkLabels(mark: QuestionMark | undefined) {
+  const labels: string[] = []
+  if (mark?.favorite) labels.push('已收藏')
+  if (mark?.reviewAgain) labels.push('再背一遍')
+  if (mark?.mastered) labels.push('已掌握')
+  return labels
+}
+
 function toDateKey(date: Date) {
   const year = date.getFullYear()
   const month = String(date.getMonth() + 1).padStart(2, '0')
@@ -608,6 +617,7 @@ function App() {
   const currentQuestion = paperQuestions[state.selectedQuestionIndex] ?? paperQuestions[0]
   const currentAttempt = state.attempts[selectedPaper.id] ?? createAttempt(selectedPaper)
   const currentRecord = currentQuestion ? currentAttempt.answers[currentQuestion.id] : undefined
+  const currentQuestionMark = currentQuestion ? state.questionMarks[currentQuestion.id] : undefined
   const answeredCount = selectedPaper.questionIds.filter((id) => currentAttempt.answers[id]?.checked).length
   const score = calculatePaperScore(selectedPaper, paperQuestions, currentAttempt.answers)
   const progress = paperQuestions.length ? Math.round((answeredCount / paperQuestions.length) * 100) : 0
@@ -647,6 +657,40 @@ function App() {
 
   function patchState(patch: Partial<AppState>) {
     setState((current) => ({ ...current, ...patch }))
+  }
+
+  function toggleQuestionMark(question: Question, key: 'favorite' | 'reviewAgain' | 'mastered') {
+    setState((current) => {
+      const currentMark = current.questionMarks[question.id]
+      const enabled = !currentMark?.[key]
+      const nextMark: QuestionMark = {
+        ...currentMark,
+        [key]: enabled,
+        updatedAt: new Date().toISOString(),
+      }
+
+      if (key === 'reviewAgain' && enabled) {
+        nextMark.mastered = false
+      }
+      if (key === 'mastered' && enabled) {
+        nextMark.reviewAgain = false
+      }
+
+      const hasAnyMark = Boolean(nextMark.favorite || nextMark.reviewAgain || nextMark.mastered)
+      const nextQuestionMarks = { ...current.questionMarks }
+      if (hasAnyMark) {
+        nextQuestionMarks[question.id] = nextMark
+      } else {
+        delete nextQuestionMarks[question.id]
+      }
+
+      return {
+        ...current,
+        questionMarks: nextQuestionMarks,
+      }
+    })
+    const label = key === 'favorite' ? '收藏' : key === 'reviewAgain' ? '再背一遍' : '已掌握'
+    setNotice(`${question.stem.slice(0, 18)}${question.stem.length > 18 ? '...' : ''} 已更新标记：${label}。`)
   }
 
   function ensureAttempt(paper: Paper) {
@@ -1274,6 +1318,29 @@ function App() {
                     <span>{currentQuestion.difficulty}</span>
                     <span>{sourceLabel(currentQuestion.sourceKind)}</span>
                   </div>
+                  <div className="question-mark-actions" aria-label="题目标记">
+                    <button
+                      type="button"
+                      className={currentQuestionMark?.favorite ? 'active' : ''}
+                      onClick={() => toggleQuestionMark(currentQuestion, 'favorite')}
+                    >
+                      收藏难题
+                    </button>
+                    <button
+                      type="button"
+                      className={currentQuestionMark?.reviewAgain ? 'active review' : ''}
+                      onClick={() => toggleQuestionMark(currentQuestion, 'reviewAgain')}
+                    >
+                      再背一遍
+                    </button>
+                    <button
+                      type="button"
+                      className={currentQuestionMark?.mastered ? 'active mastered' : ''}
+                      onClick={() => toggleQuestionMark(currentQuestion, 'mastered')}
+                    >
+                      已掌握
+                    </button>
+                  </div>
                   <h3>{currentQuestion.stem}</h3>
 
                   {(currentQuestion.type === 'single' || currentQuestion.type === 'multiple') && (
@@ -1454,6 +1521,7 @@ function App() {
         {state.view === 'mistakes' && (
           <MistakesView
             items={mistakeItems}
+            questionMarks={state.questionMarks}
             onReview={startMistakeReview}
             onOpen={(item) => {
               const paper = item.paper ?? allPapers.find((paperItem) => paperItem.id === item.question.paperId)
@@ -1972,10 +2040,12 @@ function PapersView({
 
 function MistakesView({
   items,
+  questionMarks,
   onOpen,
   onReview,
 }: {
   items: MistakeReviewItem[]
+  questionMarks: Record<string, QuestionMark>
   onOpen: (item: MistakeReviewItem) => void
   onReview: (items: MistakeReviewItem[]) => void
 }) {
@@ -2142,22 +2212,32 @@ function MistakesView({
       )}
 
       <div className="mistake-list">
-        {filteredItems.map((item) => (
-          <button key={item.question.id} type="button" onClick={() => onOpen(item)}>
-            <span className="mistake-type">{questionLabel(item.question.type)}</span>
-            <span>
-              <strong>{item.question.stem}</strong>
-              <small>
-                {item.course.shortName} · {item.chapterTitle} · {item.paper?.title ?? '本地题库'}
-              </small>
-              <small>{item.question.tags.join(' / ')}</small>
-            </span>
-            <span className="mistake-score">
-              <strong>{item.earned}/{item.question.points}</strong>
-              <small>上次得分</small>
-            </span>
-          </button>
-        ))}
+        {filteredItems.map((item) => {
+          const markLabels = getQuestionMarkLabels(questionMarks[item.question.id])
+          return (
+            <button key={item.question.id} type="button" onClick={() => onOpen(item)}>
+              <span className="mistake-type">{questionLabel(item.question.type)}</span>
+              <span>
+                <strong>{item.question.stem}</strong>
+                <small>
+                  {item.course.shortName} · {item.chapterTitle} · {item.paper?.title ?? '本地题库'}
+                </small>
+                <small>{item.question.tags.join(' / ')}</small>
+                {!!markLabels.length && (
+                  <span className="question-mark-badges">
+                    {markLabels.map((label) => (
+                      <em key={label}>{label}</em>
+                    ))}
+                  </span>
+                )}
+              </span>
+              <span className="mistake-score">
+                <strong>{item.earned}/{item.question.points}</strong>
+                <small>上次得分</small>
+              </span>
+            </button>
+          )
+        })}
       </div>
 
       {items.length > 0 && !filteredItems.length && (
