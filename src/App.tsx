@@ -53,6 +53,7 @@ const defaultState: AppState = {
   attempts: {},
   questionMarks: {},
   deepseekApiKey: '',
+  deepseekModel: 'deepseek-chat',
   targetExamDate: '',
 }
 
@@ -907,7 +908,7 @@ function App() {
           Authorization: `Bearer ${state.deepseekApiKey.trim()}`,
         },
         body: JSON.stringify({
-          model: 'deepseek-chat',
+          model: state.deepseekModel.trim() || 'deepseek-chat',
           messages: [
             {
               role: 'system',
@@ -1556,8 +1557,10 @@ function App() {
         {state.view === 'settings' && (
           <SettingsView
             apiKey={state.deepseekApiKey}
+            modelName={state.deepseekModel}
             targetExamDate={state.targetExamDate}
             onApiKeyChange={(deepseekApiKey) => patchState({ deepseekApiKey })}
+            onModelNameChange={(deepseekModel) => patchState({ deepseekModel })}
             onTargetExamDateChange={(targetExamDate) => patchState({ targetExamDate })}
             onClear={clearData}
           />
@@ -3476,14 +3479,18 @@ function ArchiveIcon() {
 
 function SettingsView({
   apiKey,
+  modelName,
   targetExamDate,
   onApiKeyChange,
+  onModelNameChange,
   onTargetExamDateChange,
   onClear,
 }: {
   apiKey: string
+  modelName: string
   targetExamDate: string
   onApiKeyChange: (apiKey: string) => void
+  onModelNameChange: (modelName: string) => void
   onTargetExamDateChange: (targetExamDate: string) => void
   onClear: () => void
 }) {
@@ -3506,6 +3513,14 @@ function SettingsView({
             onChange={(event) => onApiKeyChange(event.target.value)}
           />
           <small>Key 只保存在你的浏览器本地，用于简答题和论述题 AI 评价。</small>
+        </label>
+        <label className="setting-card">
+          <span>
+            <BrainCircuit size={20} />
+            DeepSeek 模型名
+          </span>
+          <input value={modelName} placeholder="deepseek-chat" onChange={(event) => onModelNameChange(event.target.value)} />
+          <small>默认 deepseek-chat。也可以填 deepseek-reasoner 或兼容接口支持的模型名。</small>
         </label>
         <label className="setting-card">
           <span>

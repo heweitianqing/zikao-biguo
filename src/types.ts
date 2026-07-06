@@ -97,6 +97,7 @@ export type AppState = {
   attempts: Record<string, PaperAttempt>
   questionMarks: Record<string, QuestionMark>
   deepseekApiKey: string
+  deepseekModel: string
   targetExamDate: string
 }
 
