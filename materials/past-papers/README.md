@@ -29,6 +29,7 @@
 ## 当前缺口
 
 - 已新增 `tools/build-generated-bank.py`，可从本地 PDF/ZIP 生成 `structured/generated-import-bank.json` 和应用内置文件 `src/data/generatedPastPapers.ts`。
+- 已新增 `tools/build-zikaosw-preview-bank.mjs`，可把自考生网 2016-2021 旧年份公开预览题整理成 `structured/zikaosw-preview-bank.json`；登录抓取答案后重新运行会自动合并答案和解析。
 - 当前已接入应用：18 套、189 题，正式刷题题库缺答案数为 0。覆盖习概 2025 年 4 月/10 月，马原 2022-2026 多套选择/主观题，近代史 2022-2025 多套主观题与部分选择题。
 - ZIP 汇总包已解压到 `extracted/` 并纳入生成流程；没有选项或答案不完整的选择题不会强行进入正式刷题入口。
 - 习概 RAR 包已确认可读取，包内主要是已下载过的 2025 年 4 月/10 月资料，暂不重复导入。
@@ -50,7 +51,12 @@
 1. 优先解压 `raw/` 里的 ZIP/RAR，确认是否有重复卷。
 2. 先处理已有 PDF/ZIP，它们大多自带答案，适合优先转成可刷题。
 3. 旧网页题文先按 `index/older-web-pages.json` 对齐题号和答案入口，登录或找到 PDF 后再补答案。
-4. 如果已登录并拥有自考生网查看答案权限，先小批量验证答案接口：
+4. 先生成旧网页预览题结构化草稿：
+   ```bash
+   node tools/build-zikaosw-preview-bank.mjs
+   ```
+   当前会生成 24 套、360 道待补答案预览题；这些题只是草稿，不会自动进入正式刷题入口。
+5. 如果已登录并拥有自考生网查看答案权限，先小批量验证答案接口：
    ```bash
    ZIKAOSW_COOKIE='登录后的 Cookie' ZIKAOSW_LIMIT=5 ZIKAOSW_DELAY_MS=800 node tools/fetch-zikaosw-answers.mjs
    ```
@@ -60,6 +66,7 @@
    ZIKAOSW_COOKIE='登录后的 Cookie' ZIKAOSW_OFFSET=120 ZIKAOSW_LIMIT=120 node tools/fetch-zikaosw-answers.mjs
    ZIKAOSW_COOKIE='登录后的 Cookie' ZIKAOSW_OFFSET=240 ZIKAOSW_LIMIT=120 node tools/fetch-zikaosw-answers.mjs
    ```
-5. 对 PDF/图片做 OCR，抽出题干、选项、答案、解析。
-6. 用应用资源页的“粘贴文本制卷”导入并校正分值。
-7. 最后再考虑免费数据库，只存结构化 JSON 和来源索引，不把来源不清的整套第三方资料硬编码进题库。
+   抓到答案后再次运行 `node tools/build-zikaosw-preview-bank.mjs`，会把答案和解析合并进 `structured/zikaosw-preview-bank.json`。
+6. 对 PDF/图片做 OCR，抽出题干、选项、答案、解析。
+7. 用应用资源页的“粘贴文本制卷”导入并校正分值。
+8. 最后再考虑免费数据库，只存结构化 JSON 和来源索引，不把来源不清的整套第三方资料硬编码进题库。

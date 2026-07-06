@@ -62,6 +62,10 @@
   - 当前已接入公共课真题扩展包 18 套、189 题。
   - 覆盖习概 2025 年 4 月/10 月，马原 2022-2026 多套选择/主观题，近代史 2022-2025 多套主观题与部分选择题。
   - 生成来源和缺口记录在 `materials/past-papers/`。
+- 旧年份预览题整理：
+  - 自考生网 2016-2021 马原/近代史公开预览题已整理成结构化草稿。
+  - 当前草稿为 24 套、360 题，保存在 `materials/past-papers/structured/zikaosw-preview-bank.json`。
+  - 这些题暂未接入正式刷题入口，等待登录抓取答案或找到完整 PDF 后再升级。
 - PWA：
   - 有 manifest、图标和 service worker。
   - 可安装到桌面或手机主屏。
@@ -97,7 +101,9 @@
 - `public/sw.js`：离线缓存 service worker。
 - `materials/past-papers/README.md`：真题资料来源、已下载文件、生成流程和缺口说明。
 - `materials/past-papers/structured/generated-import-bank.json`：生成题库的结构化中间文件。
+- `materials/past-papers/structured/zikaosw-preview-bank.json`：自考生网旧年份公开预览题草稿，当前 24 套、360 题，待补答案。
 - `materials/past-papers/tools/build-generated-bank.py`：从本地 PDF/ZIP 等资料生成应用题库的脚本。
+- `materials/past-papers/tools/build-zikaosw-preview-bank.mjs`：从旧网页题文和答案抓取结果生成预览题草稿的脚本。
 - `materials/past-papers/index/source-gaps.json`：已验证但暂时无法直接入库的来源缺口。
 - `materials/past-papers/index/zikaosw-answer-queue.json`：旧年份答案抓取队列，后续需要登录权限。
 
@@ -184,6 +190,7 @@ D. 选项
 - 继续处理旧年份资料：
   - 2016-2021 马原/近代史公开页只有预览题，答案入口需要登录权限。
   - 拿到自考生网 Cookie 后，可用 `ZIKAOSW_COOKIE=... node materials/past-papers/tools/fetch-zikaosw-answers.mjs` 批量拉取答案。
+  - 抓到答案后运行 `node materials/past-papers/tools/build-zikaosw-preview-bank.mjs` 合并答案，检查 `structured/zikaosw-preview-bank.json`。
   - 中国自考资料网 2016-2026 打包页需要登录/购买，已记录在 `source-gaps.json`。
 - 增加“导入质量检查”：
   - 标出疑似答案缺失。
