@@ -1934,7 +1934,8 @@
 }
 
 .preview-metrics,
-.preview-warnings {
+.preview-warnings,
+.preview-quality {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -1942,7 +1943,8 @@
 }
 
 .preview-metrics span,
-.preview-warnings span {
+.preview-warnings span,
+.preview-quality span {
   display: inline-flex;
   align-items: center;
   min-height: 28px;
@@ -1956,10 +1958,17 @@
 }
 
 .preview-metrics span.warn,
-.preview-warnings span {
+.preview-warnings span,
+.preview-quality.has-issues span {
   color: var(--red);
   background: rgba(217, 79, 53, 0.08);
   border-color: rgba(217, 79, 53, 0.24);
+}
+
+.preview-quality span {
+  color: var(--green);
+  background: rgba(45, 125, 83, 0.08);
+  border-color: rgba(45, 125, 83, 0.22);
 }
 
 .preview-question-list {

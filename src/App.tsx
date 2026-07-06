@@ -2113,6 +2113,18 @@ type BuilderPreview = {
   warnings: string[]
 }
 
+type PreviewQualityIssue = {
+  id: string
+  label: string
+  detail: string
+  count: number
+}
+
+function isPlaceholderAnalysis(question: Question) {
+  const analysis = question.analysis.trim()
+  return !analysis || /暂未提供解析|待登录抓取|待进一步校对/.test(analysis)
+}
+
 function getPreviewStats(bank: ImportedBank) {
   const questions = bank.questions
   return {
@@ -2120,9 +2132,94 @@ function getPreviewStats(bank: ImportedBank) {
     objective: questions.filter((question) => question.type === 'single' || question.type === 'multiple').length,
     text: questions.filter((question) => question.type === 'short' || question.type === 'essay').length,
     missingAnswer: questions.filter((question) => question.answer.includes('待补充答案')).length,
-    missingAnalysis: questions.filter((question) => question.analysis.includes('暂未提供解析')).length,
+    missingAnalysis: questions.filter(isPlaceholderAnalysis).length,
     score: questions.reduce((sum, question) => sum + question.points, 0),
   }
+}
+
+function getPreviewQualityIssues(bank: ImportedBank): PreviewQualityIssue[] {
+  const paper = bank.papers[0]
+  const stats = getPreviewStats(bank)
+  const objectiveOptionIssues = bank.questions.filter(
+    (question) => (question.type === 'single' || question.type === 'multiple') && (question.options?.length ?? 0) < 2,
+  )
+  const invalidChoiceAnswers = bank.questions.filter((question) => {
+    if (question.type !== 'single' && question.type !== 'multiple') {
+      return false
+    }
+    if (question.answer.includes('待补充答案')) {
+      return false
+    }
+    const optionCount = question.options?.length ?? 0
+    return question.answer.some((answer) => {
+      const index = answer.trim().toUpperCase().charCodeAt(0) - 65
+      return index < 0 || index >= optionCount
+    })
+  })
+  const pointIssues = bank.questions.filter((question) => !Number.isFinite(question.points) || question.points <= 0)
+  const paperQuestionMismatch = paper ? Math.abs((paper.questionIds?.length ?? 0) - bank.questions.length) : 0
+
+  return [
+    {
+      id: 'missing-answer',
+      label: '缺答案',
+      detail: '题目还没有参考答案，导入后无法准确判题。',
+      count: stats.missingAnswer,
+    },
+    {
+      id: 'missing-analysis',
+      label: '缺解析',
+      detail: '解析仍是占位文案，建议补教材考点或易错点。',
+      count: stats.missingAnalysis,
+    },
+    {
+      id: 'option-shortage',
+      label: '选项不足',
+      detail: '客观题选项少于 2 个，通常是 OCR 或粘贴换行漏识别。',
+      count: objectiveOptionIssues.length,
+    },
+    {
+      id: 'invalid-answer',
+      label: '答案越界',
+      detail: '客观题答案字母超出了当前选项范围。',
+      count: invalidChoiceAnswers.length,
+    },
+    {
+      id: 'bad-points',
+      label: '分值异常',
+      detail: '单题分值为空、为 0 或不是有效数字。',
+      count: pointIssues.length,
+    },
+    {
+      id: 'score-mismatch',
+      label: '满分不一致',
+      detail: '整卷满分和题目分值合计不一致，可按需要同步。',
+      count: paper && paper.totalScore !== stats.score ? 1 : 0,
+    },
+    {
+      id: 'question-count-mismatch',
+      label: '题号不一致',
+      detail: '试卷 questionIds 数量和题目数量不一致。',
+      count: paperQuestionMismatch,
+    },
+  ].filter((issue) => issue.count > 0)
+}
+
+function getQuestionQualityLabels(question: Question) {
+  const labels: string[] = []
+  if (question.answer.includes('待补充答案')) {
+    labels.push('缺答案')
+  }
+  if (isPlaceholderAnalysis(question)) {
+    labels.push('缺解析')
+  }
+  if ((question.type === 'single' || question.type === 'multiple') && (question.options?.length ?? 0) < 2) {
+    labels.push('选项不足')
+  }
+  if (!Number.isFinite(question.points) || question.points <= 0) {
+    labels.push('分值异常')
+  }
+  return labels
 }
 
 function formatAnswerForEditor(question: Question) {
@@ -2390,6 +2487,7 @@ function ResourcesView({
 
   const previewPaper = builderPreview?.bank.papers[0]
   const previewStats = builderPreview ? getPreviewStats(builderPreview.bank) : null
+  const previewQualityIssues = builderPreview ? getPreviewQualityIssues(builderPreview.bank) : []
 
   return (
     <section className="resources-view">
@@ -2717,9 +2815,22 @@ function ResourcesView({
                 </div>
               )}
 
+              <div className={previewQualityIssues.length ? 'preview-quality has-issues' : 'preview-quality'}>
+                {previewQualityIssues.length ? (
+                  previewQualityIssues.map((issue) => (
+                    <span key={issue.id} title={issue.detail}>
+                      {issue.label} {issue.count}
+                    </span>
+                  ))
+                ) : (
+                  <span>质量检查通过</span>
+                )}
+              </div>
+
               <div className="preview-question-list">
                 {builderPreview.bank.questions.map((question, index) => {
-                  const needsFix = question.answer.includes('待补充答案') || question.analysis.includes('暂未提供解析')
+                  const qualityLabels = getQuestionQualityLabels(question)
+                  const needsFix = qualityLabels.length > 0
                   return (
                     <details key={question.id} className="preview-question-editor" open={index < 3 || needsFix}>
                       <summary>
@@ -2730,7 +2841,7 @@ function ResourcesView({
                             {questionLabel(question.type)} · {question.points} 分 · 答案 {question.answer.join(' / ')}
                           </small>
                         </div>
-                        {needsFix && <em>待校正</em>}
+                        {needsFix && <em>{qualityLabels.join(' / ')}</em>}
                       </summary>
                       <div className="preview-edit-grid">
                         <label className="point-field">
