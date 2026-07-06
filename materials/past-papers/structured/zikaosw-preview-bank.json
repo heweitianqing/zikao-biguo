@@ -6,7 +6,7 @@
   "publicAnswerOverrides": "index/public-answer-overrides.json",
   "totalPapers": 24,
   "totalQuestions": 360,
-  "totalWithAnswers": 135,
+  "totalWithAnswers": 195,
   "parseWarnings": [],
   "note": "这是旧年份公开预览题的结构化草稿。未抓到答案的题不会接入正式刷题入口，登录抓取答案后可重新生成。",
   "papers": [
@@ -452,8 +452,8 @@
       "year": 2017,
       "session": "10月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -510,8 +510,8 @@
       "year": 2018,
       "session": "10月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -539,8 +539,8 @@
       "year": 2019,
       "session": "4月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -568,8 +568,8 @@
       "year": 2019,
       "session": "10月",
       "sourceKind": "imported",
-      "status": "needs-import",
-      "description": "自考生网旧年份公开预览题，仅 15 道；0 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
+      "status": "ready",
+      "description": "自考生网旧年份公开预览题，仅 15 道；15 道已有答案，完整卷仍需 PDF 或付费/登录来源补齐。",
       "minutes": 150,
       "totalScore": 30,
       "questionIds": [
@@ -8957,9 +8957,9 @@
         "学习马克思主义的方法"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -8968,14 +8968,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "851",
         "answerUrl": "https://www.zikaosw.cn/daan/851.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -8992,9 +8998,9 @@
         "世界有否统一性的问题"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -9003,14 +9009,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "856",
         "answerUrl": "https://www.zikaosw.cn/daan/856.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -9027,9 +9039,9 @@
         "形而上学的观点"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -9038,14 +9050,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "864",
         "answerUrl": "https://www.zikaosw.cn/daan/864.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -9062,9 +9080,9 @@
         "事物的主要矛盾"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -9073,14 +9091,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "867",
         "answerUrl": "https://www.zikaosw.cn/daan/867.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -9097,9 +9121,9 @@
         "事物的根本性质和表面特征间的关系"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -9108,14 +9132,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "874",
         "answerUrl": "https://www.zikaosw.cn/daan/874.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -9132,9 +9162,9 @@
         "近水知鱼性，近山识鸟音"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -9143,14 +9173,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "878",
         "answerUrl": "https://www.zikaosw.cn/daan/878.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -9167,9 +9203,9 @@
         "改造客观世界"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -9178,14 +9214,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "879",
         "answerUrl": "https://www.zikaosw.cn/daan/879.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -9202,9 +9244,9 @@
         "理性认识可以自动回归到感性认识"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -9213,14 +9255,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "885",
         "answerUrl": "https://www.zikaosw.cn/daan/885.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -9237,9 +9285,9 @@
         "厚德、包容、求是、创新"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -9248,14 +9296,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "886",
         "answerUrl": "https://www.zikaosw.cn/daan/886.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -9272,9 +9326,9 @@
         "技术社会形态的划分依据"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -9283,14 +9337,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "887",
         "answerUrl": "https://www.zikaosw.cn/daan/887.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -9307,9 +9367,9 @@
         "生产关系总是适应生产力的发展要求"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -9318,14 +9378,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "890",
         "answerUrl": "https://www.zikaosw.cn/daan/890.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -9342,9 +9408,9 @@
         "补充形式"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -9353,14 +9419,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "896",
         "answerUrl": "https://www.zikaosw.cn/daan/896.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -9377,9 +9449,9 @@
         "具有宗教信仰"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -9388,14 +9460,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "899",
         "answerUrl": "https://www.zikaosw.cn/daan/899.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -9412,9 +9490,9 @@
         "交换价值"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -9423,14 +9501,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "901",
         "answerUrl": "https://www.zikaosw.cn/daan/901.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -9447,9 +9531,9 @@
         "全社会劳动生产率普遍提高的结果"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2017年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -9458,14 +9542,20 @@
         "自考生网",
         "2017年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "904",
         "answerUrl": "https://www.zikaosw.cn/daan/904.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932249.html",
         "textFile": "text/older/marx-2017-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2017年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2687",
+          "localPage": "pages/cwj-marx-2017-10.html",
+          "localText": "text/cwj-marx-2017-10.txt"
+        }
       }
     },
     {
@@ -10097,9 +10187,9 @@
         "法国空想社会主义的代表人物"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10108,14 +10198,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "660",
         "answerUrl": "https://www.zikaosw.cn/daan/660.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10132,9 +10228,9 @@
         "马克思主义是先天智慧的结晶"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10143,14 +10239,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "661",
         "answerUrl": "https://www.zikaosw.cn/daan/661.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10167,9 +10269,9 @@
         "世界有否统一性的问题"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10178,14 +10280,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "662",
         "answerUrl": "https://www.zikaosw.cn/daan/662.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10202,9 +10310,9 @@
         "核心"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10213,14 +10321,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "663",
         "answerUrl": "https://www.zikaosw.cn/daan/663.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10237,9 +10351,9 @@
         "要具体地分析矛盾的普遍性"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10248,14 +10362,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "666",
         "answerUrl": "https://www.zikaosw.cn/daan/666.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10272,9 +10392,9 @@
         "客观性和普遍性"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10283,14 +10403,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "668",
         "answerUrl": "https://www.zikaosw.cn/daan/668.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10307,9 +10433,9 @@
         "认识是主体的内心体验"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10318,14 +10444,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "670",
         "answerUrl": "https://www.zikaosw.cn/daan/670.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10342,9 +10474,9 @@
         "创造客观规律"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10353,14 +10485,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "672",
         "answerUrl": "https://www.zikaosw.cn/daan/672.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10377,9 +10515,9 @@
         "在实践中证实的才是真理"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10388,14 +10526,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "674",
         "answerUrl": "https://www.zikaosw.cn/daan/674.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10412,9 +10556,9 @@
         "主流意识和非主流意识"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10423,14 +10567,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "676",
         "answerUrl": "https://www.zikaosw.cn/daan/676.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10447,9 +10597,9 @@
         "价值取向"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10458,14 +10608,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "689",
         "answerUrl": "https://www.zikaosw.cn/daan/689.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10482,9 +10638,9 @@
         "特殊性"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10493,14 +10649,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "690",
         "answerUrl": "https://www.zikaosw.cn/daan/690.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10517,9 +10679,9 @@
         "社会发展具有不依人的意志为转移的客观规律性"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10528,14 +10690,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "695",
         "answerUrl": "https://www.zikaosw.cn/daan/695.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10552,9 +10720,9 @@
         "具体劳动和抽象劳动的矛盾"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10563,14 +10731,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "698",
         "answerUrl": "https://www.zikaosw.cn/daan/698.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10587,9 +10761,9 @@
         "单个资本的增大为前提"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2018年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10598,14 +10772,20 @@
         "自考生网",
         "2018年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "699",
         "answerUrl": "https://www.zikaosw.cn/daan/699.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932245.html",
         "textFile": "text/older/marx-2018-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2018年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2689",
+          "localPage": "pages/cwj-marx-2018-10.html",
+          "localText": "text/cwj-marx-2018-10.txt"
+        }
       }
     },
     {
@@ -10622,9 +10802,9 @@
         "法国百科全书派哲学"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10633,14 +10813,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107765",
         "answerUrl": "https://www.zikaosw.cn/daan/107765.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -10657,9 +10843,9 @@
         "理论特征"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10668,14 +10854,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107766",
         "answerUrl": "https://www.zikaosw.cn/daan/107766.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -10692,9 +10884,9 @@
         "自然物质的共性"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10703,14 +10895,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107767",
         "answerUrl": "https://www.zikaosw.cn/daan/107767.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -10727,9 +10925,9 @@
         "精神世界的根本看法和根本观点"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10738,14 +10936,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107768",
         "answerUrl": "https://www.zikaosw.cn/daan/107768.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -10762,9 +10966,9 @@
         "社会历史发展的前进性和曲折性统-的原理"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10773,14 +10977,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107769",
         "answerUrl": "https://www.zikaosw.cn/daan/107769.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -10797,9 +11007,9 @@
         "发挥主观能动性不能违背规律"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10808,14 +11018,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107770",
         "answerUrl": "https://www.zikaosw.cn/daan/107770.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -10832,9 +11048,9 @@
         "辩证的观点"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10843,14 +11059,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107771",
         "answerUrl": "https://www.zikaosw.cn/daan/107771.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -10867,9 +11089,9 @@
         "尚未发现的地下矿藏"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10878,14 +11100,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107772",
         "answerUrl": "https://www.zikaosw.cn/daan/107772.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -10902,9 +11130,9 @@
         "由特殊真理走向终极真理的过程"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10913,14 +11141,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107773",
         "answerUrl": "https://www.zikaosw.cn/daan/107773.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -10937,9 +11171,9 @@
         "人口状况能加速或延缓社会发展"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10948,14 +11182,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107774",
         "answerUrl": "https://www.zikaosw.cn/daan/107774.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -10972,9 +11212,9 @@
         "准备性因素"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -10983,14 +11223,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107775",
         "answerUrl": "https://www.zikaosw.cn/daan/107775.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -11007,9 +11253,9 @@
         "杜会基本矛盾"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11018,14 +11264,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107776",
         "answerUrl": "https://www.zikaosw.cn/daan/107776.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -11042,9 +11294,9 @@
         "社会闻历的深找"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11053,14 +11305,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107777",
         "answerUrl": "https://www.zikaosw.cn/daan/107777.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -11077,9 +11335,9 @@
         "形成商品的价值"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11088,14 +11346,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107778",
         "answerUrl": "https://www.zikaosw.cn/daan/107778.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -11112,9 +11376,9 @@
         "历史和道德的因素"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年4月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11123,14 +11387,20 @@
         "自考生网",
         "2019年4月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "107779",
         "answerUrl": "https://www.zikaosw.cn/daan/107779.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3934606.html",
         "textFile": "text/older/marx-2019-04.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年4月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2690",
+          "localPage": "pages/cwj-marx-2019-04.html",
+          "localText": "text/cwj-marx-2019-04.txt"
+        }
       }
     },
     {
@@ -11147,9 +11417,9 @@
         "科学社会主义理论"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11158,14 +11428,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33006",
         "answerUrl": "https://www.zikaosw.cn/daan/33006.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
@@ -11182,9 +11458,9 @@
         "阶级性决定的"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11193,14 +11469,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33009",
         "answerUrl": "https://www.zikaosw.cn/daan/33009.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
@@ -11217,9 +11499,9 @@
         "变化的"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11228,14 +11510,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33011",
         "answerUrl": "https://www.zikaosw.cn/daan/33011.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
@@ -11252,9 +11540,9 @@
         "主体社会性、历史性的活动"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11263,14 +11551,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33015",
         "answerUrl": "https://www.zikaosw.cn/daan/33015.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
@@ -11287,9 +11581,9 @@
         "可以认为改变的"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11298,14 +11592,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33017",
         "answerUrl": "https://www.zikaosw.cn/daan/33017.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
@@ -11322,9 +11622,9 @@
         "意识不具有主观性"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11333,14 +11633,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33020",
         "answerUrl": "https://www.zikaosw.cn/daan/33020.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
@@ -11357,9 +11663,9 @@
         "主体对客体的科学评价"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11368,14 +11674,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33022",
         "answerUrl": "https://www.zikaosw.cn/daan/33022.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
@@ -11392,9 +11704,9 @@
         "真理是有价值的"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11403,14 +11715,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33024",
         "answerUrl": "https://www.zikaosw.cn/daan/33024.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
@@ -11427,9 +11745,9 @@
         "一切从集体意志出发"
       ],
       "answer": [
-        "待补充答案"
+        "A"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11438,14 +11756,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33026",
         "answerUrl": "https://www.zikaosw.cn/daan/33026.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
@@ -11462,9 +11786,9 @@
         "对公序良俗的影响实现;"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11473,14 +11797,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33031",
         "answerUrl": "https://www.zikaosw.cn/daan/33031.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
@@ -11497,9 +11827,9 @@
         "动力系统"
       ],
       "answer": [
-        "待补充答案"
+        "B"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11508,14 +11838,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33035",
         "answerUrl": "https://www.zikaosw.cn/daan/33035.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
@@ -11532,9 +11868,9 @@
         "相互孤立的关系"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11543,14 +11879,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33037",
         "answerUrl": "https://www.zikaosw.cn/daan/33037.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
@@ -11567,9 +11909,9 @@
         "信息社会"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11578,14 +11920,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33039",
         "answerUrl": "https://www.zikaosw.cn/daan/33039.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
@@ -11602,9 +11950,9 @@
         "以自给自足为特"
       ],
       "answer": [
-        "待补充答案"
+        "C"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11613,14 +11961,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33041",
         "answerUrl": "https://www.zikaosw.cn/daan/33041.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
@@ -11637,9 +11991,9 @@
         "全社会劳动生产率普遍提高的结果"
       ],
       "answer": [
-        "待补充答案"
+        "D"
       ],
-      "analysis": "自考生网页预览题，答案和解析待登录抓取后补齐。",
+      "analysis": "答案来自公开页面交叉校验：全国2019年10月自考03709马克思主义基本原理概论考试真题答案。解析待继续补充。",
       "points": 2,
       "difficulty": "易",
       "sourceKind": "imported",
@@ -11648,14 +12002,20 @@
         "自考生网",
         "2019年10月",
         "03709",
-        "待抓答案"
+        "公开答案"
       ],
       "source": {
         "answerId": "33043",
         "answerUrl": "https://www.zikaosw.cn/daan/33043.html",
         "sourceUrl": "https://www.zikaosw.cn/news/3932859.html",
         "textFile": "text/older/marx-2019-10.txt",
-        "accessStatus": "requires-login-and-paid-search-package"
+        "accessStatus": "requires-login-and-paid-search-package",
+        "publicAnswerSource": {
+          "title": "全国2019年10月自考03709马克思主义基本原理概论考试真题答案",
+          "url": "https://zikao.cwjedu.com/lnzt/2692",
+          "localPage": "pages/cwj-marx-2019-10.html",
+          "localText": "text/cwj-marx-2019-10.txt"
+        }
       }
     },
     {
